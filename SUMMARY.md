@@ -1,12 +1,12 @@
 # Table of contents
 
 * [ILAng](README.md)
-* [An Introduction to ILAng](an-introduction-to-ilang/README.md)
-  * [Installing ILAng](an-introduction-to-ilang/installation.md)
-  * [ILAng with CMake](an-introduction-to-ilang/cmake.md)
-  * [ILAng with Python](an-introduction-to-ilang/python.md)
-  * [Pre-built Docker](an-introduction-to-ilang/docker.md)
-  * [What's new in ILAng](an-introduction-to-ilang/releases.md)
+* [An Introduction to ILAng](intro/README.md)
+  * [Installing ILAng](intro/installation.md)
+  * [ILAng with CMake](intro/cmake.md)
+  * [ILAng with Python](intro/python.md)
+  * [Pre-built Docker](intro/docker.md)
+  * [What's new in ILAng](intro/releases.md)
 * [Introduction to the Basics](basics/README.md)
   * [ILA Formal Model](basics/ila.md)
   * [Applications](basics/application.md)
