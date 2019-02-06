@@ -1,4 +1,4 @@
-# Installation
+# Installing ILAng
 
 ## Getting Super Powers
 

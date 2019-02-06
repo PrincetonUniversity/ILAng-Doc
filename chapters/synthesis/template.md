@@ -1,2 +1,0 @@
-# Writing ILA Synthesis Template
-

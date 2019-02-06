@@ -1,2 +1,0 @@
-# Interfacing Verilator with CMake
-
