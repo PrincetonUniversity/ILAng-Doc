@@ -1,23 +1,51 @@
 # Installing ILAng
 
-## Getting Super Powers
+## Prerequisites
 
-Becoming a super hero is a fairly straight forward process:
+The build system of ILAng embraces modern CMake, which requires CMake \(3.8 or above\) and compilers with CXX11 support. It also requires 
 
+| Bison | Flex | z3 | Boost | Python |
+| :--- | :--- | :--- | :--- | :--- |
+| 3.0.4 - 3.3.0 | 2.5.35 or above | 4.4.0 or above | 1.50.0 or above | 2.7 |
+
+To install all dependencies on Debian-based UNIX:
+
+```bash
+apt-get install bison flex libboost-all-dev z3 libz3-dev
 ```
-$ give me super-powers
+
+To install on OSX using homebrew:
+
+```bash
+brew install bison flex boost boost-python z3
 ```
 
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
+{% hint style="warning" %}
+ Homebrew updates the formulas \(packages\) frequently, and may encounter build failure. Build and install from source in cases of version conflict. 
 {% endhint %}
 
-Once you're strong enough, save the world:
+## Building from source
 
+You can clone the [source](https://github.com/Bo-Yuan-Haung/ILAng) of ILAng from GitHub. To build ILAng with default configuration \(and all required submodules\), create a build directory:
+
+```bash
+cd ilang/root/dir
+mkdir -p build && cd build
+cmake .. 
+make -j$(nproc)
 ```
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
+
+After the build complete successfully, you can run tests \(optionally\) and install ILAng.
+
+```bash
+make run_test
+sudo make install
 ```
 
+### Options
 
+* Use `-DILANG_FETCH_DEPS=OFF` to disable config-time submodules update
+* Use `-DILANG_BUILD_TEST=OFF` to disable building the unit tests
+* Use `-DILANG_BUILD_SYNTH=OFF` to disable building the synthesis engine
+* Use `-DILANG_INSTALL_DEV=ON` to enable installing working features
 
