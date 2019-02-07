@@ -1,2 +1,0 @@
-# ILA Formal Model
-
