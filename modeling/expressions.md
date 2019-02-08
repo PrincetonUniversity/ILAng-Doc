@@ -4,6 +4,10 @@
 
 Expressions are the nodes of the AST where input and state variables being the leaf nodes. ILAng provides the interface to define and construct the AST expressions based on the set of operators supported in SMT LIB2. Basic type checks are performed at run time. 
 
+{% hint style="info" %}
+This page only shows a selected list of operators. The complete set is documented in [here](https://bo-yuan-huang.github.io/ILAng/doxygen-html/cpp__api_8h.html).
+{% endhint %}
+
 ### Constant
 
 To declare a constant Boolean and bit-vector expression is easy:
@@ -76,17 +80,11 @@ auto update_memory_at_x = ilang::Store(const_mem, x, y);
 auto update_memory_at_2 = ilang::Store(mem, 0x2, 0x5);
 ```
 
-### Others
-
-#### If-then-else
+### If-then-else
 
 To represent conditional expressions, the if-then-else operator takes as inputs one Boolean expression \(condition\) and two branch expressions of the same type. 
 
 ```cpp
 auto increment_x_if_y_true = ilang::Ite(y, x + 1, x);
 ```
-
-{% hint style="info" %}
-This page only shows a selected list of operators. The complete set is documented in [here](https://bo-yuan-huang.github.io/ILAng/doxygen-html/cpp__api_8h.html).
-{% endhint %}
 
