@@ -1,18 +1,12 @@
 # Architectural States
 
-## Defining ILA models
-
-To start defining an ILA model, the first thing is to create an `Ila` object at the top-most level.  
-
-```cpp
-auto m = ilang::Ila("model_name");
-```
+## Defining inputs/states
 
 There are three major types supported in ILAng:
 
-* **Boolean** that usually corresponds to flags or one-bit signals in the design.
-* **Bit-vector** that usually corresponds to multi-bit registers.
-* **Memory** \(array\) that represents the buffer, memory system, etc. 
+* Boolean -- flags or one-bit signals in the design
+* Bit-vector -- multi-bit registers \(or sometimes one-bit signals\)
+* Memory \(array\) -- buffers, memory system, etc. 
 
 ### Input signals
 
@@ -51,7 +45,7 @@ You can also define memory/array typed state variables by specifying the bit-wid
 auto buffer = m.NewMemState("Buffer", 32, 8);
 ```
 
-## Accessing ILA models
+## Accessing inputs/states
 
 The architectural state variables can be accessed by their name.
 
@@ -64,12 +58,10 @@ It can also be enumerated.
 
 ```cpp
 for (auto i = 0; i < m.input_num(); i++) {
-    auto in_i = m.input(i);
-    // ...
+    auto ith_input = m.input(i);
 }
 for (auto j = 0; j < m.state_num(); j++) {
-    auto st_j = m.state(j);
-    // ...
+    auto jth_state = m.state(j);
 }
 ```
 
