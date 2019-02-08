@@ -13,8 +13,6 @@
   * [Expressions](modeling/expressions.md)
   * [Instructions](modeling/instruction.md)
   * [Hierarchical ILA](modeling/hierarchy.md)
-  * [Example](modeling/example.md)
-  * [FAQ](modeling/faq.md)
 * [Synthesis](synthesis/README.md)
   * [Writing Templates](synthesis/template.md)
   * [Interfacing Simulators](synthesis/simulator.md)
