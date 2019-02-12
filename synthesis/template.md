@@ -14,15 +14,32 @@ m = ila.Abstraction("test")
 
 ### Defining architectural states
 
-This sets the base \(leaf nodes\) of the possible state update functions. TODO.
+To define the set of state variables that are persistent across instructions, the ILA synthesis engine requires users to specify the set of architecture. 
+
+```python
+# input variables
+cmd = m.inp('Cmd', 2)
+in_addr = m.inp('InAddr', 32)
+# state variables
+acc_status = m.reg('AccStatus', 3) # bit-vector type
+buffer = m.mem('buffer', 32, 8)    # memory/array type
+```
 
 ### Defining instructions
 
-This is the set of commands with which the synthesis engine enumerates. TODO.
+The synthesis template requires the info about the set of decode functions \(of each instruction\). This defines the search space for the synthesis engine. That is, the search is constrained but also provide modularity and compositionally for scalable search. 
+
+```python
+# decode 
+wrcmds = [ (cmd == 2) & (cmdaddr == addr) for addr in xrange(0xff00, 0xff40) ]
+m.decode_exprs =  wrcmds
+```
 
 ### Defining state update functions
 
-This part is the key part and the most time-consuming part of the synthesis. If the space is not defined correctly, there is a chance where the synthesis can not terminate/complete. In such case, it is usually the simulator results mismatch with the search space. 
+This part is the key part and the most time-consuming part of the synthesis. If the space is not defined correctly, there is a chance where the synthesis can not terminate/complete. In such case, it is usually the simulator results mismatch with the search space.
+
+This is the set of commands with which the synthesis engine enumerates 
 
 There are a set of synthesis primitives, e.g., choice, slice, etc. 
 
