@@ -25,7 +25,5 @@
   * [Refinement Relation](verification/refinement.md)
   * [Verification Target](verification/target.md)
   * [List of Support](verification/support.md)
-* [Other Features](features/README.md)
-  * [Serialize Deserialize](features/serdes.md)
 * [Development](development.md)
 
