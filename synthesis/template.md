@@ -95,5 +95,5 @@ counter = ila.readslice('any_id_for_debug', source_reg, 8)
 new_reg = ila.writeslice('any_id_for_debug', source_reg, value_reg[7:0])
 ```
 
-More details description and tutorial can be found in [other sources](other-sources.md). 
+More details description and tutorial can be found in [conclusion](example.md). 
 

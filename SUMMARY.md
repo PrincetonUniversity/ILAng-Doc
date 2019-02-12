@@ -20,7 +20,6 @@
   * [Interfacing Simulators](synthesis/simulator.md)
   * [Synthesis Results](synthesis/result.md)
   * [Conclusion](synthesis/example.md)
-  * [Other sources](synthesis/other-sources.md)
 * [Verification](verification/README.md)
   * [Refinement Relation](verification/refinement.md)
   * [Verification Target](verification/target.md)
