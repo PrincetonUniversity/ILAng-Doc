@@ -1,8 +1,10 @@
 # Synthesis
 
-This section covers how to synthesize an ILA formal model using the templated-based synthesis engine [ItSy](https://github.com/PrincetonUniversity/ItSy). You will learn how to write a synthesis template and to interface the design simulator.
+This section covers how to synthesize an ILA formal model using the template-based synthesis engine [ItSy](https://github.com/PrincetonUniversity/ItSy). You will learn how to write a synthesis template and to interface the design simulator.
 
-{% hint style="info" %}
-This guide only shows a selected list of features. The complete set of all supported API with detailed description can be found [here](https://princetonuniversity.github.io/ItSy/html/classilasynth_1_1_abstraction.html). 
+{% hint style="warning" %}
+This guide only shows a selected list of features. A more complete \(but out-dated\) document and tutorial can be found in [other sources](other-sources.md). 
 {% endhint %}
+
+
 
