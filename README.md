@@ -26,7 +26,7 @@ The ILAng platform has been used in several applications:
 
 * [POSH Upscale](https://upscale.stanford.edu/): The goal of Upscale project is to develop tools and techniques for verifying and evaluating open-source hardware, with the ILA-based methodology at its core.
 * [ILAng](https://github.com/Bo-Yuan-Huang/ILAng): The public GitHub repo for ILAng platform implementation. 
-* [ILAng Implementation](https://bo-yuan-huang.github.io/ILAng/doxygen-html/namespaceilang.html): A web-versioned documentation of the ILAng code annotation. 
+* [ILAng Doxygen](https://bo-yuan-huang.github.io/ILAng/doxygen-html/namespaceilang.html): A web-versioned documentation of the ILAng code annotation. 
 * [IMDb](https://github.com/PrincetonUniversity/IMDb): An ILA model data base containing examples, archived ILA models, ILA applications, etc.
 * [ItSy](https://github.com/PrincetonUniversity/ItSy): A template-driven ILA synthesis engine using program synthesis techniques.
 

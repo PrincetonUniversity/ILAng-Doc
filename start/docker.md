@@ -1,8 +1,8 @@
 # ILAng in Docker
 
-To provide an easy try-on experience without installing all the dependencies here and there, we provide several docker images with ILAng as well as other useful verification tools installed. The images are available at [Docker Hub](https://hub.docker.com/r/byhuang/ilang).
-
 [![docker-io](http://dockeri.co/image/byhuang/ilang)](https://hub.docker.com/r/byhuang/ilang)
+
+To provide an easy try-on experience without installing all the dependencies here and there, we provide several docker images with ILAng as well as other useful verification tools installed. The images are available at [Docker Hub](https://hub.docker.com/r/byhuang/ilang).
 
 ### For ILAng users
 
