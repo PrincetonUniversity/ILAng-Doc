@@ -32,7 +32,7 @@ The ILAng platform has been used in several applications:
 
 ### Related publications
 
-* ILAng: A Modeling and Verification Platform for SoCs using Instruction-Level Abstractions. \[TACAS19\]
+* ILAng: A Modeling and Verification Platform for SoCs using Instruction-Level Abstractions. \[[TACAS19](/files/tacas19.pdf)\]
 * A Formal Instruction-Level GPU Model for Scalable Verification. \[[ICCAD18](https://bo-yuan-huang.github.io/ILAng/papers/iccad18.pdf)\]
 * Integrating Memory Consistency Models with Instruction-Level Abstractions for Heterogeneous System-on-Chip Verification. \[[FMCAD18](https://bo-yuan-huang.github.io/ILAng/papers/fmcad18.pdf)\]
 * Formal Security Verification of Concurrent Firmware in SoCs using Instruction-Level Abstraction for Hardware. \[[DAC18](https://bo-yuan-huang.github.io/ILAng/papers/dac18.pdf)\]
