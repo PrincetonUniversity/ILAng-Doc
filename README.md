@@ -1,5 +1,7 @@
 # Introduction
 
+![](.gitbook/assets/ilang-logo.png)
+
 ## Why ILA/ng
 
 ILAng is a modeling and verification platform for systems-on-chips \(SoCs\) where **Instruction-Level Abstraction \(ILA\)** is used as the formal model for hardware components. The ILA formal model targeting the hardware-software interface enables a clean separation of concerns between software and hardware through a uniﬁed model for heterogeneous processors and accelerators. ILAng provides a programming interface for
@@ -11,7 +13,7 @@ ILAng is a modeling and verification platform for systems-on-chips \(SoCs\) wher
 
 ILAng also provides for translating models and properties into various languages \(e.g., Verilog and SMT LIB2\) for diﬀerent veriﬁcation settings and use of third-party veriﬁcation tools.
 
-![ILAng Architecture](.gitbook/assets/ilang-arch.png)
+![ILAng Workflow](.gitbook/assets/ilang-arch.png)
 
 ## Applications
 
