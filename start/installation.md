@@ -11,7 +11,7 @@ The build system of ILAng embraces modern CMake, which requires CMake \(3.8 or a
 To install all dependencies on Debian-based UNIX:
 
 ```bash
-apt-get install bison flex libboost-all-dev z3 libz3-dev
+apt-get install bison flex libboost-all-dev z3 libz3-dev libgflags-dev
 ```
 
 To install on OS X using Homebrew:
