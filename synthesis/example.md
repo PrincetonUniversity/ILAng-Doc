@@ -10,11 +10,9 @@
 
 ### Other sources
 
-The [synthesis engine](https://github.com/PrincetonUniversity/ItSy) is itself an independent self-contained tool. There are several more detailed documentations and materials. \(Note: some of them are not updated frequently.
+The [synthesis engine](https://github.com/PrincetonUniversity/ItSy) is itself an independent self-contained tool. There are several more detailed documentations and materials. \(Note: some of them are not updated frequently.\)
 
-{% file src="../.gitbook/assets/itsy-user-manual.pdf" caption="ItSy user manual" %}
-
-{% file src="../.gitbook/assets/itsy-tutorial.pdf" caption="ItSy tutorial" %}
-
-{% file src="../.gitbook/assets/itsy-tutorial.tgz" caption="ItSy tutorial" %}
+* \[[ItSy user manual](https://bo-yuan-huang.github.io/ILAng-Doc/ItSy-user-manual.pdf)\]
+* \[[ItSy tutorial](https://bo-yuan-huang.github.io/ILAng-Doc/ItSy-tutorial.pdf)\]
+* \[[ItSy tutorial](https://bo-yuan-huang.github.io/ILAng-Doc/ItSy-tutorial.tgz)\]
 

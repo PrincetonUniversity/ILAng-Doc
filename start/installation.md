@@ -14,6 +14,12 @@ To install all dependencies on Debian-based UNIX:
 apt-get install bison flex libboost-all-dev z3 libz3-dev libgflags-dev
 ```
 
+To install all dependencies on Arch Linux-based distributions:
+
+```bash
+pacman -S bison flex boost z3
+```
+
 To install on OS X using Homebrew:
 
 ```bash
