@@ -23,5 +23,6 @@
 * [Verification](verification/README.md)
   * [Refinement Relation](verification/refinement.md)
   * [Verification Target](verification/target.md)
+  * [Notes](verification/notes.md)
 * [Development](development.md)
 

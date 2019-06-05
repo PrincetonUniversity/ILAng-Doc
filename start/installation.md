@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-The build system of ILAng embraces modern CMake, which requires CMake \(3.8 or above\) and compilers with CXX 11 support. It also requires 
+The build system of ILAng embraces modern CMake, which requires CMake \(3.8 or above\) and compilers with CXX 11 support. It also requires
 
 | Bison | Flex | z3 | Boost | Python |
 | :--- | :--- | :--- | :--- | :--- |
@@ -27,7 +27,7 @@ brew install bison flex boost boost-python z3
 ```
 
 {% hint style="warning" %}
-Homebrew updates the formulas \(packages\) frequently, and may encounter build failure. Build and install from source in cases of version conflict. 
+Homebrew updates the formulas \(packages\) frequently, and may encounter build failure. Build and install from source in cases of version conflict.
 {% endhint %}
 
 ## Building from source
