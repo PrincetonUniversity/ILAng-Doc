@@ -14,3 +14,33 @@ Besides the above two parts, there are other auxiliary information needed. They 
   - **uninterpreted function mapping**: What an uninterpreted function inside the ILA model corresponds to.
 
 ### The Structure of _var-map_ and _inst-cond_ ###
+
+```json
+{
+  "models": { 
+    "ILA" : <module-name:string> , 
+    "VERILOG": <module-name:string> },
+  "state mapping": {
+    <ILA-variable-name:string> : <Verilog-signal:string>,
+    ...
+    },
+  "interface mapping": {
+    <Verilog-signal:string> : <ILA-variable-name:string>,
+    ...
+    },  
+  "mapping control": [
+    <Verilog-expression:string>,
+    ...
+    ],
+  "functions":{
+    <function-name:string>:
+      [
+        [
+          <Verilog-expression:string>, <Verilog-signal:string>,
+          <Verilog-expression:string>, <Verilog-signal:string>,
+          ...
+        ]
+      ]
+  }
+}
+```
