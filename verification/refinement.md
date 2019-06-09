@@ -113,3 +113,55 @@ The `max bound` can be used when `ready signal` field is provided. It provides a
 
 The `flush constraint`, `pre flush-end` and `post flush-end` signals are used when using the `flushing verification setting`. For this verification setting, you can refer to \href{https://arxiv.org/abs/1801.01114}{our paper} on the ILA-based verification or the \href{https://dl.acm.org/citation.cfm?id=735662}{Burch-Dill's approach} on processor verification.
 
+
+### Global Invariants ###
+
+In the verification of instructions, we do not assume the design starts from the initial states. This helps us to get a better guarantee of the instruction correctness when only bounded model checking is used. However, if there is no constraints on the starting state of a instruction, there 
+might be spurious bugs just because the design starts from a state that it will never reach when started from the reset state. In order to avoid this false positive, we use global invariants to constrain on the starting state. These invariants help rule out some unreachable states and the tool will generate a separate target to check whether the provided invariants are globally true or not. These invariants should be provided as a list of strings, where each string is a Verilog predicate. In the future, we will exploit invariant synthesis techniques to help synthesize these invariants.
+
+### Interface Signal Information ###
+
+The Verilog module comes with a set of I/O signals and the tool needs to know how these signals should be connected. The `interface mapping` field is a map whose keys are the Verilog I/O signal names and whose values can be one of the following:
+
+  * An ILA input name. This means that the Verilog input signal corresponds to one ILA input. They must have the same encoding and bit-width.
+  * `**KEEP**` directive. Telling the tool to have a wire of the same name and to connect it as the verification wrapper I/O.
+  * `**NC**` directive, indicating that this port does not need to be connected.
+  * `**SO**` directive, indicating that this is actually a direct output from a visible state variable (a state variable that is modeled in the ILA).
+  * `**RESET**` or `**NRESET**` directive. Indicating that this signal is the reset signal, active-high or active-low (we assume synchronous reset).
+  * `**CLOCK**` directive, indicating that this is the clock signal.
+  * `**MEM**name.signal` directive, indicating this signal is the connection to an external/shared memory. The name part should be the ILA state variable name of the memory, and the signal part could be one of the following: `wdata`,`rdata`, `waddr`,`raddr`, `wen`, `ren`. If the signal does not directly correspond to the write/read data, write/read address, write/read enable signal, it should be specified as `**KEEP**`, you can specify the mapping using the additional assumptions.
+
+### Uninterpreted Function Mapping ###
+
+The ILA model may use uninterpreted functions, however, in the verification, the tool must know the correspondence of this uninterpreted function in order to reason about the correctness. In the `functions` field of the _var-map_ JSON, a map should be provided if uninterpreted function is used in the ILA model. The keys of the map are the function names, with the values in a list. Each element of this list is for one application of this function. Per each function application, the tool needs to know the correspondence of the arguments/result in the Verilog and when that happens, this is like a condition/mapping pair, and it is specified as a list. The correspondence of the function result goes first followed by the arguments (in the same order as the arguments in ILA function definitions).
+
+For example in the ILA there is such specification
+```cpp
+  auto div = FuncRef("div", SortRef::BV(8), SortRef::BV(8), SortRef::BV(8) );
+  instr.SetUpdate(state0, div(arg0, arg1) );
+```
+
+Then in the refinement map
+```json
+{
+  "functions" : {
+    "div" : [ ["cond1", "verilog-signal-result", "cond2", "verilog-signal-arg0", "cond3", "verilog-signal-arg1", ] ]
+  }
+}
+```
+
+### Additional Assumptions ###
+
+
+This section allows users to add additional assumptions in the verification. They can be, for example,
+
+  * An assumption about the module I/O.
+  * A mapping from the Verilog design's memory interface to the provided 6-signal memory interface. The AES case study provides an example of this. The Verilog design uses two signals  `stb` and `wr` to indicate memory read and write enable, which are different from the `ren` and `wen` signals. Therefore a mapping is provided as follows:
+
+```json
+
+"mapping control" : [
+  "( wr & stb) == "__MEM_XRAM_0_wen" , 
+  "(~wr & stb) == "__MEM_XRAM_0_ren" ]
+```
+
