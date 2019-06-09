@@ -6,12 +6,12 @@ referred as _var-map_ and the other _inst-cond_.
 
 Besides the above two parts, there are other auxiliary information needed. They are:
 
-  - **module naming**: The names of the ILA module and the Verilog module.
-  - **global invariants**: Some properties that are globally true for the Verilog design that will be checked separately and can be safely assumed when verifying  individual instructions.
-  - **interface signal information**: What does the interface of the Verilog top module look like and what do these signals mean to the tool.
-  - **uninterpreted function mapping**: What an uninterpreted function inside the ILA model corresponds to.
+  * **module naming**: The names of the ILA module and the Verilog module.
+  * **global invariants**: Some properties that are globally true for the Verilog design that will be checked separately and can be safely assumed when verifying  individual instructions.
+  * **interface signal information**: What does the interface of the Verilog top module look like and what do these signals mean to the tool.
+  * **uninterpreted function mapping**: What an uninterpreted function inside the ILA model corresponds to.
 
-### The Structure of _var-map_ ###
+### The Structure of Variable Mappings ###
 
 ```json
 {
@@ -43,7 +43,7 @@ Besides the above two parts, there are other auxiliary information needed. They 
 }
 ```
 
-### The Structure of _inst-cond_ ###
+### The Structure of Instruction Completion Conditions ###
 
 ```json
 {
@@ -105,7 +105,6 @@ The `max bound` can be used when `ready signal` field is provided. It provides a
 
 The `flush constraint`, `pre flush-end` and `post flush-end` signals are used when using the `flushing verification setting`. For this verification setting, you can refer to [our paper](https://arxiv.org/abs/1801.01114) on the ILA-based verification or the [Burch-Dill's approach](https://dl.acm.org/citation.cfm?id=735662) on processor verification.
 
-
 ### Global Invariants ###
 
 In the verification of instructions, we do not assume the design starts from the initial states. This helps us to get a better guarantee of the instruction correctness when only bounded model checking is used. However, if there is no constraints on the starting state of a instruction, there 
@@ -143,7 +142,6 @@ Then in the refinement map
 ```
 
 ### Additional Assumptions ###
-
 
 This section allows users to add additional assumptions in the verification. They can be, for example,
 
