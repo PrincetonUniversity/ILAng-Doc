@@ -11,7 +11,7 @@ Besides the above two parts, there are other auxiliary information needed. They 
   * **interface signal information**: What does the interface of the Verilog top module look like and what do these signals mean to the tool.
   * **uninterpreted function mapping**: What an uninterpreted function inside the ILA model corresponds to.
 
-### The Structure of Variable Mappings ###
+### The Structure of Variable Mappings
 
 ```json
 {
@@ -43,7 +43,7 @@ Besides the above two parts, there are other auxiliary information needed. They 
 }
 ```
 
-### The Structure of Instruction Completion Conditions ###
+### The Structure of Instruction Completion Conditions
 
 ```json
 {
@@ -63,11 +63,11 @@ Besides the above two parts, there are other auxiliary information needed. They 
 }
 ```
 
-### Module Naming ###
+### Module Naming
 
 The module naming section comes first in the _var-map_ JSON file. It is a dictionary (map) with two elements. One element should have the key `ILA` and the value of it is what will be used as the instance name of the ILA module. The other element should have the key `VERILOG` with the value to be the instance name of the Verilog module. These names are used in all the expressions later when you want to refer to a variable in Verilog or ILA.
 
-### Variable Mapping ###
+### Variable Mapping
 
 The variable mapping in the JSON file is a map data structure. The keys of this map are the state variable names in the ILA model while the values are the Verilog variables. There are cases that one Verilog state variable can be mapped to multiple Verilog state variables and the mapping may be some special function. So the allowed value field of this map can be:
 
@@ -93,7 +93,7 @@ Below are some of the examples:
 
 One note in the above example: the condition can refer to special signals (`__START__ ` and `__IEND__`), which are the condition when the instruction-under-verification starts to execute and finishes.
 
-### Instruction Completion Condition ###
+### Instruction Completion Condition
 
 The instruction completion condition is specified per instruction. In the JSON file, it is a list of maps. The list does not need to be a full list of instructions. Those not in the list will not be verified. Each dictionary must have an element whose key is `instruction` and the value of this element is the name of the instruction in the ILA model. Besides this name element, it must contain one of the `ready bound` or the `ready signal` element. The `ready bound`  specifies a bound that the instruction takes. It is used for instructions that take a fixed number of cycles. Alternatively, one can provide a signal (or a predicate) in the `ready signal` field.
 
@@ -105,12 +105,12 @@ The `max bound` can be used when `ready signal` field is provided. It provides a
 
 The `flush constraint`, `pre flush-end` and `post flush-end` signals are used when using the `flushing verification setting`. For this verification setting, you can refer to [our paper](https://arxiv.org/abs/1801.01114) on the ILA-based verification or the [Burch-Dill's approach](https://dl.acm.org/citation.cfm?id=735662) on processor verification.
 
-### Global Invariants ###
+### Global Invariants
 
 In the verification of instructions, we do not assume the design starts from the initial states. This helps us to get a better guarantee of the instruction correctness when only bounded model checking is used. However, if there is no constraints on the starting state of a instruction, there 
 might be spurious bugs just because the design starts from a state that it will never reach when started from the reset state. In order to avoid this false positive, we use global invariants to constrain on the starting state. These invariants help rule out some unreachable states and the tool will generate a separate target to check whether the provided invariants are globally true or not. These invariants should be provided as a list of strings, where each string is a Verilog predicate. In the future, we will exploit invariant synthesis techniques to help synthesize these invariants.
 
-### Interface Signal Information ###
+### Interface Signal Information
 
 The Verilog module comes with a set of I/O signals and the tool needs to know how these signals should be connected. The `interface mapping` field is a map whose keys are the Verilog I/O signal names and whose values can be one of the following:
 
@@ -122,7 +122,7 @@ The Verilog module comes with a set of I/O signals and the tool needs to know ho
   * `**CLOCK**` directive, indicating that this is the clock signal.
   * `**MEM**name.signal` directive, indicating this signal is the connection to an external/shared memory. The name part should be the ILA state variable name of the memory, and the signal part could be one of the following: `wdata`,`rdata`, `waddr`,`raddr`, `wen`, `ren`. If the signal does not directly correspond to the write/read data, write/read address, write/read enable signal, it should be specified as `**KEEP**`, you can specify the mapping using the additional assumptions.
 
-### Uninterpreted Function Mapping ###
+### Uninterpreted Function Mapping
 
 The ILA model may use uninterpreted functions, however, in the verification, the tool must know the correspondence of this uninterpreted function in order to reason about the correctness. In the `functions` field of the _var-map_ JSON, a map should be provided if uninterpreted function is used in the ILA model. The keys of the map are the function names, with the values in a list. Each element of this list is for one application of this function. Per each function application, the tool needs to know the correspondence of the arguments/result in the Verilog and when that happens, this is like a condition/mapping pair, and it is specified as a list. The correspondence of the function result goes first followed by the arguments (in the same order as the arguments in ILA function definitions).
 
@@ -141,7 +141,7 @@ Then in the refinement map
 }
 ```
 
-### Additional Assumptions ###
+### Additional Assumptions
 
 This section allows users to add additional assumptions in the verification. They can be, for example,
 
