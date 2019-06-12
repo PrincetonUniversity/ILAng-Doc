@@ -1,7 +1,6 @@
 # Refinement Relation
 
-The refinement map or refinement relation mainly consists of two parts: _variable mappings_ and _instruction completion conditions_. These two parts are specified in two separate files, one  
-referred as _var-map_ and the other _inst-cond_.
+The refinement map or refinement relation mainly consists of two parts: _variable mappings_ and _instruction completion conditions_. These two parts are specified in two separate files, one referred as _var-map_ and the other _inst-cond_.
 
 Besides the above two parts, there are other auxiliary information needed. They are:
 
@@ -16,28 +15,28 @@ Besides the above two parts, there are other auxiliary information needed. They 
 {
   "models": { 
     "ILA" : "<module-name>" , 
-    "VERILOG": "<module-name>" },
+    "VERILOG": "<module-name>" 
+  },
   "state mapping": {
     "<ILA-variable-name>" : "<Verilog-signal>",
     // more ...
-    },
+  },
   "interface mapping": {
     "<Verilog-io-signal>" : "<ILA-variable-name/directives>",
     // more ...
-    },  
+  },  
   "mapping control": [
     "<Verilog-expression>",
     // more ...
-    ],
+  ],
   "functions":{
-    "<function-name>":
+    "<function-name>": [
       [
-        [
-          "<Verilog-expression>", "<Verilog-signal>",
-          "<Verilog-expression>", "<Verilog-signal>",
-          // more ...
-        ]
+        "<Verilog-expression>", "<Verilog-signal>",
+        "<Verilog-expression>", "<Verilog-signal>",
+        // more ...
       ]
+    ]
   }
 }
 ```
@@ -71,7 +70,7 @@ The module naming section comes first in the _var-map_ JSON file. It is a dictio
 The variable mapping in the JSON file is a map data structure. The keys of this map are the state variable names in the ILA model while the values are the Verilog variables. There are cases that one Verilog state variable can be mapped to multiple Verilog state variables and the mapping may be some special function. So the allowed value field of this map can be:
 
 1. A Verilog variable name as a string. If the Verilog variable is in the top module of Verilog, you can omit the module name \(it does not hurt to add it\). Otherwise, you must specify the complete hierarchy. For example, if you want to refer to a signal `S` in module `A` that is instantiated with name `IA` in the top module, while the top module's instance name is `VERILOG` \(specified in the previous section\), then you should use `VERILOG.IA.S` to refer to it.
-2. A predicate that has at least a `=` in it \(you can use `>=` , `<=` , `==` and etc.\) This is just for our parser to distinguish it from the first case
+2. A predicate that has at least a `=` in it \(you can use `>=` , `<=` , `==` and etc.\) This is just for our parser to distinguish it from the first case.
 3. A string-string pair that is in the form of a list or map. If it is given as a list, the first element is regarded as the condition and the second element is regarded as the mapping. It conveys the meaning of "when the condition is true, the ILA and Verilog variables should have the mapping". If the condition is not true, there is no mapping guaranteed. If the string-string pair is given as a map, it must have two elements. One element should have the key `cond` and the other should have the  key `map`. The `map` part could be a string of Verilog variable name as in case \(1\) or a Verilog expression as case \(2\).
 4. A list of string-string pairs, each pair follows requirement in \(3\).
 
@@ -86,8 +85,8 @@ Below are some of the examples:
     "ILA_state_4" : { "cond":"__START__", "map":"Verilog_state_4"},     // case 3.b
     "ILA_state_5" : [["__START__", "Verilog_state_5"], ["__IEND__","Verilog_state_6"]],     // case 4
     // more ...
-    }, 
-    // other fields ...
+  }, 
+  // other fields ...
 }
 ```
 
@@ -107,7 +106,7 @@ The `flush constraint`, `pre-flush end` and `post-flush end` signals are used wh
 
 ## Global Invariants
 
-In the verification of instructions, we do not assume the design starts from the initial states. This helps us to get a better guarantee of the instruction correctness when only bounded model checking is used. However, if there is no constraints on the starting state of a instruction, there might be spurious bugs just because the design starts from a state that it will never reach when started from the reset state. In order to avoid this false positive, we use global invariants to constrain on the starting state. These invariants help rule out some unreachable states and the tool will generate a separate target to check whether the provided invariants are globally true or not. These invariants should be provided as a list of strings, where each string is a Verilog predicate. In the future, we will exploit invariant synthesis techniques to help synthesize these invariants.
+In the verification of instructions, we do not assume the design starts from the initial states. This helps us to get a better guarantee of the instruction correctness when only bounded model checking is used. However, if there is no constraints on the starting state of an instruction, there might be spurious bugs just because the design starts from a state that it will never reach when started from the reset state. In order to avoid this false positive, we use global invariants to constrain on the starting state. These invariants help rule out some unreachable states and the tool will generate a separate target to check whether the provided invariants are globally true or not. These invariants should be provided as a list of strings, where each string is a Verilog predicate. In the future, we will exploit invariant synthesis techniques to help synthesize these invariants.
 
 ## Interface Signal Information
 
@@ -137,14 +136,16 @@ Then in the refinement map
 ```javascript
 {
   "functions" : {
-    "div" : [ ["cond1", "verilog-signal-result", "cond2", "verilog-signal-arg0", "cond3", "verilog-signal-arg1", ] ]
+    "div" : [ 
+      ["cond1", "verilog-signal-result", "cond2", "verilog-signal-arg0", "cond3", "verilog-signal-arg1", ] 
+    ]
   }
 }
 ```
 
 ## Additional Assumptions
 
-This section allows users to add additional assumptions in the verification. They can be, for example,
+This section allows users to add additional assumptions in the verification. They can be, for example:
 
 * An assumption about the module I/O.
 * A mapping from the Verilog design's memory interface to the provided 6-signal memory interface. The AES case study provides an example of this. The Verilog design uses two signals  `stb` and `wr` to indicate memory read and write enable, which are different from the `ren` and `wen` signals. Therefore a mapping is provided as follows:
@@ -152,6 +153,7 @@ This section allows users to add additional assumptions in the verification. The
 ```javascript
 "mapping control" : [
   "( wr & stb) == __MEM_XRAM_0_wen" , 
-  "(~wr & stb) == __MEM_XRAM_0_ren" ]
+  "(~wr & stb) == __MEM_XRAM_0_ren" 
+]
 ```
 
