@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.0</span>
+   &#160;<span id="projectnumber">0.9.1</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -217,6 +217,10 @@ ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e
 ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#ab80c6263489dfb445eab801a368b9737">ilang::ExprFuse::Sub</a> (const ExprPtr l, const int &amp;r)</td></tr>
 <tr class="memdesc:ab80c6263489dfb445eab801a368b9737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arithmetic subtraction with int. <br /></td></tr>
 <tr class="separator:ab80c6263489dfb445eab801a368b9737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae017da8f97bd6a184a962f457d66fab6"><td class="memItemLeft" align="right" valign="top"><a id="ae017da8f97bd6a184a962f457d66fab6"></a>
+ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#ae017da8f97bd6a184a962f457d66fab6">ilang::ExprFuse::Mul</a> (const ExprPtr l, const int &amp;r)</td></tr>
+<tr class="memdesc:ae017da8f97bd6a184a962f457d66fab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arithmetic unsigned multiply with int (bv only). <br /></td></tr>
+<tr class="separator:ae017da8f97bd6a184a962f457d66fab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af94cb52fe4c29aa675262fdfb3c62367"><td class="memItemLeft" align="right" valign="top"><a id="af94cb52fe4c29aa675262fdfb3c62367"></a>
 ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#af94cb52fe4c29aa675262fdfb3c62367">ilang::ExprFuse::Eq</a> (const ExprPtr l, const ExprPtr r)</td></tr>
 <tr class="memdesc:af94cb52fe4c29aa675262fdfb3c62367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparison: equal. <br /></td></tr>
@@ -317,6 +321,14 @@ ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e
 ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#a564583c38782d21f0a4afb677e4b9ac0">ilang::ExprFuse::Store</a> (const ExprPtr mem, const int &amp;addr, const int &amp;data)</td></tr>
 <tr class="memdesc:a564583c38782d21f0a4afb677e4b9ac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory store to constant address and data. <br /></td></tr>
 <tr class="separator:a564583c38782d21f0a4afb677e4b9ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a235aed2cb6f62e4cba54d7be449bd7"><td class="memItemLeft" align="right" valign="top"><a id="a0a235aed2cb6f62e4cba54d7be449bd7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#a0a235aed2cb6f62e4cba54d7be449bd7">ilang::ExprFuse::SetMemSize</a> (const ExprPtr mem, const int &amp;size=0)</td></tr>
+<tr class="memdesc:a0a235aed2cb6f62e4cba54d7be449bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set memory size. <br /></td></tr>
+<tr class="separator:a0a235aed2cb6f62e4cba54d7be449bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cc716eb49f4ef2d11f114f060864f48"><td class="memItemLeft" align="right" valign="top"><a id="a1cc716eb49f4ef2d11f114f060864f48"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#a1cc716eb49f4ef2d11f114f060864f48">ilang::ExprFuse::GetMemSize</a> (const ExprPtr mem)</td></tr>
+<tr class="memdesc:a1cc716eb49f4ef2d11f114f060864f48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get memory size. <br /></td></tr>
+<tr class="separator:a1cc716eb49f4ef2d11f114f060864f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeae787e25f58136ba241db78b13ace9"><td class="memItemLeft" align="right" valign="top"><a id="aaeae787e25f58136ba241db78b13ace9"></a>
 ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#aaeae787e25f58136ba241db78b13ace9">ilang::ExprFuse::Concat</a> (const ExprPtr hi, const ExprPtr lo)</td></tr>
 <tr class="memdesc:aaeae787e25f58136ba241db78b13ace9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenate two bitvectors (bv only) <br /></td></tr>

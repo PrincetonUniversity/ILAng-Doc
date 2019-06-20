@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['param',['param',['../classilang_1_1_expr.html#a6598f4a51176bc3c4063df90f3b39a18',1,'ilang::Expr']]],
-  ['param_5fnum',['param_num',['../classilang_1_1_expr.html#aad1ffb4cfc42593237adc00be3c367e7',1,'ilang::Expr']]],
+  ['param',['param',['../classilang_1_1_expr.html#a159a7a1a5bfd883bdae55f5766aaa1db',1,'ilang::Expr']]],
+  ['param_5fnum',['param_num',['../classilang_1_1_expr.html#aa3c31573b5fb720316fd6ade804b7fb1',1,'ilang::Expr']]],
   ['parent',['parent',['../classilang_1_1_instr_lvl_abs.html#ab529f7a931940d7f870cc83fd214822f',1,'ilang::InstrLvlAbs']]],
+  ['parsecurrentmoduleparameters',['ParseCurrentModuleParameters',['../classilang_1_1_verilog_constant_expr_eval.html#abe7e102ebc457b49991373de747bfe90',1,'ilang::VerilogConstantExprEval']]],
   ['parsetoextract',['ParseToExtract',['../classilang_1_1_var_extractor.html#a7c23702503bba86772b710e156e1105f',1,'ilang::VarExtractor']]],
   ['pathassn',['PathAssn',['../classilang_1_1_path_unroll.html#a838d9960d23482e7673bfc77d9399d44',1,'ilang::PathUnroll']]],
   ['pathnone',['PathNone',['../classilang_1_1_path_unroll.html#abd088f982ccfeceb63d5f993e7f91b9e',1,'ilang::PathUnroll']]],
@@ -11,7 +12,6 @@ var searchData=
   ['perstatemap',['PerStateMap',['../classilang_1_1_vlg_sgl_tgt_gen.html#abf195efff04925236ea8591c17c9aca0',1,'ilang::VlgSglTgtGen']]],
   ['pop',['Pop',['../classilang_1_1_inter_ila_unroller.html#a922a75c80f16820692b720e6151885eb',1,'ilang::InterIlaUnroller']]],
   ['port',['Port',['../classilang_1_1_synth_abs_converter.html#a1e8a9e5277adff72b0c728c9cfdf591b',1,'ilang::SynthAbsConverter']]],
-  ['portablemngr',['PortableMngr',['../classilang_1_1_portable_mngr.html#af98d7cd47dcf1bcb0c40f2974d7dccd2',1,'ilang::PortableMngr']]],
   ['pos_5fsuffix',['pos_suffix',['../classilang_1_1_trace_step.html#aa5a52e788d8776bc6a51de60646def46',1,'ilang::TraceStep']]],
   ['post',['post',['../classilang_1_1_func_obj_rewr_expr.html#ab8e5326a0a7a025b8620e063828f6bf2',1,'ilang::FuncObjRewrExpr::post()'],['../classilang_1_1_func_obj_rewr_ila.html#a7d211374362a4f0760a9533c868f7f0c',1,'ilang::FuncObjRewrIla::post()'],['../classilang_1_1_func_obj_flat_ila.html#a52b68368bff94b02aba87d0b14cfb539',1,'ilang::FuncObjFlatIla::post()']]],
   ['pre',['pre',['../classilang_1_1_func_obj_rewr_expr.html#acf58f353d67f6976002d436719ebd24a',1,'ilang::FuncObjRewrExpr::pre()'],['../classilang_1_1_func_obj_rewr_ila.html#a61a436da0720f881f97a7f087d9904bd',1,'ilang::FuncObjRewrIla::pre()'],['../classilang_1_1_func_obj_flat_ila.html#ac9e5dec0fca543578e27b8572bbff6c8',1,'ilang::FuncObjFlatIla::pre()']]],

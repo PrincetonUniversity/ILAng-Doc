@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ilang: portable_mngr.h File Reference</title>
+<title>ilang: interface.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.0</span>
+   &#160;<span id="projectnumber">0.9.1</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -60,7 +60,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_45e3ea34f8a3d0f10d903c0d85b95d4a.html">ilang</a></li><li class="navelem"><a class="el" href="dir_8dc2cc3fbc191a1306108babfaeb4799.html">portable</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_45e3ea34f8a3d0f10d903c0d85b95d4a.html">ilang</a></li><li class="navelem"><a class="el" href="dir_75ce415940f41ef4da70a829fddc854d.html">target-json</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,20 +69,19 @@ $(function() {
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">portable_mngr.h File Reference</div>  </div>
+<div class="title">target-json/interface.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="instr__lvl__abs_8h_source.html">ilang/ila/instr_lvl_abs.h</a>&gt;</code><br />
-<code>#include &lt;memory&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;<a class="el" href="instr__lvl__abs_8h_source.html">ilang/ila/instr_lvl_abs.h</a>&gt;</code><br />
 <code>#include &lt;nlohmann/json.hpp&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
 </div>
-<p><a href="portable__mngr_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="target-json_2interface_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_portable_mngr.html">ilang::PortableMngr</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for exporting and importing ILA portable in JSON format.  <a href="classilang_1_1_portable_mngr.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila_ser_des_mngr.html">ilang::IlaSerDesMngr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class wrapper for the ILA portable Ser/Des interface.  <a href="classilang_1_1_ila_ser_des_mngr.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -92,16 +91,12 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ab701e3ac61a85b337ec5c1abaad6742d"><td class="memItemLeft" align="right" valign="top"><a id="ab701e3ac61a85b337ec5c1abaad6742d"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>json</b> = nlohmann::json</td></tr>
-<tr class="separator:ab701e3ac61a85b337ec5c1abaad6742d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9447fa13b525405d092d22eb0566edcb"><td class="memItemLeft" align="right" valign="top"><a id="a9447fa13b525405d092d22eb0566edcb"></a>
-typedef PortableMngr::PortableMngrPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a9447fa13b525405d092d22eb0566edcb">ilang::PortableMngrPtr</a></td></tr>
-<tr class="memdesc:a9447fa13b525405d092d22eb0566edcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for normal use of <a class="el" href="classilang_1_1_portable_mngr.html" title="The class for exporting and importing ILA portable in JSON format. ">PortableMngr</a>. <br /></td></tr>
-<tr class="separator:a9447fa13b525405d092d22eb0566edcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c41ab4ec19b72eb84fe175e058c40ae"><td class="memItemLeft" align="right" valign="top"><a id="a0c41ab4ec19b72eb84fe175e058c40ae"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ilang::json</b> = nlohmann::json</td></tr>
+<tr class="separator:a0c41ab4ec19b72eb84fe175e058c40ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The object to export and import ILA portable in JSON format. </p>
+<div class="textblock"><p>The interface for Ser/Des ILA to/from ILA portable (JSON format). </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

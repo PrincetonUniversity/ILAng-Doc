@@ -20,6 +20,7 @@ var searchData=
   ['expropload',['ExprOpLoad',['../classilang_1_1_expr_op_load.html',1,'ilang']]],
   ['exproplshr',['ExprOpLshr',['../classilang_1_1_expr_op_lshr.html',1,'ilang']]],
   ['exproplt',['ExprOpLt',['../classilang_1_1_expr_op_lt.html',1,'ilang']]],
+  ['expropmul',['ExprOpMul',['../classilang_1_1_expr_op_mul.html',1,'ilang']]],
   ['expropneg',['ExprOpNeg',['../classilang_1_1_expr_op_neg.html',1,'ilang']]],
   ['expropnot',['ExprOpNot',['../classilang_1_1_expr_op_not.html',1,'ilang']]],
   ['expropor',['ExprOpOr',['../classilang_1_1_expr_op_or.html',1,'ilang']]],

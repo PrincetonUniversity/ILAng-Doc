@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.0</span>
+   &#160;<span id="projectnumber">0.9.1</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -84,6 +84,21 @@ $(function() {
 <li>second
 : <a class="el" href="classilang_1_1_key_vec_it.html#a0ce2ee174229296f5abf0e838f4029b0">ilang::KeyVecIt&lt; Key, T &gt;</a>
 </li>
+<li>SerExpr()
+: <a class="el" href="classilang_1_1_i2_j_ser.html#ae22f3f00175a0ca2aa09110cb315f635">ilang::I2JSer</a>
+</li>
+<li>Serialize()
+: <a class="el" href="classilang_1_1_ila_ser_des_mngr.html#a50047f5d8de5d9e9825a0fe67e5f7aa5">ilang::IlaSerDesMngr</a>
+</li>
+<li>SerInstr()
+: <a class="el" href="classilang_1_1_i2_j_ser.html#a35c9ed09ad1fbe95f3f89d864d4d186b">ilang::I2JSer</a>
+</li>
+<li>SerInstrLvlAbs()
+: <a class="el" href="classilang_1_1_i2_j_ser.html#aa97573db66bdf7f54616682c03b32504">ilang::I2JSer</a>
+</li>
+<li>SerToFile()
+: <a class="el" href="classilang_1_1_ila_ser_des_mngr.html#ae65f62193ecb6073c3553a7a29754f25">ilang::IlaSerDesMngr</a>
+</li>
 <li>set_appl()
 : <a class="el" href="classilang_1_1_refinement_map.html#a11ff60e2d977de10ffa725c3e4b7eeac">ilang::RefinementMap</a>
 </li>
@@ -136,7 +151,7 @@ $(function() {
 : <a class="el" href="classilang_1_1_refinement_map.html#a11a3b3b60aaea9ceb07597cfc30d745f">ilang::RefinementMap</a>
 </li>
 <li>set_tgt()
-: <a class="el" href="classilang_1_1_refinement_map.html#a693f4c11cc7cc112deea9e8af1c701a2">ilang::RefinementMap</a>
+: <a class="el" href="classilang_1_1_refinement_map.html#a0912208174a0a2c0b70b3f5529f8cd4d">ilang::RefinementMap</a>
 </li>
 <li>set_update()
 : <a class="el" href="classilang_1_1_instr.html#a248d466e6e2d599da4673b43db28cc02">ilang::Instr</a>
@@ -152,6 +167,9 @@ $(function() {
 </li>
 <li>SetDecode()
 : <a class="el" href="classilang_1_1_instr_ref.html#a5cfba90d3110e6a484fbef83a9f19c0e">ilang::InstrRef</a>
+</li>
+<li>SetEntryNum()
+: <a class="el" href="classilang_1_1_expr_ref.html#aced4f73f2d113cdfdd2d50a5367ea962">ilang::ExprRef</a>
 </li>
 <li>SetFetch()
 : <a class="el" href="classilang_1_1_ila.html#a13311b670d91f92bce21835231b33c1d">ilang::Ila</a>
@@ -195,13 +213,13 @@ $(function() {
 : <a class="el" href="classilang_1_1_signal_info_base.html#a919ea5db2aa3e8faed4212c681db1a7e">ilang::SignalInfoBase</a>
 </li>
 <li>SignalInfoPort()
-: <a class="el" href="classilang_1_1_signal_info_port.html#a620ce5aa14d0170551828361273322d1">ilang::SignalInfoPort</a>
+: <a class="el" href="classilang_1_1_signal_info_port.html#a291524c889e3e5527f275959b4696db0">ilang::SignalInfoPort</a>
 </li>
 <li>SignalInfoReg()
-: <a class="el" href="classilang_1_1_signal_info_reg.html#ae3c80b62ef2165ea2a82d99d216ebafc">ilang::SignalInfoReg</a>
+: <a class="el" href="classilang_1_1_signal_info_reg.html#adcc49a4054365e1b3e8550c4c4d3f53d">ilang::SignalInfoReg</a>
 </li>
 <li>SignalInfoWire()
-: <a class="el" href="classilang_1_1_signal_info_wire.html#a49ba05c65f55794ea142d24cc5fc8a59">ilang::SignalInfoWire</a>
+: <a class="el" href="classilang_1_1_signal_info_wire.html#a9eec43ba7a5c6b57a2d59d1a669cf1da">ilang::SignalInfoWire</a>
 </li>
 <li>size()
 : <a class="el" href="classilang_1_1_key_vec.html#a52ae0309c452aeb2c223f7a7d52d17d6">ilang::KeyVec&lt; Key, T &gt;</a>
@@ -241,7 +259,7 @@ $(function() {
 : <a class="el" href="classilang_1_1_verilog_generator_base.html#a53d4242a4e9da84e4d3812e154f0d7e7">ilang::VerilogGeneratorBase</a>
 </li>
 <li>state()
-: <a class="el" href="classilang_1_1_ila.html#af4faf3005888bf8dbfea193c9257d8bf">ilang::Ila</a>
+: <a class="el" href="classilang_1_1_ila.html#a1b00fea38839636b56b001c0d617b300">ilang::Ila</a>
 , <a class="el" href="classilang_1_1_instr_lvl_abs.html#a96dea7d21e2f80dbbc9c4993d053c641">ilang::InstrLvlAbs</a>
 </li>
 <li>state_num()
@@ -273,7 +291,7 @@ $(function() {
 : <a class="el" href="classilang_1_1_refinement_map.html#adc04e1195249f39144341d33d366044e">ilang::RefinementMap</a>
 </li>
 <li>Store()
-: <a class="el" href="classilang_1_1_expr_ref.html#a0b147afffd1c0ba885951472b0697430">ilang::ExprRef</a>
+: <a class="el" href="classilang_1_1_expr_ref.html#aadf3615adc5d09341e88db3b172cde5a">ilang::ExprRef</a>
 </li>
 <li>str()
 : <a class="el" href="classilang_1_1_bool_val.html#a98a6e4a4d7e449a47cb630327cf0b23a">ilang::BoolVal</a>
@@ -287,7 +305,7 @@ $(function() {
 : <a class="el" href="classilang_1_1_var_extractor.html#a4807efdec347e22c4eea89488ca8f825">ilang::VarExtractor</a>
 </li>
 <li>Symbol()
-: <a class="el" href="classilang_1_1_symbol.html#a89c64866ed5cb913bed047354ad24e7f">ilang::Symbol</a>
+: <a class="el" href="classilang_1_1_symbol.html#a022b68ff8c9d7be4b1480941c81f675d">ilang::Symbol</a>
 </li>
 <li>SynthAbsConverter()
 : <a class="el" href="classilang_1_1_synth_abs_converter.html#a47c1bf7554b365a74eb2bd5b371837cb">ilang::SynthAbsConverter</a>
