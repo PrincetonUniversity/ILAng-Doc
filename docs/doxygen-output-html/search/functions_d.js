@@ -18,5 +18,5 @@ var searchData=
   ['mononone',['MonoNone',['../classilang_1_1_mono_unroll.html#a4c0358f80f40c17be6db6074bd814de6',1,'ilang::MonoUnroll']]],
   ['monosubs',['MonoSubs',['../classilang_1_1_mono_unroll.html#aa808ab172856281103f20fefe27085b8',1,'ilang::MonoUnroll']]],
   ['monounroll',['MonoUnroll',['../classilang_1_1_mono_unroll.html#aeca1517897661177d3452a63447ff2e8',1,'ilang::MonoUnroll']]],
-  ['mul',['Mul',['../expr__fuse_8h.html#a12e30a49bff27de9e8252be843511c2e',1,'ilang::ExprFuse']]]
+  ['mul',['Mul',['../expr__fuse_8h.html#a12e30a49bff27de9e8252be843511c2e',1,'ilang::ExprFuse::Mul(const ExprPtr l, const ExprPtr r)'],['../expr__fuse_8h.html#ae017da8f97bd6a184a962f457d66fab6',1,'ilang::ExprFuse::Mul(const ExprPtr l, const int &amp;r)']]]
 ];

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.0</span>
+   &#160;<span id="projectnumber">0.9.1</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -103,17 +103,18 @@ Inheritance diagram for ilang::Expr:</div>
 <area href="classilang_1_1_expr_op_load.html" title="The class wrapper for memory load. " alt="ilang::ExprOpLoad" shape="rect" coords="472,840,698,864"/>
 <area href="classilang_1_1_expr_op_lshr.html" title="The wrapper for logical right shifting a bit-vector. " alt="ilang::ExprOpLshr" shape="rect" coords="472,896,698,920"/>
 <area href="classilang_1_1_expr_op_lt.html" title="The class wrapper for binary comparison signed less than &quot;&lt;&quot;. " alt="ilang::ExprOpLt" shape="rect" coords="472,952,698,976"/>
-<area href="classilang_1_1_expr_op_neg.html" title="The wrapper for unary negate operation &quot;-&quot;. " alt="ilang::ExprOpNeg" shape="rect" coords="472,1008,698,1032"/>
-<area href="classilang_1_1_expr_op_not.html" title="The wrapper for unary not operation &quot;!&quot;. (bool only) " alt="ilang::ExprOpNot" shape="rect" coords="472,1064,698,1088"/>
-<area href="classilang_1_1_expr_op_or.html" title="The wrapper for binary logical OR operation &quot;|&quot;. " alt="ilang::ExprOpOr" shape="rect" coords="472,1120,698,1144"/>
-<area href="classilang_1_1_expr_op_s_ext.html" title="The calss wrapper for sign-extend. " alt="ilang::ExprOpSExt" shape="rect" coords="472,1176,698,1200"/>
-<area href="classilang_1_1_expr_op_shl.html" title="The wrapper for left shifting a bit-vector. " alt="ilang::ExprOpShl" shape="rect" coords="472,1232,698,1256"/>
-<area href="classilang_1_1_expr_op_store.html" title="The class wrapper for memory store. " alt="ilang::ExprOpStore" shape="rect" coords="472,1288,698,1312"/>
-<area href="classilang_1_1_expr_op_sub.html" title="The wrapper for unsigned subtraction. " alt="ilang::ExprOpSub" shape="rect" coords="472,1344,698,1368"/>
-<area href="classilang_1_1_expr_op_ugt.html" title="The class wrapper for binary comparison unsigned greater than. " alt="ilang::ExprOpUgt" shape="rect" coords="472,1400,698,1424"/>
-<area href="classilang_1_1_expr_op_ult.html" title="The class wrapper for binary comparison unsigned less than. " alt="ilang::ExprOpUlt" shape="rect" coords="472,1456,698,1480"/>
-<area href="classilang_1_1_expr_op_xor.html" title="The wrapper for binary logical XOR operation &quot;^&quot;. " alt="ilang::ExprOpXor" shape="rect" coords="472,1512,698,1536"/>
-<area href="classilang_1_1_expr_op_z_ext.html" title="The class wrapper for zero-extend. " alt="ilang::ExprOpZExt" shape="rect" coords="472,1568,698,1592"/>
+<area href="classilang_1_1_expr_op_mul.html" title="The wrapper for unsigned multiplication. " alt="ilang::ExprOpMul" shape="rect" coords="472,1008,698,1032"/>
+<area href="classilang_1_1_expr_op_neg.html" title="The wrapper for unary negate operation &quot;-&quot;. " alt="ilang::ExprOpNeg" shape="rect" coords="472,1064,698,1088"/>
+<area href="classilang_1_1_expr_op_not.html" title="The wrapper for unary not operation &quot;!&quot;. (bool only) " alt="ilang::ExprOpNot" shape="rect" coords="472,1120,698,1144"/>
+<area href="classilang_1_1_expr_op_or.html" title="The wrapper for binary logical OR operation &quot;|&quot;. " alt="ilang::ExprOpOr" shape="rect" coords="472,1176,698,1200"/>
+<area href="classilang_1_1_expr_op_s_ext.html" title="The calss wrapper for sign-extend. " alt="ilang::ExprOpSExt" shape="rect" coords="472,1232,698,1256"/>
+<area href="classilang_1_1_expr_op_shl.html" title="The wrapper for left shifting a bit-vector. " alt="ilang::ExprOpShl" shape="rect" coords="472,1288,698,1312"/>
+<area href="classilang_1_1_expr_op_store.html" title="The class wrapper for memory store. " alt="ilang::ExprOpStore" shape="rect" coords="472,1344,698,1368"/>
+<area href="classilang_1_1_expr_op_sub.html" title="The wrapper for unsigned subtraction. " alt="ilang::ExprOpSub" shape="rect" coords="472,1400,698,1424"/>
+<area href="classilang_1_1_expr_op_ugt.html" title="The class wrapper for binary comparison unsigned greater than. " alt="ilang::ExprOpUgt" shape="rect" coords="472,1456,698,1480"/>
+<area href="classilang_1_1_expr_op_ult.html" title="The class wrapper for binary comparison unsigned less than. " alt="ilang::ExprOpUlt" shape="rect" coords="472,1512,698,1536"/>
+<area href="classilang_1_1_expr_op_xor.html" title="The wrapper for binary logical XOR operation &quot;^&quot;. " alt="ilang::ExprOpXor" shape="rect" coords="472,1568,698,1592"/>
+<area href="classilang_1_1_expr_op_z_ext.html" title="The class wrapper for zero-extend. " alt="ilang::ExprOpZExt" shape="rect" coords="472,1624,698,1648"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -156,22 +157,22 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 const <a class="el" href="namespaceilang.html#ae01073336878d60a231f4fe96d45ab55">SortPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a1726b6941cefbd048115cf6e12c9f61b">sort</a> () const</td></tr>
 <tr class="memdesc:a1726b6941cefbd048115cf6e12c9f61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the pointer of the sort. <br /></td></tr>
 <tr class="separator:a1726b6941cefbd048115cf6e12c9f61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addcdb2713bbc7c90622165c126b7dd1f"><td class="memItemLeft" align="right" valign="top"><a id="addcdb2713bbc7c90622165c126b7dd1f"></a>
-const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#addcdb2713bbc7c90622165c126b7dd1f">arg_num</a> () const</td></tr>
-<tr class="memdesc:addcdb2713bbc7c90622165c126b7dd1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrun the number of argument (arity). <br /></td></tr>
-<tr class="separator:addcdb2713bbc7c90622165c126b7dd1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb6f2ad604ca36d1a576f8f70e1023b6"><td class="memItemLeft" align="right" valign="top"><a id="adb6f2ad604ca36d1a576f8f70e1023b6"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#adb6f2ad604ca36d1a576f8f70e1023b6">arg_num</a> () const</td></tr>
+<tr class="memdesc:adb6f2ad604ca36d1a576f8f70e1023b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrun the number of argument (arity). <br /></td></tr>
+<tr class="separator:adb6f2ad604ca36d1a576f8f70e1023b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a754c28cd350d28c7bdc8fffe7fe22ec2"><td class="memItemLeft" align="right" valign="top"><a id="a754c28cd350d28c7bdc8fffe7fe22ec2"></a>
 <a class="el" href="classilang_1_1_expr.html#a85952b6a34620c4c8cab6bac9c9fdf8c">ExprPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a754c28cd350d28c7bdc8fffe7fe22ec2">arg</a> (const size_t &amp;i) const</td></tr>
 <tr class="memdesc:a754c28cd350d28c7bdc8fffe7fe22ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i-th argument. <br /></td></tr>
 <tr class="separator:a754c28cd350d28c7bdc8fffe7fe22ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad1ffb4cfc42593237adc00be3c367e7"><td class="memItemLeft" align="right" valign="top"><a id="aad1ffb4cfc42593237adc00be3c367e7"></a>
-const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#aad1ffb4cfc42593237adc00be3c367e7">param_num</a> () const</td></tr>
-<tr class="memdesc:aad1ffb4cfc42593237adc00be3c367e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of parameters. <br /></td></tr>
-<tr class="separator:aad1ffb4cfc42593237adc00be3c367e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6598f4a51176bc3c4063df90f3b39a18"><td class="memItemLeft" align="right" valign="top"><a id="a6598f4a51176bc3c4063df90f3b39a18"></a>
-const int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a6598f4a51176bc3c4063df90f3b39a18">param</a> (const size_t &amp;i) const</td></tr>
-<tr class="memdesc:a6598f4a51176bc3c4063df90f3b39a18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i-th paramter. <br /></td></tr>
-<tr class="separator:a6598f4a51176bc3c4063df90f3b39a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c31573b5fb720316fd6ade804b7fb1"><td class="memItemLeft" align="right" valign="top"><a id="aa3c31573b5fb720316fd6ade804b7fb1"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#aa3c31573b5fb720316fd6ade804b7fb1">param_num</a> () const</td></tr>
+<tr class="memdesc:aa3c31573b5fb720316fd6ade804b7fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of parameters. <br /></td></tr>
+<tr class="separator:aa3c31573b5fb720316fd6ade804b7fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a159a7a1a5bfd883bdae55f5766aaa1db"><td class="memItemLeft" align="right" valign="top"><a id="a159a7a1a5bfd883bdae55f5766aaa1db"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a159a7a1a5bfd883bdae55f5766aaa1db">param</a> (const size_t &amp;i) const</td></tr>
+<tr class="memdesc:a159a7a1a5bfd883bdae55f5766aaa1db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i-th paramter. <br /></td></tr>
+<tr class="separator:a159a7a1a5bfd883bdae55f5766aaa1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a910c3f39b917eee2e484649f48916e81"><td class="memItemLeft" align="right" valign="top"><a id="a910c3f39b917eee2e484649f48916e81"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a910c3f39b917eee2e484649f48916e81">set_sort</a> (const <a class="el" href="namespaceilang.html#ae01073336878d60a231f4fe96d45ab55">SortPtr</a> <a class="el" href="classilang_1_1_expr.html#a1726b6941cefbd048115cf6e12c9f61b">sort</a>)</td></tr>
 <tr class="memdesc:a910c3f39b917eee2e484649f48916e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the sort of the expression. <br /></td></tr>

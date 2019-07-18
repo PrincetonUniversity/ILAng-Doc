@@ -9,6 +9,7 @@ var searchData=
   ['varusefinder',['VarUseFinder',['../classilang_1_1_var_use_finder.html#abb89a083408c0f83a830bf703e277c21',1,'ilang::VarUseFinder']]],
   ['veriloganalyzer',['VerilogAnalyzer',['../classilang_1_1_verilog_analyzer.html#ac53266afe761b9ebf28cacfef432a700',1,'ilang::VerilogAnalyzer']]],
   ['veriloganalyzerbase',['VerilogAnalyzerBase',['../classilang_1_1_verilog_analyzer_base.html#a154a73d2fb240e6348460986d23856dd',1,'ilang::VerilogAnalyzerBase']]],
+  ['verilogconstantexpreval',['VerilogConstantExprEval',['../classilang_1_1_verilog_constant_expr_eval.html#a43d4b3c8f5367dac6481d9a35e31b4e3',1,'ilang::VerilogConstantExprEval']]],
   ['veriloggenerator',['VerilogGenerator',['../classilang_1_1_verilog_generator.html#abf9c7566b2c958bb7456fa1be6e438b0',1,'ilang::VerilogGenerator']]],
   ['veriloggeneratorbase',['VerilogGeneratorBase',['../classilang_1_1_verilog_generator_base.html#a4e6f47c16d7f1ad45540189a5c764133',1,'ilang::VerilogGeneratorBase']]],
   ['veriloginfo',['VerilogInfo',['../classilang_1_1_verilog_info.html#a4c8b9b01c2f8e0fcd5047de49670faba',1,'ilang::VerilogInfo::VerilogInfo(const path_vec_t &amp;include_path, const path_vec_t &amp;srcs, const std::string &amp;top_module_inst_name, const std::string &amp;optional_top_module=&quot;&quot;)'],['../classilang_1_1_verilog_info.html#affcafc26465188310a9ab5ca8b064f98',1,'ilang::VerilogInfo::VerilogInfo(const VerilogInfo &amp;)=delete']]],

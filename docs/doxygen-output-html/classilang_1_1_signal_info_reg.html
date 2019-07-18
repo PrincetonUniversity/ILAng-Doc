@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.0</span>
+   &#160;<span id="projectnumber">0.9.1</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -89,10 +89,8 @@ Inheritance diagram for ilang::SignalInfoReg:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae3c80b62ef2165ea2a82d99d216ebafc"><td class="memItemLeft" align="right" valign="top"><a id="ae3c80b62ef2165ea2a82d99d216ebafc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_signal_info_reg.html#ae3c80b62ef2165ea2a82d99d216ebafc">SignalInfoReg</a> (ast_reg_declaration *def, const std::string &amp;full_name, <a class="el" href="classilang_1_1_verilog_analyzer_base.html#a97a6885ff663a7914c77301b3e8972c3">VerilogAnalyzerBase::hierarchical_name_type</a> tp)</td></tr>
-<tr class="memdesc:ae3c80b62ef2165ea2a82d99d216ebafc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor: from ast_port_declaration. <br /></td></tr>
-<tr class="separator:ae3c80b62ef2165ea2a82d99d216ebafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcc49a4054365e1b3e8550c4c4d3f53d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_signal_info_reg.html#adcc49a4054365e1b3e8550c4c4d3f53d">SignalInfoReg</a> (ast_reg_declaration *def, const std::string &amp;full_name, <a class="el" href="classilang_1_1_verilog_analyzer_base.html#a97a6885ff663a7914c77301b3e8972c3">VerilogAnalyzerBase::hierarchical_name_type</a> tp, ast_module_declaration *mod)</td></tr>
+<tr class="separator:adcc49a4054365e1b3e8550c4c4d3f53d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff6d805d0ae5966fb279cd1cfdd44e1b"><td class="memItemLeft" align="right" valign="top"><a id="aff6d805d0ae5966fb279cd1cfdd44e1b"></a>
 ast_reg_declaration *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_signal_info_reg.html#aff6d805d0ae5966fb279cd1cfdd44e1b">get_def</a> ()</td></tr>
 <tr class="memdesc:aff6d805d0ae5966fb279cd1cfdd44e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return its definition. <br /></td></tr>
@@ -173,7 +171,49 @@ const <a class="el" href="classilang_1_1_verilog_analyzer_base.html#a218c0476db4
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to convert reg to signal info. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="adcc49a4054365e1b3e8550c4c4d3f53d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcc49a4054365e1b3e8550c4c4d3f53d">&#9670;&nbsp;</a></span>SignalInfoReg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ilang::SignalInfoReg::SignalInfoReg </td>
+          <td>(</td>
+          <td class="paramtype">ast_reg_declaration *&#160;</td>
+          <td class="paramname"><em>def</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>full_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classilang_1_1_verilog_analyzer_base.html#a97a6885ff663a7914c77301b3e8972c3">VerilogAnalyzerBase::hierarchical_name_type</a>&#160;</td>
+          <td class="paramname"><em>tp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ast_module_declaration *&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor: from ast_port_declaration &ndash; will parse the parameters of itself </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="verilog__analysis_8h_source.html">verilog_analysis.h</a></li>
 </ul>
 </div><!-- contents -->

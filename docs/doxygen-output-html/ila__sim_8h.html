@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ilang: portable_interface.h File Reference</title>
+<title>ilang: ila_sim.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.0</span>
+   &#160;<span id="projectnumber">0.9.1</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -60,38 +60,49 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_45e3ea34f8a3d0f10d903c0d85b95d4a.html">ilang</a></li><li class="navelem"><a class="el" href="dir_8dc2cc3fbc191a1306108babfaeb4799.html">portable</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_45e3ea34f8a3d0f10d903c0d85b95d4a.html">ilang</a></li><li class="navelem"><a class="el" href="dir_f1d5f747f828eb85474dfd773e80bb8d.html">target-sc</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">portable_interface.h File Reference</div>  </div>
+<div class="title">ila_sim.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="instr__lvl__abs_8h_source.html">ilang/ila/instr_lvl_abs.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;set&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;<a class="el" href="instr__lvl__abs_8h_source.html">ilang/ila/instr_lvl_abs.h</a>&gt;</code><br />
 </div>
-<p><a href="portable__interface_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="ila__sim_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila_sim.html">ilang::IlaSim</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class to generate SystemC simulator model from ILA model Example Use:  <a href="classilang_1_1_ila_sim.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structilang_1_1_ila_sim_1_1ld__info.html">ilang::IlaSim::ld_info</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structilang_1_1_ila_sim_1_1st__info.html">ilang::IlaSim::st_info</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceilang"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html">ilang</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a18f0ebb2ec25f3584a4e5618e3878fe4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a18f0ebb2ec25f3584a4e5618e3878fe4">ilang::ExportPortableToFile</a> (const InstrLvlAbsPtr &amp;ila, const std::string &amp;file)</td></tr>
-<tr class="memdesc:a18f0ebb2ec25f3584a4e5618e3878fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export the ILA portable to a file.  <a href="namespaceilang.html#a18f0ebb2ec25f3584a4e5618e3878fe4">More...</a><br /></td></tr>
-<tr class="separator:a18f0ebb2ec25f3584a4e5618e3878fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84abd51cf83ad7f00802caae2853e628"><td class="memItemLeft" align="right" valign="top">InstrLvlAbsPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a84abd51cf83ad7f00802caae2853e628">ilang::ImportPortableFromFile</a> (const std::string &amp;file)</td></tr>
-<tr class="memdesc:a84abd51cf83ad7f00802caae2853e628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import the ILA model from the file.  <a href="namespaceilang.html#a84abd51cf83ad7f00802caae2853e628">More...</a><br /></td></tr>
-<tr class="separator:a84abd51cf83ad7f00802caae2853e628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0919e1d239cdc53fd1bebdbe76267117"><td class="memItemLeft" align="right" valign="top"><a id="a0919e1d239cdc53fd1bebdbe76267117"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EXTERNAL_MEM</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a0919e1d239cdc53fd1bebdbe76267117"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Elevated interface for the portable manager and utilities. </p>
+<div class="textblock"><p>The header for the class IlaSim </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

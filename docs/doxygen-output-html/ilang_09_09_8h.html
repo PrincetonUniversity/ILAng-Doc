@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.0</span>
+   &#160;<span id="projectnumber">0.9.1</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -72,11 +72,11 @@ $(function() {
 <div class="title">ilang++.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;z3++.h&quot;</code><br />
-<code>#include &lt;map&gt;</code><br />
+<div class="textblock"><code>#include &lt;map&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;z3++.h&quot;</code><br />
 </div>
 <p><a href="ilang_09_09_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -171,6 +171,10 @@ ExprRef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n
 ExprRef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a28362d954dc9512c7292ef91df694e37">ilang::operator-</a> (const ExprRef &amp;a, const ExprRef &amp;b)</td></tr>
 <tr class="memdesc:a28362d954dc9512c7292ef91df694e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsigned subtraction for bit-vectors. <br /></td></tr>
 <tr class="separator:a28362d954dc9512c7292ef91df694e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac463e3a89b6404f2537da22ac5b846e1"><td class="memItemLeft" align="right" valign="top"><a id="ac463e3a89b6404f2537da22ac5b846e1"></a>
+ExprRef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#ac463e3a89b6404f2537da22ac5b846e1">ilang::operator*</a> (const ExprRef &amp;a, const ExprRef &amp;b)</td></tr>
+<tr class="memdesc:ac463e3a89b6404f2537da22ac5b846e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsigned multiply for bit-vectors. <br /></td></tr>
+<tr class="separator:ac463e3a89b6404f2537da22ac5b846e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a879d966b396169287ed8d4e734526d22"><td class="memItemLeft" align="right" valign="top"><a id="a879d966b396169287ed8d4e734526d22"></a>
 ExprRef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a879d966b396169287ed8d4e734526d22">ilang::operator &amp;</a> (const ExprRef &amp;a, const bool &amp;b)</td></tr>
 <tr class="memdesc:a879d966b396169287ed8d4e734526d22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical AND with Boolean constant. <br /></td></tr>
@@ -203,6 +207,10 @@ ExprRef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n
 ExprRef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a86888214d74c96271cda87a4f13c9dfc">ilang::operator-</a> (const ExprRef &amp;a, const int &amp;b)</td></tr>
 <tr class="memdesc:a86888214d74c96271cda87a4f13c9dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsigned subtraction with int constant. <br /></td></tr>
 <tr class="separator:a86888214d74c96271cda87a4f13c9dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4301456faecf77bf5cad97a87c9b483"><td class="memItemLeft" align="right" valign="top"><a id="ac4301456faecf77bf5cad97a87c9b483"></a>
+ExprRef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#ac4301456faecf77bf5cad97a87c9b483">ilang::operator*</a> (const ExprRef &amp;a, const int &amp;b)</td></tr>
+<tr class="memdesc:ac4301456faecf77bf5cad97a87c9b483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsigned multiply with int constant. <br /></td></tr>
+<tr class="separator:ac4301456faecf77bf5cad97a87c9b483"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac40770ca14b70a11f277696dc6c6dff2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#ac40770ca14b70a11f277696dc6c6dff2">ilang::SetUnsignedComparison</a> (bool sign)</td></tr>
 <tr class="separator:ac40770ca14b70a11f277696dc6c6dff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb9b38a78f3d3d10857d632479e1a1f6"><td class="memItemLeft" align="right" valign="top"><a id="acb9b38a78f3d3d10857d632479e1a1f6"></a>
@@ -383,6 +391,18 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a6a1bf9ab1a26dcdd7ac71b99181c96ac">ilang::operator&lt;&lt;</a> (std::ostream &amp;out, const Ila &amp;ila)</td></tr>
 <tr class="memdesc:a6a1bf9ab1a26dcdd7ac71b99181c96ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print out the ILA. <br /></td></tr>
 <tr class="separator:a6a1bf9ab1a26dcdd7ac71b99181c96ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b4e6aeabd9ca97928e0aab10648587"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a21b4e6aeabd9ca97928e0aab10648587">ilang::ExportIlaPortable</a> (const Ila &amp;ila, const std::string &amp;file_name)</td></tr>
+<tr class="memdesc:a21b4e6aeabd9ca97928e0aab10648587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export the ILA portable to file.  <a href="namespaceilang.html#a21b4e6aeabd9ca97928e0aab10648587">More...</a><br /></td></tr>
+<tr class="separator:a21b4e6aeabd9ca97928e0aab10648587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58cdb6e544ecc6bec6b75edcf51ef694"><td class="memItemLeft" align="right" valign="top">Ila&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a58cdb6e544ecc6bec6b75edcf51ef694">ilang::ImportIlaPortable</a> (const std::string &amp;file_name)</td></tr>
+<tr class="memdesc:a58cdb6e544ecc6bec6b75edcf51ef694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import the ILA portable from file.  <a href="namespaceilang.html#a58cdb6e544ecc6bec6b75edcf51ef694">More...</a><br /></td></tr>
+<tr class="separator:a58cdb6e544ecc6bec6b75edcf51ef694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74bfc39bc1e23556a38f0bea47a2c6dc"><td class="memItemLeft" align="right" valign="top">Ila&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a74bfc39bc1e23556a38f0bea47a2c6dc">ilang::ImportSynthAbstraction</a> (const std::string &amp;file_name, const std::string &amp;ila_name)</td></tr>
+<tr class="memdesc:a74bfc39bc1e23556a38f0bea47a2c6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import the synthesized abstraction from file.  <a href="namespaceilang.html#a74bfc39bc1e23556a38f0bea47a2c6dc">More...</a><br /></td></tr>
+<tr class="separator:a74bfc39bc1e23556a38f0bea47a2c6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e232d6d5294946f552703a2eca544b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a29e232d6d5294946f552703a2eca544b">ilang::ImportChildSynthAbstraction</a> (const std::string &amp;file_name, Ila &amp;parent, const std::string &amp;ila_name)</td></tr>
+<tr class="memdesc:a29e232d6d5294946f552703a2eca544b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import the synthesized (child-)abstraction from file, under the given parent ILA.  <a href="namespaceilang.html#a29e232d6d5294946f552703a2eca544b">More...</a><br /></td></tr>
+<tr class="separator:a29e232d6d5294946f552703a2eca544b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The header for the c++ API. </p>

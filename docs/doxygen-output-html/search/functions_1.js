@@ -46,7 +46,7 @@ var searchData=
   ['appl',['appl',['../classilang_1_1_refinement_map.html#aeb5a18fcf44126369725c7ba31e1d201',1,'ilang::RefinementMap']]],
   ['applyaxioms',['ApplyAxioms',['../classilang_1_1_memory_model.html#ad156cb7f836b1be79678218df10fb5ae',1,'ilang::MemoryModel::ApplyAxioms()'],['../classilang_1_1_sc.html#a6c4a9d771ef4c32d088e7c6f3acb47e1',1,'ilang::Sc::ApplyAxioms()'],['../classilang_1_1_tso.html#a9237afb143f6b2506d9a7147bafabd66',1,'ilang::Tso::ApplyAxioms()']]],
   ['arg',['arg',['../classilang_1_1_expr.html#a754c28cd350d28c7bdc8fffe7fe22ec2',1,'ilang::Expr::arg()'],['../classilang_1_1_func.html#abc7bc1fdb72e084ded515387a204b43a',1,'ilang::Func::arg()']]],
-  ['arg_5fnum',['arg_num',['../classilang_1_1_expr.html#addcdb2713bbc7c90622165c126b7dd1f',1,'ilang::Expr::arg_num()'],['../classilang_1_1_func.html#aa4ac51e100f5fd9380ce9d43fe2a3092',1,'ilang::Func::arg_num()']]],
+  ['arg_5fnum',['arg_num',['../classilang_1_1_expr.html#adb6f2ad604ca36d1a576f8f70e1023b6',1,'ilang::Expr::arg_num()'],['../classilang_1_1_func.html#aa4ac51e100f5fd9380ce9d43fe2a3092',1,'ilang::Func::arg_num()']]],
   ['ashr',['Ashr',['../expr__fuse_8h.html#ae7a7bc135990178fb4e3e95b048db598',1,'ilang::ExprFuse::Ashr(const ExprPtr l, const ExprPtr r)'],['../expr__fuse_8h.html#aff74c7c46a0f5a9f81166842006aa1ee',1,'ilang::ExprFuse::Ashr(const ExprPtr l, const int &amp;r)']]],
   ['ast',['Ast',['../classilang_1_1_ast.html#ac3ce0c23b9fbb09e5acf7548753cb1d1',1,'ilang::Ast::Ast()'],['../classilang_1_1_ast.html#aef23b3e9a35daff1001cdd514378b530',1,'ilang::Ast::Ast(const std::string &amp;name)']]]
 ];

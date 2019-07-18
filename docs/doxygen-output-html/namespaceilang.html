@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.0</span>
+   &#160;<span id="projectnumber">0.9.1</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -152,6 +152,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr_op_lt.html">ExprOpLt</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class wrapper for binary comparison signed less than "&lt;".  <a href="classilang_1_1_expr_op_lt.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr_op_mul.html">ExprOpMul</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The wrapper for unsigned multiplication.  <a href="classilang_1_1_expr_op_mul.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr_op_neg.html">ExprOpNeg</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The wrapper for unary negate operation "-".  <a href="classilang_1_1_expr_op_neg.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,11 +209,23 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_func_ref.html">FuncRef</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The wrapper of <a class="el" href="classilang_1_1_func.html" title="The class for uninterpreted function. ">Func</a> (uninterpreted function).  <a href="classilang_1_1_func_ref.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_function_application_finder.html">FunctionApplicationFinder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class of traversing to find the application of functions in an AST.  <a href="classilang_1_1_function_application_finder.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_host_remove_restore.html">HostRemoveRestore</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to remove and restore the host info This is useful as we want the ast with the same name generates the same z3 expr. This framework is based on an assumption that if we call z3 to create the variable of the same name multiple times they refer to the same one internally. FIXME: Need to check this assumption if we want to support other SMT solvers!  <a href="classilang_1_1_host_remove_restore.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_i2_j_ser.html">I2JSer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for serializing an ILA model to JSON format.  <a href="classilang_1_1_i2_j_ser.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila.html">Ila</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The wrapper of <a class="el" href="classilang_1_1_instr_lvl_abs.html" title="The class of Instruction-Level Abstraction (ILA). An ILA contains: ">InstrLvlAbs</a> (ILA).  <a href="classilang_1_1_ila.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila_ser_des_mngr.html">IlaSerDesMngr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class wrapper for the ILA portable Ser/Des interface.  <a href="classilang_1_1_ila_ser_des_mngr.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila_sim.html">IlaSim</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class to generate SystemC simulator model from ILA model Example Use:  <a href="classilang_1_1_ila_sim.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila_z3_unroller.html">IlaZ3Unroller</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The wrapper of generating z3::expr for verification.  <a href="classilang_1_1_ila_z3_unroller.html#details">More...</a><br /></td></tr>
@@ -238,6 +253,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_inter_ila_unroller.html">InterIlaUnroller</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for unrolling multiple ILAs. There are two ways of unrolling: ordered and unordered. Ordered unrolling assumes an ordered program template, despite that some may not exist in the final outcome. By default the state with the same name among ILAs is considered as the same shared state.  <a href="classilang_1_1_inter_ila_unroller.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_j2_i_des.html">J2IDes</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for deserializing an ILA model from JSON format.  <a href="classilang_1_1_j2_i_des.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_key_vec.html">KeyVec</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The container that support key search and index access.  <a href="classilang_1_1_key_vec.html#details">More...</a><br /></td></tr>
@@ -271,9 +289,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_path_unroll.html">PathUnroll</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application class for unrolling a path of instruction sequence.  <a href="classilang_1_1_path_unroll.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_portable_mngr.html">PortableMngr</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class for exporting and importing ILA portable in JSON format.  <a href="classilang_1_1_portable_mngr.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_refinement_map.html">RefinementMap</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refinement mapping defines how to map micro-architectural states to architectural states for comparison.  <a href="classilang_1_1_refinement_map.html#details">More...</a><br /></td></tr>
@@ -348,6 +363,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_analyzer_base.html">VerilogAnalyzerBase</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classilang_1_1_verilog_analyzer_base.html" title="VerilogAnalyzerBase should never be instantiated, only used as a pointer type in class VerilogInfo...">VerilogAnalyzerBase</a> should never be instantiated, only used as a pointer type in class <a class="el" href="classilang_1_1_verilog_info.html" title="The class that invoke the analyzer. ">VerilogInfo</a>.  <a href="classilang_1_1_verilog_analyzer_base.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html">VerilogConstantExprEval</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class to convert a constant expr to an integer number.  <a href="classilang_1_1_verilog_constant_expr_eval.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_generator.html">VerilogGenerator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class of Verilog Generator.  <a href="classilang_1_1_verilog_generator.html#details">More...</a><br /></td></tr>
@@ -502,20 +520,77 @@ typedef <a class="el" href="classilang_1_1_instr_seq.html#a37dd168ce5d95507eb7bf
 typedef <a class="el" href="classilang_1_1_expr_hash.html">ExprHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a784e2a4ef111b96f327b76f11e86b01a">Z3AdapterHash</a></td></tr>
 <tr class="memdesc:a784e2a4ef111b96f327b76f11e86b01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function object for hashing <a class="el" href="classilang_1_1_expr.html" title="The class for expression, which is the basic type for variables, constraints, state update expression...">Expr</a> in generating z3 expression. <br /></td></tr>
 <tr class="separator:a784e2a4ef111b96f327b76f11e86b01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9447fa13b525405d092d22eb0566edcb"><td class="memItemLeft" align="right" valign="top"><a id="a9447fa13b525405d092d22eb0566edcb"></a>
-typedef <a class="el" href="classilang_1_1_portable_mngr.html#aa4780430bc807fb5f3bf80991266ffe6">PortableMngr::PortableMngrPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a9447fa13b525405d092d22eb0566edcb">PortableMngrPtr</a></td></tr>
-<tr class="memdesc:a9447fa13b525405d092d22eb0566edcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for normal use of <a class="el" href="classilang_1_1_portable_mngr.html" title="The class for exporting and importing ILA portable in JSON format. ">PortableMngr</a>. <br /></td></tr>
-<tr class="separator:a9447fa13b525405d092d22eb0566edcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0e72f6051594b2a8c58f6ad6ee59df1"><td class="memItemLeft" align="right" valign="top"><a id="ab0e72f6051594b2a8c58f6ad6ee59df1"></a>
 typedef <a class="el" href="classilang_1_1_synth_abs_converter.html#a4ea7491df29005572c22aae8786db092">SynthAbsConverter::SynthAbsConverterPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#ab0e72f6051594b2a8c58f6ad6ee59df1">SynthAbsConverterPtr</a></td></tr>
 <tr class="memdesc:ab0e72f6051594b2a8c58f6ad6ee59df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for normal use of <a class="el" href="classilang_1_1_synth_abs_converter.html" title="The class for converting an abstraction from the synthesis engine to an ILA model. ">SynthAbsConverter</a>. <br /></td></tr>
 <tr class="separator:ab0e72f6051594b2a8c58f6ad6ee59df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2a0fa3acbb99035c33836ee55b0c672"><td class="memItemLeft" align="right" valign="top"><a id="af2a0fa3acbb99035c33836ee55b0c672"></a>
+typedef <a class="el" href="classilang_1_1_i2_j_ser.html#ad1e0aaa7242a3020763523ebaeff034f">I2JSer::I2JSerPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#af2a0fa3acbb99035c33836ee55b0c672">I2JSerPtr</a></td></tr>
+<tr class="memdesc:af2a0fa3acbb99035c33836ee55b0c672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for normal use of <a class="el" href="classilang_1_1_i2_j_ser.html" title="The class for serializing an ILA model to JSON format. ">I2JSer</a>. <br /></td></tr>
+<tr class="separator:af2a0fa3acbb99035c33836ee55b0c672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c41ab4ec19b72eb84fe175e058c40ae"><td class="memItemLeft" align="right" valign="top"><a id="a0c41ab4ec19b72eb84fe175e058c40ae"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>json</b> = nlohmann::json</td></tr>
+<tr class="separator:a0c41ab4ec19b72eb84fe175e058c40ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d649149559c0d42b4315c15ec3023c0"><td class="memItemLeft" align="right" valign="top"><a id="a1d649149559c0d42b4315c15ec3023c0"></a>
+typedef <a class="el" href="classilang_1_1_j2_i_des.html#a9c4de6792d4a106a0dc40451fddf637c">J2IDes::J2IDesPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a1d649149559c0d42b4315c15ec3023c0">J2IDesPtr</a></td></tr>
+<tr class="memdesc:a1d649149559c0d42b4315c15ec3023c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for normal use of <a class="el" href="classilang_1_1_j2_i_des.html" title="The class for deserializing an ILA model from JSON format. ">J2IDes</a>. <br /></td></tr>
+<tr class="separator:a1d649149559c0d42b4315c15ec3023c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ae3529ea370d3252b9e44e20b53532e"><td class="memItemLeft" align="right" valign="top"><a id="a6ae3529ea370d3252b9e44e20b53532e"></a>
 typedef <a class="el" href="classilang_1_1_expr_hash.html">ExprHash</a>&#160;</td><td class="memItemRight" valign="bottom"><b>VerilogGenHash</b></td></tr>
 <tr class="separator:a6ae3529ea370d3252b9e44e20b53532e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:a6ec2515ae3e70a4fdc7f5ea2afa02759"><td class="memItemLeft" align="right" valign="top"><a id="a6ec2515ae3e70a4fdc7f5ea2afa02759"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a6ec2515ae3e70a4fdc7f5ea2afa02759">AST_UID_SORT</a> { <b>BOOL</b> = 1, 
+<b>BV</b>, 
+<b>MEM</b>
+ }<tr class="memdesc:a6ec2515ae3e70a4fdc7f5ea2afa02759"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unified ID for Sort. <br /></td></tr>
+</td></tr>
+<tr class="separator:a6ec2515ae3e70a4fdc7f5ea2afa02759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8e1c5a9029426dc0794c4c74c675cea"><td class="memItemLeft" align="right" valign="top"><a id="aa8e1c5a9029426dc0794c4c74c675cea"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#aa8e1c5a9029426dc0794c4c74c675cea">AST_UID_EXPR</a> { <b>VAR</b> = 1, 
+<b>CONST</b>, 
+<b>OP</b>
+ }<tr class="memdesc:aa8e1c5a9029426dc0794c4c74c675cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unified ID for Expr type. <br /></td></tr>
+</td></tr>
+<tr class="separator:aa8e1c5a9029426dc0794c4c74c675cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d51cc1a5df5198d10d1db7c5beeac42"><td class="memItemLeft" align="right" valign="top"><a id="a4d51cc1a5df5198d10d1db7c5beeac42"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a4d51cc1a5df5198d10d1db7c5beeac42">AST_UID_EXPR_OP</a> { <br />
+&#160;&#160;<b>INVALID</b> = 0, 
+<b>NEG</b>, 
+<b>NOT</b>, 
+<b>COMPL</b>, 
+<br />
+&#160;&#160;<b>AND</b>, 
+<b>OR</b>, 
+<b>XOR</b>, 
+<b>SHL</b>, 
+<br />
+&#160;&#160;<b>ASHR</b>, 
+<b>LSHR</b>, 
+<b>ADD</b>, 
+<b>SUB</b>, 
+<br />
+&#160;&#160;<b>MUL</b>, 
+<b>EQ</b>, 
+<b>LT</b>, 
+<b>GT</b>, 
+<br />
+&#160;&#160;<b>ULT</b>, 
+<b>UGT</b>, 
+<b>LOAD</b>, 
+<b>STORE</b>, 
+<br />
+&#160;&#160;<b>CONCAT</b>, 
+<b>EXTRACT</b>, 
+<b>ZEXT</b>, 
+<b>SEXT</b>, 
+<br />
+&#160;&#160;<b>APP_FUNC</b>, 
+<b>IMPLY</b>, 
+<b>ITE</b>
+<br />
+ }<tr class="memdesc:a4d51cc1a5df5198d10d1db7c5beeac42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unified ID for ExprOp. <br /></td></tr>
+</td></tr>
+<tr class="separator:a4d51cc1a5df5198d10d1db7c5beeac42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4dc990a0af528177f6f90b63bd208c7"><td class="memItemLeft" align="right" valign="top"><a id="ab4dc990a0af528177f6f90b63bd208c7"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#ab4dc990a0af528177f6f90b63bd208c7">AccessType</a> { <b>READ</b>, 
 <b>WRITE</b>, 
 <b>EITHER</b>
@@ -530,6 +605,18 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a1a3284ef090db4d828f6635c7d7572a0"><td class="memItemLeft" align="right" valign="top"><a id="a1a3284ef090db4d828f6635c7d7572a0"></a>
+<a class="el" href="namespaceilang.html#a6ec2515ae3e70a4fdc7f5ea2afa02759">AST_UID_SORT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a1a3284ef090db4d828f6635c7d7572a0">GetUidSort</a> (const <a class="el" href="namespaceilang.html#ae01073336878d60a231f4fe96d45ab55">SortPtr</a> &amp;sort)</td></tr>
+<tr class="memdesc:a1a3284ef090db4d828f6635c7d7572a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the AST_UID_SORT of the given <a class="el" href="classilang_1_1_sort.html" title="The class for sort (type for expr, and the range/domain of functions). ">Sort</a>. <br /></td></tr>
+<tr class="separator:a1a3284ef090db4d828f6635c7d7572a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bc47efbf1e7df0879497df80b32d909"><td class="memItemLeft" align="right" valign="top"><a id="a6bc47efbf1e7df0879497df80b32d909"></a>
+<a class="el" href="namespaceilang.html#aa8e1c5a9029426dc0794c4c74c675cea">AST_UID_EXPR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a6bc47efbf1e7df0879497df80b32d909">GetUidExpr</a> (const <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> &amp;expr)</td></tr>
+<tr class="memdesc:a6bc47efbf1e7df0879497df80b32d909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the AST_UID_EXPR of the given <a class="el" href="classilang_1_1_expr.html" title="The class for expression, which is the basic type for variables, constraints, state update expression...">Expr</a>. <br /></td></tr>
+<tr class="separator:a6bc47efbf1e7df0879497df80b32d909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4e0e6cc9a9703c578f6df3959718f98"><td class="memItemLeft" align="right" valign="top"><a id="ae4e0e6cc9a9703c578f6df3959718f98"></a>
+<a class="el" href="namespaceilang.html#a4d51cc1a5df5198d10d1db7c5beeac42">AST_UID_EXPR_OP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#ae4e0e6cc9a9703c578f6df3959718f98">GetUidExprOp</a> (const <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> &amp;expr)</td></tr>
+<tr class="memdesc:ae4e0e6cc9a9703c578f6df3959718f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the AST_UID_EXPR_OP of the given <a class="el" href="classilang_1_1_expr.html" title="The class for expression, which is the basic type for variables, constraints, state update expression...">Expr</a> (must be <a class="el" href="classilang_1_1_expr_op.html" title="Expression for operations, e.g. AND, OR, ADD, etc. Operations are non-terminating nodes in the AST...">ExprOp</a>). <br /></td></tr>
+<tr class="separator:ae4e0e6cc9a9703c578f6df3959718f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38808a9aed62a8c4a6917621c9318d6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a38808a9aed62a8c4a6917621c9318d6e">LogLevel</a> (const int &amp;lvl)</td></tr>
 <tr class="memdesc:a38808a9aed62a8c4a6917621c9318d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimun log level. Log messages at or above this level will be logged. (Default: 0)  <a href="#a38808a9aed62a8c4a6917621c9318d6e">More...</a><br /></td></tr>
 <tr class="separator:a38808a9aed62a8c4a6917621c9318d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -593,6 +680,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <a class="el" href="classilang_1_1_expr_ref.html">ExprRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a28362d954dc9512c7292ef91df694e37">operator-</a> (const <a class="el" href="classilang_1_1_expr_ref.html">ExprRef</a> &amp;a, const <a class="el" href="classilang_1_1_expr_ref.html">ExprRef</a> &amp;b)</td></tr>
 <tr class="memdesc:a28362d954dc9512c7292ef91df694e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsigned subtraction for bit-vectors. <br /></td></tr>
 <tr class="separator:a28362d954dc9512c7292ef91df694e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac463e3a89b6404f2537da22ac5b846e1"><td class="memItemLeft" align="right" valign="top"><a id="ac463e3a89b6404f2537da22ac5b846e1"></a>
+<a class="el" href="classilang_1_1_expr_ref.html">ExprRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#ac463e3a89b6404f2537da22ac5b846e1">operator*</a> (const <a class="el" href="classilang_1_1_expr_ref.html">ExprRef</a> &amp;a, const <a class="el" href="classilang_1_1_expr_ref.html">ExprRef</a> &amp;b)</td></tr>
+<tr class="memdesc:ac463e3a89b6404f2537da22ac5b846e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsigned multiply for bit-vectors. <br /></td></tr>
+<tr class="separator:ac463e3a89b6404f2537da22ac5b846e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a879d966b396169287ed8d4e734526d22"><td class="memItemLeft" align="right" valign="top"><a id="a879d966b396169287ed8d4e734526d22"></a>
 <a class="el" href="classilang_1_1_expr_ref.html">ExprRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a879d966b396169287ed8d4e734526d22">operator &amp;</a> (const <a class="el" href="classilang_1_1_expr_ref.html">ExprRef</a> &amp;a, const bool &amp;b)</td></tr>
 <tr class="memdesc:a879d966b396169287ed8d4e734526d22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical AND with Boolean constant. <br /></td></tr>
@@ -625,6 +716,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <a class="el" href="classilang_1_1_expr_ref.html">ExprRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a86888214d74c96271cda87a4f13c9dfc">operator-</a> (const <a class="el" href="classilang_1_1_expr_ref.html">ExprRef</a> &amp;a, const int &amp;b)</td></tr>
 <tr class="memdesc:a86888214d74c96271cda87a4f13c9dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsigned subtraction with int constant. <br /></td></tr>
 <tr class="separator:a86888214d74c96271cda87a4f13c9dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4301456faecf77bf5cad97a87c9b483"><td class="memItemLeft" align="right" valign="top"><a id="ac4301456faecf77bf5cad97a87c9b483"></a>
+<a class="el" href="classilang_1_1_expr_ref.html">ExprRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#ac4301456faecf77bf5cad97a87c9b483">operator*</a> (const <a class="el" href="classilang_1_1_expr_ref.html">ExprRef</a> &amp;a, const int &amp;b)</td></tr>
+<tr class="memdesc:ac4301456faecf77bf5cad97a87c9b483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsigned multiply with int constant. <br /></td></tr>
+<tr class="separator:ac4301456faecf77bf5cad97a87c9b483"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac40770ca14b70a11f277696dc6c6dff2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#ac40770ca14b70a11f277696dc6c6dff2">SetUnsignedComparison</a> (bool sign)</td></tr>
 <tr class="separator:ac40770ca14b70a11f277696dc6c6dff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb9b38a78f3d3d10857d632479e1a1f6"><td class="memItemLeft" align="right" valign="top"><a id="acb9b38a78f3d3d10857d632479e1a1f6"></a>
@@ -805,16 +900,22 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a6a1bf9ab1a26dcdd7ac71b99181c96ac">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;ila)</td></tr>
 <tr class="memdesc:a6a1bf9ab1a26dcdd7ac71b99181c96ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print out the ILA. <br /></td></tr>
 <tr class="separator:a6a1bf9ab1a26dcdd7ac71b99181c96ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b4e6aeabd9ca97928e0aab10648587"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a21b4e6aeabd9ca97928e0aab10648587">ExportIlaPortable</a> (const <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;ila, const std::string &amp;file_name)</td></tr>
+<tr class="memdesc:a21b4e6aeabd9ca97928e0aab10648587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export the ILA portable to file.  <a href="#a21b4e6aeabd9ca97928e0aab10648587">More...</a><br /></td></tr>
+<tr class="separator:a21b4e6aeabd9ca97928e0aab10648587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58cdb6e544ecc6bec6b75edcf51ef694"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classilang_1_1_ila.html">Ila</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a58cdb6e544ecc6bec6b75edcf51ef694">ImportIlaPortable</a> (const std::string &amp;file_name)</td></tr>
+<tr class="memdesc:a58cdb6e544ecc6bec6b75edcf51ef694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import the ILA portable from file.  <a href="#a58cdb6e544ecc6bec6b75edcf51ef694">More...</a><br /></td></tr>
+<tr class="separator:a58cdb6e544ecc6bec6b75edcf51ef694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74bfc39bc1e23556a38f0bea47a2c6dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classilang_1_1_ila.html">Ila</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a74bfc39bc1e23556a38f0bea47a2c6dc">ImportSynthAbstraction</a> (const std::string &amp;file_name, const std::string &amp;ila_name)</td></tr>
+<tr class="memdesc:a74bfc39bc1e23556a38f0bea47a2c6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import the synthesized abstraction from file.  <a href="#a74bfc39bc1e23556a38f0bea47a2c6dc">More...</a><br /></td></tr>
+<tr class="separator:a74bfc39bc1e23556a38f0bea47a2c6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e232d6d5294946f552703a2eca544b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a29e232d6d5294946f552703a2eca544b">ImportChildSynthAbstraction</a> (const std::string &amp;file_name, <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;parent, const std::string &amp;ila_name)</td></tr>
+<tr class="memdesc:a29e232d6d5294946f552703a2eca544b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import the synthesized (child-)abstraction from file, under the given parent ILA.  <a href="#a29e232d6d5294946f552703a2eca544b">More...</a><br /></td></tr>
+<tr class="separator:a29e232d6d5294946f552703a2eca544b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a181bcd7690eed0466a301469995543a4"><td class="memItemLeft" align="right" valign="top"><a id="a181bcd7690eed0466a301469995543a4"></a>
 z3::expr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a181bcd7690eed0466a301469995543a4">Z3And</a> (const z3::expr &amp;a, const z3::expr &amp;b)</td></tr>
 <tr class="memdesc:a181bcd7690eed0466a301469995543a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is just a shortcut to be used for generated axiom. <br /></td></tr>
 <tr class="separator:a181bcd7690eed0466a301469995543a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18f0ebb2ec25f3584a4e5618e3878fe4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a18f0ebb2ec25f3584a4e5618e3878fe4">ExportPortableToFile</a> (const <a class="el" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a> &amp;ila, const std::string &amp;file)</td></tr>
-<tr class="memdesc:a18f0ebb2ec25f3584a4e5618e3878fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export the ILA portable to a file.  <a href="#a18f0ebb2ec25f3584a4e5618e3878fe4">More...</a><br /></td></tr>
-<tr class="separator:a18f0ebb2ec25f3584a4e5618e3878fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84abd51cf83ad7f00802caae2853e628"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a84abd51cf83ad7f00802caae2853e628">ImportPortableFromFile</a> (const std::string &amp;file)</td></tr>
-<tr class="memdesc:a84abd51cf83ad7f00802caae2853e628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import the ILA model from the file.  <a href="#a84abd51cf83ad7f00802caae2853e628">More...</a><br /></td></tr>
-<tr class="separator:a84abd51cf83ad7f00802caae2853e628"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6810cc71b8a884538774f9f0cae4a48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#ad6810cc71b8a884538774f9f0cae4a48">ImportSynthAbsFromFile</a> (const std::string &amp;file_name, const std::string &amp;ila_name=&quot;&quot;)</td></tr>
 <tr class="memdesc:ad6810cc71b8a884538774f9f0cae4a48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import from file the abstraction from the synthesis engine and convert it into an ILA model.  <a href="#ad6810cc71b8a884538774f9f0cae4a48">More...</a><br /></td></tr>
 <tr class="separator:ad6810cc71b8a884538774f9f0cae4a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1033,23 +1134,23 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>TestParseVerilogFrom</
 
 </div>
 </div>
-<a id="a18f0ebb2ec25f3584a4e5618e3878fe4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18f0ebb2ec25f3584a4e5618e3878fe4">&#9670;&nbsp;</a></span>ExportPortableToFile()</h2>
+<a id="a21b4e6aeabd9ca97928e0aab10648587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b4e6aeabd9ca97928e0aab10648587">&#9670;&nbsp;</a></span>ExportIlaPortable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ilang::ExportPortableToFile </td>
+          <td class="memname">bool ilang::ExportIlaPortable </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;&#160;</td>
           <td class="paramname"><em>ila</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>file</em>&#160;</td>
+          <td class="paramname"><em>file_name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1059,15 +1160,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>TestParseVerilogFrom</
       </table>
 </div><div class="memdoc">
 
-<p>Export the ILA portable to a file. </p>
+<p>Export the ILA portable to file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ila</td><td>pointer to the ila model to be exported. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>output file name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ila</td><td>the source ILA model to export. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>the name of the exported ILA portable (JSON) file. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>export status. </dd></dl>
 
 </div>
 </div>
@@ -1152,30 +1252,73 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>TestParseVerilogFrom</
 
 </div>
 </div>
-<a id="a84abd51cf83ad7f00802caae2853e628"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84abd51cf83ad7f00802caae2853e628">&#9670;&nbsp;</a></span>ImportPortableFromFile()</h2>
+<a id="a29e232d6d5294946f552703a2eca544b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29e232d6d5294946f552703a2eca544b">&#9670;&nbsp;</a></span>ImportChildSynthAbstraction()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a> ilang::ImportPortableFromFile </td>
+          <td class="memname">void ilang::ImportChildSynthAbstraction </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>file</em></td><td>)</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ila_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Import the synthesized (child-)abstraction from file, under the given parent ILA. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>the name of the synthesized child-abstraction. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent</td><td>the parent ILA. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ila_name</td><td>the name pf the generated child-ILA. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a58cdb6e544ecc6bec6b75edcf51ef694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58cdb6e544ecc6bec6b75edcf51ef694">&#9670;&nbsp;</a></span>ImportIlaPortable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classilang_1_1_ila.html">Ila</a> ilang::ImportIlaPortable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Import the ILA model from the file. </p>
+<p>Import the ILA portable from file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>input file name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>the name of the ILA portable (JSON) file to import. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the generated ILA model. </dd></dl>
 
 </div>
 </div>
@@ -1259,6 +1402,43 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>TestParseVerilogFrom</
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the generated ILA model. </dd></dl>
+
+</div>
+</div>
+<a id="a74bfc39bc1e23556a38f0bea47a2c6dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74bfc39bc1e23556a38f0bea47a2c6dc">&#9670;&nbsp;</a></span>ImportSynthAbstraction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classilang_1_1_ila.html">Ila</a> ilang::ImportSynthAbstraction </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ila_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Import the synthesized abstraction from file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>the name of the synthesized abstraction (.ila) file. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ila_name</td><td>the name of the generated ILA. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

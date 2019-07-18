@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.0</span>
+   &#160;<span id="projectnumber">0.9.1</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -73,9 +73,9 @@ $(function() {
 <div class="title">log.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;glog/logging.h&gt;</code><br />
-<code>#include &lt;set&gt;</code><br />
+<div class="textblock"><code>#include &lt;set&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;glog/logging.h&gt;</code><br />
 </div>
 <p><a href="log_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -141,11 +141,11 @@ Macros</h2></td></tr>
 <tr class="separator:a35bf1e46585fc6bf07ad7b0437f95b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b14caeb0c417dae04ce45c8eab6d19b"><td class="memItemLeft" align="right" valign="top"><a id="a2b14caeb0c417dae04ce45c8eab6d19b"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a2b14caeb0c417dae04ce45c8eab6d19b">ILA_CHECK_STREQ</a>(a,  b)&#160;&#160;&#160;CHECK_STREQ(a, b)</td></tr>
-<tr class="memdesc:a2b14caeb0c417dae04ce45c8eab6d19b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert string equal with FATAL message (lvl 3). (Debug/Release) <br /></td></tr>
+<tr class="memdesc:a2b14caeb0c417dae04ce45c8eab6d19b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert string equal with message logged to FATAL (lvl 3). (Debug/Release) <br /></td></tr>
 <tr class="separator:a2b14caeb0c417dae04ce45c8eab6d19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ab3dbc9affa07b8d01e7cba4f4e38d8"><td class="memItemLeft" align="right" valign="top"><a id="a0ab3dbc9affa07b8d01e7cba4f4e38d8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a0ab3dbc9affa07b8d01e7cba4f4e38d8">ILA_NOT_NULL</a>(ptr)&#160;&#160;&#160;CHECK(ptr)</td></tr>
-<tr class="memdesc:a0ab3dbc9affa07b8d01e7cba4f4e38d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert point not NULL with FATAL message (lvl 3). (Debug/Release) <br /></td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a0ab3dbc9affa07b8d01e7cba4f4e38d8">ILA_NOT_NULL</a>(ptr)&#160;&#160;&#160;CHECK_NOTNULL(ptr)</td></tr>
+<tr class="memdesc:a0ab3dbc9affa07b8d01e7cba4f4e38d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert point not NULL &ndash; FATAL (lvl 3). (Debug/Release) <br /></td></tr>
 <tr class="separator:a0ab3dbc9affa07b8d01e7cba4f4e38d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>

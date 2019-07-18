@@ -4,6 +4,7 @@ var searchData=
   ['abs_5fmem_5fname',['abs_mem_name',['../classilang_1_1_vlg_sgl_tgt_gen___jasper.html#ae17a4ccefc551ab297c757ef12c1fc83',1,'ilang::VlgSglTgtGen_Jasper']]],
   ['abs_5fmems',['abs_mems',['../classilang_1_1_inteface_directive_recorder.html#a4f1dc705ec64405f29c2a37cff836385',1,'ilang::IntefaceDirectiveRecorder']]],
   ['absknob',['AbsKnob',['../classilang_1_1_abs_knob.html',1,'ilang']]],
+  ['abst_5fto_5fila_2eh',['abst_to_ila.h',['../abst__to__ila_8h.html',1,'']]],
   ['access',['Access',['../classilang_1_1_trace_step.html#aea903528a1e31416a70986d6a189b9d5',1,'ilang::TraceStep::Access(AccessType acc_type, const std::string &amp;name) const'],['../classilang_1_1_trace_step.html#a4548ca4185a17c6d06f4c0f61b26247e',1,'ilang::TraceStep::Access(AccessType acc_type, const StateNameSet &amp;stateset) const']]],
   ['accesstype',['AccessType',['../namespaceilang.html#ab4dc990a0af528177f6f90b63bd208c7',1,'ilang']]],
   ['add',['add',['../classilang_1_1_relation_map.html#ada615b06d8cbd4e8e525b89ac4fed7db',1,'ilang::RelationMap::add()'],['../expr__fuse_8h.html#ade2bb312da3d640f167a755d3e7ab7d3',1,'ilang::ExprFuse::Add(const ExprPtr l, const ExprPtr r)'],['../expr__fuse_8h.html#ad12ca7a34fd385671f9da69e3a7f2b1d',1,'ilang::ExprFuse::Add(const ExprPtr l, const int &amp;r)']]],
@@ -56,7 +57,7 @@ var searchData=
   ['appl',['appl',['../classilang_1_1_refinement_map.html#aeb5a18fcf44126369725c7ba31e1d201',1,'ilang::RefinementMap']]],
   ['applyaxioms',['ApplyAxioms',['../classilang_1_1_memory_model.html#ad156cb7f836b1be79678218df10fb5ae',1,'ilang::MemoryModel::ApplyAxioms()'],['../classilang_1_1_sc.html#a6c4a9d771ef4c32d088e7c6f3acb47e1',1,'ilang::Sc::ApplyAxioms()'],['../classilang_1_1_tso.html#a9237afb143f6b2506d9a7147bafabd66',1,'ilang::Tso::ApplyAxioms()']]],
   ['arg',['arg',['../classilang_1_1_expr.html#a754c28cd350d28c7bdc8fffe7fe22ec2',1,'ilang::Expr::arg()'],['../classilang_1_1_func.html#abc7bc1fdb72e084ded515387a204b43a',1,'ilang::Func::arg()']]],
-  ['arg_5fnum',['arg_num',['../classilang_1_1_expr.html#addcdb2713bbc7c90622165c126b7dd1f',1,'ilang::Expr::arg_num()'],['../classilang_1_1_func.html#aa4ac51e100f5fd9380ce9d43fe2a3092',1,'ilang::Func::arg_num()']]],
+  ['arg_5fnum',['arg_num',['../classilang_1_1_expr.html#adb6f2ad604ca36d1a576f8f70e1023b6',1,'ilang::Expr::arg_num()'],['../classilang_1_1_func.html#aa4ac51e100f5fd9380ce9d43fe2a3092',1,'ilang::Func::arg_num()']]],
   ['args',['args',['../structilang_1_1_verilog_generator_base_1_1function__app__t.html#a6913d011bd059f573f4876d25a819ce4',1,'ilang::VerilogGeneratorBase::function_app_t']]],
   ['ashr',['Ashr',['../expr__fuse_8h.html#ae7a7bc135990178fb4e3e95b048db598',1,'ilang::ExprFuse::Ashr(const ExprPtr l, const ExprPtr r)'],['../expr__fuse_8h.html#aff74c7c46a0f5a9f81166842006aa1ee',1,'ilang::ExprFuse::Ashr(const ExprPtr l, const int &amp;r)']]],
   ['assertions',['assertions',['../classilang_1_1_vlg_sgl_tgt_gen___jasper.html#a5dbc7dc2508805c54090fc272467f39c',1,'ilang::VlgSglTgtGen_Jasper']]],
@@ -68,6 +69,10 @@ var searchData=
   ['assumpts',['assumpts',['../structilang_1_1_vlg_abs_mem.html#a985b9a9799835860006b2b32e4ab1298',1,'ilang::VlgAbsMem']]],
   ['ast',['Ast',['../classilang_1_1_ast.html',1,'ilang::Ast'],['../classilang_1_1_ast.html#ac3ce0c23b9fbb09e5acf7548753cb1d1',1,'ilang::Ast::Ast()'],['../classilang_1_1_ast.html#aef23b3e9a35daff1001cdd514378b530',1,'ilang::Ast::Ast(const std::string &amp;name)']]],
   ['ast_2eh',['ast.h',['../ast_8h.html',1,'']]],
+  ['ast_5ffuse_2eh',['ast_fuse.h',['../ast__fuse_8h.html',1,'']]],
   ['ast_5fhelper_2eh',['ast_helper.h',['../ast__helper_8h.html',1,'']]],
+  ['ast_5fuid_5fexpr',['AST_UID_EXPR',['../namespaceilang.html#aa8e1c5a9029426dc0794c4c74c675cea',1,'ilang']]],
+  ['ast_5fuid_5fexpr_5fop',['AST_UID_EXPR_OP',['../namespaceilang.html#a4d51cc1a5df5198d10d1db7c5beeac42',1,'ilang']]],
+  ['ast_5fuid_5fsort',['AST_UID_SORT',['../namespaceilang.html#a6ec2515ae3e70a4fdc7f5ea2afa02759',1,'ilang']]],
   ['axiom_5fhelper_2eh',['axiom_helper.h',['../axiom__helper_8h.html',1,'']]]
 ];
