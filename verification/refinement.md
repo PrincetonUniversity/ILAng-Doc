@@ -37,6 +37,11 @@ Besides the above two parts, there are other auxiliary information needed. They 
         // more ...
       ]
     ]
+  },
+  "annotation":{
+    "memory": {
+      "<memory-name>":"external/internal"
+    }
   }
 }
 ```
@@ -165,6 +170,20 @@ For example, for a Verilog input signal `control`, the effects of applying diffe
   * `**RESET**` or `**NRESET**`. It will be connected as `.control(rst)` or `.control(~rst)`, where `rst` is the reset signal of the wrapper.
   * `**CLOCK**` directive. It will be connected as `.control(clk)`, where `clk` is the clock signal of the wrapper.
   * `**MEM**name.signal`. The tool will check if `name` is an ILA memory name. It will be connected as `.control(__MEM_name_0_signal)`.
+
+## Notes on Memory State Variable
+
+Memory state variable might be internal or external to the module. An internal memory variable corresponds to a verilog array, and therefore no specific I/O interface is needed to access the memory. An external memory is a memory that connects with the current module via I/O interface. By default, all memory variables in the ILA are treated as external memory. The default setting can be override by _annotation_ in refinement map, and here is an example:
+```json
+  "annotation" : {
+    "memory" : {
+      "rf":"internal",
+      "mem":"external"
+    }
+  }
+```
+
+The above annotation specifies memory named as `rf` and `mem` as internal and external respectively. Being internal or external affects how properties are generated. The mapping of internal memory is element-wise with expressions comparing two verilog arrays entry by entry, which is inefficient for a large memory. The mapping of external memory will use memory abstraction, which is more efficient.
 
 ## Uninterpreted Function Mapping
 
