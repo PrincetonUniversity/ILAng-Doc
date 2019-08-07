@@ -37,11 +37,6 @@ Besides the above two parts, there are other auxiliary information needed. They 
         // more ...
       ]
     ]
-  },
-  "annotation":{
-    "memory": {
-      "<memory-name>":"external/internal"
-    }
   }
 }
 ```
