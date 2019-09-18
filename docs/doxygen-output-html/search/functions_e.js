@@ -13,7 +13,7 @@ var searchData=
   ['newboolstate',['NewBoolState',['../classilang_1_1_instr_lvl_abs.html#a7ccfca0eb52e4700f4e28a29df37ea47',1,'ilang::InstrLvlAbs::NewBoolState()'],['../classilang_1_1_ila.html#aa08f99af425455d098aaae6c139476b0',1,'ilang::Ila::NewBoolState()']]],
   ['newboolvar',['NewBoolVar',['../expr__fuse_8h.html#aabafd822b9dfce34e70935111a9d0099',1,'ilang::ExprFuse']]],
   ['newbvfreevar',['NewBvFreeVar',['../classilang_1_1_instr_lvl_abs.html#af2bc2d00955d5ce5322abeddb4d8324f',1,'ilang::InstrLvlAbs']]],
-  ['newbvinput',['NewBvInput',['../classilang_1_1_instr_lvl_abs.html#a7d0fc6b753de534f4175418167f833f3',1,'ilang::InstrLvlAbs::NewBvInput()'],['../classilang_1_1_ila.html#a22fa6a46415f285a85ad8a02eb55c006',1,'ilang::Ila::NewBvInput()'],['../classilang_1_1pyapi_1_1_instr_lvl_abs_wrap.html#a83822f407368b569dfd89c6c435adc50',1,'ilang::pyapi::InstrLvlAbsWrap::NewBvInput()']]],
+  ['newbvinput',['NewBvInput',['../classilang_1_1_instr_lvl_abs.html#a7d0fc6b753de534f4175418167f833f3',1,'ilang::InstrLvlAbs::NewBvInput()'],['../classilang_1_1_ila.html#a22fa6a46415f285a85ad8a02eb55c006',1,'ilang::Ila::NewBvInput()']]],
   ['newbvstate',['NewBvState',['../classilang_1_1_instr_lvl_abs.html#aa955d8adb360f8b8025cb5960861970e',1,'ilang::InstrLvlAbs::NewBvState()'],['../classilang_1_1_ila.html#a38c75ca43e70d29087279a13c66c0e4f',1,'ilang::Ila::NewBvState()']]],
   ['newbvvar',['NewBvVar',['../expr__fuse_8h.html#ae34a3dc2b370c2bf9b3ab03d4a8b3885',1,'ilang::ExprFuse']]],
   ['newchild',['NewChild',['../classilang_1_1_instr_lvl_abs.html#a1ef924bf341b57eb7a1bdb22444d353b',1,'ilang::InstrLvlAbs::NewChild()'],['../classilang_1_1_ila.html#aececb677cbc28452afa22f90da102022',1,'ilang::Ila::NewChild()']]],

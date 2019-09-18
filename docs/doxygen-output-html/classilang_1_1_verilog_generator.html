@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.1</span>
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -262,6 +262,10 @@ typedef std::vector&lt; <a class="el" href="structilang_1_1_verilog_generator_ba
 typedef std::unordered_map&lt; const <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a>, <a class="el" href="classilang_1_1_verilog_generator_base.html#a2e3942a4f391bb9d9d074d2840768aa9">vlg_name_t</a>, <a class="el" href="classilang_1_1_expr_hash.html">VerilogGenHash</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_generator_base.html#acb2f41e42b2cea77796abc841f806307">ExprMap</a></td></tr>
 <tr class="memdesc:acb2f41e42b2cea77796abc841f806307 inherit pub_types_classilang_1_1_verilog_generator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for caching the generated expressions. <br /></td></tr>
 <tr class="separator:acb2f41e42b2cea77796abc841f806307 inherit pub_types_classilang_1_1_verilog_generator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb8e6237e9576cfc408a381fe9c4eec inherit pub_types_classilang_1_1_verilog_generator_base"><td class="memItemLeft" align="right" valign="top"><a id="abcb8e6237e9576cfc408a381fe9c4eec"></a>
+typedef std::map&lt; std::string, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_generator_base.html#abcb8e6237e9576cfc408a381fe9c4eec">memory_export_annotation_t</a></td></tr>
+<tr class="memdesc:abcb8e6237e9576cfc408a381fe9c4eec inherit pub_types_classilang_1_1_verilog_generator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for memory annotation. <br /></td></tr>
+<tr class="separator:abcb8e6237e9576cfc408a381fe9c4eec inherit pub_types_classilang_1_1_verilog_generator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -324,6 +328,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a4e6f47c16d7f1ad45540189a5c764133 inherit pub_methods_classilang_1_1_verilog_generator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f3be7f94a0657cee81b79feb46d3148 inherit pub_methods_classilang_1_1_verilog_generator_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_generator_base.html#a5f3be7f94a0657cee81b79feb46d3148">DumpToFile</a> (std::ostream &amp;fout) const</td></tr>
 <tr class="separator:a5f3be7f94a0657cee81b79feb46d3148 inherit pub_methods_classilang_1_1_verilog_generator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b20c6644379d2180d47dfcced362562 inherit pub_methods_classilang_1_1_verilog_generator_base"><td class="memItemLeft" align="right" valign="top"><a id="a8b20c6644379d2180d47dfcced362562"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_generator_base.html#a8b20c6644379d2180d47dfcced362562">AnnotateMemory</a> (const <a class="el" href="classilang_1_1_verilog_generator_base.html#abcb8e6237e9576cfc408a381fe9c4eec">memory_export_annotation_t</a> &amp;annotation)</td></tr>
+<tr class="memdesc:a8b20c6644379d2180d47dfcced362562 inherit pub_methods_classilang_1_1_verilog_generator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">add memory annotation, please invoke right after constructor <br /></td></tr>
+<tr class="separator:a8b20c6644379d2180d47dfcced362562 inherit pub_methods_classilang_1_1_verilog_generator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -408,6 +416,10 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <a class="el" href="classilang_1_1_verilog_generator_base.html#a25fb99f0974b13a4b64af69c063fdac3">vlg_sigs_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_generator_base.html#a3ce1bcd9f998f1a8e7eda897505b057d">mem_o</a></td></tr>
 <tr class="memdesc:a3ce1bcd9f998f1a8e7eda897505b057d inherit pro_attribs_classilang_1_1_verilog_generator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of memory output signals <br /></td></tr>
 <tr class="separator:a3ce1bcd9f998f1a8e7eda897505b057d inherit pro_attribs_classilang_1_1_verilog_generator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de7e7a0ef7f8377a1afc424c46e0b55 inherit pro_attribs_classilang_1_1_verilog_generator_base"><td class="memItemLeft" align="right" valign="top"><a id="a8de7e7a0ef7f8377a1afc424c46e0b55"></a>
+<a class="el" href="classilang_1_1_verilog_generator_base.html#a25fb99f0974b13a4b64af69c063fdac3">vlg_sigs_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_generator_base.html#a8de7e7a0ef7f8377a1afc424c46e0b55">mem_probe_o</a></td></tr>
+<tr class="memdesc:a8de7e7a0ef7f8377a1afc424c46e0b55 inherit pro_attribs_classilang_1_1_verilog_generator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of signals that probe each element of a memory <br /></td></tr>
+<tr class="separator:a8de7e7a0ef7f8377a1afc424c46e0b55 inherit pro_attribs_classilang_1_1_verilog_generator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cc89798c9cb045aa7e559ac0b01d1d9 inherit pro_attribs_classilang_1_1_verilog_generator_base"><td class="memItemLeft" align="right" valign="top"><a id="a5cc89798c9cb045aa7e559ac0b01d1d9"></a>
 <a class="el" href="classilang_1_1_verilog_generator_base.html#af90097316c69f6c5e16cfa8995c19480">vlg_sigs_map_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_generator_base.html#a5cc89798c9cb045aa7e559ac0b01d1d9">wires</a></td></tr>
 <tr class="memdesc:a5cc89798c9cb045aa7e559ac0b01d1d9 inherit pro_attribs_classilang_1_1_verilog_generator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of wires to be defined <br /></td></tr>
@@ -470,6 +482,9 @@ std::map&lt; std::string, std::map&lt; unsigned, <a class="el" href="structilang
 function_app_vec_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_generator_base.html#aa7e9afc03e6fd91d407a3cce81e8b058">ila_func_app</a></td></tr>
 <tr class="memdesc:aa7e9afc03e6fd91d407a3cce81e8b058 inherit pro_attribs_classilang_1_1_verilog_generator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">a collection of all function application <br /></td></tr>
 <tr class="separator:aa7e9afc03e6fd91d407a3cce81e8b058 inherit pro_attribs_classilang_1_1_verilog_generator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad80103ab4ef1544ee6faabdc9746ac22 inherit pro_attribs_classilang_1_1_verilog_generator_base"><td class="memItemLeft" align="right" valign="top"><a id="ad80103ab4ef1544ee6faabdc9746ac22"></a>
+<a class="el" href="classilang_1_1_verilog_generator_base.html#abcb8e6237e9576cfc408a381fe9c4eec">memory_export_annotation_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>memory_export_annotation</b></td></tr>
+<tr class="separator:ad80103ab4ef1544ee6faabdc9746ac22 inherit pro_attribs_classilang_1_1_verilog_generator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0257c355b9aeb95af736afcc2056c67 inherit pro_attribs_classilang_1_1_verilog_generator_base"><td class="memItemLeft" align="right" valign="top"><a id="ad0257c355b9aeb95af736afcc2056c67"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_generator_base.html#ad0257c355b9aeb95af736afcc2056c67">idCounter</a></td></tr>
 <tr class="memdesc:ad0257c355b9aeb95af736afcc2056c67 inherit pro_attribs_classilang_1_1_verilog_generator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id counter. <br /></td></tr>

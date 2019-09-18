@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.1</span>
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -111,6 +111,9 @@ $(function() {
 <li>set_host()
 : <a class="el" href="classilang_1_1_ast.html#a5f6ec0aef013e95d4798500b9d6058dd">ilang::Ast</a>
 </li>
+<li>set_instr_lvl_abs()
+: <a class="el" href="classilang_1_1_ila_sim.html#af8c5c4c84257c4a71f6a85f47b84a8f6">ilang::IlaSim</a>
+</li>
 <li>set_module_instantiation_name()
 : <a class="el" href="classilang_1_1_vlg_verif_tgt_gen.html#a9bbd406ae8e4987be51f9d2537efd5e3">ilang::VlgVerifTgtGen</a>
 </li>
@@ -138,11 +141,14 @@ $(function() {
 <li>set_step_orig()
 : <a class="el" href="classilang_1_1_refinement_map.html#a11a3b3b60aaea9ceb07597cfc30d745f">ilang::RefinementMap</a>
 </li>
+<li>set_systemc_path()
+: <a class="el" href="classilang_1_1_ila_sim.html#a42b6186b1bfd0746d333e71a0fec692d">ilang::IlaSim</a>
+</li>
 <li>set_tgt()
 : <a class="el" href="classilang_1_1_refinement_map.html#a693f4c11cc7cc112deea9e8af1c701a2">ilang::RefinementMap</a>
 </li>
 <li>set_update()
-: <a class="el" href="classilang_1_1_instr.html#a248d466e6e2d599da4673b43db28cc02">ilang::Instr</a>
+: <a class="el" href="classilang_1_1_instr.html#a18867fe296b2c31a4a762cf236e81e43">ilang::Instr</a>
 </li>
 <li>set_view()
 : <a class="el" href="classilang_1_1_instr.html#a797d88453c8368611a2ed36c8edf99a2">ilang::Instr</a>
@@ -192,13 +198,16 @@ $(function() {
 : <a class="el" href="classilang_1_1_signal_info_base.html#a919ea5db2aa3e8faed4212c681db1a7e">ilang::SignalInfoBase</a>
 </li>
 <li>SignalInfoPort()
-: <a class="el" href="classilang_1_1_signal_info_port.html#a291524c889e3e5527f275959b4696db0">ilang::SignalInfoPort</a>
+: <a class="el" href="classilang_1_1_signal_info_port.html#a1eb852d4621386f8ff31627b1370c5f4">ilang::SignalInfoPort</a>
 </li>
 <li>SignalInfoReg()
-: <a class="el" href="classilang_1_1_signal_info_reg.html#adcc49a4054365e1b3e8550c4c4d3f53d">ilang::SignalInfoReg</a>
+: <a class="el" href="classilang_1_1_signal_info_reg.html#abdacd2a5dc483faa2a3c9ee6811a482c">ilang::SignalInfoReg</a>
 </li>
 <li>SignalInfoWire()
-: <a class="el" href="classilang_1_1_signal_info_wire.html#a9eec43ba7a5c6b57a2d59d1a669cf1da">ilang::SignalInfoWire</a>
+: <a class="el" href="classilang_1_1_signal_info_wire.html#afe1c3b3fd1392eb7c358bbaca10a96c1">ilang::SignalInfoWire</a>
+</li>
+<li>sim_gen()
+: <a class="el" href="classilang_1_1_ila_sim.html#a7c601c620062c40f53e5fa2393320812">ilang::IlaSim</a>
 </li>
 <li>size()
 : <a class="el" href="classilang_1_1_key_vec.html#a52ae0309c452aeb2c223f7a7d52d17d6">ilang::KeyVec&lt; Key, T &gt;</a>
@@ -230,7 +239,7 @@ $(function() {
 </li>
 <li>state()
 : <a class="el" href="classilang_1_1_ila.html#a1b00fea38839636b56b001c0d617b300">ilang::Ila</a>
-, <a class="el" href="classilang_1_1_instr_lvl_abs.html#a96dea7d21e2f80dbbc9c4993d053c641">ilang::InstrLvlAbs</a>
+, <a class="el" href="classilang_1_1_instr_lvl_abs.html#a2d73f0fe6602b095a608327cefdd4476">ilang::InstrLvlAbs</a>
 </li>
 <li>state_num()
 : <a class="el" href="classilang_1_1_ila.html#a311c18856362d1baa0852072688f4ae0">ilang::Ila</a>
@@ -249,7 +258,7 @@ $(function() {
 : <a class="el" href="classilang_1_1_refinement_map.html#adc04e1195249f39144341d33d366044e">ilang::RefinementMap</a>
 </li>
 <li>Store()
-: <a class="el" href="classilang_1_1_expr_ref.html#aadf3615adc5d09341e88db3b172cde5a">ilang::ExprRef</a>
+: <a class="el" href="classilang_1_1_expr_ref.html#a0b147afffd1c0ba885951472b0697430">ilang::ExprRef</a>
 </li>
 <li>str()
 : <a class="el" href="classilang_1_1_bool_val.html#a98a6e4a4d7e449a47cb630327cf0b23a">ilang::BoolVal</a>
@@ -257,7 +266,7 @@ $(function() {
 , <a class="el" href="classilang_1_1_symbol.html#a268f38293a5538cb1da7dc7cc36a8940">ilang::Symbol</a>
 </li>
 <li>Symbol()
-: <a class="el" href="classilang_1_1_symbol.html#a022b68ff8c9d7be4b1480941c81f675d">ilang::Symbol</a>
+: <a class="el" href="classilang_1_1_symbol.html#aad108f719d4057fa5a4d6d1c3b2b34e3">ilang::Symbol</a>
 </li>
 <li>SynthAbsConverter()
 : <a class="el" href="classilang_1_1_synth_abs_converter.html#a47c1bf7554b365a74eb2bd5b371837cb">ilang::SynthAbsConverter</a>

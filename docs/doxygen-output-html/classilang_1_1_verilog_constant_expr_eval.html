@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.1</span>
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -65,6 +65,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
@@ -79,38 +80,50 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="verilog__const__parser_8h_source.html">verilog_const_parser.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a821e76ad3fa659758af3b17df7c4af1c"><td class="memItemLeft" align="right" valign="top"><a id="a821e76ad3fa659758af3b17df7c4af1c"></a>
+typedef std::pair&lt; ast_module_declaration *, ast_module_instantiation * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a821e76ad3fa659758af3b17df7c4af1c">param_hier_item_t</a></td></tr>
+<tr class="memdesc:a821e76ad3fa659758af3b17df7c4af1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">An item in the hierarchy. <br /></td></tr>
+<tr class="separator:a821e76ad3fa659758af3b17df7c4af1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98384478c8c5a16cbe56deb54ac0f737"><td class="memItemLeft" align="right" valign="top"><a id="a98384478c8c5a16cbe56deb54ac0f737"></a>
+typedef std::vector&lt; <a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a821e76ad3fa659758af3b17df7c4af1c">param_hier_item_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a98384478c8c5a16cbe56deb54ac0f737">param_def_hierarchy</a></td></tr>
+<tr class="memdesc:a98384478c8c5a16cbe56deb54ac0f737"><td class="mdescLeft">&#160;</td><td class="mdescRight">The hierarchy. <br /></td></tr>
+<tr class="separator:a98384478c8c5a16cbe56deb54ac0f737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c43d73650568845537ebe1ba1348855"><td class="memItemLeft" align="right" valign="top"><a id="a5c43d73650568845537ebe1ba1348855"></a>
+typedef std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a5c43d73650568845537ebe1ba1348855">named_parameter_dict_t</a></td></tr>
+<tr class="memdesc:a5c43d73650568845537ebe1ba1348855"><td class="mdescLeft">&#160;</td><td class="mdescRight">named parameter dictionary <br /></td></tr>
+<tr class="separator:a5c43d73650568845537ebe1ba1348855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2973621dc5b8790212c23fa246bc7a2f"><td class="memItemLeft" align="right" valign="top"><a id="a2973621dc5b8790212c23fa246bc7a2f"></a>
+typedef std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a2973621dc5b8790212c23fa246bc7a2f">ordered_parameter_dict_t</a></td></tr>
+<tr class="memdesc:a2973621dc5b8790212c23fa246bc7a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ordered paramater dictionary <br /></td></tr>
+<tr class="separator:a2973621dc5b8790212c23fa246bc7a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a43d4b3c8f5367dac6481d9a35e31b4e3"><td class="memItemLeft" align="right" valign="top"><a id="a43d4b3c8f5367dac6481d9a35e31b4e3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a43d4b3c8f5367dac6481d9a35e31b4e3">VerilogConstantExprEval</a> (ast_expression *e)</td></tr>
-<tr class="memdesc:a43d4b3c8f5367dac6481d9a35e31b4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">input : the string to evaluate <br /></td></tr>
-<tr class="separator:a43d4b3c8f5367dac6481d9a35e31b4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe7e102ebc457b49991373de747bfe90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#abe7e102ebc457b49991373de747bfe90">ParseCurrentModuleParameters</a> (ast_module_declaration *m)</td></tr>
-<tr class="separator:abe7e102ebc457b49991373de747bfe90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6be929158df51f9c059b2539cf0f044b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a6be929158df51f9c059b2539cf0f044b">Eval</a> ()</td></tr>
-<tr class="memdesc:a6be929158df51f9c059b2539cf0f044b"><td class="mdescLeft">&#160;</td><td class="mdescRight">parse a hierarchy  <a href="#a6be929158df51f9c059b2539cf0f044b">More...</a><br /></td></tr>
-<tr class="separator:a6be929158df51f9c059b2539cf0f044b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a944d826af3fef3f9c5d7dadf0e486898"><td class="memItemLeft" align="right" valign="top"><a id="a944d826af3fef3f9c5d7dadf0e486898"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a944d826af3fef3f9c5d7dadf0e486898">VerilogConstantExprEval</a> ()</td></tr>
+<tr class="memdesc:a944d826af3fef3f9c5d7dadf0e486898"><td class="mdescLeft">&#160;</td><td class="mdescRight">input : the string to evaluate <br /></td></tr>
+<tr class="separator:a944d826af3fef3f9c5d7dadf0e486898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb1f2093df8a844f98695ed1e977ed8d"><td class="memItemLeft" align="right" valign="top"><a id="adb1f2093df8a844f98695ed1e977ed8d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#adb1f2093df8a844f98695ed1e977ed8d">PopulateParameterDefByHierarchy</a> (const <a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a98384478c8c5a16cbe56deb54ac0f737">param_def_hierarchy</a> &amp;hier, ast_module_declaration *current_module)</td></tr>
+<tr class="memdesc:adb1f2093df8a844f98695ed1e977ed8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">parse a hierarchy <br /></td></tr>
+<tr class="separator:adb1f2093df8a844f98695ed1e977ed8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80a45d1bbbe165a63c50f2270041c286"><td class="memItemLeft" align="right" valign="top"><a id="a80a45d1bbbe165a63c50f2270041c286"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a80a45d1bbbe165a63c50f2270041c286">Eval</a> (ast_expression *_s)</td></tr>
+<tr class="memdesc:a80a45d1bbbe165a63c50f2270041c286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value. <br /></td></tr>
+<tr class="separator:a80a45d1bbbe165a63c50f2270041c286"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac0697f5d726482ca08394ea03c6f8009"><td class="memItemLeft" align="right" valign="top"><a id="ac0697f5d726482ca08394ea03c6f8009"></a>
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>_eval</b> (ast_expression *e)</td></tr>
-<tr class="separator:ac0697f5d726482ca08394ea03c6f8009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab76665c9b997ea3ea551a7968bd32ccc"><td class="memItemLeft" align="right" valign="top"><a id="ab76665c9b997ea3ea551a7968bd32ccc"></a>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>_eval</b> (ast_expression *e, const <a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a5c43d73650568845537ebe1ba1348855">named_parameter_dict_t</a> &amp;param_defs)</td></tr>
+<tr class="separator:ab76665c9b997ea3ea551a7968bd32ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a360fb47f12a4690d9a2e4807477a28d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a360fb47f12a4690d9a2e4807477a28d0">ParseCurrentModuleParameters</a> (ast_module_declaration *m, const <a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a5c43d73650568845537ebe1ba1348855">named_parameter_dict_t</a> &amp;named_parameter_override, const <a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a2973621dc5b8790212c23fa246bc7a2f">ordered_parameter_dict_t</a> &amp;ordered_parameter_override, <a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a5c43d73650568845537ebe1ba1348855">named_parameter_dict_t</a> &amp;output_parameter_dict)</td></tr>
+<tr class="separator:a360fb47f12a4690d9a2e4807477a28d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ac738ac7f96a4eb5a5a2758ef488476ca"><td class="memItemLeft" align="right" valign="top"><a id="ac738ac7f96a4eb5a5a2758ef488476ca"></a>
-ast_expression *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#ac738ac7f96a4eb5a5a2758ef488476ca">eval_expr</a></td></tr>
-<tr class="memdesc:ac738ac7f96a4eb5a5a2758ef488476ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">the given expression <br /></td></tr>
-<tr class="separator:ac738ac7f96a4eb5a5a2758ef488476ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf7b2acdea68575f3167c8f298c645b5"><td class="memItemLeft" align="right" valign="top"><a id="aaf7b2acdea68575f3167c8f298c645b5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#aaf7b2acdea68575f3167c8f298c645b5">evaluated</a></td></tr>
-<tr class="memdesc:aaf7b2acdea68575f3167c8f298c645b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether it has been evaluated or not <br /></td></tr>
-<tr class="separator:aaf7b2acdea68575f3167c8f298c645b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fb72ee4b7dcd0ac8a735339fa317203"><td class="memItemLeft" align="right" valign="top"><a id="a5fb72ee4b7dcd0ac8a735339fa317203"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a5fb72ee4b7dcd0ac8a735339fa317203">cached_value</a></td></tr>
-<tr class="memdesc:a5fb72ee4b7dcd0ac8a735339fa317203"><td class="mdescLeft">&#160;</td><td class="mdescRight">if it has been evaluated store the value here <br /></td></tr>
-<tr class="separator:a5fb72ee4b7dcd0ac8a735339fa317203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad6cd7b9caa66942d4a0a46b4c9e3114"><td class="memItemLeft" align="right" valign="top"><a id="aad6cd7b9caa66942d4a0a46b4c9e3114"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#aad6cd7b9caa66942d4a0a46b4c9e3114">eval_error</a></td></tr>
 <tr class="memdesc:aad6cd7b9caa66942d4a0a46b4c9e3114"><td class="mdescLeft">&#160;</td><td class="mdescRight">record if there was an error in eval <br /></td></tr>
@@ -119,48 +132,58 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#abb8e6b45bd77ed1d4cb897158fa6211c">error_str</a></td></tr>
 <tr class="memdesc:abb8e6b45bd77ed1d4cb897158fa6211c"><td class="mdescLeft">&#160;</td><td class="mdescRight">record the errorneous part: <br /></td></tr>
 <tr class="separator:abb8e6b45bd77ed1d4cb897158fa6211c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad04ac98aea36b3ab4c6e4cbddef7925a"><td class="memItemLeft" align="right" valign="top"><a id="ad04ac98aea36b3ab4c6e4cbddef7925a"></a>
-std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#ad04ac98aea36b3ab4c6e4cbddef7925a">param_defs</a></td></tr>
-<tr class="memdesc:ad04ac98aea36b3ab4c6e4cbddef7925a"><td class="mdescLeft">&#160;</td><td class="mdescRight">to record the variable binding <br /></td></tr>
-<tr class="separator:ad04ac98aea36b3ab4c6e4cbddef7925a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78873d0b5aba5edb5b9057d85eb08626"><td class="memItemLeft" align="right" valign="top"><a id="a78873d0b5aba5edb5b9057d85eb08626"></a>
+<a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a5c43d73650568845537ebe1ba1348855">named_parameter_dict_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a78873d0b5aba5edb5b9057d85eb08626">current_module_param_defs</a></td></tr>
+<tr class="memdesc:a78873d0b5aba5edb5b9057d85eb08626"><td class="mdescLeft">&#160;</td><td class="mdescRight">to record the variable binding in the current module <br /></td></tr>
+<tr class="separator:a78873d0b5aba5edb5b9057d85eb08626"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The class to convert a constant expr to an integer number. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6be929158df51f9c059b2539cf0f044b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6be929158df51f9c059b2539cf0f044b">&#9670;&nbsp;</a></span>Eval()</h2>
+<a id="a360fb47f12a4690d9a2e4807477a28d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a360fb47f12a4690d9a2e4807477a28d0">&#9670;&nbsp;</a></span>ParseCurrentModuleParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double ilang::VerilogConstantExprEval::Eval </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>parse a hierarchy </p>
-<p>Get the value </p>
-
-</div>
-</div>
-<a id="abe7e102ebc457b49991373de747bfe90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe7e102ebc457b49991373de747bfe90">&#9670;&nbsp;</a></span>ParseCurrentModuleParameters()</h2>
-
-<div class="memitem">
-<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ilang::VerilogConstantExprEval::ParseCurrentModuleParameters </td>
           <td>(</td>
           <td class="paramtype">ast_module_declaration *&#160;</td>
-          <td class="paramname"><em>m</em></td><td>)</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a5c43d73650568845537ebe1ba1348855">named_parameter_dict_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>named_parameter_override</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a2973621dc5b8790212c23fa246bc7a2f">ordered_parameter_dict_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>ordered_parameter_override</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a5c43d73650568845537ebe1ba1348855">named_parameter_dict_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>output_parameter_dict</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>parse only the current module's parameter definitions, will update param_defs </p>
 

@@ -52,6 +52,7 @@ var searchData=
   ['all_5fvalid_5fnames',['all_valid_names',['../classilang_1_1_verilog_generator_base.html#ad2d8cd65f64a0f5e951bec780460fb99',1,'ilang::VerilogGeneratorBase']]],
   ['always_5fstmts',['always_stmts',['../classilang_1_1_verilog_generator_base.html#ad9e8de23a2e817991aab0188f5f6c100',1,'ilang::VerilogGeneratorBase']]],
   ['and',['And',['../expr__fuse_8h.html#a31779a9735a114e221718cff90fc4483',1,'ilang::ExprFuse::And(const ExprPtr l, const ExprPtr r)'],['../expr__fuse_8h.html#a964c27874e53334ec86140fea608dac1',1,'ilang::ExprFuse::And(const ExprPtr l, const bool &amp;r)']]],
+  ['annotatememory',['AnnotateMemory',['../classilang_1_1_verilog_generator_base.html#a8b20c6644379d2180d47dfcced362562',1,'ilang::VerilogGeneratorBase']]],
   ['append',['Append',['../classilang_1_1_expr_ref.html#af4a6672462b5d6a69757ef3041e22182',1,'ilang::ExprRef']]],
   ['appfunc',['AppFunc',['../expr__fuse_8h.html#a59f21d9c6a2e23d611a0ed0c22581ad5',1,'ilang::ExprFuse::AppFunc(const FuncPtr func)'],['../expr__fuse_8h.html#a4ca0df8d0795852ae53dbed5d41ef235',1,'ilang::ExprFuse::AppFunc(const FuncPtr func, const ExprPtr arg0)'],['../expr__fuse_8h.html#a64c79ab60f4db36755c386add4242300',1,'ilang::ExprFuse::AppFunc(const FuncPtr func, const ExprPtr arg0, const ExprPtr arg1)'],['../expr__fuse_8h.html#af25fb73283f531194f7794daa8466bb9',1,'ilang::ExprFuse::AppFunc(const FuncPtr func, const ExprPtrVec &amp;args)']]],
   ['appl',['appl',['../classilang_1_1_refinement_map.html#aeb5a18fcf44126369725c7ba31e1d201',1,'ilang::RefinementMap']]],

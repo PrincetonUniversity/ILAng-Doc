@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ilang: ila_py_api.h File Reference</title>
+<title>ilang: validate_model.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.1</span>
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -60,43 +60,47 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_45e3ea34f8a3d0f10d903c0d85b95d4a.html">ilang</a></li><li class="navelem"><a class="el" href="dir_4c78af9401c87cfe6d33f1cdefcb8a67.html">python-api</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_45e3ea34f8a3d0f10d903c0d85b95d4a.html">ilang</a></li><li class="navelem"><a class="el" href="dir_7154c0ac8c82aa8eda5701dc9f723097.html">ila</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">ila_py_api.h File Reference</div>  </div>
+<div class="title">validate_model.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;boost/python.hpp&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="instr__lvl__abs_8h_source.html">ilang/ila/instr_lvl_abs.h</a>&gt;</code><br />
 </div>
-<p><a href="ila__py__api_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="validate__model_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceilang"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html">ilang</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a2e20af889c24c84475198e2db9937cf7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a2e20af889c24c84475198e2db9937cf7">ilang::DEFAULT_UPDATE_METHOD</a> { <b>OLD_VALUE</b> = 0, 
+<b>NONDET_VALUE</b> = 1
+ }</td></tr>
+<tr class="separator:a2e20af889c24c84475198e2db9937cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5434f17d745b07fcb017e64a013388e6"><td class="memItemLeft" align="right" valign="top"><a id="a5434f17d745b07fcb017e64a013388e6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ilang::pyapi::export_log</b> ()</td></tr>
-<tr class="separator:a5434f17d745b07fcb017e64a013388e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72e0b3f6da4100cd3f1b8303c20f573e"><td class="memItemLeft" align="right" valign="top"><a id="a72e0b3f6da4100cd3f1b8303c20f573e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ilang::pyapi::export_expr</b> ()</td></tr>
-<tr class="separator:a72e0b3f6da4100cd3f1b8303c20f573e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94db7d9304e1b6e75c17b80d79214ffe"><td class="memItemLeft" align="right" valign="top"><a id="a94db7d9304e1b6e75c17b80d79214ffe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ilang::pyapi::export_instr</b> ()</td></tr>
-<tr class="separator:a94db7d9304e1b6e75c17b80d79214ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fb0723378e1e7d1b8145e504d257adf"><td class="memItemLeft" align="right" valign="top"><a id="a5fb0723378e1e7d1b8145e504d257adf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ilang::pyapi::export_instr_lvl_abs</b> ()</td></tr>
-<tr class="separator:a5fb0723378e1e7d1b8145e504d257adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eed520a7d8e159cf7188680647cede3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a7eed520a7d8e159cf7188680647cede3">ilang::CheckDeterminism</a> (const InstrLvlAbsPtr &amp;model_ptr_)</td></tr>
+<tr class="separator:a7eed520a7d8e159cf7188680647cede3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388d56a6951f3e383bcdf0e39a672720"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a388d56a6951f3e383bcdf0e39a672720">ilang::CheckCompleteness</a> (const InstrLvlAbsPtr &amp;model_ptr_)</td></tr>
+<tr class="separator:a388d56a6951f3e383bcdf0e39a672720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafbb2022a842f23f36ef624986ea61bd"><td class="memItemLeft" align="right" valign="top"><a id="aafbb2022a842f23f36ef624986ea61bd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#aafbb2022a842f23f36ef624986ea61bd">ilang::CompleteModel</a> (const InstrLvlAbsPtr &amp;model_ptr_, DEFAULT_UPDATE_METHOD dum)</td></tr>
+<tr class="memdesc:aafbb2022a842f23f36ef624986ea61bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use a default update method to complete model. <br /></td></tr>
+<tr class="separator:aafbb2022a842f23f36ef624986ea61bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header for Python API &ndash; top level for all tools </p>
+<div class="textblock"><p>Header for validating/completing fuctions to ILA models </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

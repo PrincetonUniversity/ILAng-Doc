@@ -1,12 +1,15 @@
 var searchData=
 [
   ['c_5fstr',['c_str',['../classilang_1_1_symbol.html#a9c031209ed040a6dad1da0530186172d',1,'ilang::Symbol']]],
-  ['cached_5fvalue',['cached_value',['../classilang_1_1_verilog_constant_expr_eval.html#a5fb72ee4b7dcd0ac8a735339fa317203',1,'ilang::VerilogConstantExprEval']]],
   ['cfg_5f',['cfg_',['../classilang_1_1_verilog_generator_base.html#a7ee9ccdc6817719d27169fd1a5482186',1,'ilang::VerilogGeneratorBase']]],
   ['check',['Check',['../classilang_1_1_instr_lvl_abs.html#a888c4e60c93c65ee3a711dde7be6af61',1,'ilang::InstrLvlAbs::Check()'],['../classilang_1_1_legacy_bmc.html#af52a74ba7df5fe3b7bc3d3c0a9b82789',1,'ilang::LegacyBmc::Check()']]],
   ['check_5fhierarchical_5fname_5ftype',['check_hierarchical_name_type',['../classilang_1_1_verilog_analyzer.html#a4cbf352e4975607e78d18a1cdef98ee4',1,'ilang::VerilogAnalyzer::check_hierarchical_name_type()'],['../classilang_1_1_verilog_info.html#a9e80e602854595c1fe2ee5ab17b79241',1,'ilang::VerilogInfo::check_hierarchical_name_type()']]],
   ['check_5freserved_5fname',['check_reserved_name',['../classilang_1_1_verilog_generator_base.html#a0e3c9b3920ff186f3971eaba429abe2d',1,'ilang::VerilogGeneratorBase']]],
   ['check_5fresolve_5fmodules',['check_resolve_modules',['../classilang_1_1_verilog_analyzer.html#af292546fa5521fcb6c62fbee7fcfc601',1,'ilang::VerilogAnalyzer']]],
+  ['checkcompleteness',['CheckCompleteness',['../namespaceilang.html#a388d56a6951f3e383bcdf0e39a672720',1,'ilang']]],
+  ['checkdeterminism',['CheckDeterminism',['../namespaceilang.html#a7eed520a7d8e159cf7188680647cede3',1,'ilang']]],
+  ['checkeqsamearch',['CheckEqSameArch',['../namespaceilang.html#a41ee876398e1809694900f2555cd6ad9',1,'ilang']]],
+  ['checkeqsamemicroarch',['CheckEqSameMicroArch',['../namespaceilang.html#a656b2f08edc6fdf198af1ac54756b6ca',1,'ilang']]],
   ['checksat',['CheckSat',['../classilang_1_1_inter_ila_unroller.html#a4916b8b8859c4c9d7f8880c59520ea5b',1,'ilang::InterIlaUnroller']]],
   ['checksort',['CheckSort',['../classilang_1_1_func.html#a185ffddce2b7275341557fc895a77b35',1,'ilang::Func']]],
   ['checkthisinstructiononly',['CheckThisInstructionOnly',['../structilang_1_1_vlg_verif_tgt_gen_base_1_1__vtg__config.html#a8bd73346cef4f2b743de30c8d6876a82',1,'ilang::VlgVerifTgtGenBase::_vtg_config']]],
@@ -28,6 +31,7 @@ var searchData=
   ['commdiag',['CommDiag',['../classilang_1_1_comm_diag.html',1,'ilang::CommDiag'],['../classilang_1_1_comm_diag.html#ae4a2740c66b7832bb22aec6744f3df2f',1,'ilang::CommDiag::CommDiag()']]],
   ['comp_5fref_5frel_2eh',['comp_ref_rel.h',['../comp__ref__rel_8h.html',1,'']]],
   ['complement',['Complement',['../expr__fuse_8h.html#a8c865a17197d9cc0c74f8149507232df',1,'ilang::ExprFuse']]],
+  ['completemodel',['CompleteModel',['../namespaceilang.html#aafbb2022a842f23f36ef624986ea61bd',1,'ilang']]],
   ['comprefrel',['CompRefRel',['../classilang_1_1_comp_ref_rel.html',1,'ilang::CompRefRel'],['../classilang_1_1_comp_ref_rel.html#add50e0ba6aadbb0e4ca7709731eff927',1,'ilang::CompRefRel::CompRefRel()']]],
   ['concat',['Concat',['../expr__fuse_8h.html#aaeae787e25f58136ba241db78b13ace9',1,'ilang::ExprFuse::Concat()'],['../namespaceilang.html#aa74b423140c9b8a60e1bac56e90ba175',1,'ilang::Concat()']]],
   ['concrete_5flevel',['concrete_level',['../structilang_1_1_vlg_abs_mem.html#a582ae85da2482cc0bea25a37e52bfc7d',1,'ilang::VlgAbsMem']]],
@@ -76,6 +80,7 @@ var searchData=
   ['cstr_5f',['cstr_',['../classilang_1_1_inter_ila_unroller.html#a19040211712fa2f0584ce55f950aed29',1,'ilang::InterIlaUnroller']]],
   ['ctx',['ctx',['../classilang_1_1_trace_step.html#afcab3e7a5ce7b619dd445882a9846c93',1,'ilang::TraceStep::ctx()'],['../classilang_1_1_memory_model.html#af2ca71c0d173e7cb5502d05a2e4cf24c',1,'ilang::MemoryModel::ctx()']]],
   ['currconstrsat',['CurrConstrSat',['../classilang_1_1_inter_ila_unroller.html#aed907c324b08115a75807052e25b3bb9',1,'ilang::InterIlaUnroller']]],
+  ['current_5fmodule_5fparam_5fdefs',['current_module_param_defs',['../classilang_1_1_verilog_constant_expr_eval.html#a78873d0b5aba5edb5b9057d85eb08626',1,'ilang::VerilogConstantExprEval']]],
   ['current_5fwrites',['current_writes',['../classilang_1_1_verilog_generator_base.html#a7ef52746089e42ccd3ba65586a9285b4',1,'ilang::VerilogGeneratorBase']]],
   ['currstate',['CurrState',['../classilang_1_1_ila_z3_unroller.html#a8cecc83a1af405fbcba8c1df5995a5a9',1,'ilang::IlaZ3Unroller::CurrState()'],['../classilang_1_1_unroller.html#a4e96f5740ade5b06e715a5e19b21f049',1,'ilang::Unroller::CurrState()']]]
 ];

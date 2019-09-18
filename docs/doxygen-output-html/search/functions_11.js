@@ -15,7 +15,6 @@ var searchData=
   ['registersteps',['RegisterSteps',['../classilang_1_1_memory_model.html#acfdedf33eba608ee30582dc0eeb81d4e',1,'ilang::MemoryModel::RegisterSteps()'],['../classilang_1_1_sc.html#ac3f3a91b32deeed529625a7e5ad9fef6',1,'ilang::Sc::RegisterSteps()'],['../classilang_1_1_tso.html#a79354c755bdb91f4ad9a054116c4b242',1,'ilang::Tso::RegisterSteps()']]],
   ['relation',['relation',['../classilang_1_1_comp_ref_rel.html#a0cadd43385d0ce35c3744aeb996c9782',1,'ilang::CompRefRel']]],
   ['relationmap',['RelationMap',['../classilang_1_1_relation_map.html#ac11eda6555d38a1174843413ea7bf133',1,'ilang::RelationMap']]],
-  ['rem',['Rem',['../expr__fuse_8h.html#aa2bc7be97a3be60783caaf8a2d976601',1,'ilang::ExprFuse']]],
   ['replace',['Replace',['../classilang_1_1_var_extractor.html#a09087af33c4b7f40059b83b4e63d4e6a',1,'ilang::VarExtractor']]],
   ['replace_5farg',['replace_arg',['../classilang_1_1_expr.html#a8381c199449b5f0b2fad610360ba8bc3',1,'ilang::Expr::replace_arg(const int &amp;idx, const ExprPtr arg)'],['../classilang_1_1_expr.html#a00c141f79e644f44e4ea0e54811821e3',1,'ilang::Expr::replace_arg(const ExprPtr a, const ExprPtr b)']]],
   ['replaceall',['ReplaceAll',['../namespaceilang.html#a7edef00da62caf959c84b6cff88b035d',1,'ilang']]],
@@ -24,5 +23,6 @@ var searchData=
   ['restore',['Restore',['../classilang_1_1_host_remove_restore.html#a91a45a5e32fd89096d1425d5795b29a2',1,'ilang::HostRemoveRestore']]],
   ['restoreall',['RestoreAll',['../classilang_1_1_host_remove_restore.html#ae290c429c0d73072f09eb301f90dd7cc',1,'ilang::HostRemoveRestore']]],
   ['rewrite',['Rewrite',['../classilang_1_1_abs_knob.html#a6668c30b9010fe929b24fcadb9232493',1,'ilang::AbsKnob']]],
-  ['rewriteinstr',['RewriteInstr',['../classilang_1_1_abs_knob.html#aff155ca74f7cecc47b02c54c8e5c5a49',1,'ilang::AbsKnob']]]
+  ['rewriteinstr',['RewriteInstr',['../classilang_1_1_abs_knob.html#aff155ca74f7cecc47b02c54c8e5c5a49',1,'ilang::AbsKnob']]],
+  ['rrotate',['RRotate',['../expr__fuse_8h.html#a2cad892092712239a0b58960e9bbcb21',1,'ilang::ExprFuse::RRotate()'],['../namespaceilang.html#abd95e8beb244056395bb6f24dca2173b',1,'ilang::RRotate()']]]
 ];

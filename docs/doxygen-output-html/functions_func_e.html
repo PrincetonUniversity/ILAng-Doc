@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.1</span>
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -85,7 +85,7 @@ $(function() {
 , <a class="el" href="classilang_1_1_unroller.html#a313471de6639a1f277d38f51a3df3470">ilang::Unroller</a>
 </li>
 <li>Eval()
-: <a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a6be929158df51f9c059b2539cf0f044b">ilang::VerilogConstantExprEval</a>
+: <a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a80a45d1bbbe165a63c50f2270041c286">ilang::VerilogConstantExprEval</a>
 </li>
 <li>Export_ila_vlg()
 : <a class="el" href="classilang_1_1_vlg_sgl_tgt_gen.html#a917eddbba611d563209b16cd4cbdc2d9">ilang::VlgSglTgtGen</a>
@@ -145,7 +145,7 @@ $(function() {
 : <a class="el" href="classilang_1_1_expr_mngr.html#a26b8d898425956cc09c989a7dd166799">ilang::ExprMngr</a>
 </li>
 <li>ExprOp()
-: <a class="el" href="classilang_1_1_expr_op.html#a65a7be5afed3ff5825c5d37e565564d2">ilang::ExprOp</a>
+: <a class="el" href="classilang_1_1_expr_op.html#af6527ce8fb830580d7fd9741e18fe246">ilang::ExprOp</a>
 </li>
 <li>ExprOpAdd()
 : <a class="el" href="classilang_1_1_expr_op_add.html#af6d91ca8cb832a40a102db5b83a4456f">ilang::ExprOpAdd</a>
@@ -165,6 +165,9 @@ $(function() {
 <li>ExprOpConcat()
 : <a class="el" href="classilang_1_1_expr_op_concat.html#a8ef3638ac5325378267d288fec101cc4">ilang::ExprOpConcat</a>
 </li>
+<li>ExprOpDiv()
+: <a class="el" href="classilang_1_1_expr_op_div.html#a220428ecee56cb6e598afb0f18eb5c6b">ilang::ExprOpDiv</a>
+</li>
 <li>ExprOpEq()
 : <a class="el" href="classilang_1_1_expr_op_eq.html#a787a23e64e9f2f4ecf89f7e73ef26b7d">ilang::ExprOpEq</a>
 </li>
@@ -182,6 +185,9 @@ $(function() {
 </li>
 <li>ExprOpLoad()
 : <a class="el" href="classilang_1_1_expr_op_load.html#ac7498e494eb3d11568e8ff2a7d3fc1ff">ilang::ExprOpLoad</a>
+</li>
+<li>ExprOpLRotate()
+: <a class="el" href="classilang_1_1_expr_op_l_rotate.html#afc0dd656756fceea08d21645bc75ec2a">ilang::ExprOpLRotate</a>
 </li>
 <li>ExprOpLshr()
 : <a class="el" href="classilang_1_1_expr_op_lshr.html#a154a59a604aac2806ceaba6705a6df7a">ilang::ExprOpLshr</a>
@@ -201,11 +207,20 @@ $(function() {
 <li>ExprOpOr()
 : <a class="el" href="classilang_1_1_expr_op_or.html#ae37fc999c6e5e571326b8596925f13df">ilang::ExprOpOr</a>
 </li>
+<li>ExprOpRRotate()
+: <a class="el" href="classilang_1_1_expr_op_r_rotate.html#a9ab23c7bd2da7ee36820bb747b4b18cc">ilang::ExprOpRRotate</a>
+</li>
 <li>ExprOpSExt()
 : <a class="el" href="classilang_1_1_expr_op_s_ext.html#ad293dd01d21c5406e73e47bdf4f195e2">ilang::ExprOpSExt</a>
 </li>
 <li>ExprOpShl()
 : <a class="el" href="classilang_1_1_expr_op_shl.html#a85a0e2552bc2f503a9d3c6f4aadc6f0b">ilang::ExprOpShl</a>
+</li>
+<li>ExprOpSMod()
+: <a class="el" href="classilang_1_1_expr_op_s_mod.html#a7df31f985c9cf7e6192271b157522519">ilang::ExprOpSMod</a>
+</li>
+<li>ExprOpSRem()
+: <a class="el" href="classilang_1_1_expr_op_s_rem.html#aec8beb212ebac9c6218ea2eae0fc07e3">ilang::ExprOpSRem</a>
 </li>
 <li>ExprOpStore()
 : <a class="el" href="classilang_1_1_expr_op_store.html#a5c92ad69283a8dd304b9e56d6ae31444">ilang::ExprOpStore</a>
@@ -219,6 +234,9 @@ $(function() {
 <li>ExprOpUlt()
 : <a class="el" href="classilang_1_1_expr_op_ult.html#af85c43f8a1b8788150b2515b3a8baa77">ilang::ExprOpUlt</a>
 </li>
+<li>ExprOpURem()
+: <a class="el" href="classilang_1_1_expr_op_u_rem.html#a509222c96518cb14cfe6f7d756260543">ilang::ExprOpURem</a>
+</li>
 <li>ExprOpXor()
 : <a class="el" href="classilang_1_1_expr_op_xor.html#acb3b6aff53d074b40c728cd67e4087ab">ilang::ExprOpXor</a>
 </li>
@@ -229,10 +247,7 @@ $(function() {
 : <a class="el" href="classilang_1_1_expr_ref.html#a6068122aa0b9dc8f187082fc581aa79e">ilang::ExprRef</a>
 </li>
 <li>ExprVar()
-: <a class="el" href="classilang_1_1_expr_var.html#a132f0c6aac806b8d279734d0ce1307a7">ilang::ExprVar</a>
-</li>
-<li>ExprWrap()
-: <a class="el" href="classilang_1_1pyapi_1_1_expr_wrap.html#ae2b66bde38b44b6bc4010ef5d0e3b7f7">ilang::pyapi::ExprWrap</a>
+: <a class="el" href="classilang_1_1_expr_var.html#ad1c8cb733c7182f66caa94514b690611">ilang::ExprVar</a>
 </li>
 <li>ExtrDeptModl()
 : <a class="el" href="classilang_1_1_abs_knob.html#a58b7509a2ccf2c515d3cdf5dab95888f">ilang::AbsKnob</a>

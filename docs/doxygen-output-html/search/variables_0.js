@@ -43,6 +43,7 @@ var searchData=
   ['_5ftokens',['_tokens',['../classilang_1_1_var_extractor.html#a02ac1d5f8269c20cbb99984c9e7e2c5b',1,'ilang::VarExtractor']]],
   ['_5ftype',['_type',['../classilang_1_1_trace_step.html#a73261de8f31c1a25ca303e9fe5b50eb4',1,'ilang::TraceStep::_type()'],['../classilang_1_1_signal_info_base.html#abca9622672314cf6d0783aa7ee3971a9',1,'ilang::SignalInfoBase::_type()']]],
   ['_5fvext',['_vext',['../classilang_1_1_vlg_sgl_tgt_gen.html#a76b385c90d1d8350248247955b5f96d5',1,'ilang::VlgSglTgtGen']]],
+  ['_5fvlg_5fcfg',['_vlg_cfg',['../classilang_1_1_vlg_sgl_tgt_gen.html#a411073700c1d410cdcd592210e6e1e38',1,'ilang::VlgSglTgtGen']]],
   ['_5fvlg_5fimpl_5finclude_5fpath',['_vlg_impl_include_path',['../classilang_1_1_vlg_verif_tgt_gen.html#a0d97036926b94c0556a3b6685a93d2ae',1,'ilang::VlgVerifTgtGen']]],
   ['_5fvlg_5fimpl_5fsrcs',['_vlg_impl_srcs',['../classilang_1_1_vlg_verif_tgt_gen.html#aef769c3231f52a80839b29114f3f0c14',1,'ilang::VlgVerifTgtGen']]],
   ['_5fvlg_5fimpl_5ftop_5fname',['_vlg_impl_top_name',['../classilang_1_1_vlg_verif_tgt_gen.html#aa953de26971bc5bff5f25dd59ba32013',1,'ilang::VlgVerifTgtGen']]],

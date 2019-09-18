@@ -16,6 +16,7 @@ var searchData=
   ['vlgsgltgtgen',['VlgSglTgtGen',['../classilang_1_1_vlg_sgl_tgt_gen.html',1,'ilang']]],
   ['vlgsgltgtgen_5fcosa',['VlgSglTgtGen_Cosa',['../classilang_1_1_vlg_sgl_tgt_gen___cosa.html',1,'ilang']]],
   ['vlgsgltgtgen_5fjasper',['VlgSglTgtGen_Jasper',['../classilang_1_1_vlg_sgl_tgt_gen___jasper.html',1,'ilang']]],
+  ['vlgtgtsupplementaryinfo',['VlgTgtSupplementaryInfo',['../structilang_1_1_vlg_tgt_supplementary_info.html',1,'ilang']]],
   ['vlgveriftgtgen',['VlgVerifTgtGen',['../classilang_1_1_vlg_verif_tgt_gen.html',1,'ilang']]],
   ['vlgveriftgtgenbase',['VlgVerifTgtGenBase',['../classilang_1_1_vlg_verif_tgt_gen_base.html',1,'ilang']]]
 ];

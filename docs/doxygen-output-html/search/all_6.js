@@ -24,6 +24,7 @@ var searchData=
   ['forcesetdecode',['ForceSetDecode',['../classilang_1_1_instr.html#a6874338250ece9d9a2c307ff38c732df',1,'ilang::Instr']]],
   ['foreachtokenreplace',['ForEachTokenReplace',['../classilang_1_1_var_extractor.html#affe27bed1edb54dc8ceddce84dae4905',1,'ilang::VarExtractor']]],
   ['format_5fstr',['format_str',['../classilang_1_1_symbol.html#afcddff50b929dbaeac4a5a91a582997e',1,'ilang::Symbol']]],
+  ['fromjson',['FromJson',['../structilang_1_1_vlg_tgt_supplementary_info.html#a78d60e55f31fda307e88579578f6aae4',1,'ilang::VlgTgtSupplementaryInfo']]],
   ['func',['Func',['../classilang_1_1_func.html',1,'ilang::Func'],['../classilang_1_1_func.html#a68120449566b97422d856a045e376d5c',1,'ilang::Func::Func()']]],
   ['func_2eh',['func.h',['../func_8h.html',1,'']]],
   ['func_5fapp_5fcnt_5ft',['func_app_cnt_t',['../classilang_1_1_vlg_sgl_tgt_gen.html#ae72ed1f0d28acbfdfa20c61162742b2d',1,'ilang::VlgSglTgtGen']]],

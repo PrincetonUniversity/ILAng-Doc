@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ready_5ftype_5ft',['ready_type_t',['../classilang_1_1_vlg_sgl_tgt_gen.html#a9b002a2f0ce9f150e9f13bc16696e20e',1,'ilang::VlgSglTgtGen']]]
+  ['port_5fdecl_5fstyle_5ft',['port_decl_style_t',['../classilang_1_1_verilog_modifier.html#a218488747a1334039416a460648069be',1,'ilang::VerilogModifier']]]
 ];

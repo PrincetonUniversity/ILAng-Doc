@@ -6,5 +6,6 @@ var searchData=
   ['start_5fsignal',['start_signal',['../structilang_1_1_verilog_generator_base_1_1_vlg_gen_config.html#acb5d2d3d4601548fdb7886dfe97ba57b',1,'ilang::VerilogGeneratorBase::VlgGenConfig']]],
   ['startname',['startName',['../classilang_1_1_verilog_generator_base.html#a53d4242a4e9da84e4d3812e154f0d7e7',1,'ilang::VerilogGeneratorBase']]],
   ['statements',['statements',['../classilang_1_1_verilog_generator_base.html#ace74859e342301d96cf8c20088f678fd',1,'ilang::VerilogGeneratorBase']]],
+  ['supplementary_5finfo',['supplementary_info',['../classilang_1_1_vlg_sgl_tgt_gen.html#afe045943af83209d85fa399980b6db47',1,'ilang::VlgSglTgtGen::supplementary_info()'],['../classilang_1_1_vlg_verif_tgt_gen.html#a4f0f0d2617e5fc73a2121544622fc12c',1,'ilang::VlgVerifTgtGen::supplementary_info()']]],
   ['sys_5fila_5f',['sys_ila_',['../classilang_1_1_inter_ila_unroller.html#a3e35f38a342c994afe43edc13ed77bd5',1,'ilang::InterIlaUnroller']]]
 ];
