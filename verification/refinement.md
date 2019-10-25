@@ -90,42 +90,6 @@ Below are some of the examples:
 }
 ```
 
-The corresponding generated assumptions will be in the following form:
-```verilog
-wire __m10__ = Verilog_state_1 == __ILA_SO_ILA_state_1 ;
-wire variable_map_assume___p1__ILA_state_1 = (~ __START__) || (__m10__) ;  // __START__ --> Verilog_state_1 == __ILA_SO_ILA_state_1
-
-wire __m12__ = Verilog_state_2 + Verilog_state_3 == ILA_state_2 ;
-wire variable_map_assume___p3__ILA_state_2 = (~ __START__) || (__m12__) ;
-
-wire __m14__ = (~ __START__ ) ||  ( Verilog_state_3 == ILA_state_3 ) ;
-wire variable_map_assume___p5__ILA_state_3 = (~ __START__) || (__m14__) ;
-
-wire __m16__ = (~ __START__ ) ||  ( Verilog_state_4 == ILA_state_4 ) ;
-wire variable_map_assume___p7__ILA_state_4 = (~ __START__) || (__m16__) ;
-
-wire __m18__ = ( (~ __START__ ) ||  ( Verilog_state_5 == ILA_state_5 ) ) && ( ~( ~__START__ && __IEND__ ) ||  Verilog_state_6 == ILA_state_5 ) ; // __START__ --> match1 && (~__START__ && __IEND__) --> match2
-wire variable_map_assume___p9__ILA_state_5 = (~ __START__) || (__m18__) ;
-```
-
-and the assertions:
-```verilog
-wire __m0__ = Verilog_state_1 == __ILA_SO_ILA_state_1 ;
-wire variable_map_assert___p1__ILA_state_1 = (~ __IEND__) || (__m0__) ;  // IEND --> Verilog_state_1 == __ILA_SO_ILA_state_1
-
-wire __m2__ = Verilog_state_2 + Verilog_state_3 == ILA_state_2 ;
-wire variable_map_assert___p3__ILA_state_2 = (~ __IEND__) || (__m2__) ;
-
-wire __m4__ = (~ __START__ ) ||  ( Verilog_state_3 == ILA_state_3 ) ;
-wire variable_map_assert___p5__ILA_state_3 = (~ __IEND__) || (__m4__) ;
-
-wire __m6__ = (~ __START__ ) ||  ( Verilog_state_4 == ILA_state_4 ) ;
-wire variable_map_assert___p7__ILA_state_4 = (~ __IEND__) || (__m6__) ;
-
-wire __m8__ = ( (~ __START__ ) ||  ( Verilog_state_5 == ILA_state_5 ) ) && ( ~( ~__START__ && __IEND__ ) ||  Verilog_state_6 == ILA_state_5 ) ; // __START__ --> match1 && (~__START__ && __IEND__) --> match2
-wire variable_map_assert___p9__ILA_state_5 = (~ __IEND__) || (__m8__) ;
-```
-
 One note in the above example: the condition can refer to special signals \(`__START__` and `__IEND__`\), which are the condition when the instruction-under-verification starts to execute and finishes.
 
 ## Instruction Completion Condition
@@ -155,16 +119,6 @@ The Verilog module comes with a set of I/O signals and the tool needs to know ho
 * `**RESET**` or `**NRESET**` directive. Indicating that this signal is the reset signal, active-high or active-low \(we assume synchronous reset\).
 * `**CLOCK**` directive, indicating that this is the clock signal.
 * `**MEM**name.signal` directive, indicating this signal is the connection to an external/shared memory. The name part should be the ILA state variable name of the memory, and the signal part could be one of the following: `wdata`,`rdata`, `waddr`,`raddr`, `wen`, `ren`. If the signal does not directly correspond to the write/read data, write/read address, write/read enable signal, it should be specified as `**KEEP**`, you can specify the mapping using the additional assumptions.
-
-For example, for a Verilog input signal `control`, the effects of applying different directives are:
-
-  * An ILA input name, e.g., `c1`. The tool will check if ILA indeed has the input `c1` and the type is matched. The wire `__ILA_I_c1` will be created and will be connected to the input port `control`.
-  *  `**KEEP**` directive. The tool will check if the signal is input or output and create an input/output wire named `__VLG_I_control` with the proper width and connect to the port.
-  * `**NC**` directive. The tool will have it unconnected like `.control()`.
-  * `**SO**` directive. The tool will check if it is indeed an output and create an output wire `__VLG_SO_control` and connect to the port. In this example, because it is actually an input, the tool will give warning.
-  * `**RESET**` or `**NRESET**`. It will be connected as `.control(rst)` or `.control(~rst)`, where `rst` is the reset signal of the wrapper.
-  * `**CLOCK**` directive. It will be connected as `.control(clk)`, where `clk` is the clock signal of the wrapper.
-  * `**MEM**name.signal`. The tool will check if `name` is an ILA memory name. It will be connected as `.control(__MEM_name_0_signal)`.
 
 ## Uninterpreted Function Mapping
 
