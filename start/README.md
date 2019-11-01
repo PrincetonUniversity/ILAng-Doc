@@ -8,11 +8,11 @@ Here are some build environments where ILAng has been tested on.
 
 | OS | Compiler | CMake | z3 | Boost |
 | :--- | :--- | :--- | :--- | :--- |
-| Ubuntu 14.04 \(Trusty\) | gcc 4.8.4 | 3.8.0 | 4.7.1 | 1.54 |
+| Ubuntu 14.04 \(Trusty\) | gcc 4.8.4 | 3.8.0 | 4.8.6 | 1.54 |
 | Ubuntu 16.04 \(Xenial\) | gcc 5.4.0 | 3.12.4 | 4.4.1 | 1.58 |
 | Ubuntu 16.04 \(Xenial\) | clang 7.0.0 | 3.12.4 | 4.4.1 | 1.58 |
 | Ubuntu 16.04 \(Xenial\) | gcc 5.4.0 | 3.12.4 | 4.4.1 | 1.69 |
-| Ubuntu 18.04 \(Bionic\) | gcc 7.4.0 | 3.15.2 | 4.8.7 | 1.65 |
+| Ubuntu 18.04 \(Bionic\) | gcc 7.4.0 | 3.15.2 | 4.8.6 | 1.65 |
 | OSX 10.13.3 \(High Sierra\) | Xcode 9.4.1 | 3.11.3 | 4.8.6 | 1.71 |
 | OSX 10.13.6 \(High Sierra\) | Xcode 10.1.0 | 3.14.5 | 4.8.6 | 1.71 |
 | OSX 10.14.5 \(Mojave\) | Xcode 10.2.1 | 3.14.5 | 4.8.6 | 1.71 |
