@@ -38,7 +38,7 @@ Homebrew updates the formulas \(packages\) frequently, and may encounter build f
 
 ## Building from source
 
-You can clone the [source](https://github.com/Bo-Yuan-Haung/ILAng) of ILAng from GitHub. To build ILAng with default configuration \(and all required sub-modules\), create a build directory:
+You can clone the [source](https://github.com/Bo-Yuan-Huang/ILAng.git) of ILAng from GitHub. To build ILAng with default configuration \(and all required sub-modules\), create a build directory:
 
 ```bash
 cd ilang/root/dir
