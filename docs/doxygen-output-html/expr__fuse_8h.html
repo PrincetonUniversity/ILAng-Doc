@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.1</span>
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -71,12 +71,12 @@ $(function() {
 <div class="title">expr_fuse.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="expr_8h_source.html">ilang/ila/ast/expr.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;<a class="el" href="expr_8h_source.html">ilang/ila/ast/expr.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="expr__const_8h_source.html">ilang/ila/ast/expr_const.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="expr__op_8h_source.html">ilang/ila/ast/expr_op.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="expr__var_8h_source.html">ilang/ila/ast/expr_var.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="func_8h_source.html">ilang/ila/ast/func.h</a>&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
 </div>
 <p><a href="expr__fuse_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -173,10 +173,18 @@ ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e
 ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#ad3c885846963cb43a821048cf7ddcb54">ilang::ExprFuse::Div</a> (const ExprPtr l, const ExprPtr r)</td></tr>
 <tr class="memdesc:ad3c885846963cb43a821048cf7ddcb54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arithmetic unsigned division (bv only) <br /></td></tr>
 <tr class="separator:ad3c885846963cb43a821048cf7ddcb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2bc7be97a3be60783caaf8a2d976601"><td class="memItemLeft" align="right" valign="top"><a id="aa2bc7be97a3be60783caaf8a2d976601"></a>
-ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#aa2bc7be97a3be60783caaf8a2d976601">ilang::ExprFuse::Rem</a> (const ExprPtr l, const ExprPtr r)</td></tr>
-<tr class="memdesc:aa2bc7be97a3be60783caaf8a2d976601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arithmetic unsigned remainder (bv only) <br /></td></tr>
-<tr class="separator:aa2bc7be97a3be60783caaf8a2d976601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c86280cdbf4cd89ad5be78d93692c8"><td class="memItemLeft" align="right" valign="top"><a id="a22c86280cdbf4cd89ad5be78d93692c8"></a>
+ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#a22c86280cdbf4cd89ad5be78d93692c8">ilang::ExprFuse::SRem</a> (const ExprPtr l, const ExprPtr r)</td></tr>
+<tr class="memdesc:a22c86280cdbf4cd89ad5be78d93692c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arithmetic signed remainder (bv only) <br /></td></tr>
+<tr class="separator:a22c86280cdbf4cd89ad5be78d93692c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386b63bed5fecca54c7544b1010a6bd5"><td class="memItemLeft" align="right" valign="top"><a id="a386b63bed5fecca54c7544b1010a6bd5"></a>
+ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#a386b63bed5fecca54c7544b1010a6bd5">ilang::ExprFuse::URem</a> (const ExprPtr l, const ExprPtr r)</td></tr>
+<tr class="memdesc:a386b63bed5fecca54c7544b1010a6bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arithmetic unsigned remainder (bv only) <br /></td></tr>
+<tr class="separator:a386b63bed5fecca54c7544b1010a6bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fae670ead57d9242a451d66065d485f"><td class="memItemLeft" align="right" valign="top"><a id="a4fae670ead57d9242a451d66065d485f"></a>
+ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#a4fae670ead57d9242a451d66065d485f">ilang::ExprFuse::SMod</a> (const ExprPtr l, const ExprPtr r)</td></tr>
+<tr class="memdesc:a4fae670ead57d9242a451d66065d485f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arithmetic signed modular (bv only) <br /></td></tr>
+<tr class="separator:a4fae670ead57d9242a451d66065d485f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b3897f262e454ad7a3b9012ee6e005b"><td class="memItemLeft" align="right" valign="top"><a id="a6b3897f262e454ad7a3b9012ee6e005b"></a>
 ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#a6b3897f262e454ad7a3b9012ee6e005b">ilang::ExprFuse::Mod</a> (const ExprPtr l, const ExprPtr r)</td></tr>
 <tr class="memdesc:a6b3897f262e454ad7a3b9012ee6e005b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arithmetic unsigned modular (bv only) <br /></td></tr>
@@ -345,6 +353,14 @@ ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e
 ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#a8e46fb0c4ad9558275566f98fae32b6d">ilang::ExprFuse::SExt</a> (const ExprPtr bv, const int &amp;out_width)</td></tr>
 <tr class="memdesc:a8e46fb0c4ad9558275566f98fae32b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sign extend the bitvector to the specified length. <br /></td></tr>
 <tr class="separator:a8e46fb0c4ad9558275566f98fae32b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a028bcf8d1a63efe0694fa2d5d6ce4412"><td class="memItemLeft" align="right" valign="top"><a id="a028bcf8d1a63efe0694fa2d5d6ce4412"></a>
+ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#a028bcf8d1a63efe0694fa2d5d6ce4412">ilang::ExprFuse::LRotate</a> (const ExprPtr bv, const int &amp;immediate)</td></tr>
+<tr class="memdesc:a028bcf8d1a63efe0694fa2d5d6ce4412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Left rotate the bitvector to immediate number of times. <br /></td></tr>
+<tr class="separator:a028bcf8d1a63efe0694fa2d5d6ce4412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cad892092712239a0b58960e9bbcb21"><td class="memItemLeft" align="right" valign="top"><a id="a2cad892092712239a0b58960e9bbcb21"></a>
+ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#a2cad892092712239a0b58960e9bbcb21">ilang::ExprFuse::RRotate</a> (const ExprPtr bv, const int &amp;immediate)</td></tr>
+<tr class="memdesc:a2cad892092712239a0b58960e9bbcb21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right rotate the bitvector to immediate number of times. <br /></td></tr>
+<tr class="separator:a2cad892092712239a0b58960e9bbcb21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59f21d9c6a2e23d611a0ed0c22581ad5"><td class="memItemLeft" align="right" valign="top"><a id="a59f21d9c6a2e23d611a0ed0c22581ad5"></a>
 ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expr__fuse_8h.html#a59f21d9c6a2e23d611a0ed0c22581ad5">ilang::ExprFuse::AppFunc</a> (const FuncPtr func)</td></tr>
 <tr class="memdesc:a59f21d9c6a2e23d611a0ed0c22581ad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply function with zero argument. <br /></td></tr>

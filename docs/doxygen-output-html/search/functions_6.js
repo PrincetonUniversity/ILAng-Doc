@@ -20,6 +20,7 @@ var searchData=
   ['forcesetdecode',['ForceSetDecode',['../classilang_1_1_instr.html#a6874338250ece9d9a2c307ff38c732df',1,'ilang::Instr']]],
   ['foreachtokenreplace',['ForEachTokenReplace',['../classilang_1_1_var_extractor.html#affe27bed1edb54dc8ceddce84dae4905',1,'ilang::VarExtractor']]],
   ['format_5fstr',['format_str',['../classilang_1_1_symbol.html#afcddff50b929dbaeac4a5a91a582997e',1,'ilang::Symbol']]],
+  ['fromjson',['FromJson',['../structilang_1_1_vlg_tgt_supplementary_info.html#a78d60e55f31fda307e88579578f6aae4',1,'ilang::VlgTgtSupplementaryInfo']]],
   ['func',['Func',['../classilang_1_1_func.html#a68120449566b97422d856a045e376d5c',1,'ilang::Func']]],
   ['funcobjflatila',['FuncObjFlatIla',['../classilang_1_1_func_obj_flat_ila.html#a60ec9f98fefc4521c90860ed8816617d',1,'ilang::FuncObjFlatIla']]],
   ['funcobjrewrexpr',['FuncObjRewrExpr',['../classilang_1_1_func_obj_rewr_expr.html#afff85c3a0980d75a3fefb39d416cd918',1,'ilang::FuncObjRewrExpr']]],

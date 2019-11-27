@@ -9,6 +9,7 @@ var searchData=
   ['loglevel',['LogLevel',['../namespaceilang.html#a38808a9aed62a8c4a6917621c9318d6e',1,'ilang']]],
   ['logpath',['LogPath',['../namespaceilang.html#a04b0d31076d694adcb6b1ee0a475c9dd',1,'ilang']]],
   ['logtoerr',['LogToErr',['../namespaceilang.html#a7d33dbd65f2036041b06be22c830592b',1,'ilang']]],
+  ['lrotate',['LRotate',['../expr__fuse_8h.html#a028bcf8d1a63efe0694fa2d5d6ce4412',1,'ilang::ExprFuse::LRotate()'],['../namespaceilang.html#a35a459a835293a24f66c8e2fcf35aa50',1,'ilang::LRotate()']]],
   ['lshr',['Lshr',['../expr__fuse_8h.html#af166c8d94ba03a22a1f8d675da61aee4',1,'ilang::ExprFuse::Lshr(const ExprPtr l, const ExprPtr r)'],['../expr__fuse_8h.html#a577116c59453ee45feaf9955c91279d4',1,'ilang::ExprFuse::Lshr(const ExprPtr l, const int &amp;r)'],['../namespaceilang.html#acffd757988bbf08aa6ab6395f65de46a',1,'ilang::Lshr(const ExprRef &amp;a, const ExprRef &amp;b)'],['../namespaceilang.html#ad75467ae3bda2dbdcec1e140dada8e41',1,'ilang::Lshr(const ExprRef &amp;a, const int &amp;b)']]],
   ['lt',['Lt',['../expr__fuse_8h.html#a27fd324ba3702c6a6649d93cec34fa8c',1,'ilang::ExprFuse::Lt(const ExprPtr l, const ExprPtr r)'],['../expr__fuse_8h.html#a24b5e739da5c10d4bce6fdb1ed7035b6',1,'ilang::ExprFuse::Lt(const ExprPtr l, const int &amp;r)']]]
 ];

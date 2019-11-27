@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inf_5fdir_5ft',['inf_dir_t',['../classilang_1_1_inteface_directive_recorder.html#a3b79e730a544f1de45ffdc9fca3d00f6',1,'ilang::IntefaceDirectiveRecorder']]]
+  ['hierarchical_5fname_5ftype',['hierarchical_name_type',['../classilang_1_1_verilog_analyzer_base.html#a97a6885ff663a7914c77301b3e8972c3',1,'ilang::VerilogAnalyzerBase']]]
 ];

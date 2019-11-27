@@ -26,6 +26,8 @@ add_library(MyProj ...)
 target_link_libraries(MyProj PRIVATE ilang::ilang)
 ```
 
+A template repo for starting a project using ILAng can be found in [PrincetonUniversity/template-ila](https://github.com/PrincetonUniversity/template-ila).
+
 ### Embedded
 
 ILAng also supports embedded \(in-source\) build. To embed the library into an existing CMake project, place the entire source tree in a sub-directory and call `add_subdirectory()` in your CMake recipe:

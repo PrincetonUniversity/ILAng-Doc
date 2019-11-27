@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.1</span>
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -95,6 +95,10 @@ Public Types</h2></td></tr>
 typedef std::shared_ptr&lt; <a class="el" href="classilang_1_1_instr.html">Instr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_instr.html#af43ebb1fe223b369e42b5600f902b4b4">InstrPtr</a></td></tr>
 <tr class="memdesc:af43ebb1fe223b369e42b5600f902b4b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for normal use of <a class="el" href="classilang_1_1_instr.html" title="The class for the Instruction. An Instr object contains: ">Instr</a>. <br /></td></tr>
 <tr class="separator:af43ebb1fe223b369e42b5600f902b4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e26c0331fe17f1267ec1272b7dbddfa"><td class="memItemLeft" align="right" valign="top"><a id="a6e26c0331fe17f1267ec1272b7dbddfa"></a>
+typedef std::shared_ptr&lt; const <a class="el" href="classilang_1_1_instr.html">Instr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_instr.html#a6e26c0331fe17f1267ec1272b7dbddfa">InstrCnstPtr</a></td></tr>
+<tr class="memdesc:a6e26c0331fe17f1267ec1272b7dbddfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for read-only use of <a class="el" href="classilang_1_1_instr.html" title="The class for the Instruction. An Instr object contains: ">Instr</a>. <br /></td></tr>
+<tr class="separator:a6e26c0331fe17f1267ec1272b7dbddfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9f7f07cfbd07809131085e6190f489a"><td class="memItemLeft" align="right" valign="top"><a id="aa9f7f07cfbd07809131085e6190f489a"></a>
 typedef std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_instr.html#aa9f7f07cfbd07809131085e6190f489a">StateNameSet</a></td></tr>
 <tr class="memdesc:aa9f7f07cfbd07809131085e6190f489a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for a set of state names. <br /></td></tr>
@@ -217,6 +221,10 @@ Friends</h2></td></tr>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_instr.html#a8e66ff25b0f41f3a326d1901ed8bd33a">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="classilang_1_1_instr.html#af43ebb1fe223b369e42b5600f902b4b4">InstrPtr</a> i)</td></tr>
 <tr class="memdesc:a8e66ff25b0f41f3a326d1901ed8bd33a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload output stream operator. <br /></td></tr>
 <tr class="separator:a8e66ff25b0f41f3a326d1901ed8bd33a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbc94d28541d9ea253bfc6ecf6ca8aca"><td class="memItemLeft" align="right" valign="top"><a id="acbc94d28541d9ea253bfc6ecf6ca8aca"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_instr.html#acbc94d28541d9ea253bfc6ecf6ca8aca">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="classilang_1_1_instr.html#a6e26c0331fe17f1267ec1272b7dbddfa">InstrCnstPtr</a> i)</td></tr>
+<tr class="memdesc:acbc94d28541d9ea253bfc6ecf6ca8aca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload output stream operator for const object. <br /></td></tr>
+<tr class="separator:acbc94d28541d9ea253bfc6ecf6ca8aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The class for the Instruction. An <a class="el" href="classilang_1_1_instr.html" title="The class for the Instruction. An Instr object contains: ">Instr</a> object contains: </p>

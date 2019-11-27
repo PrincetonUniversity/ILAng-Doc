@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">0.9.1</span>
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -133,6 +133,14 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_analyzer.html#ac771a47ae7704fda312ec75e3ad464b0">module_io_vec_t</a> = <a class="el" href="classilang_1_1_verilog_analyzer_base.html#a38a921fd310970b0cbda4a74707d7541">VerilogAnalyzerBase::module_io_vec_t</a></td></tr>
 <tr class="memdesc:ac771a47ae7704fda312ec75e3ad464b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top module signal list. <br /></td></tr>
 <tr class="separator:ac771a47ae7704fda312ec75e3ad464b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51457aa7bc0b771a92dcce408d936153"><td class="memItemLeft" align="right" valign="top"><a id="a51457aa7bc0b771a92dcce408d936153"></a>
+typedef std::map&lt; std::string, ast_module_instantiation * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_analyzer.html#a51457aa7bc0b771a92dcce408d936153">mod_inst_ast_t</a></td></tr>
+<tr class="memdesc:a51457aa7bc0b771a92dcce408d936153"><td class="mdescLeft">&#160;</td><td class="mdescRight">type of instance_name -&gt; instance_ast_node <br /></td></tr>
+<tr class="separator:a51457aa7bc0b771a92dcce408d936153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69dbe0ca0f4f19f4e3e2b2675ea753a0"><td class="memItemLeft" align="right" valign="top"><a id="a69dbe0ca0f4f19f4e3e2b2675ea753a0"></a>
+typedef std::map&lt; std::string, <a class="el" href="classilang_1_1_verilog_analyzer.html#a51457aa7bc0b771a92dcce408d936153">mod_inst_ast_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_analyzer.html#a69dbe0ca0f4f19f4e3e2b2675ea753a0">name_insts_ast_map_t</a></td></tr>
+<tr class="memdesc:a69dbe0ca0f4f19f4e3e2b2675ea753a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map of module name -&gt; the instantiation ast. <br /></td></tr>
+<tr class="separator:a69dbe0ca0f4f19f4e3e2b2675ea753a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classilang_1_1_verilog_analyzer_base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classilang_1_1_verilog_analyzer_base')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classilang_1_1_verilog_analyzer_base.html">ilang::VerilogAnalyzerBase</a></td></tr>
 <tr class="memitem:a97a6885ff663a7914c77301b3e8972c3 inherit pub_types_classilang_1_1_verilog_analyzer_base"><td class="memItemLeft" align="right" valign="top"><a id="a97a6885ff663a7914c77301b3e8972c3"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_analyzer_base.html#a97a6885ff663a7914c77301b3e8972c3">hierarchical_name_type</a> { <br />
 &#160;&#160;<b>NONE</b> = 0, 
@@ -238,6 +246,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_analyzer.html#ac533369ed7d0d0bca5cc736087abc646">get_module_name_of_net_name</a> (const std::string &amp;net_name) const</td></tr>
 <tr class="memdesc:ac533369ed7d0d0bca5cc736087abc646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the module name of a net &mdash; will check if the module names are. <br /></td></tr>
 <tr class="separator:ac533369ed7d0d0bca5cc736087abc646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b887be70102c94e1de83d4135e67c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_analyzer.html#a49b887be70102c94e1de83d4135e67c3">get_hierarchy_from_full_name</a> (const std::string &amp;full_name, <a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a98384478c8c5a16cbe56deb54ac0f737">VerilogConstantExprEval::param_def_hierarchy</a> &amp;hier, ast_module_declaration **lowest_level) const</td></tr>
+<tr class="separator:a49b887be70102c94e1de83d4135e67c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a262f2f5ce46e35e81cc26b879118cd5a"><td class="memItemLeft" align="right" valign="top"><a id="a262f2f5ce46e35e81cc26b879118cd5a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_analyzer.html#a262f2f5ce46e35e81cc26b879118cd5a">in_bad_state</a> () const</td></tr>
 <tr class="memdesc:a262f2f5ce46e35e81cc26b879118cd5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether this analyzer is in bad state <br /></td></tr>
@@ -346,6 +356,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <a class="el" href="classilang_1_1_verilog_analyzer.html#a648804d4b3b593bc03e93468287707d5">name_insts_map_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_analyzer.html#a72e8052b0bd371b987892eeeb7d78ea3">modules_to_submodules_map</a></td></tr>
 <tr class="memdesc:a72e8052b0bd371b987892eeeb7d78ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">module -&gt; all sub modules <br /></td></tr>
 <tr class="separator:a72e8052b0bd371b987892eeeb7d78ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b430c69c3d2a918807eed480b794bb"><td class="memItemLeft" align="right" valign="top"><a id="a48b430c69c3d2a918807eed480b794bb"></a>
+<a class="el" href="classilang_1_1_verilog_analyzer.html#a69dbe0ca0f4f19f4e3e2b2675ea753a0">name_insts_ast_map_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_analyzer.html#a48b430c69c3d2a918807eed480b794bb">modules_to_submodule_inst_ast_map</a></td></tr>
+<tr class="memdesc:a48b430c69c3d2a918807eed480b794bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">module -&gt; all sub modules and their instantiation ast <br /></td></tr>
+<tr class="separator:a48b430c69c3d2a918807eed480b794bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d3d2973829ce395b91957f0e19dd87c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_verilog_analyzer.html#a2d3d2973829ce395b91957f0e19dd87c">top_inst_name</a></td></tr>
 <tr class="separator:a2d3d2973829ce395b91957f0e19dd87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -415,6 +429,41 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Return the declaration of a name, which could be be converted to: ast_module_declaration, ast_net_declaration, ast_reg_declaration, ast_port_declaration </p>
+
+</div>
+</div>
+<a id="a49b887be70102c94e1de83d4135e67c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49b887be70102c94e1de83d4135e67c3">&#9670;&nbsp;</a></span>get_hierarchy_from_full_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ilang::VerilogAnalyzer::get_hierarchy_from_full_name </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>full_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classilang_1_1_verilog_constant_expr_eval.html#a98384478c8c5a16cbe56deb54ac0f737">VerilogConstantExprEval::param_def_hierarchy</a> &amp;&#160;</td>
+          <td class="paramname"><em>hier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ast_module_declaration **&#160;</td>
+          <td class="paramname"><em>lowest_level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the hierarchy information needed by constant parser returns true if succeed </p>
 
 </div>
 </div>

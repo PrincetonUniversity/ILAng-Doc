@@ -25,7 +25,6 @@ var searchData=
   ['relation',['relation',['../classilang_1_1_comp_ref_rel.html#a0cadd43385d0ce35c3744aeb996c9782',1,'ilang::CompRefRel']]],
   ['relationmap',['RelationMap',['../classilang_1_1_relation_map.html',1,'ilang::RelationMap'],['../classilang_1_1_relation_map.html#ac11eda6555d38a1174843413ea7bf133',1,'ilang::RelationMap::RelationMap()']]],
   ['relptr',['RelPtr',['../classilang_1_1_relation_map.html#adfdefb173e77fc29073c233aa3ccdbd2',1,'ilang::RelationMap::RelPtr()'],['../namespaceilang.html#adca57fadf3c1f00dba124eb1ec56e6e9',1,'ilang::RelPtr()']]],
-  ['rem',['Rem',['../expr__fuse_8h.html#aa2bc7be97a3be60783caaf8a2d976601',1,'ilang::ExprFuse']]],
   ['ren',['ren',['../structilang_1_1_verilog_generator_base_1_1rport__t.html#a457a0b0a278c203337f5bb86ca04f421',1,'ilang::VerilogGeneratorBase::rport_t']]],
   ['replace',['Replace',['../classilang_1_1_var_extractor.html#a09087af33c4b7f40059b83b4e63d4e6a',1,'ilang::VarExtractor']]],
   ['replace_5farg',['replace_arg',['../classilang_1_1_expr.html#a8381c199449b5f0b2fad610360ba8bc3',1,'ilang::Expr::replace_arg(const int &amp;idx, const ExprPtr arg)'],['../classilang_1_1_expr.html#a00c141f79e644f44e4ea0e54811821e3',1,'ilang::Expr::replace_arg(const ExprPtr a, const ExprPtr b)']]],
@@ -42,5 +41,6 @@ var searchData=
   ['rf_5fcond',['rf_cond',['../classilang_1_1_vlg_sgl_tgt_gen.html#aea10c210f6832c058983aca64d22155b',1,'ilang::VlgSglTgtGen::rf_cond()'],['../classilang_1_1_vlg_verif_tgt_gen.html#a5cb59a3773ce073542bda717d68029b3',1,'ilang::VlgVerifTgtGen::rf_cond()']]],
   ['rf_5fvmap',['rf_vmap',['../classilang_1_1_vlg_sgl_tgt_gen.html#af980474a31e8a7b64a308d916e7274bb',1,'ilang::VlgSglTgtGen::rf_vmap()'],['../classilang_1_1_vlg_verif_tgt_gen.html#a09a6c157df67b31c6f97c12a34ccbe74',1,'ilang::VlgVerifTgtGen::rf_vmap()']]],
   ['rport_5ft',['rport_t',['../structilang_1_1_verilog_generator_base_1_1rport__t.html',1,'ilang::VerilogGeneratorBase::rport_t'],['../structilang_1_1_vlg_abs_mem.html#ad9107759f1e2076b27d9bf0b52fc8808',1,'ilang::VlgAbsMem::rport_t()'],['../classilang_1_1_inteface_directive_recorder.html#aa67e6463ada92b0f9cb7668d87e44b4d',1,'ilang::IntefaceDirectiveRecorder::rport_t()']]],
+  ['rrotate',['RRotate',['../expr__fuse_8h.html#a2cad892092712239a0b58960e9bbcb21',1,'ilang::ExprFuse::RRotate()'],['../namespaceilang.html#abd95e8beb244056395bb6f24dca2173b',1,'ilang::RRotate()']]],
   ['rstname',['rstName',['../classilang_1_1_verilog_generator_base.html#acc9ecfe16807d8feaf495e3282e434aa',1,'ilang::VerilogGeneratorBase']]]
 ];

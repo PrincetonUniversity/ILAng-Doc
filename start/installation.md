@@ -20,6 +20,12 @@ To install all dependencies on Arch Linux-based distributions:
 pacman -S bison flex boost z3
 ```
 
+To install dependencies \(except z3\) on Fedora-based Linux:
+
+```bash
+yum install bison flex boost boost-python boost-devel
+```
+
 To install on OS X using Homebrew:
 
 ```bash
@@ -32,7 +38,7 @@ Homebrew updates the formulas \(packages\) frequently, and may encounter build f
 
 ## Building from source
 
-You can clone the [source](https://github.com/Bo-Yuan-Haung/ILAng) of ILAng from GitHub. To build ILAng with default configuration \(and all required sub-modules\), create a build directory:
+You can clone the [source](https://github.com/Bo-Yuan-Huang/ILAng.git) of ILAng from GitHub. To build ILAng with default configuration \(and all required sub-modules\), create a build directory:
 
 ```bash
 cd ilang/root/dir
@@ -54,4 +60,16 @@ sudo make install
 * Use `-DILANG_BUILD_TEST=OFF` to disable building the unit tests
 * Use `-DILANG_BUILD_SYNTH=OFF` to disable building the synthesis engine
 * Use `-DILANG_INSTALL_DEV=ON` to enable installing working features
+
+### Sub-modules
+
+When using git older than 1.8.4, you need to update the sub-modules before running the configuration.
+
+```bash
+cd ilang/root/dir
+git submodule update --init --recursive
+mkdir -p build && cd build
+cmake .. -DILANG_FETCH_DEPS=OFF
+make -j$(nproc)
+```
 
