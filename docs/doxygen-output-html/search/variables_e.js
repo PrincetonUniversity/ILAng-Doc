@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['pass_5fnode_5fname',['pass_node_name',['../structilang_1_1_verilog_generator_base_1_1_vlg_gen_config.html#a5c8050147905068289a5de872ddcef06',1,'ilang::VerilogGeneratorBase::VlgGenConfig']]],
-  ['past_5fwrites',['past_writes',['../classilang_1_1_verilog_generator_base.html#af96822de32c21627040162172b623dae',1,'ilang::VerilogGeneratorBase']]],
-  ['pervariableproblemcosa',['PerVariableProblemCosa',['../structilang_1_1_vlg_verif_tgt_gen_base_1_1__vtg__config.html#a972950158333ed0abc6dcbfc998c4572',1,'ilang::VlgVerifTgtGenBase::_vtg_config']]],
-  ['portdeclstyle',['PortDeclStyle',['../structilang_1_1_vlg_verif_tgt_gen_base_1_1__vtg__config.html#a4cb44c2112cca6832556a65cb06cdd36',1,'ilang::VlgVerifTgtGenBase::_vtg_config']]],
-  ['preheader',['preheader',['../classilang_1_1_verilog_generator_base.html#aed9b0c20c2ebc4ae02a95a91a70038bc',1,'ilang::VerilogGeneratorBase']]],
-  ['private_5fstates_5f',['private_states_',['../classilang_1_1_inter_ila_unroller.html#ac7aeda8ba6169eda6fbc57c0481386de',1,'ilang::InterIlaUnroller']]],
-  ['probitem',['probitem',['../classilang_1_1_cosa__problem.html#a5a68ceab5087a842e312d217ce4506d8',1,'ilang::Cosa_problem']]]
+  ['name_5fmodule_5fmap_2702',['name_module_map',['../classilang_1_1_verilog_analyzer.html#ac7885aeb9bf758afc1ea0d7522de3ae2',1,'ilang::VerilogAnalyzer']]],
+  ['nested_5ffinder_5f_2703',['nested_finder_',['../classilang_1_1_memory_model.html#a62957cb1ce34cf1b0248e32b336aa79e',1,'ilang::MemoryModel']]],
+  ['nmap_2704',['nmap',['../classilang_1_1_verilog_generator_base.html#adc389672a10e85e1e5487db5079a2783',1,'ilang::VerilogGeneratorBase']]],
+  ['no_5foutside_5fvar_5frefer_2705',['no_outside_var_refer',['../classilang_1_1smt_1_1_smtlib_invariant_parser.html#a9c78558651f7efbcb6b95458714ab61a',1,'ilang::smt::SmtlibInvariantParser']]],
+  ['no_5freset_5fafter_5fstarting_5fstate_2706',['no_reset_after_starting_state',['../structilang_1_1_vlg_tgt_supplementary_info_1_1reset__config__t.html#a580c2300f9316b94ca65e239656bbf9e',1,'ilang::VlgTgtSupplementaryInfo::reset_config_t']]],
+  ['numofdesignstatebits_2707',['NumOfDesignStateBits',['../structilang_1_1_design_statistics.html#a88e5b240482158232805dc62fd8d39de',1,'ilang::DesignStatistics']]],
+  ['numofdesignstatevars_2708',['NumOfDesignStateVars',['../structilang_1_1_design_statistics.html#a76e155b191473f497ba1167300b1c2c2',1,'ilang::DesignStatistics']]],
+  ['numofextrastatebits_2709',['NumOfExtraStateBits',['../structilang_1_1_design_statistics.html#acae5a008881478b0636ac4788d3df3bd',1,'ilang::DesignStatistics']]],
+  ['numofextrastatevars_2710',['NumOfExtraStateVars',['../structilang_1_1_design_statistics.html#a1980fe56dac2b83b4a6dbc966a5f8529',1,'ilang::DesignStatistics']]]
 ];

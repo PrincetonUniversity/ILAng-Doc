@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['funcoption',['funcOption',['../structilang_1_1_verilog_generator_base_1_1_vlg_gen_config.html#a5e10357d8ac3f35eb325bf2990d4bab6',1,'ilang::VerilogGeneratorBase::VlgGenConfig']]]
+  ['cosadotreferencenotify_5ft_2979',['CosaDotReferenceNotify_t',['../structilang_1_1_vlg_verif_tgt_gen_base_1_1__vtg__config.html#a03460e1cf9e49362855bdc77905cc6a7',1,'ilang::VlgVerifTgtGenBase::_vtg_config']]]
 ];

@@ -1,14 +1,22 @@
 var searchData=
 [
-  ['validname',['validName',['../classilang_1_1_verilog_generator_base.html#a91cb8b4994d18b6a2ee148c52128114f',1,'ilang::VerilogGeneratorBase']]],
-  ['vars_5f',['vars_',['../classilang_1_1_unroller.html#a84c608ea581d7e37074d2fd39af17eb5',1,'ilang::Unroller']]],
-  ['vlg_5fdesign_5ffiles',['vlg_design_files',['../classilang_1_1_vlg_sgl_tgt_gen.html#a22da743894b79d944a64f7be90be9504',1,'ilang::VlgSglTgtGen']]],
-  ['vlg_5fila',['vlg_ila',['../classilang_1_1_vlg_sgl_tgt_gen.html#a711d3fb4853c9b711c91f04ea1cd3b5e',1,'ilang::VlgSglTgtGen']]],
-  ['vlg_5finclude_5ffiles_5fpath',['vlg_include_files_path',['../classilang_1_1_vlg_sgl_tgt_gen.html#ace5600731955dbde085e092be133a8fb',1,'ilang::VlgSglTgtGen']]],
-  ['vlg_5finclude_5fpath',['vlg_include_path',['../classilang_1_1_verilog_analyzer.html#ab05d74a5040a064352bbdf66ba6dea5e',1,'ilang::VerilogAnalyzer']]],
-  ['vlg_5finfo_5fptr',['vlg_info_ptr',['../classilang_1_1_verilog_modifier.html#a3a5d35d198159da2a4e7acf49d459c94',1,'ilang::VerilogModifier::vlg_info_ptr()'],['../classilang_1_1_vlg_sgl_tgt_gen.html#a575d387c167ad27f66b8df3c4aa60150',1,'ilang::VlgSglTgtGen::vlg_info_ptr()'],['../classilang_1_1_vlg_verif_tgt_gen.html#a0859d8b3cd0cc84ce6f37cd57c766b19',1,'ilang::VlgVerifTgtGen::vlg_info_ptr()']]],
-  ['vlg_5frports',['vlg_rports',['../structilang_1_1_vlg_abs_mem.html#abd9b633b62e47e8a08760be796035b2f',1,'ilang::VlgAbsMem']]],
-  ['vlg_5fsrc_5ffiles',['vlg_src_files',['../classilang_1_1_verilog_analyzer.html#a203795ec36b9b3679196f0707aad0d62',1,'ilang::VerilogAnalyzer']]],
-  ['vlg_5fwports',['vlg_wports',['../structilang_1_1_vlg_abs_mem.html#ad2fd9589c552eace289539b6cbb04469',1,'ilang::VlgAbsMem']]],
-  ['vlg_5fwrapper',['vlg_wrapper',['../classilang_1_1_vlg_sgl_tgt_gen.html#af624ac37f1a491909ab35470210314d7',1,'ilang::VlgSglTgtGen']]]
+  ['raddr_2728',['raddr',['../structilang_1_1_verilog_generator_base_1_1rport__t.html#abda374bbde346e9e08859077395cc69a',1,'ilang::VerilogGeneratorBase::rport_t']]],
+  ['rdata_2729',['rdata',['../structilang_1_1_verilog_generator_base_1_1rport__t.html#a401512ca011ac9aadb5ea50eed817fd8',1,'ilang::VerilogGeneratorBase::rport_t']]],
+  ['read_5fabstract_2730',['read_abstract',['../structilang_1_1_vlg_abs_mem.html#aaa389772b290f686e97f64fc6bf4ef44',1,'ilang::VlgAbsMem']]],
+  ['ready_5ftype_2731',['ready_type',['../classilang_1_1_vlg_sgl_tgt_gen.html#a9fd417ab106861ed9acbc840926af71c',1,'ilang::VlgSglTgtGen']]],
+  ['reference_5fname_5fset_2732',['reference_name_set',['../classilang_1_1_verilog_generator_base.html#a79b578cee1b98824edf1334e36589ff7',1,'ilang::VerilogGeneratorBase']]],
+  ['reg_5frandom_5finit_2733',['reg_random_init',['../structilang_1_1_verilog_generator_base_1_1_vlg_gen_config.html#acc1dfd0b55bf3919b11f3c722fae818a',1,'ilang::VerilogGeneratorBase::VlgGenConfig']]],
+  ['regs_2734',['regs',['../classilang_1_1_verilog_generator_base.html#ac9e8c6eb0fe350f1c944a8ed60fe9ba6',1,'ilang::VerilogGeneratorBase']]],
+  ['ren_2735',['ren',['../structilang_1_1_verilog_generator_base_1_1rport__t.html#a457a0b0a278c203337f5bb86ca04f421',1,'ilang::VerilogGeneratorBase::rport_t']]],
+  ['reset_5fcycles_2736',['reset_cycles',['../structilang_1_1_vlg_tgt_supplementary_info_1_1reset__config__t.html#ae5c122b8ef460a2999ead8683fa61808',1,'ilang::VlgTgtSupplementaryInfo::reset_config_t']]],
+  ['reset_5fsequence_2737',['reset_sequence',['../structilang_1_1_vlg_tgt_supplementary_info_1_1reset__config__t.html#a79fea202f36fd2c8937ca9d78946d9c7',1,'ilang::VlgTgtSupplementaryInfo::reset_config_t']]],
+  ['reset_5fstate_2738',['reset_state',['../structilang_1_1_vlg_tgt_supplementary_info_1_1reset__config__t.html#a47c6516177846cee6f55046f36b14f5a',1,'ilang::VlgTgtSupplementaryInfo::reset_config_t']]],
+  ['result_2739',['result',['../classilang_1_1_key_vec_it.html#a465bc3a4924f6a7bab71a18b2d998f7a',1,'ilang::KeyVecIt::result()'],['../structilang_1_1_verilog_generator_base_1_1function__app__t.html#ae0d8e49cf445fb92c10ae9afb33f32e4',1,'ilang::VerilogGeneratorBase::function_app_t::result()']]],
+  ['ret_2740',['ret',['../structilang_1_1execute__result.html#ada4f94a7a10d20802b5f677ce50dadd2',1,'ilang::execute_result']]],
+  ['ret_5ftype_2741',['ret_type',['../structilang_1_1smt_1_1func__def__t.html#ae593e1b3dd8af4246620733cb2c89875',1,'ilang::smt::func_def_t']]],
+  ['rf_5fcond_2742',['rf_cond',['../classilang_1_1_vlg_sgl_tgt_gen.html#aea10c210f6832c058983aca64d22155b',1,'ilang::VlgSglTgtGen::rf_cond()'],['../classilang_1_1_vlg_verif_tgt_gen.html#a5cb59a3773ce073542bda717d68029b3',1,'ilang::VlgVerifTgtGen::rf_cond()']]],
+  ['rf_5fvmap_2743',['rf_vmap',['../classilang_1_1_vlg_sgl_tgt_gen.html#af980474a31e8a7b64a308d916e7274bb',1,'ilang::VlgSglTgtGen::rf_vmap()'],['../classilang_1_1_vlg_verif_tgt_gen.html#a09a6c157df67b31c6f97c12a34ccbe74',1,'ilang::VlgVerifTgtGen::rf_vmap()']]],
+  ['rstname_2744',['rstName',['../classilang_1_1_verilog_generator_base.html#acc9ecfe16807d8feaf495e3282e434aa',1,'ilang::VerilogGeneratorBase']]],
+  ['run_5fscript_5fname_2745',['run_script_name',['../classilang_1_1_vlg_sgl_tgt_gen___yosys.html#a9464014c7d2f4d1cacfdd9c6948f5959',1,'ilang::VlgSglTgtGen_Yosys']]],
+  ['runnable_5fscript_5fname_2746',['runnable_script_name',['../classilang_1_1_vlg_verif_tgt_gen.html#acb9a6283d4407d6d5acfb9c7cec89b87',1,'ilang::VlgVerifTgtGen']]]
 ];
