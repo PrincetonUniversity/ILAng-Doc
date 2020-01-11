@@ -23,6 +23,7 @@ The ILAng platform has been used in several applications:
 * **Firmware/Hardware Co-Verification**. The ILA models program-visible hardware behavior while abstracting out lower-level implementation details. This enables scalable firmware/hardware co-verification. \[[DAC18](https://bo-yuan-huang.github.io/ILAng-Doc/dac18.pdf), [DATE16](https://bo-yuan-huang.github.io/ILAng-Doc/date16.pdf)\]
 * **Memory Consistency and Concurrency Reasoning**. The ILA model is an operational model that captures program-visible state updates. When integrated with axiomatic memory consistency models that specify orderings between memory operations, the transition relation can be used to reason about concurrent interactions between heterogeneous components. \[[FMCAD18](https://bo-yuan-huang.github.io/ILAng-Doc/fmcad18.pdf)\]
 * **Data Race Checking of GPU Programs**. Besides general-purpose processors and accelerators, an ILA model can be synthesized for the Nvidia GPU PTX instruction set using the synthesis engine. This can then been used for data race checking for GPU programs. \[[ICCAD18](https://bo-yuan-huang.github.io/ILAng-Doc/iccad18.pdf)\]
+* **Synthesizing Environment Invariants for Modular Hardware Verification**. With ILAs, we automate synthesis of environment invariants for modular hardware verification in processors and application-specific accelerators, where functional equivalence is proved between a high-level specification and a low-level implementation. \[[VMCAI20](https://bo-yuan-huang.github.io/ILAng-Doc/vmcai20.pdf)\]
 
 ## Other sources
 
@@ -34,6 +35,7 @@ The ILAng platform has been used in several applications:
 
 ### Related publications
 
+* Synthesizing Environment Invariants for Modular Hardware Verification. \[[VMCAI20](https://bo-yuan-huang.github.io/ILAng-Doc/vmcai20.pdf)\]
 * ILAng: A Modeling and Verification Platform for SoCs using Instruction-Level Abstractions. \[[TACAS19](https://bo-yuan-huang.github.io/ILAng-Doc/tacas19.pdf)\]
 * A Formal Instruction-Level GPU Model for Scalable Verification. \[[ICCAD18](https://bo-yuan-huang.github.io/ILAng-Doc/iccad18.pdf)\]
 * Integrating Memory Consistency Models with Instruction-Level Abstractions for Heterogeneous System-on-Chip Verification. \[[FMCAD18](https://bo-yuan-huang.github.io/ILAng-Doc/fmcad18.pdf)\]

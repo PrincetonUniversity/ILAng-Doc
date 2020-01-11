@@ -1,5 +1,13 @@
 # What's new in ILAng
 
+## 1.0.2 - 2020-01-09
+
+#### Updates
+
+* Include invariant synthesis support.
+* New external project - SMT parser.
+* New external project - VCD parser.
+
 ## 1.0.1 - 2019-11-01
 
 #### Updates 

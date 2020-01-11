@@ -91,7 +91,8 @@ Below are some of the examples:
 ```
 
 The corresponding generated assumptions will be in the following form:
-```verilog
+
+```text
 wire __m10__ = Verilog_state_1 == __ILA_SO_ILA_state_1 ;
 wire variable_map_assume___p1__ILA_state_1 = (~ __START__) || (__m10__) ;  // __START__ --> Verilog_state_1 == __ILA_SO_ILA_state_1
 
@@ -109,7 +110,8 @@ wire variable_map_assume___p9__ILA_state_5 = (~ __START__) || (__m18__) ;
 ```
 
 and the assertions:
-```verilog
+
+```text
 wire __m0__ = Verilog_state_1 == __ILA_SO_ILA_state_1 ;
 wire variable_map_assert___p1__ILA_state_1 = (~ __IEND__) || (__m0__) ;  // IEND --> Verilog_state_1 == __ILA_SO_ILA_state_1
 
@@ -158,18 +160,19 @@ The Verilog module comes with a set of I/O signals and the tool needs to know ho
 
 For example, for a Verilog input signal `control`, the effects of applying different directives are:
 
-  * An ILA input name, e.g., `c1`. The tool will check if ILA indeed has the input `c1` and the type is matched. The wire `__ILA_I_c1` will be created and will be connected to the input port `control`.
-  *  `**KEEP**` directive. The tool will check if the signal is input or output and create an input/output wire named `__VLG_I_control` with the proper width and connect to the port.
-  * `**NC**` directive. The tool will have it unconnected like `.control()`.
-  * `**SO**` directive. The tool will check if it is indeed an output and create an output wire `__VLG_SO_control` and connect to the port. In this example, because it is actually an input, the tool will give warning.
-  * `**RESET**` or `**NRESET**`. It will be connected as `.control(rst)` or `.control(~rst)`, where `rst` is the reset signal of the wrapper.
-  * `**CLOCK**` directive. It will be connected as `.control(clk)`, where `clk` is the clock signal of the wrapper.
-  * `**MEM**name.signal`. The tool will check if `name` is an ILA memory name. It will be connected as `.control(__MEM_name_0_signal)`.
+* An ILA input name, e.g., `c1`. The tool will check if ILA indeed has the input `c1` and the type is matched. The wire `__ILA_I_c1` will be created and will be connected to the input port `control`.
+* `**KEEP**` directive. The tool will check if the signal is input or output and create an input/output wire named `__VLG_I_control` with the proper width and connect to the port.
+* `**NC**` directive. The tool will have it unconnected like `.control()`.
+* `**SO**` directive. The tool will check if it is indeed an output and create an output wire `__VLG_SO_control` and connect to the port. In this example, because it is actually an input, the tool will give warning.
+* `**RESET**` or `**NRESET**`. It will be connected as `.control(rst)` or `.control(~rst)`, where `rst` is the reset signal of the wrapper.
+* `**CLOCK**` directive. It will be connected as `.control(clk)`, where `clk` is the clock signal of the wrapper.
+* `**MEM**name.signal`. The tool will check if `name` is an ILA memory name. It will be connected as `.control(__MEM_name_0_signal)`.
 
 ## Notes on Memory State Variable
 
 Memory state variable might be internal or external to the module. An internal memory variable corresponds to a verilog array, and therefore no specific I/O interface is needed to access the memory. An external memory is a memory that connects with the current module via I/O interface. By default, all memory variables in the ILA are treated as external memory. The default setting can be override by _annotation_ in refinement map, and here is an example:
-```json
+
+```javascript
   "annotation" : {
     "memory" : {
       "rf":"internal",
