@@ -287,14 +287,12 @@ holds. If there are multiple cycles that its condition holds, the assumption may
 overconstrain if `m1.registers[1]` should carry different values at these points.
 This situation should be avoided.
 
-
 ## Verilog Monitor
 
 In the case that user may want to add customized auxiliary variables, we support
 inline monitors for this purpose.
 
 An example is given as follows:
-
 
 ```javascript
   "verilog-inline-monitors" : {
@@ -321,6 +319,3 @@ This will help our tool to add auxiliary wires to connect them with the monitor.
 Value holders and monitors are normally only in effect when verifying instructions. If you 
 want a monitor to appear also when verifying the invariants, you can add the `"keep-for-invariants":true`
 attribute in the monitor's description following the `defs` and `refs` attributes.
-
-
-
