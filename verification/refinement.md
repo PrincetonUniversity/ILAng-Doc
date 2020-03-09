@@ -91,7 +91,8 @@ Below are some of the examples:
 ```
 
 The corresponding generated assumptions will be in the following form:
-```verilog
+
+```text
 wire __m10__ = Verilog_state_1 == __ILA_SO_ILA_state_1 ;
 wire variable_map_assume___p1__ILA_state_1 = (~ __START__) || (__m10__) ;  // __START__ --> Verilog_state_1 == __ILA_SO_ILA_state_1
 
@@ -109,7 +110,8 @@ wire variable_map_assume___p9__ILA_state_5 = (~ __START__) || (__m18__) ;
 ```
 
 and the assertions:
-```verilog
+
+```text
 wire __m0__ = Verilog_state_1 == __ILA_SO_ILA_state_1 ;
 wire variable_map_assert___p1__ILA_state_1 = (~ __IEND__) || (__m0__) ;  // IEND --> Verilog_state_1 == __ILA_SO_ILA_state_1
 
@@ -158,18 +160,19 @@ The Verilog module comes with a set of I/O signals and the tool needs to know ho
 
 For example, for a Verilog input signal `control`, the effects of applying different directives are:
 
-  * An ILA input name, e.g., `c1`. The tool will check if ILA indeed has the input `c1` and the type is matched. The wire `__ILA_I_c1` will be created and will be connected to the input port `control`.
-  *  `**KEEP**` directive. The tool will check if the signal is input or output and create an input/output wire named `__VLG_I_control` with the proper width and connect to the port.
-  * `**NC**` directive. The tool will have it unconnected like `.control()`.
-  * `**SO**` directive. The tool will check if it is indeed an output and create an output wire `__VLG_SO_control` and connect to the port. In this example, because it is actually an input, the tool will give warning.
-  * `**RESET**` or `**NRESET**`. It will be connected as `.control(rst)` or `.control(~rst)`, where `rst` is the reset signal of the wrapper.
-  * `**CLOCK**` directive. It will be connected as `.control(clk)`, where `clk` is the clock signal of the wrapper.
-  * `**MEM**name.signal`. The tool will check if `name` is an ILA memory name. It will be connected as `.control(__MEM_name_0_signal)`.
+* An ILA input name, e.g., `c1`. The tool will check if ILA indeed has the input `c1` and the type is matched. The wire `__ILA_I_c1` will be created and will be connected to the input port `control`.
+* `**KEEP**` directive. The tool will check if the signal is input or output and create an input/output wire named `__VLG_I_control` with the proper width and connect to the port.
+* `**NC**` directive. The tool will have it unconnected like `.control()`.
+* `**SO**` directive. The tool will check if it is indeed an output and create an output wire `__VLG_SO_control` and connect to the port. In this example, because it is actually an input, the tool will give warning.
+* `**RESET**` or `**NRESET**`. It will be connected as `.control(rst)` or `.control(~rst)`, where `rst` is the reset signal of the wrapper.
+* `**CLOCK**` directive. It will be connected as `.control(clk)`, where `clk` is the clock signal of the wrapper.
+* `**MEM**name.signal`. The tool will check if `name` is an ILA memory name. It will be connected as `.control(__MEM_name_0_signal)`.
 
 ## Notes on Memory State Variable
 
 Memory state variable might be internal or external to the module. An internal memory variable corresponds to a verilog array, and therefore no specific I/O interface is needed to access the memory. An external memory is a memory that connects with the current module via I/O interface. By default, all memory variables in the ILA are treated as external memory. The default setting can be override by _annotation_ in refinement map, and here is an example:
-```json
+
+```javascript
   "annotation" : {
     "memory" : {
       "rf":"internal",
@@ -203,12 +206,13 @@ Then in the refinement map
 }
 ```
 
-## Additional Assumptions
+## Additional Mapping
 
-This section allows users to add additional assumptions in the verification. They can be, for example:
-
-* An assumption about the module I/O.
-* A mapping from the Verilog design's memory interface to the provided 6-signal memory interface. The AES case study provides an example of this. The Verilog design uses two signals  `stb` and `wr` to indicate memory read and write enable, which are different from the `ren` and `wen` signals. Therefore a mapping is provided as follows:
+Sometimes, the mapping between Verilog variables and ILA state variables does not fit easily into the
+state mapping section. For example, you may need a customized mapping from the Verilog design's memory
+interface to the provided 6-signal memory interface. The AES case study provides an example of this. 
+The Verilog design uses two signals  `stb` and `wr` to indicate memory read and write enable, which are 
+different from the `ren` and `wen` signals. Therefore a mapping can be provided as follows:
 
 ```javascript
 "mapping control" : [
@@ -216,4 +220,107 @@ This section allows users to add additional assumptions in the verification. The
   "(~wr & stb) == __MEM_XRAM_0_ren" 
 ]
 ```
+
+Assumptions in the `mapping control` section does not appear in the invariant or invariant synthesis
+target.
+
+## Additional Assumptions
+
+This section allows users to add additional assumptions in the verification. They can be, for example,
+an assumption about the module I/O.
+
+```javascript
+"assumptions" : [
+  // the two inputs can not be both 1
+  "! ( verilog_module.input1 & verilog_module.input2 )"
+]
+```
+
+Assumptions in this section are in effect when verifying the instructions, the invariants and when
+synthesizing the invariants.
+
+## Value Holder
+
+Value holder (a.k.a prophecy variables, auxiliary variables and etc.) can be introduced to capture
+the value of a Verilog variable at a certain time (or under a certain condition).
+Below is an example of a value holder:
+
+```javascript
+"value-holder": {
+  "r1_pvholder" : {
+        "cond": "m1.write_enable == 1",
+        "val":"m1.registers[1]",
+        "width":8
+      }
+}
+```
+
+The above value holder will be translated to the following Verilog code fragments in the Verilog.
+
+```text
+input      [7:0] __r1_pvholder_init__;
+output reg      [7:0] r1_pvholder;
+
+always @(posedge clk) begin
+   if(rst) begin
+       r1_pvholder <= __r1_pvholder_init__;
+   end
+   else if(1) begin
+       r1_pvholder <= r1_pvholder;
+   end
+end
+
+assume property ((m1.write_enable == 1) |-> ((r1_pvholder) == (m1.registers[1])));
+```
+It creates an auxiliary Verilog variable `r1_pvholder` which carries a undetermined
+value. 
+Its value keeps the same all the time, and an assumption says this undetermined
+value is same as the specified value `m1.registers[1]`, under the condition that
+`m1.write_enable == 1`. 
+This variables can be referenced in other sections by `#r1_pvholder#` (this tells the
+tool not to find this signal name in the original Verilog design.
+The `width` part can also be a string `"auto"`, which
+tells the tool to automatically determine the width (in case of failure, error will
+be prompted.)
+This value holder does not check if there is only one cycle that `m1.write_enable == 1`
+holds. If there are multiple cycles that its condition holds, the assumption may
+overconstrain if `m1.registers[1]` should carry different values at these points.
+This situation should be avoided.
+
+
+## Verilog Monitor
+
+In the case that user may want to add customized auxiliary variables, we support
+inline monitors for this purpose.
+
+An example is given as follows:
+
+
+```javascript
+  "verilog-inline-monitors" : {
+    "stage_tracker" : {
+      "verilog": 
+        ["always @(posedge clk) begin",
+         "  if (__START__) stage_tracker <= 0;",
+         "  else if (__STARTED__ && !__ENDED__) stage_tracker <= stage_tracker + 1;",
+         "end"],
+      "defs" :[ ["stage_tracker", 2, "reg"] ],
+      "refs" :[]
+    },
+  }
+```
+
+This creates a 2-bit variable `stage_tracker` to track the number of cycles (this is just for demoing
+the syntax of Verilog monitor, you can in fact use the embedded variable `__CYCLE_CNT__`
+to track the number of cycles). Variables that should be accessible outside the monitor
+should be defined in the `defs` list with its name, bit-width and its type: `reg` or `wire`.
+Variables used only inside the monitor can be defined inside the `verilog` code list.
+Any variable inside the original Verilog, if referenced, should be put in the list of `refs`.
+This will help our tool to add auxiliary wires to connect them with the monitor.
+
+Value holders and monitors are normally only in effect when verifying instructions. If you 
+want a monitor to appear also when verifying the invariants, you can add the `"keep-for-invariants":true`
+attribute in the monitor's description following the `defs` and `refs` attributes.
+
+
 
