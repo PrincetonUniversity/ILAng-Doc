@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inf_5fdir_5ft',['inf_dir_t',['../classilang_1_1_inteface_directive_recorder.html#a3b79e730a544f1de45ffdc9fca3d00f6',1,'ilang::IntefaceDirectiveRecorder']]]
+  ['funcoption_2981',['funcOption',['../structilang_1_1_verilog_generator_base_1_1_vlg_gen_config.html#a5e10357d8ac3f35eb325bf2990d4bab6',1,'ilang::VerilogGeneratorBase::VlgGenConfig']]]
 ];

@@ -13,11 +13,12 @@ Here are some build environments where ILAng has been tested on.
 | Ubuntu 16.04 \(Xenial\) | clang 7.0.0 | 3.12.4 | 4.4.1 | 1.58 |
 | Ubuntu 16.04 \(Xenial\) | gcc 5.4.0 | 3.12.4 | 4.4.1 | 1.69 |
 | Ubuntu 18.04 \(Bionic\) | gcc 7.4.0 | 3.15.2 | 4.8.6 | 1.65 |
-| OSX 10.13.3 \(High Sierra\) | Xcode 9.4.1 | 3.11.3 | 4.8.6 | 1.71 |
-| OSX 10.13.6 \(High Sierra\) | Xcode 10.1.0 | 3.14.5 | 4.8.6 | 1.71 |
-| OSX 10.14.5 \(Mojave\) | Xcode 10.2.1 | 3.14.5 | 4.8.6 | 1.71 |
-| Windows Server 2016 | VS 2017 | 3.14.5 | 4.8.5 | - |
+| OSX 10.13.3 \(High Sierra\) | Xcode 9.4.1 | 3.11.3 | 4.8.7 | 1.72 |
+| OSX 10.13.6 \(High Sierra\) | Xcode 10.1.0 | 3.16.2 | 4.8.7 | 1.72 |
+| OSX 10.14.5 \(Mojave\) | Xcode 10.2.1 | 3.16.2 | 4.8.7 | 1.72 |
+| Windows Server 2016 | VS 2017 | 3.14.5 | 4.8.6 | - |
 | Arch Linux \(2019-03-18\) | gcc 8.2.1 | 3.14.0 | 4.8.4 | 1.69 |
+| RHEL 7 \(2020-01-10\) | gcc 4.8.5 | 3.14.6 | 4.8.7 | 1.53 |
 
 {% hint style="info" %}
 Some dependencies are installed via Home brew in OSX, which may be updated fairly frequently.
