@@ -35,6 +35,8 @@ The ILAng platform has been used in several applications:
 
 ### Related publications
 
+Below are the ILA-related publications \(bib-entries available below\)
+
 * Synthesizing Environment Invariants for Modular Hardware Verification. \[[VMCAI20](https://bo-yuan-huang.github.io/ILAng-Doc/vmcai20.pdf)\]
 * ILAng: A Modeling and Verification Platform for SoCs using Instruction-Level Abstractions. \[[TACAS19](https://bo-yuan-huang.github.io/ILAng-Doc/tacas19.pdf)\]
 * A Formal Instruction-Level GPU Model for Scalable Verification. \[[ICCAD18](https://bo-yuan-huang.github.io/ILAng-Doc/iccad18.pdf)\]
@@ -49,4 +51,6 @@ The ILAng platform has been used in several applications:
 {% hint style="info" %}
 This document is meant to be a living document. You can raise an issue or create a pull request on [GitHub](https://github.com/Bo-Yuan-Huang/ILAng-Doc).
 {% endhint %}
+
+{% file src=".gitbook/assets/referencesila.tex" caption="Bibliography entries" %}
 
