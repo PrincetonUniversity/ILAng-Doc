@@ -1,5 +1,13 @@
 # What's new in ILAng
 
+## 1.0.3 - 2020-06-02
+
+#### Updates
+
+* Include `smt-switch` interface support.
+* New external library `fmt` for string formatting.
+* New ILA passes for optimization and simplification.
+
 ## 1.0.2 - 2020-01-09
 
 #### Updates
