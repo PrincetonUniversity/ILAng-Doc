@@ -1,5 +1,14 @@
 # What's new in ILAng
 
+## 1.0.4 - 2020-06-17
+
+#### Updates
+
+* Revamp filesystem utilities with `c++17` features.
+* Set off \(default\) the synthesis engine interface for future OS \(due to the deprecation of Python2\).
+* Update CI setups accordingly.
+* Regular maintenance, e.g., clean up redundant unit tests and leaving temporary files.
+
 ## 1.0.3 - 2020-06-02
 
 #### Updates
