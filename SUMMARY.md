@@ -6,7 +6,6 @@
   * [ILAng with CMake](start/cmake.md)
   * [ILAng with Python](start/python.md)
   * [ILAng in Docker](start/docker.md)
-  * [What's new in ILAng](start/releases.md)
 * [Modeling](modeling/README.md)
   * [ILA Model](modeling/ila-model.md)
   * [Architectural States](modeling/state/README.md)
@@ -24,5 +23,6 @@
   * [Refinement Relation](verification/refinement.md)
   * [Verification Target](verification/target.md)
   * [Notes](verification/notes.md)
-* [Development](development.md)
+* [Development](development/README.md)
+  * [Release Notes](development/releases.md)
 
