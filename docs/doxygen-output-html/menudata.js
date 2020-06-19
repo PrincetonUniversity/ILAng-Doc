@@ -1,32 +1,10 @@
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this file.
-
-Copyright (C) 1997-2019 by Dimitri van Heesch
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of version 2 of the GNU General Public License as published by
-the Free Software Foundation
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-
-@licend  The above is the entire license notice
-for the JavaScript code in this file
-*/
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
 {text:"Namespaces",url:"namespaces.html",children:[
 {text:"Namespace List",url:"namespaces.html"},
 {text:"Namespace Members",url:"namespacemembers.html",children:[
 {text:"All",url:"namespacemembers.html",children:[
-{text:"_",url:"namespacemembers.html#index__5F"},
+{text:"_",url:"namespacemembers.html#index__"},
 {text:"a",url:"namespacemembers.html#index_a"},
 {text:"b",url:"namespacemembers.html#index_b"},
 {text:"c",url:"namespacemembers.html#index_c"},
@@ -41,6 +19,7 @@ var menudata={children:[
 {text:"m",url:"namespacemembers.html#index_m"},
 {text:"n",url:"namespacemembers.html#index_n"},
 {text:"o",url:"namespacemembers.html#index_o"},
+{text:"p",url:"namespacemembers.html#index_p"},
 {text:"r",url:"namespacemembers.html#index_r"},
 {text:"s",url:"namespacemembers.html#index_s"},
 {text:"t",url:"namespacemembers.html#index_t"},
@@ -48,7 +27,7 @@ var menudata={children:[
 {text:"v",url:"namespacemembers.html#index_v"},
 {text:"z",url:"namespacemembers.html#index_z"}]},
 {text:"Functions",url:"namespacemembers_func.html",children:[
-{text:"_",url:"namespacemembers_func.html#index__5F"},
+{text:"_",url:"namespacemembers_func.html#index__"},
 {text:"b",url:"namespacemembers_func.html#index_b"},
 {text:"c",url:"namespacemembers_func.html#index_c"},
 {text:"d",url:"namespacemembers_func.html#index_d"},
@@ -59,6 +38,7 @@ var menudata={children:[
 {text:"l",url:"namespacemembers_func.html#index_l"},
 {text:"m",url:"namespacemembers_func.html#index_m"},
 {text:"o",url:"namespacemembers_func.html#index_o"},
+{text:"p",url:"namespacemembers_func.html#index_p"},
 {text:"r",url:"namespacemembers_func.html#index_r"},
 {text:"s",url:"namespacemembers_func.html#index_s"},
 {text:"t",url:"namespacemembers_func.html#index_t"},
@@ -85,7 +65,7 @@ var menudata={children:[
 {text:"Class Hierarchy",url:"hierarchy.html"},
 {text:"Class Members",url:"functions.html",children:[
 {text:"All",url:"functions.html",children:[
-{text:"_",url:"functions.html#index__5F"},
+{text:"_",url:"functions.html#index__"},
 {text:"a",url:"functions_a.html#index_a"},
 {text:"b",url:"functions_b.html#index_b"},
 {text:"c",url:"functions_c.html#index_c"},
@@ -111,9 +91,9 @@ var menudata={children:[
 {text:"w",url:"functions_w.html#index_w"},
 {text:"y",url:"functions_y.html#index_y"},
 {text:"z",url:"functions_z.html#index_z"},
-{text:"~",url:"functions_~.html#index__7E"}]},
+{text:"~",url:"functions_0x7e.html#index_0x7e"}]},
 {text:"Functions",url:"functions_func.html",children:[
-{text:"_",url:"functions_func.html#index__5F"},
+{text:"_",url:"functions_func.html#index__"},
 {text:"a",url:"functions_func_a.html#index_a"},
 {text:"b",url:"functions_func_b.html#index_b"},
 {text:"c",url:"functions_func_c.html#index_c"},
@@ -137,9 +117,9 @@ var menudata={children:[
 {text:"v",url:"functions_func_v.html#index_v"},
 {text:"w",url:"functions_func_w.html#index_w"},
 {text:"z",url:"functions_func_z.html#index_z"},
-{text:"~",url:"functions_func_~.html#index__7E"}]},
+{text:"~",url:"functions_func_0x7e.html#index_0x7e"}]},
 {text:"Variables",url:"functions_vars.html",children:[
-{text:"_",url:"functions_vars.html#index__5F"},
+{text:"_",url:"functions_vars.html#index__"},
 {text:"a",url:"functions_vars_a.html#index_a"},
 {text:"b",url:"functions_vars_b.html#index_b"},
 {text:"c",url:"functions_vars_c.html#index_c"},
@@ -165,7 +145,7 @@ var menudata={children:[
 {text:"y",url:"functions_vars_y.html#index_y"},
 {text:"z",url:"functions_vars_z.html#index_z"}]},
 {text:"Typedefs",url:"functions_type.html",children:[
-{text:"_",url:"functions_type.html#index__5F"},
+{text:"_",url:"functions_type.html#index__"},
 {text:"a",url:"functions_type_a.html#index_a"},
 {text:"b",url:"functions_type_b.html#index_b"},
 {text:"c",url:"functions_type_c.html#index_c"},
