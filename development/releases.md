@@ -1,5 +1,13 @@
 # Release Notes
 
+## 1.1.0 - 2020-07-08
+
+#### Updates
+
+* New simulator generation \(class `ilator`\) to optimize compile time and simulation time.
+* Enrich top-level interface to help unrolling SMT \(z3 specifically\) of program fragments.
+* Misc. utilities \(e.g., `util` and `AbsKnob`\).
+
 ## 1.0.5 - 2020-06-18
 
 #### Updates
