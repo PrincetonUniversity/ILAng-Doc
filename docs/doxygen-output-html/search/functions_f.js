@@ -29,6 +29,7 @@ var searchData=
   ['os_5fportable_5fcopy_5fdir',['os_portable_copy_dir',['../namespaceilang.html#aefd59e78d3468c65ac2ca90374046fbd',1,'ilang']]],
   ['os_5fportable_5fcopy_5ffile_5fto_5fdir',['os_portable_copy_file_to_dir',['../namespaceilang.html#a1e9d76f39d3c86e48d40510503f8fa7b',1,'ilang']]],
   ['os_5fportable_5fexecute_5fshell',['os_portable_execute_shell',['../namespaceilang.html#a09d86bebcf221a241039af4bd2f5ee4a',1,'ilang']]],
+  ['os_5fportable_5fexist',['os_portable_exist',['../namespaceilang.html#a60ee21a98e20146f4528e093b89815ea',1,'ilang']]],
   ['os_5fportable_5ffile_5fname_5ffrom_5fpath',['os_portable_file_name_from_path',['../namespaceilang.html#a79f4521ec82c6af4695e31e917082828',1,'ilang']]],
   ['os_5fportable_5fgetcwd',['os_portable_getcwd',['../namespaceilang.html#ad76d6610763b865acbab68d621ef1326',1,'ilang']]],
   ['os_5fportable_5fjoin_5fdir',['os_portable_join_dir',['../namespaceilang.html#a85352bb17b3608b7e37a9b68ca2e4974',1,'ilang']]],

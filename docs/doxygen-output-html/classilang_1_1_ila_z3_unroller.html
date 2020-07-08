@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.0.5</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -120,6 +120,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:aee34e9bf670b6321f735e10294c79462"><td class="memItemLeft" align="right" valign="top">z3::expr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila_z3_unroller.html#aee34e9bf670b6321f735e10294c79462">UnrollPathConn</a> (const std::vector&lt; <a class="el" href="classilang_1_1_instr_ref.html">InstrRef</a> &gt; &amp;path, const int &amp;init=0)</td></tr>
 <tr class="memdesc:aee34e9bf670b6321f735e10294c79462"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unroll a path with each step connected.  <a href="#aee34e9bf670b6321f735e10294c79462">More...</a><br /></td></tr>
 <tr class="separator:aee34e9bf670b6321f735e10294c79462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3395b7ff9b6fc2cf707670e275728843"><td class="memItemLeft" align="right" valign="top">z3::expr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila_z3_unroller.html#a3395b7ff9b6fc2cf707670e275728843">UnrollPathSubs</a> (const std::vector&lt; <a class="el" href="classilang_1_1_instr_ref.html">InstrRef</a> &gt; &amp;path, const int &amp;init=0)</td></tr>
+<tr class="memdesc:a3395b7ff9b6fc2cf707670e275728843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unroll a path with each step connected with rewriting.  <a href="#a3395b7ff9b6fc2cf707670e275728843">More...</a><br /></td></tr>
+<tr class="separator:a3395b7ff9b6fc2cf707670e275728843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78106021b04582a5064b72f2d9b55df9"><td class="memItemLeft" align="right" valign="top">z3::expr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila_z3_unroller.html#a78106021b04582a5064b72f2d9b55df9">UnrollPathFree</a> (const std::vector&lt; <a class="el" href="classilang_1_1_instr_ref.html">InstrRef</a> &gt; &amp;path, const int &amp;init=0)</td></tr>
 <tr class="memdesc:a78106021b04582a5064b72f2d9b55df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unroll a path with each step freely defined.  <a href="#a78106021b04582a5064b72f2d9b55df9">More...</a><br /></td></tr>
 <tr class="separator:a78106021b04582a5064b72f2d9b55df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -295,6 +298,43 @@ z3::expr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 </div><div class="memdoc">
 
 <p>Unroll a path with each step freely defined. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>the sequence of instructions. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">init</td><td>the starting time frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3395b7ff9b6fc2cf707670e275728843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3395b7ff9b6fc2cf707670e275728843">&#9670;&nbsp;</a></span>UnrollPathSubs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">z3::expr ilang::IlaZ3Unroller::UnrollPathSubs </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classilang_1_1_instr_ref.html">InstrRef</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>init</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unroll a path with each step connected with rewriting. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>the sequence of instructions. </td></tr>

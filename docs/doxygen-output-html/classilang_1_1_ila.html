@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.0.5</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -121,9 +121,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aececb677cbc28452afa22f90da102022"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classilang_1_1_ila.html">Ila</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila.html#aececb677cbc28452afa22f90da102022">NewChild</a> (const std::string &amp;<a class="el" href="classilang_1_1_ila.html#aef59c0b294a99f65ce5dccef8dd1ccb7">name</a>)</td></tr>
 <tr class="memdesc:aececb677cbc28452afa22f90da102022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a child-ILA.  <a href="#aececb677cbc28452afa22f90da102022">More...</a><br /></td></tr>
 <tr class="separator:aececb677cbc28452afa22f90da102022"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08499172526aea2df0a58420de5eab44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila.html#a08499172526aea2df0a58420de5eab44">ExportToVerilog</a> (std::ostream &amp;fout) const</td></tr>
-<tr class="memdesc:a08499172526aea2df0a58420de5eab44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export an ILA as Verilog.  <a href="#a08499172526aea2df0a58420de5eab44">More...</a><br /></td></tr>
-<tr class="separator:a08499172526aea2df0a58420de5eab44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8dc4a2b9b78b36da849e19a4e2cd0a1"><td class="memItemLeft" align="right" valign="top"><a id="ae8dc4a2b9b78b36da849e19a4e2cd0a1"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila.html#ae8dc4a2b9b78b36da849e19a4e2cd0a1">input_num</a> () const</td></tr>
 <tr class="memdesc:ae8dc4a2b9b78b36da849e19a4e2cd0a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of input variables. <br /></td></tr>
@@ -196,6 +193,13 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 IlaPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila.html#a69736aa320c68e4eb7d80c6a083af55f">get</a> () const</td></tr>
 <tr class="memdesc:a69736aa320c68e4eb7d80c6a083af55f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the wrapped ILA pointer. <br /></td></tr>
 <tr class="separator:a69736aa320c68e4eb7d80c6a083af55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08499172526aea2df0a58420de5eab44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila.html#a08499172526aea2df0a58420de5eab44">ExportToVerilog</a> (std::ostream &amp;fout) const</td></tr>
+<tr class="memdesc:a08499172526aea2df0a58420de5eab44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export an ILA as Verilog.  <a href="#a08499172526aea2df0a58420de5eab44">More...</a><br /></td></tr>
+<tr class="separator:a08499172526aea2df0a58420de5eab44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24ad1023f07e22fb49a5b78fa71d54ce"><td class="memItemLeft" align="right" valign="top"><a id="a24ad1023f07e22fb49a5b78fa71d54ce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila.html#a24ad1023f07e22fb49a5b78fa71d54ce">FlattenHierarchy</a> ()</td></tr>
+<tr class="memdesc:a24ad1023f07e22fb49a5b78fa71d54ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flatten the hierarchy by lifting child-instructions as the top-level parent instructions. <br /></td></tr>
+<tr class="separator:a24ad1023f07e22fb49a5b78fa71d54ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The wrapper of <a class="el" href="classilang_1_1_instr_lvl_abs.html" title="The class of Instruction-Level Abstraction (ILA). An ILA contains: ">InstrLvlAbs</a> (ILA). </p>

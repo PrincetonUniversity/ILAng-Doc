@@ -14,6 +14,7 @@ var searchData=
   ['findsharedstates',['FindSharedStates',['../classilang_1_1_inter_ila_unroller.html#aea10fd80ffa6f186591735812473d54c',1,'ilang::InterIlaUnroller']]],
   ['finishrecording',['FinishRecording',['../classilang_1_1_verilog_modifier.html#a8a84bd9fb886ad3a493f4f29372de87a',1,'ilang::VerilogModifier']]],
   ['finishregistersteps',['FinishRegisterSteps',['../classilang_1_1_memory_model.html#a485cec6011f853c04ed7822f53a36230',1,'ilang::MemoryModel::FinishRegisterSteps()'],['../classilang_1_1_sc.html#af778a694603c1383718b04c00e8369f4',1,'ilang::Sc::FinishRegisterSteps()'],['../classilang_1_1_tso.html#a44edf79e55ba95c8b65f85285314ce1c',1,'ilang::Tso::FinishRegisterSteps()']]],
+  ['flattenhierarchy',['FlattenHierarchy',['../classilang_1_1_ila.html#a24ad1023f07e22fb49a5b78fa71d54ce',1,'ilang::Ila']]],
   ['flattenila',['FlattenIla',['../classilang_1_1_abs_knob.html#ae0d72daf9c00d1ffa0a121022e4e8840',1,'ilang::AbsKnob::FlattenIla()'],['../u__abs__knob_8h.html#adc39fcaac019e8b8181bf2f5074c0e2f',1,'ilang::AbsKnob::FlattenIla()']]],
   ['flush',['flush',['../classilang_1_1_refinement_map.html#aef5fd6634b3dbefad911450b2c0deab1',1,'ilang::RefinementMap::flush() const'],['../classilang_1_1_refinement_map.html#aef5fd6634b3dbefad911450b2c0deab1',1,'ilang::RefinementMap::flush() const']]],
   ['forceaddupdate',['ForceAddUpdate',['../classilang_1_1_instr.html#a051d9168bb58a1ded675f0e2bef8cee4',1,'ilang::Instr']]],

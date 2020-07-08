@@ -71,7 +71,7 @@ var searchData=
   ['smtlibinvariantparserbase',['SmtlibInvariantParserBase',['../classilang_1_1smt_1_1_smtlib_invariant_parser_base.html#a8f9ea3a918ebbb6a77a9c599c9cb5ff7',1,'ilang::smt::SmtlibInvariantParserBase']]],
   ['smtlibinvariantparserinstance',['SmtlibInvariantParserInstance',['../classilang_1_1smt_1_1_smtlib_invariant_parser_instance.html#ac20871f0512d8d8306b771b508fa4b3e',1,'ilang::smt::SmtlibInvariantParserInstance']]],
   ['smtterminfo',['SmtTermInfo',['../structilang_1_1smt_1_1_smt_term_info.html#a0bb11500e13ff24bcacc8dbaa67bce60',1,'ilang::smt::SmtTermInfo::SmtTermInfo()'],['../structilang_1_1smt_1_1_smt_term_info.html#a156e8939c99c93e263bfe6f5e8cfb874',1,'ilang::smt::SmtTermInfo::SmtTermInfo(const T &amp;trans, const var_type &amp;p, SmtlibInvariantParser *c)']]],
-  ['sort',['Sort',['../classilang_1_1_sort.html#a9073ce0d29a535949387aebbbea2a10c',1,'ilang::Sort::Sort()'],['../classilang_1_1_expr.html#a1726b6941cefbd048115cf6e12c9f61b',1,'ilang::Expr::sort()']]],
+  ['sort',['sort',['../classilang_1_1_expr.html#a1726b6941cefbd048115cf6e12c9f61b',1,'ilang::Expr::sort()'],['../classilang_1_1_sort.html#a9073ce0d29a535949387aebbbea2a10c',1,'ilang::Sort::Sort()']]],
   ['sortbool',['SortBool',['../classilang_1_1_sort_bool.html#a264423605d8273965c5081d77e0b1250',1,'ilang::SortBool']]],
   ['sortbv',['SortBv',['../classilang_1_1_sort_bv.html#ad89f9d8bca535bb00d0ef69484f1f6da',1,'ilang::SortBv']]],
   ['sortmem',['SortMem',['../classilang_1_1_sort_mem.html#a2455b7867ad7cce9f0801496f2e467a9',1,'ilang::SortMem']]],

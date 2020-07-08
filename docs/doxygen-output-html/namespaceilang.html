@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.0.5</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -256,6 +256,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila_sim.html">IlaSim</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class to generate SystemC simulator model from ILA model Example Use:  <a href="classilang_1_1_ila_sim.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ilator.html">Ilator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ILAtor class - for CMake-based SystemC simulator generation.  <a href="classilang_1_1_ilator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ila_z3_unroller.html">IlaZ3Unroller</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The wrapper of generating z3::expr for verification.  <a href="classilang_1_1_ila_z3_unroller.html#details">More...</a><br /></td></tr>
@@ -696,12 +699,6 @@ Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#aafbb2022a842f23f36ef624986ea61bd">CompleteModel</a> (const <a class="el" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a> &amp;model_ptr_, <a class="el" href="namespaceilang.html#a2e20af889c24c84475198e2db9937cf7">DEFAULT_UPDATE_METHOD</a> dum)</td></tr>
 <tr class="memdesc:aafbb2022a842f23f36ef624986ea61bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use a default update method to complete model. <br /></td></tr>
 <tr class="separator:aafbb2022a842f23f36ef624986ea61bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41ee876398e1809694900f2555cd6ad9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a41ee876398e1809694900f2555cd6ad9">CheckEqSameArch</a> (const <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;a, const <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;b, bool update=true)</td></tr>
-<tr class="memdesc:a41ee876398e1809694900f2555cd6ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two ILAs have an exact same architecture, i.e., at the highest level of hierarchy.  <a href="#a41ee876398e1809694900f2555cd6ad9">More...</a><br /></td></tr>
-<tr class="separator:a41ee876398e1809694900f2555cd6ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a656b2f08edc6fdf198af1ac54756b6ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a656b2f08edc6fdf198af1ac54756b6ca">CheckEqSameMicroArch</a> (const <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;a, const <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;b, bool update=true)</td></tr>
-<tr class="memdesc:a656b2f08edc6fdf198af1ac54756b6ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two ILAs have an exact same micro-architecture. That is, they have a same architecture at every level in the hierarchy.  <a href="#a656b2f08edc6fdf198af1ac54756b6ca">More...</a><br /></td></tr>
-<tr class="separator:a656b2f08edc6fdf198af1ac54756b6ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c192076b6299abbc37f4bd31fd7e8e6"><td class="memItemLeft" align="right" valign="top"><a id="a6c192076b6299abbc37f4bd31fd7e8e6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a6c192076b6299abbc37f4bd31fd7e8e6">PassInferChildProgCFG</a> (const <a class="el" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a> &amp;m)</td></tr>
 <tr class="memdesc:a6c192076b6299abbc37f4bd31fd7e8e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Infer the control flow graph among the child-instructions (instr. seq.) <br /></td></tr>
@@ -1041,6 +1038,10 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <tr class="memitem:a29e232d6d5294946f552703a2eca544b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a29e232d6d5294946f552703a2eca544b">ImportChildSynthAbstraction</a> (const std::string &amp;file_name, <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;parent, const std::string &amp;ila_name)</td></tr>
 <tr class="memdesc:a29e232d6d5294946f552703a2eca544b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import the synthesized (child-)abstraction from file, under the given parent ILA.  <a href="#a29e232d6d5294946f552703a2eca544b">More...</a><br /></td></tr>
 <tr class="separator:a29e232d6d5294946f552703a2eca544b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad425ca8d07d9bf09cc0b024fc5121200"><td class="memItemLeft" align="right" valign="top"><a id="ad425ca8d07d9bf09cc0b024fc5121200"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#ad425ca8d07d9bf09cc0b024fc5121200">ExportSysCSim</a> (const <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;ila, const std::string &amp;dir_path)</td></tr>
+<tr class="memdesc:ad425ca8d07d9bf09cc0b024fc5121200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the SystemC simulator. <br /></td></tr>
+<tr class="separator:ad425ca8d07d9bf09cc0b024fc5121200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c1ef1665cc30522240ca2ea43e75a65"><td class="memItemLeft" align="right" valign="top"><a id="a7c1ef1665cc30522240ca2ea43e75a65"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a7c1ef1665cc30522240ca2ea43e75a65">getIteUnknownCondVal</a> (const <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> &amp;e, <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> &amp;c, <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> &amp;v)</td></tr>
 <tr class="memdesc:a7c1ef1665cc30522240ca2ea43e75a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to deal with Ite(c, v, apply(<b>unknown</b>) );. <br /></td></tr>
@@ -1055,6 +1056,10 @@ z3::expr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="memitem:aa1380087070c036209a6000d2034586b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#aa1380087070c036209a6000d2034586b">ImportSynthAbsFromFileHier</a> (const std::string &amp;file_name, const <a class="el" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a> parent, const std::string &amp;ila_name=&quot;&quot;)</td></tr>
 <tr class="memdesc:aa1380087070c036209a6000d2034586b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import from file the abstraction from the synthesis engine and convert it into a child-ILA of the specified parent ILA.  <a href="#aa1380087070c036209a6000d2034586b">More...</a><br /></td></tr>
 <tr class="separator:aa1380087070c036209a6000d2034586b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ee21a98e20146f4528e093b89815ea"><td class="memItemLeft" align="right" valign="top"><a id="a60ee21a98e20146f4528e093b89815ea"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a60ee21a98e20146f4528e093b89815ea">os_portable_exist</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a60ee21a98e20146f4528e093b89815ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if path exist. <br /></td></tr>
+<tr class="separator:a60ee21a98e20146f4528e093b89815ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeca5c66b61666678437e9145181ec121"><td class="memItemLeft" align="right" valign="top"><a id="aeca5c66b61666678437e9145181ec121"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#aeca5c66b61666678437e9145181ec121">os_portable_mkdir</a> (const std::string &amp;dir)</td></tr>
 <tr class="memdesc:aeca5c66b61666678437e9145181ec121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a dir, true -&gt; suceeded , ow false. <br /></td></tr>
@@ -1389,52 +1394,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a id="a41ee876398e1809694900f2555cd6ad9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41ee876398e1809694900f2555cd6ad9">&#9670;&nbsp;</a></span>CheckEqSameArch() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ilang::CheckEqSameArch </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>update</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check if two ILAs have an exact same architecture, i.e., at the highest level of hierarchy. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>first ILA. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>second ILA. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">update</td><td>check update if true. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a67e68d9a2bc95ba73a79ef8ad161d42d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67e68d9a2bc95ba73a79ef8ad161d42d">&#9670;&nbsp;</a></span>CheckEqSameArch() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e68d9a2bc95ba73a79ef8ad161d42d">&#9670;&nbsp;</a></span>CheckEqSameArch()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1466,50 +1427,6 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><div class="memdoc">
 
 <p>Check if two ILAs have an exact same architecture, i.e., at the highest level of hierarchy. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>first ILA. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>second ILA. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">update</td><td>check update if true. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a656b2f08edc6fdf198af1ac54756b6ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a656b2f08edc6fdf198af1ac54756b6ca">&#9670;&nbsp;</a></span>CheckEqSameMicroArch() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ilang::CheckEqSameMicroArch </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classilang_1_1_ila.html">Ila</a> &amp;&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>update</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check if two ILAs have an exact same micro-architecture. That is, they have a same architecture at every level in the hierarchy. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>first ILA. </td></tr>
@@ -1522,7 +1439,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div>
 </div>
 <a id="a28d67c6e5b8f137abfec44b36ae6b22f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28d67c6e5b8f137abfec44b36ae6b22f">&#9670;&nbsp;</a></span>CheckEqSameMicroArch() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a28d67c6e5b8f137abfec44b36ae6b22f">&#9670;&nbsp;</a></span>CheckEqSameMicroArch()</h2>
 
 <div class="memitem">
 <div class="memproto">

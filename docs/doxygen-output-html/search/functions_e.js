@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name',['name',['../classilang_1_1_object.html#acf20b072e69f572910d7d80c93af0b38',1,'ilang::Object::name()'],['../classilang_1_1_ila.html#aef59c0b294a99f65ce5dccef8dd1ccb7',1,'ilang::Ila::name()'],['../classilang_1_1_trace_step.html#a38df7c1cd47ec7dc399b8ecb8dbaf2a7',1,'ilang::TraceStep::name()']]],
+  ['name',['name',['../classilang_1_1_object.html#acf20b072e69f572910d7d80c93af0b38',1,'ilang::Object::name()'],['../classilang_1_1_expr_ref.html#a31473756178f76d7ea8340153cb0af6a',1,'ilang::ExprRef::name()'],['../classilang_1_1_func_ref.html#a5ac4ac87418baae7180825870ebfb784',1,'ilang::FuncRef::name()'],['../classilang_1_1_instr_ref.html#aedd438a623844d58702ebba6a0b31b30',1,'ilang::InstrRef::name()'],['../classilang_1_1_ila.html#aef59c0b294a99f65ce5dccef8dd1ccb7',1,'ilang::Ila::name()'],['../classilang_1_1_trace_step.html#a38df7c1cd47ec7dc399b8ecb8dbaf2a7',1,'ilang::TraceStep::name()']]],
   ['name2loc',['name2loc',['../classilang_1_1_verilog_analyzer.html#acaf9dcaeda40de14fa918cceb159f127',1,'ilang::VerilogAnalyzer::name2loc()'],['../classilang_1_1_verilog_info.html#a0d1cbd92a41a6ac7e545a32c5f087953',1,'ilang::VerilogInfo::name2loc()']]],
   ['ne',['Ne',['../expr__fuse_8h.html#a55f1d7cf9454f27664521cd0bf768da4',1,'ilang::ExprFuse::Ne(const ExprPtr l, const ExprPtr r)'],['../expr__fuse_8h.html#a9b50dce5da373473b804515941e17285',1,'ilang::ExprFuse::Ne(const ExprPtr l, const BvValType &amp;r)']]],
   ['negate',['Negate',['../expr__fuse_8h.html#ab7412f9a93a851a5f81247c3f1a615cc',1,'ilang::ExprFuse']]],

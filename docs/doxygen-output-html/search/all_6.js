@@ -17,6 +17,7 @@ var searchData=
   ['finishregistersteps',['FinishRegisterSteps',['../classilang_1_1_memory_model.html#a485cec6011f853c04ed7822f53a36230',1,'ilang::MemoryModel::FinishRegisterSteps()'],['../classilang_1_1_sc.html#af778a694603c1383718b04c00e8369f4',1,'ilang::Sc::FinishRegisterSteps()'],['../classilang_1_1_tso.html#a44edf79e55ba95c8b65f85285314ce1c',1,'ilang::Tso::FinishRegisterSteps()']]],
   ['first',['first',['../classilang_1_1_key_vec_it.html#a2771cebc1c4e334a400e2848fd798786',1,'ilang::KeyVecIt']]],
   ['flatten_5fdatatype',['flatten_datatype',['../classilang_1_1smt_1_1_yosys_smt_parser.html#a99006d44a24df53a65bf8cb998171d19',1,'ilang::smt::YosysSmtParser']]],
+  ['flattenhierarchy',['FlattenHierarchy',['../classilang_1_1_ila.html#a24ad1023f07e22fb49a5b78fa71d54ce',1,'ilang::Ila']]],
   ['flattenila',['FlattenIla',['../classilang_1_1_abs_knob.html#ae0d72daf9c00d1ffa0a121022e4e8840',1,'ilang::AbsKnob::FlattenIla()'],['../u__abs__knob_8h.html#adc39fcaac019e8b8181bf2f5074c0e2f',1,'ilang::AbsKnob::FlattenIla()']]],
   ['flush',['flush',['../classilang_1_1_refinement_map.html#aef5fd6634b3dbefad911450b2c0deab1',1,'ilang::RefinementMap::flush() const'],['../classilang_1_1_refinement_map.html#aef5fd6634b3dbefad911450b2c0deab1',1,'ilang::RefinementMap::flush() const']]],
   ['fn_5fl_5fmap',['fn_l_map',['../classilang_1_1_verilog_modifier.html#a68345754ff948794a806e1546a7f0371',1,'ilang::VerilogModifier']]],
