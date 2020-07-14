@@ -1,5 +1,15 @@
 # Release Notes
 
+## 1.1.1 - 2020-07-14
+
+#### Updates
+
+* New pass `SimplifySyntactic`
+* ILAtor support for initial condition setup using SMT queries
+* ILAtor bug fix in cascaded conditional memory update
+* Unroller support external interpretation of uninterpreted function
+* Redesign expression node hashing \(`ExprMngr`\)
+
 ## 1.1.0 - 2020-07-08
 
 #### Updates
