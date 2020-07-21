@@ -1,5 +1,14 @@
 # Release Notes
 
+## 1.1.2 - 2020-07-20
+
+#### Updates
+
+* New `SmtShim` to provide a unified interface for both z3 and smt-switch
+* Update smt-switch interface for their new releases
+* New pass `SanityCheckAndFix` for checking instruction set completeness and determinism \(hierarchically\)
+* Unify `ExprFuse` and `ast_fuse` into namespace `asthub`
+
 ## 1.1.1 - 2020-07-14
 
 #### Updates
