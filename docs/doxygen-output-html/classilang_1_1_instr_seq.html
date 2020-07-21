@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">1.1.2</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -88,14 +88,6 @@ Public Types</h2></td></tr>
 typedef std::shared_ptr&lt; <a class="el" href="classilang_1_1_instr_seq.html">InstrSeq</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_instr_seq.html#a37dd168ce5d95507eb7bf53455d79b80">InstrSeqPtr</a></td></tr>
 <tr class="memdesc:a37dd168ce5d95507eb7bf53455d79b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for passing around <a class="el" href="classilang_1_1_instr_seq.html" title="Instruction Sequencing does:">InstrSeq</a>. <br /></td></tr>
 <tr class="separator:a37dd168ce5d95507eb7bf53455d79b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6cdd19a1f5c41fa5e381bd8fa024cbc"><td class="memItemLeft" align="right" valign="top"><a id="ad6cdd19a1f5c41fa5e381bd8fa024cbc"></a>
-typedef <a class="el" href="classilang_1_1_instr_tran_edge.html#ada0821479c930f2895d2614405d3971f">InstrTranEdge::ItEdgePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_instr_seq.html#ad6cdd19a1f5c41fa5e381bd8fa024cbc">ItEdgePtr</a></td></tr>
-<tr class="memdesc:ad6cdd19a1f5c41fa5e381bd8fa024cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for passing around <a class="el" href="classilang_1_1_instr_tran_edge.html" title="Instruction transition edge, includeing:">InstrTranEdge</a>. <br /></td></tr>
-<tr class="separator:ad6cdd19a1f5c41fa5e381bd8fa024cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8733287d8a758300cbed05c5d86df2f5"><td class="memItemLeft" align="right" valign="top"><a id="a8733287d8a758300cbed05c5d86df2f5"></a>
-typedef <a class="el" href="classilang_1_1_instr_tran_node.html#a449144ce50eff60a35867b970f4608c6">InstrTranNode::ItNodePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_instr_seq.html#a8733287d8a758300cbed05c5d86df2f5">ItNodePtr</a></td></tr>
-<tr class="memdesc:a8733287d8a758300cbed05c5d86df2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for passing around <a class="el" href="classilang_1_1_instr_tran_node.html" title="Node for instruction-transition node, each node represent an instruction.">InstrTranNode</a>. <br /></td></tr>
-<tr class="separator:a8733287d8a758300cbed05c5d86df2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -111,10 +103,10 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_instr_seq.html#a9a8a95534f7c656d7fca14d5b2de619b">clear</a> ()</td></tr>
 <tr class="memdesc:a9a8a95534f7c656d7fca14d5b2de619b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset all stored sequences. <br /></td></tr>
 <tr class="separator:a9a8a95534f7c656d7fca14d5b2de619b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aff40b39ca609f3ac31553bc14e4026"><td class="memItemLeft" align="right" valign="top"><a id="a8aff40b39ca609f3ac31553bc14e4026"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_instr_seq.html#a8aff40b39ca609f3ac31553bc14e4026">AddTran</a> (const <a class="el" href="namespaceilang.html#af88a19312ae653d687a0d1207bb284f6">InstrPtr</a> src, const <a class="el" href="namespaceilang.html#af88a19312ae653d687a0d1207bb284f6">InstrPtr</a> dst, const <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> cnd)</td></tr>
-<tr class="memdesc:a8aff40b39ca609f3ac31553bc14e4026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one transition to the set. <br /></td></tr>
-<tr class="separator:a8aff40b39ca609f3ac31553bc14e4026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cdbb83cc9f448b1ca1b358c9969941c"><td class="memItemLeft" align="right" valign="top"><a id="a0cdbb83cc9f448b1ca1b358c9969941c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_instr_seq.html#a0cdbb83cc9f448b1ca1b358c9969941c">AddTran</a> (const <a class="el" href="namespaceilang.html#af88a19312ae653d687a0d1207bb284f6">InstrPtr</a> &amp;src, const <a class="el" href="namespaceilang.html#af88a19312ae653d687a0d1207bb284f6">InstrPtr</a> &amp;dst, const <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> &amp;cnd)</td></tr>
+<tr class="memdesc:a0cdbb83cc9f448b1ca1b358c9969941c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one transition to the set. <br /></td></tr>
+<tr class="separator:a0cdbb83cc9f448b1ca1b358c9969941c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0830ff76052fb45427b0ff2c155ef118"><td class="memItemLeft" align="right" valign="top"><a id="a0830ff76052fb45427b0ff2c155ef118"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_instr_seq.html#a0830ff76052fb45427b0ff2c155ef118">set_root</a> (const <a class="el" href="namespaceilang.html#af88a19312ae653d687a0d1207bb284f6">InstrPtr</a> &amp;i)</td></tr>
 <tr class="memdesc:a0830ff76052fb45427b0ff2c155ef118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the root node (entry instruction). <br /></td></tr>

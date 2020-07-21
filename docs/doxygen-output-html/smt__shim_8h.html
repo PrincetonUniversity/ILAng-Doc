@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ilang: v_eq_check.h File Reference</title>
+<title>ilang: smt_shim.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">1.1.2</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -63,37 +63,35 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_45e3ea34f8a3d0f10d903c0d85b95d4a.html">ilang</a></li><li class="navelem"><a class="el" href="dir_c30b481d98be78b6a2de7205bb13b7dc.html">ila-mngr</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_45e3ea34f8a3d0f10d903c0d85b95d4a.html">ilang</a></li><li class="navelem"><a class="el" href="dir_6c29916a83d3cf229a1becce57cbef43.html">target-smt</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">v_eq_check.h File Reference</div>  </div>
+<div class="title">smt_shim.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="instr__lvl__abs_8h_source.html">ilang/ila/instr_lvl_abs.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="func_8h_source.html">ilang/ila/ast/func.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="ast__hub_8h_source.html">ilang/ila/ast_hub.h</a>&gt;</code><br />
 </div>
-<p><a href="v__eq__check_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="smt__shim_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_smt_shim.html">ilang::SmtShim&lt; Generator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A templated class for wrapping z3 and smt-switch to provide a unified interface for different application, e.g., unroller.  <a href="classilang_1_1_smt_shim.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceilang"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html">ilang</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a67e68d9a2bc95ba73a79ef8ad161d42d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a67e68d9a2bc95ba73a79ef8ad161d42d">ilang::CheckEqSameArch</a> (const InstrLvlAbsPtr &amp;a, const InstrLvlAbsPtr &amp;b, bool update=true)</td></tr>
-<tr class="memdesc:a67e68d9a2bc95ba73a79ef8ad161d42d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two ILAs have an exact same architecture, i.e., at the highest level of hierarchy.  <a href="namespaceilang.html#a67e68d9a2bc95ba73a79ef8ad161d42d">More...</a><br /></td></tr>
-<tr class="separator:a67e68d9a2bc95ba73a79ef8ad161d42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28d67c6e5b8f137abfec44b36ae6b22f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a28d67c6e5b8f137abfec44b36ae6b22f">ilang::CheckEqSameMicroArch</a> (const InstrLvlAbsPtr &amp;a, const InstrLvlAbsPtr &amp;b, bool update=true)</td></tr>
-<tr class="memdesc:a28d67c6e5b8f137abfec44b36ae6b22f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two ILAs have an exact same micro-architecture. That is, they have a same architecture at every level in the hierarchy.  <a href="namespaceilang.html#a28d67c6e5b8f137abfec44b36ae6b22f">More...</a><br /></td></tr>
-<tr class="separator:a28d67c6e5b8f137abfec44b36ae6b22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The header for checking the equivalence of two ILAs. </p>
+<div class="textblock"><p>Templated class SmtShim - higher-level wrapper for z3 and smt-switch. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

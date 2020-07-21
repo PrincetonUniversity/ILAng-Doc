@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">1.1.2</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -110,6 +110,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pass
 <tr class="memitem:ada3bdc618ddfe116e7c8ff46b99eaad5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pass_8h.html#ada3bdc618ddfe116e7c8ff46b99eaad5">ilang::pass::SimplifySyntactic</a> (const InstrLvlAbsPtr &amp;m)</td></tr>
 <tr class="memdesc:ada3bdc618ddfe116e7c8ff46b99eaad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simplify instructions (across the hierarchy) syntactically. (Light-weight simplification, no SMT query.)  <a href="pass_8h.html#ada3bdc618ddfe116e7c8ff46b99eaad5">More...</a><br /></td></tr>
 <tr class="separator:ada3bdc618ddfe116e7c8ff46b99eaad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50717dc67ccfb7373c62ed94cf25e01b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pass_8h.html#a50717dc67ccfb7373c62ed94cf25e01b">ilang::pass::SanityCheckAndFix</a> (const InstrLvlAbsPtr &amp;m)</td></tr>
+<tr class="memdesc:a50717dc67ccfb7373c62ed94cf25e01b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sanity check instruction completness and determinism and fix if possible.  <a href="pass_8h.html#a50717dc67ccfb7373c62ed94cf25e01b">More...</a><br /></td></tr>
+<tr class="separator:a50717dc67ccfb7373c62ed94cf25e01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ILA passes </p>
@@ -143,6 +146,32 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pass
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>The target ILA. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">Rewr</td><td>The pass-specific rewriting function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a50717dc67ccfb7373c62ed94cf25e01b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50717dc67ccfb7373c62ed94cf25e01b">&#9670;&nbsp;</a></span>SanityCheckAndFix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ilang::pass::SanityCheckAndFix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sanity check instruction completness and determinism and fix if possible. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>The top-level ILA. </td></tr>
   </table>
   </dd>
 </dl>

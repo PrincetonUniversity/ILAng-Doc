@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">1.1.2</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -70,6 +70,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classilang_1_1_expr-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -137,11 +138,6 @@ typedef std::shared_ptr&lt; <a class="el" href="classilang_1_1_expr.html">Expr</
 typedef std::vector&lt; <a class="el" href="classilang_1_1_expr.html#a85952b6a34620c4c8cab6bac9c9fdf8c">ExprPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a17efc8282f647681d37cd4c78928aa01">ExprPtrVec</a></td></tr>
 <tr class="memdesc:a17efc8282f647681d37cd4c78928aa01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for storing a set of <a class="el" href="classilang_1_1_expr.html" title="The class for expression, which is the basic type for variables, constraints, state update expression...">Expr</a>. <br /></td></tr>
 <tr class="separator:a17efc8282f647681d37cd4c78928aa01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classilang_1_1_ast"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classilang_1_1_ast')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classilang_1_1_ast.html">ilang::Ast</a></td></tr>
-<tr class="memitem:a7433a1e6c865c5c7f64eb7bceca11ec2 inherit pub_types_classilang_1_1_ast"><td class="memItemLeft" align="right" valign="top"><a id="a7433a1e6c865c5c7f64eb7bceca11ec2"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classilang_1_1_instr_lvl_abs.html">InstrLvlAbs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ast.html#a7433a1e6c865c5c7f64eb7bceca11ec2">InstrLvlAbsPtr</a></td></tr>
-<tr class="memdesc:a7433a1e6c865c5c7f64eb7bceca11ec2 inherit pub_types_classilang_1_1_ast"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for forward declaration of ILA. <br /></td></tr>
-<tr class="separator:a7433a1e6c865c5c7f64eb7bceca11ec2 inherit pub_types_classilang_1_1_ast"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classilang_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classilang_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classilang_1_1_object.html">ilang::Object</a></td></tr>
 <tr class="memitem:af23d3767cfbc8cb9312281cbfa4aae48 inherit pub_types_classilang_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="af23d3767cfbc8cb9312281cbfa4aae48"></a>
 typedef std::shared_ptr&lt; <a class="el" href="classilang_1_1_object.html">Object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_object.html#af23d3767cfbc8cb9312281cbfa4aae48">ObjPtr</a></td></tr>
@@ -194,14 +190,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a9028b056abab5ba74372506cc0174551">set_params</a> (const std::vector&lt; int &gt; params)</td></tr>
 <tr class="memdesc:a9028b056abab5ba74372506cc0174551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the parameters. <br /></td></tr>
 <tr class="separator:a9028b056abab5ba74372506cc0174551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8381c199449b5f0b2fad610360ba8bc3"><td class="memItemLeft" align="right" valign="top"><a id="a8381c199449b5f0b2fad610360ba8bc3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a8381c199449b5f0b2fad610360ba8bc3">replace_arg</a> (const int &amp;idx, const <a class="el" href="classilang_1_1_expr.html#a85952b6a34620c4c8cab6bac9c9fdf8c">ExprPtr</a> <a class="el" href="classilang_1_1_expr.html#a754c28cd350d28c7bdc8fffe7fe22ec2">arg</a>)</td></tr>
-<tr class="memdesc:a8381c199449b5f0b2fad610360ba8bc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the i-th argument. <br /></td></tr>
-<tr class="separator:a8381c199449b5f0b2fad610360ba8bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00c141f79e644f44e4ea0e54811821e3"><td class="memItemLeft" align="right" valign="top"><a id="a00c141f79e644f44e4ea0e54811821e3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a00c141f79e644f44e4ea0e54811821e3">replace_arg</a> (const <a class="el" href="classilang_1_1_expr.html#a85952b6a34620c4c8cab6bac9c9fdf8c">ExprPtr</a> a, const <a class="el" href="classilang_1_1_expr.html#a85952b6a34620c4c8cab6bac9c9fdf8c">ExprPtr</a> b)</td></tr>
-<tr class="memdesc:a00c141f79e644f44e4ea0e54811821e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the "a" argument with "b" argument with "exist". <br /></td></tr>
-<tr class="separator:a00c141f79e644f44e4ea0e54811821e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8837404fbd246584cd184c8e6f37318"><td class="memItemLeft" align="right" valign="top"><a id="af8837404fbd246584cd184c8e6f37318"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#af8837404fbd246584cd184c8e6f37318">replace_arg</a> (const int &amp;idx, const <a class="el" href="classilang_1_1_expr.html#a85952b6a34620c4c8cab6bac9c9fdf8c">ExprPtr</a> &amp;<a class="el" href="classilang_1_1_expr.html#a754c28cd350d28c7bdc8fffe7fe22ec2">arg</a>)</td></tr>
+<tr class="memdesc:af8837404fbd246584cd184c8e6f37318"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the i-th argument. <br /></td></tr>
+<tr class="separator:af8837404fbd246584cd184c8e6f37318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a00cdc9b0b771c0fc9b4309077221de"><td class="memItemLeft" align="right" valign="top"><a id="a0a00cdc9b0b771c0fc9b4309077221de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a0a00cdc9b0b771c0fc9b4309077221de">replace_arg</a> (const <a class="el" href="classilang_1_1_expr.html#a85952b6a34620c4c8cab6bac9c9fdf8c">ExprPtr</a> &amp;a, const <a class="el" href="classilang_1_1_expr.html#a85952b6a34620c4c8cab6bac9c9fdf8c">ExprPtr</a> &amp;b)</td></tr>
+<tr class="memdesc:a0a00cdc9b0b771c0fc9b4309077221de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the "a" argument with "b" argument with "exist". <br /></td></tr>
+<tr class="separator:a0a00cdc9b0b771c0fc9b4309077221de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae77e44b5507512a5d5b935db00725498"><td class="memItemLeft" align="right" valign="top"><a id="ae77e44b5507512a5d5b935db00725498"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#ae77e44b5507512a5d5b935db00725498">is_expr</a> () const</td></tr>
 <tr class="memdesc:ae77e44b5507512a5d5b935db00725498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is type expr (object). <br /></td></tr>
@@ -231,7 +227,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a354b84f94e2c0c847b05fa27764dc679"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if this is an Array expression. <br /></td></tr>
 <tr class="separator:a354b84f94e2c0c847b05fa27764dc679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a061fbe78d239f6361f3f6f166db6791d"><td class="memItemLeft" align="right" valign="top"><a id="a061fbe78d239f6361f3f6f166db6791d"></a>
-virtual z3::expr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a061fbe78d239f6361f3f6f166db6791d">GetZ3Expr</a> (z3::context &amp;z3_ctx, const <a class="el" href="namespaceilang.html#adc4eee919aa24fff882d03a48d733c19">Z3ExprVec</a> &amp;z3expr_vec, const std::string &amp;suffix=&quot;&quot;) const =0</td></tr>
+virtual z3::expr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a061fbe78d239f6361f3f6f166db6791d">GetZ3Expr</a> (z3::context &amp;z3_ctx, const <a class="el" href="classilang_1_1_expr.html#a66e9230a381199e0560dd4f55376e57f">Z3ExprVec</a> &amp;z3expr_vec, const std::string &amp;suffix=&quot;&quot;) const =0</td></tr>
 <tr class="memdesc:a061fbe78d239f6361f3f6f166db6791d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the z3 expression for the node. <br /></td></tr>
 <tr class="separator:a061fbe78d239f6361f3f6f166db6791d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42b2e7df92a760c27d552a7bf290548f"><td class="memItemLeft" align="right" valign="top"><a id="a42b2e7df92a760c27d552a7bf290548f"></a>
@@ -273,10 +269,10 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <a class="el" href="classilang_1_1_ast.html#a7433a1e6c865c5c7f64eb7bceca11ec2">InstrLvlAbsPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ast.html#a533dd9faf9db1cb76e479c1cacdde285">host</a> () const</td></tr>
 <tr class="memdesc:a533dd9faf9db1cb76e479c1cacdde285 inherit pub_methods_classilang_1_1_ast"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the hosting ILA. <br /></td></tr>
 <tr class="separator:a533dd9faf9db1cb76e479c1cacdde285 inherit pub_methods_classilang_1_1_ast"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f6ec0aef013e95d4798500b9d6058dd inherit pub_methods_classilang_1_1_ast"><td class="memItemLeft" align="right" valign="top"><a id="a5f6ec0aef013e95d4798500b9d6058dd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ast.html#a5f6ec0aef013e95d4798500b9d6058dd">set_host</a> (<a class="el" href="classilang_1_1_ast.html#a7433a1e6c865c5c7f64eb7bceca11ec2">InstrLvlAbsPtr</a> <a class="el" href="classilang_1_1_ast.html#a533dd9faf9db1cb76e479c1cacdde285">host</a>)</td></tr>
-<tr class="memdesc:a5f6ec0aef013e95d4798500b9d6058dd inherit pub_methods_classilang_1_1_ast"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the hosting ILA. <br /></td></tr>
-<tr class="separator:a5f6ec0aef013e95d4798500b9d6058dd inherit pub_methods_classilang_1_1_ast"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab86e69c8a4cd0bbb09ff6ce0ddf9face inherit pub_methods_classilang_1_1_ast"><td class="memItemLeft" align="right" valign="top"><a id="ab86e69c8a4cd0bbb09ff6ce0ddf9face"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ast.html#ab86e69c8a4cd0bbb09ff6ce0ddf9face">set_host</a> (const <a class="el" href="classilang_1_1_ast.html#a7433a1e6c865c5c7f64eb7bceca11ec2">InstrLvlAbsPtr</a> &amp;<a class="el" href="classilang_1_1_ast.html#a533dd9faf9db1cb76e479c1cacdde285">host</a>)</td></tr>
+<tr class="memdesc:ab86e69c8a4cd0bbb09ff6ce0ddf9face inherit pub_methods_classilang_1_1_ast"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the hosting ILA. <br /></td></tr>
+<tr class="separator:ab86e69c8a4cd0bbb09ff6ce0ddf9face inherit pub_methods_classilang_1_1_ast"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classilang_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classilang_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classilang_1_1_object.html">ilang::Object</a></td></tr>
 <tr class="memitem:acd2c81efbfd62f8d4de1d3007a187fc5 inherit pub_methods_classilang_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="acd2c81efbfd62f8d4de1d3007a187fc5"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_object.html#acd2c81efbfd62f8d4de1d3007a187fc5">Object</a> ()</td></tr>
@@ -303,12 +299,24 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:abafa1d9b1ba81835b191fc8a032f13ae inherit pub_methods_classilang_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is type <a class="el" href="classilang_1_1_instr.html" title="The class for the Instruction. An Instr object contains:">Instr</a>. <br /></td></tr>
 <tr class="separator:abafa1d9b1ba81835b191fc8a032f13ae inherit pub_methods_classilang_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:a66e9230a381199e0560dd4f55376e57f"><td class="memItemLeft" align="right" valign="top"><a id="a66e9230a381199e0560dd4f55376e57f"></a>
+typedef std::vector&lt; z3::expr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a66e9230a381199e0560dd4f55376e57f">Z3ExprVec</a></td></tr>
+<tr class="memdesc:a66e9230a381199e0560dd4f55376e57f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector type for z3 expression. <br /></td></tr>
+<tr class="separator:a66e9230a381199e0560dd4f55376e57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_types_classilang_1_1_ast"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classilang_1_1_ast')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="classilang_1_1_ast.html">ilang::Ast</a></td></tr>
+<tr class="memitem:a7433a1e6c865c5c7f64eb7bceca11ec2 inherit pro_types_classilang_1_1_ast"><td class="memItemLeft" align="right" valign="top"><a id="a7433a1e6c865c5c7f64eb7bceca11ec2"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classilang_1_1_instr_lvl_abs.html">InstrLvlAbs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ast.html#a7433a1e6c865c5c7f64eb7bceca11ec2">InstrLvlAbsPtr</a></td></tr>
+<tr class="memdesc:a7433a1e6c865c5c7f64eb7bceca11ec2 inherit pro_types_classilang_1_1_ast"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for forward declaration of ILA. <br /></td></tr>
+<tr class="separator:a7433a1e6c865c5c7f64eb7bceca11ec2 inherit pro_types_classilang_1_1_ast"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a54f39f89237980d51dc32f4a9bae4f77"><td class="memItemLeft" align="right" valign="top"><a id="a54f39f89237980d51dc32f4a9bae4f77"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a54f39f89237980d51dc32f4a9bae4f77">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classilang_1_1_expr.html#a85952b6a34620c4c8cab6bac9c9fdf8c">ExprPtr</a> expr)</td></tr>
-<tr class="memdesc:a54f39f89237980d51dc32f4a9bae4f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload output stream operator for pointer. <br /></td></tr>
-<tr class="separator:a54f39f89237980d51dc32f4a9bae4f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71232c44fd2e0ae98319d9eea5a13ba9"><td class="memItemLeft" align="right" valign="top"><a id="a71232c44fd2e0ae98319d9eea5a13ba9"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_expr.html#a71232c44fd2e0ae98319d9eea5a13ba9">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classilang_1_1_expr.html#a85952b6a34620c4c8cab6bac9c9fdf8c">ExprPtr</a> &amp;expr)</td></tr>
+<tr class="memdesc:a71232c44fd2e0ae98319d9eea5a13ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload output stream operator for pointer. <br /></td></tr>
+<tr class="separator:a71232c44fd2e0ae98319d9eea5a13ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The class for expression, which is the basic type for variables, constraints, state update expressions, etc. </p>

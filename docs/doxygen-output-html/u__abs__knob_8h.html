@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">1.1.2</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -85,14 +85,14 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab7782e1d9547605a44461d5484d1edf9"><td class="memItemLeft" align="right" valign="top"><a id="ab7782e1d9547605a44461d5484d1edf9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#ab7782e1d9547605a44461d5484d1edf9">ilang::AbsKnob::InsertVar</a> (const ExprPtr e, ExprSet &amp;vars)</td></tr>
-<tr class="memdesc:ab7782e1d9547605a44461d5484d1edf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all dependent vars of the expr to the set. <br /></td></tr>
-<tr class="separator:ab7782e1d9547605a44461d5484d1edf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32998668e65ea28dd68a588adbd2c233"><td class="memItemLeft" align="right" valign="top"><a id="a32998668e65ea28dd68a588adbd2c233"></a>
-ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a32998668e65ea28dd68a588adbd2c233">ilang::AbsKnob::GetVar</a> (const ExprPtr e)</td></tr>
-<tr class="memdesc:a32998668e65ea28dd68a588adbd2c233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all dependent vars of the expr. <br /></td></tr>
-<tr class="separator:a32998668e65ea28dd68a588adbd2c233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94ab69df9cd9af6e548866786c40ce2"><td class="memItemLeft" align="right" valign="top"><a id="ac94ab69df9cd9af6e548866786c40ce2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#ac94ab69df9cd9af6e548866786c40ce2">ilang::AbsKnob::InsertVar</a> (const ExprPtr &amp;e, ExprSet &amp;vars)</td></tr>
+<tr class="memdesc:ac94ab69df9cd9af6e548866786c40ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all dependent vars of the expr to the set. <br /></td></tr>
+<tr class="separator:ac94ab69df9cd9af6e548866786c40ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57ac76bd7a8e4d893aada67d7e510415"><td class="memItemLeft" align="right" valign="top"><a id="a57ac76bd7a8e4d893aada67d7e510415"></a>
+ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a57ac76bd7a8e4d893aada67d7e510415">ilang::AbsKnob::GetVar</a> (const ExprPtr &amp;e)</td></tr>
+<tr class="memdesc:a57ac76bd7a8e4d893aada67d7e510415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all dependent vars of the expr. <br /></td></tr>
+<tr class="separator:a57ac76bd7a8e4d893aada67d7e510415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a4233d49f7a5277dc993725bb7a449a"><td class="memItemLeft" align="right" valign="top"><a id="a4a4233d49f7a5277dc993725bb7a449a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a4a4233d49f7a5277dc993725bb7a449a">ilang::AbsKnob::InsertStt</a> (const InstrCnstPtr instrs, ExprSet &amp;stts)</td></tr>
 <tr class="memdesc:a4a4233d49f7a5277dc993725bb7a449a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all state vars of the host (excluding child) to the set. <br /></td></tr>
@@ -101,123 +101,123 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__a
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a9ac114f35508f649cf7eb23036447ad8">ilang::AbsKnob::InsertSttTree</a> (const InstrCnstPtr instrs, ExprSet &amp;stts)</td></tr>
 <tr class="memdesc:a9ac114f35508f649cf7eb23036447ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all state vars of the host (including child) to the set. <br /></td></tr>
 <tr class="separator:a9ac114f35508f649cf7eb23036447ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b297a1d06bd4d17aa2b6eb0c3487139"><td class="memItemLeft" align="right" valign="top"><a id="a3b297a1d06bd4d17aa2b6eb0c3487139"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a3b297a1d06bd4d17aa2b6eb0c3487139">ilang::AbsKnob::InsertVar</a> (const InstrLvlAbsCnstPtr m, ExprSet &amp;vars)</td></tr>
-<tr class="memdesc:a3b297a1d06bd4d17aa2b6eb0c3487139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all vars of the ILA (excluding child) to the set. <br /></td></tr>
-<tr class="separator:a3b297a1d06bd4d17aa2b6eb0c3487139"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dd2ad00aa24bbfe2b3f1f5fa6b44526"><td class="memItemLeft" align="right" valign="top"><a id="a9dd2ad00aa24bbfe2b3f1f5fa6b44526"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a9dd2ad00aa24bbfe2b3f1f5fa6b44526">ilang::AbsKnob::InsertStt</a> (const InstrLvlAbsCnstPtr m, ExprSet &amp;stts)</td></tr>
-<tr class="memdesc:a9dd2ad00aa24bbfe2b3f1f5fa6b44526"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all state vars of the ILA (excluding child) to the set. <br /></td></tr>
-<tr class="separator:a9dd2ad00aa24bbfe2b3f1f5fa6b44526"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab62a8484a87a861460d19746022c0b9d"><td class="memItemLeft" align="right" valign="top"><a id="ab62a8484a87a861460d19746022c0b9d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#ab62a8484a87a861460d19746022c0b9d">ilang::AbsKnob::InsertInp</a> (const InstrLvlAbsCnstPtr m, ExprSet &amp;inps)</td></tr>
-<tr class="memdesc:ab62a8484a87a861460d19746022c0b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all input vars of the ILA (excluding child) to the set. <br /></td></tr>
-<tr class="separator:ab62a8484a87a861460d19746022c0b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae091bae215c31ceaa6fbc0926c35ef0c"><td class="memItemLeft" align="right" valign="top"><a id="ae091bae215c31ceaa6fbc0926c35ef0c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#ae091bae215c31ceaa6fbc0926c35ef0c">ilang::AbsKnob::InsertVarTree</a> (const InstrLvlAbsCnstPtr top, ExprSet &amp;vars)</td></tr>
-<tr class="memdesc:ae091bae215c31ceaa6fbc0926c35ef0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all vars of the ILA (including child) to the set. <br /></td></tr>
-<tr class="separator:ae091bae215c31ceaa6fbc0926c35ef0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58fb2da38aa5e35b9b1324276e3234fe"><td class="memItemLeft" align="right" valign="top"><a id="a58fb2da38aa5e35b9b1324276e3234fe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a58fb2da38aa5e35b9b1324276e3234fe">ilang::AbsKnob::InsertSttTree</a> (const InstrLvlAbsCnstPtr top, ExprSet &amp;stts)</td></tr>
-<tr class="memdesc:a58fb2da38aa5e35b9b1324276e3234fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all state vars of the ILA (including child) to the set. <br /></td></tr>
-<tr class="separator:a58fb2da38aa5e35b9b1324276e3234fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adff96276629ac4ce3ddea08f8d25192d"><td class="memItemLeft" align="right" valign="top"><a id="adff96276629ac4ce3ddea08f8d25192d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#adff96276629ac4ce3ddea08f8d25192d">ilang::AbsKnob::InsertInpTree</a> (const InstrLvlAbsCnstPtr top, ExprSet &amp;inps)</td></tr>
-<tr class="memdesc:adff96276629ac4ce3ddea08f8d25192d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all input vars of the ILA (including child) to the set. <br /></td></tr>
-<tr class="separator:adff96276629ac4ce3ddea08f8d25192d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4da62c48785ce034814eddcf26141f34"><td class="memItemLeft" align="right" valign="top"><a id="a4da62c48785ce034814eddcf26141f34"></a>
-ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a4da62c48785ce034814eddcf26141f34">ilang::AbsKnob::GetVar</a> (const InstrLvlAbsCnstPtr m)</td></tr>
-<tr class="memdesc:a4da62c48785ce034814eddcf26141f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all vars of the ILA (excluding child). <br /></td></tr>
-<tr class="separator:a4da62c48785ce034814eddcf26141f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a860ade707d784126b33d28ebd40f76dc"><td class="memItemLeft" align="right" valign="top"><a id="a860ade707d784126b33d28ebd40f76dc"></a>
-ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a860ade707d784126b33d28ebd40f76dc">ilang::AbsKnob::GetStt</a> (const InstrLvlAbsCnstPtr m)</td></tr>
-<tr class="memdesc:a860ade707d784126b33d28ebd40f76dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all state vars of the ILA (excluding child). <br /></td></tr>
-<tr class="separator:a860ade707d784126b33d28ebd40f76dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a928befd46857dc7b97f3daa8b578569b"><td class="memItemLeft" align="right" valign="top"><a id="a928befd46857dc7b97f3daa8b578569b"></a>
-ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a928befd46857dc7b97f3daa8b578569b">ilang::AbsKnob::GetInp</a> (const InstrLvlAbsCnstPtr m)</td></tr>
-<tr class="memdesc:a928befd46857dc7b97f3daa8b578569b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all input vars of the ILA (excluding child). <br /></td></tr>
-<tr class="separator:a928befd46857dc7b97f3daa8b578569b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a504bec7506d63a9689e34f37e33c1377"><td class="memItemLeft" align="right" valign="top"><a id="a504bec7506d63a9689e34f37e33c1377"></a>
-ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a504bec7506d63a9689e34f37e33c1377">ilang::AbsKnob::GetVarTree</a> (const InstrLvlAbsCnstPtr top)</td></tr>
-<tr class="memdesc:a504bec7506d63a9689e34f37e33c1377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all vars of the ILA (including child). <br /></td></tr>
-<tr class="separator:a504bec7506d63a9689e34f37e33c1377"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a222ffe1e9c400c639676311caa049320"><td class="memItemLeft" align="right" valign="top"><a id="a222ffe1e9c400c639676311caa049320"></a>
-ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a222ffe1e9c400c639676311caa049320">ilang::AbsKnob::GetSttTree</a> (const InstrLvlAbsCnstPtr top)</td></tr>
-<tr class="memdesc:a222ffe1e9c400c639676311caa049320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all state vars of the ILA (including child). <br /></td></tr>
-<tr class="separator:a222ffe1e9c400c639676311caa049320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a387b03b58f8a89414f40ec027c759316"><td class="memItemLeft" align="right" valign="top"><a id="a387b03b58f8a89414f40ec027c759316"></a>
-ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a387b03b58f8a89414f40ec027c759316">ilang::AbsKnob::GetInpTree</a> (const InstrLvlAbsCnstPtr top)</td></tr>
-<tr class="memdesc:a387b03b58f8a89414f40ec027c759316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all input vars of the ILA (including child). <br /></td></tr>
-<tr class="separator:a387b03b58f8a89414f40ec027c759316"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa54664ab23d627ca96444243ef13a9a7"><td class="memItemLeft" align="right" valign="top"><a id="aa54664ab23d627ca96444243ef13a9a7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#aa54664ab23d627ca96444243ef13a9a7">ilang::AbsKnob::InsertInstr</a> (const InstrLvlAbsCnstPtr m, InstrVec &amp;instrs)</td></tr>
-<tr class="memdesc:aa54664ab23d627ca96444243ef13a9a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all instructions of the ILA (excluding child) to the set. <br /></td></tr>
-<tr class="separator:aa54664ab23d627ca96444243ef13a9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a390fa3fa3f037e6db913ea39bd477af5"><td class="memItemLeft" align="right" valign="top"><a id="a390fa3fa3f037e6db913ea39bd477af5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a390fa3fa3f037e6db913ea39bd477af5">ilang::AbsKnob::InsertInstrTree</a> (const InstrLvlAbsCnstPtr top, InstrVec &amp;instrs)</td></tr>
-<tr class="memdesc:a390fa3fa3f037e6db913ea39bd477af5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all instructions of the ILA (including child) to the set. <br /></td></tr>
-<tr class="separator:a390fa3fa3f037e6db913ea39bd477af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf3558eb206cbc2d79df795f77a001ac"><td class="memItemLeft" align="right" valign="top"><a id="abf3558eb206cbc2d79df795f77a001ac"></a>
-InstrVec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#abf3558eb206cbc2d79df795f77a001ac">ilang::AbsKnob::GetInstr</a> (const InstrLvlAbsCnstPtr m)</td></tr>
-<tr class="memdesc:abf3558eb206cbc2d79df795f77a001ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of instructions of the ILA (excluding child). <br /></td></tr>
-<tr class="separator:abf3558eb206cbc2d79df795f77a001ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86e273f2b0bbe9f2dae4dfbcd755cf54"><td class="memItemLeft" align="right" valign="top"><a id="a86e273f2b0bbe9f2dae4dfbcd755cf54"></a>
-InstrVec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a86e273f2b0bbe9f2dae4dfbcd755cf54">ilang::AbsKnob::GetInstrTree</a> (const InstrLvlAbsCnstPtr top)</td></tr>
-<tr class="memdesc:a86e273f2b0bbe9f2dae4dfbcd755cf54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of instructions of the ILA (including child). <br /></td></tr>
-<tr class="separator:a86e273f2b0bbe9f2dae4dfbcd755cf54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace63a67f6d4120143c013d6ed78b49cd"><td class="memItemLeft" align="right" valign="top">ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#ace63a67f6d4120143c013d6ed78b49cd">ilang::AbsKnob::Rewrite</a> (const ExprPtr e, const ExprMap &amp;rule)</td></tr>
-<tr class="memdesc:ace63a67f6d4120143c013d6ed78b49cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewrite an expression by replacing based on the rule.  <a href="u__abs__knob_8h.html#ace63a67f6d4120143c013d6ed78b49cd">More...</a><br /></td></tr>
-<tr class="separator:ace63a67f6d4120143c013d6ed78b49cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30b54aea454b1ee5f05366da50abe241"><td class="memItemLeft" align="right" valign="top"><a id="a30b54aea454b1ee5f05366da50abe241"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a30b54aea454b1ee5f05366da50abe241">ilang::AbsKnob::RewriteInstr</a> (const InstrCnstPtr instr_src, const InstrPtr instr_dst, const ExprMap &amp;expr_map)</td></tr>
-<tr class="memdesc:a30b54aea454b1ee5f05366da50abe241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewrite an instruction by replacing based on the rule. <br /></td></tr>
-<tr class="separator:a30b54aea454b1ee5f05366da50abe241"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc39fcaac019e8b8181bf2f5074c0e2f"><td class="memItemLeft" align="right" valign="top"><a id="adc39fcaac019e8b8181bf2f5074c0e2f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#adc39fcaac019e8b8181bf2f5074c0e2f">ilang::AbsKnob::FlattenIla</a> (const InstrLvlAbsPtr ila_ptr_)</td></tr>
-<tr class="memdesc:adc39fcaac019e8b8181bf2f5074c0e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flatten the given ILA, the initial conditions will be added to the top the child instructions will also be added to the top, but their (hierarchical) valid conditions will be added to their decode condition Some usage hint: this function is intended to generate an ILA for Verilog generator or other verification model generator. You can first use ExtrDeptModl to extract the dependent model and use this to flatten the that model and send to the generator. <br /></td></tr>
-<tr class="separator:adc39fcaac019e8b8181bf2f5074c0e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d9d9c45a6f4be9167b8840ceafc7522"><td class="memItemLeft" align="right" valign="top"><a id="a2d9d9c45a6f4be9167b8840ceafc7522"></a>
-InstrLvlAbsPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a2d9d9c45a6f4be9167b8840ceafc7522">ilang::AbsKnob::ExtrDeptModl</a> (const InstrPtr instr, const std::string &amp;name)</td></tr>
-<tr class="memdesc:a2d9d9c45a6f4be9167b8840ceafc7522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new ILA that contains the dependant instructions and child-ILAs of an instruction (defined by sub-programs). <br /></td></tr>
-<tr class="separator:a2d9d9c45a6f4be9167b8840ceafc7522"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1df84dc30c847db9c5680b46f35d1fab"><td class="memItemLeft" align="right" valign="top"><a id="a1df84dc30c847db9c5680b46f35d1fab"></a>
-InstrLvlAbsPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a1df84dc30c847db9c5680b46f35d1fab">ilang::AbsKnob::CopyIlaTree</a> (const InstrLvlAbsCnstPtr src, const std::string &amp;dst_name)</td></tr>
-<tr class="memdesc:a1df84dc30c847db9c5680b46f35d1fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy and ILA (including child). <br /></td></tr>
-<tr class="separator:a1df84dc30c847db9c5680b46f35d1fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98dbd1171e1a745fd29643c3f15721a9"><td class="memItemLeft" align="right" valign="top"><a id="a98dbd1171e1a745fd29643c3f15721a9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a98dbd1171e1a745fd29643c3f15721a9">ilang::AbsKnob::DuplInp</a> (const InstrLvlAbsCnstPtr src, const InstrLvlAbsPtr dst, ExprMap &amp;expr_map)</td></tr>
-<tr class="memdesc:a98dbd1171e1a745fd29643c3f15721a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate input vars from src to dst while updating the mapping. <br /></td></tr>
-<tr class="separator:a98dbd1171e1a745fd29643c3f15721a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a315883086dde83840f74331762b13c"><td class="memItemLeft" align="right" valign="top"><a id="a7a315883086dde83840f74331762b13c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a7a315883086dde83840f74331762b13c">ilang::AbsKnob::DuplStt</a> (const InstrLvlAbsCnstPtr src, const InstrLvlAbsPtr dst, ExprMap &amp;expr_map)</td></tr>
-<tr class="memdesc:a7a315883086dde83840f74331762b13c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate state vars from src to dst while updating the mapping. <br /></td></tr>
-<tr class="separator:a7a315883086dde83840f74331762b13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a892e452fecdb29d9b6fd2bc15fdb4cbd"><td class="memItemLeft" align="right" valign="top"><a id="a892e452fecdb29d9b6fd2bc15fdb4cbd"></a>
-ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a892e452fecdb29d9b6fd2bc15fdb4cbd">ilang::AbsKnob::DuplFetch</a> (const InstrLvlAbsCnstPtr src, const InstrLvlAbsPtr dst, const ExprMap &amp;expr_map)</td></tr>
-<tr class="memdesc:a892e452fecdb29d9b6fd2bc15fdb4cbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate fetch from src to dst if defined (rewritten w.r.t. mapping). <br /></td></tr>
-<tr class="separator:a892e452fecdb29d9b6fd2bc15fdb4cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a400a86b14e545e0c15afa5897930bd27"><td class="memItemLeft" align="right" valign="top"><a id="a400a86b14e545e0c15afa5897930bd27"></a>
-ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a400a86b14e545e0c15afa5897930bd27">ilang::AbsKnob::DuplValid</a> (const InstrLvlAbsCnstPtr src, const InstrLvlAbsPtr dst, const ExprMap &amp;expr_map)</td></tr>
-<tr class="memdesc:a400a86b14e545e0c15afa5897930bd27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate valid from src to dst if defined (rewritten w.r.t. mapping). <br /></td></tr>
-<tr class="separator:a400a86b14e545e0c15afa5897930bd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac54d1ae5fdbf59d79d6142c2d0a63d05"><td class="memItemLeft" align="right" valign="top"><a id="ac54d1ae5fdbf59d79d6142c2d0a63d05"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#ac54d1ae5fdbf59d79d6142c2d0a63d05">ilang::AbsKnob::DuplInit</a> (const InstrLvlAbsCnstPtr src, const InstrLvlAbsPtr dst, const ExprMap &amp;expr_map)</td></tr>
-<tr class="memdesc:ac54d1ae5fdbf59d79d6142c2d0a63d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate initial conditions from src to dst (rewritten w.r.t. mapping). <br /></td></tr>
-<tr class="separator:ac54d1ae5fdbf59d79d6142c2d0a63d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9798ee46189e11846b4c8c408ad6b3b8"><td class="memItemLeft" align="right" valign="top"><a id="a9798ee46189e11846b4c8c408ad6b3b8"></a>
-InstrPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a9798ee46189e11846b4c8c408ad6b3b8">ilang::AbsKnob::DuplInstr</a> (const InstrCnstPtr instr_src, const InstrLvlAbsPtr dst, const ExprMap &amp;expr_map, const CnstIlaMap &amp;ila_map)</td></tr>
-<tr class="memdesc:a9798ee46189e11846b4c8c408ad6b3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate an instruction to dst (rewritten w.r.t. mapping). <br /></td></tr>
-<tr class="separator:a9798ee46189e11846b4c8c408ad6b3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69b0ffbf60ece7cf0d9e71e010df598a"><td class="memItemLeft" align="right" valign="top"><a id="a69b0ffbf60ece7cf0d9e71e010df598a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a69b0ffbf60ece7cf0d9e71e010df598a">ilang::AbsKnob::DuplInstrSeq</a> (const InstrLvlAbsCnstPtr src, const InstrLvlAbsPtr dst)</td></tr>
-<tr class="memdesc:a69b0ffbf60ece7cf0d9e71e010df598a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate instruction sequence to dst. NOT IMPLEMENTED YET. <br /></td></tr>
-<tr class="separator:a69b0ffbf60ece7cf0d9e71e010df598a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab64b90835e6202754c4c6d218a652d"><td class="memItemLeft" align="right" valign="top"><a id="a4ab64b90835e6202754c4c6d218a652d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a4ab64b90835e6202754c4c6d218a652d">ilang::AbsKnob::InsertVar</a> (const InstrLvlAbsCnstPtr &amp;m, ExprSet &amp;vars)</td></tr>
+<tr class="memdesc:a4ab64b90835e6202754c4c6d218a652d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all vars of the ILA (excluding child) to the set. <br /></td></tr>
+<tr class="separator:a4ab64b90835e6202754c4c6d218a652d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d5c1d34441b1c652654b4d8d0107e6"><td class="memItemLeft" align="right" valign="top"><a id="ac9d5c1d34441b1c652654b4d8d0107e6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#ac9d5c1d34441b1c652654b4d8d0107e6">ilang::AbsKnob::InsertStt</a> (const InstrLvlAbsCnstPtr &amp;m, ExprSet &amp;stts)</td></tr>
+<tr class="memdesc:ac9d5c1d34441b1c652654b4d8d0107e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all state vars of the ILA (excluding child) to the set. <br /></td></tr>
+<tr class="separator:ac9d5c1d34441b1c652654b4d8d0107e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe7cbad433e46ef64ac06a32cc6043d7"><td class="memItemLeft" align="right" valign="top"><a id="abe7cbad433e46ef64ac06a32cc6043d7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#abe7cbad433e46ef64ac06a32cc6043d7">ilang::AbsKnob::InsertInp</a> (const InstrLvlAbsCnstPtr &amp;m, ExprSet &amp;inps)</td></tr>
+<tr class="memdesc:abe7cbad433e46ef64ac06a32cc6043d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all input vars of the ILA (excluding child) to the set. <br /></td></tr>
+<tr class="separator:abe7cbad433e46ef64ac06a32cc6043d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a2bc42053af0ad3154ce559b0467f0"><td class="memItemLeft" align="right" valign="top"><a id="a37a2bc42053af0ad3154ce559b0467f0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a37a2bc42053af0ad3154ce559b0467f0">ilang::AbsKnob::InsertVarTree</a> (const InstrLvlAbsCnstPtr &amp;top, ExprSet &amp;vars)</td></tr>
+<tr class="memdesc:a37a2bc42053af0ad3154ce559b0467f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all vars of the ILA (including child) to the set. <br /></td></tr>
+<tr class="separator:a37a2bc42053af0ad3154ce559b0467f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb47c4fc86e488134af864125395017"><td class="memItemLeft" align="right" valign="top"><a id="a6cb47c4fc86e488134af864125395017"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a6cb47c4fc86e488134af864125395017">ilang::AbsKnob::InsertSttTree</a> (const InstrLvlAbsCnstPtr &amp;top, ExprSet &amp;stts)</td></tr>
+<tr class="memdesc:a6cb47c4fc86e488134af864125395017"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all state vars of the ILA (including child) to the set. <br /></td></tr>
+<tr class="separator:a6cb47c4fc86e488134af864125395017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ac796230e30e3e9152bfbc75443f0e"><td class="memItemLeft" align="right" valign="top"><a id="a72ac796230e30e3e9152bfbc75443f0e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a72ac796230e30e3e9152bfbc75443f0e">ilang::AbsKnob::InsertInpTree</a> (const InstrLvlAbsCnstPtr &amp;top, ExprSet &amp;inps)</td></tr>
+<tr class="memdesc:a72ac796230e30e3e9152bfbc75443f0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all input vars of the ILA (including child) to the set. <br /></td></tr>
+<tr class="separator:a72ac796230e30e3e9152bfbc75443f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21cfcc7504284bb847efd53ef9b65377"><td class="memItemLeft" align="right" valign="top"><a id="a21cfcc7504284bb847efd53ef9b65377"></a>
+ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a21cfcc7504284bb847efd53ef9b65377">ilang::AbsKnob::GetVar</a> (const InstrLvlAbsCnstPtr &amp;m)</td></tr>
+<tr class="memdesc:a21cfcc7504284bb847efd53ef9b65377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all vars of the ILA (excluding child). <br /></td></tr>
+<tr class="separator:a21cfcc7504284bb847efd53ef9b65377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f375b97472c5c4cf8448c9bdc38eea"><td class="memItemLeft" align="right" valign="top"><a id="ac3f375b97472c5c4cf8448c9bdc38eea"></a>
+ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#ac3f375b97472c5c4cf8448c9bdc38eea">ilang::AbsKnob::GetStt</a> (const InstrLvlAbsCnstPtr &amp;m)</td></tr>
+<tr class="memdesc:ac3f375b97472c5c4cf8448c9bdc38eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all state vars of the ILA (excluding child). <br /></td></tr>
+<tr class="separator:ac3f375b97472c5c4cf8448c9bdc38eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a568d1315ee74130365726c848c5632a0"><td class="memItemLeft" align="right" valign="top"><a id="a568d1315ee74130365726c848c5632a0"></a>
+ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a568d1315ee74130365726c848c5632a0">ilang::AbsKnob::GetInp</a> (const InstrLvlAbsCnstPtr &amp;m)</td></tr>
+<tr class="memdesc:a568d1315ee74130365726c848c5632a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all input vars of the ILA (excluding child). <br /></td></tr>
+<tr class="separator:a568d1315ee74130365726c848c5632a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb6ad33036cea13e7dbd737c5f85165"><td class="memItemLeft" align="right" valign="top"><a id="aabb6ad33036cea13e7dbd737c5f85165"></a>
+ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#aabb6ad33036cea13e7dbd737c5f85165">ilang::AbsKnob::GetVarTree</a> (const InstrLvlAbsCnstPtr &amp;top)</td></tr>
+<tr class="memdesc:aabb6ad33036cea13e7dbd737c5f85165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all vars of the ILA (including child). <br /></td></tr>
+<tr class="separator:aabb6ad33036cea13e7dbd737c5f85165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a945cbb77b1fb1e4c696d2d64e1bc4097"><td class="memItemLeft" align="right" valign="top"><a id="a945cbb77b1fb1e4c696d2d64e1bc4097"></a>
+ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a945cbb77b1fb1e4c696d2d64e1bc4097">ilang::AbsKnob::GetSttTree</a> (const InstrLvlAbsCnstPtr &amp;top)</td></tr>
+<tr class="memdesc:a945cbb77b1fb1e4c696d2d64e1bc4097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all state vars of the ILA (including child). <br /></td></tr>
+<tr class="separator:a945cbb77b1fb1e4c696d2d64e1bc4097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1de6cc9cb02885ba7782770026530ed"><td class="memItemLeft" align="right" valign="top"><a id="aa1de6cc9cb02885ba7782770026530ed"></a>
+ExprSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#aa1de6cc9cb02885ba7782770026530ed">ilang::AbsKnob::GetInpTree</a> (const InstrLvlAbsCnstPtr &amp;top)</td></tr>
+<tr class="memdesc:aa1de6cc9cb02885ba7782770026530ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of all input vars of the ILA (including child). <br /></td></tr>
+<tr class="separator:aa1de6cc9cb02885ba7782770026530ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefad338116e2bf2b38032c157466017c"><td class="memItemLeft" align="right" valign="top"><a id="aefad338116e2bf2b38032c157466017c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#aefad338116e2bf2b38032c157466017c">ilang::AbsKnob::InsertInstr</a> (const InstrLvlAbsCnstPtr &amp;m, InstrVec &amp;instrs)</td></tr>
+<tr class="memdesc:aefad338116e2bf2b38032c157466017c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all instructions of the ILA (excluding child) to the set. <br /></td></tr>
+<tr class="separator:aefad338116e2bf2b38032c157466017c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a844655f7adedb08b5b4d7ae41f960bb0"><td class="memItemLeft" align="right" valign="top"><a id="a844655f7adedb08b5b4d7ae41f960bb0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a844655f7adedb08b5b4d7ae41f960bb0">ilang::AbsKnob::InsertInstrTree</a> (const InstrLvlAbsCnstPtr &amp;top, InstrVec &amp;instrs)</td></tr>
+<tr class="memdesc:a844655f7adedb08b5b4d7ae41f960bb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all instructions of the ILA (including child) to the set. <br /></td></tr>
+<tr class="separator:a844655f7adedb08b5b4d7ae41f960bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eecdc17b6f52fdbb8e85afbd3298692"><td class="memItemLeft" align="right" valign="top"><a id="a2eecdc17b6f52fdbb8e85afbd3298692"></a>
+InstrVec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a2eecdc17b6f52fdbb8e85afbd3298692">ilang::AbsKnob::GetInstr</a> (const InstrLvlAbsCnstPtr &amp;m)</td></tr>
+<tr class="memdesc:a2eecdc17b6f52fdbb8e85afbd3298692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of instructions of the ILA (excluding child). <br /></td></tr>
+<tr class="separator:a2eecdc17b6f52fdbb8e85afbd3298692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae948c9f18f51f5c427f2a6c9ad217e88"><td class="memItemLeft" align="right" valign="top"><a id="ae948c9f18f51f5c427f2a6c9ad217e88"></a>
+InstrVec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#ae948c9f18f51f5c427f2a6c9ad217e88">ilang::AbsKnob::GetInstrTree</a> (const InstrLvlAbsCnstPtr &amp;top)</td></tr>
+<tr class="memdesc:ae948c9f18f51f5c427f2a6c9ad217e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of instructions of the ILA (including child). <br /></td></tr>
+<tr class="separator:ae948c9f18f51f5c427f2a6c9ad217e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5d8eafcfb7fb716ab27c69d2cf6332c"><td class="memItemLeft" align="right" valign="top">ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#ac5d8eafcfb7fb716ab27c69d2cf6332c">ilang::AbsKnob::Rewrite</a> (const ExprPtr &amp;e, const ExprMap &amp;rule)</td></tr>
+<tr class="memdesc:ac5d8eafcfb7fb716ab27c69d2cf6332c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewrite an expression by replacing based on the rule.  <a href="u__abs__knob_8h.html#ac5d8eafcfb7fb716ab27c69d2cf6332c">More...</a><br /></td></tr>
+<tr class="separator:ac5d8eafcfb7fb716ab27c69d2cf6332c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475d66c7365ab6a52f27b539e46bd603"><td class="memItemLeft" align="right" valign="top"><a id="a475d66c7365ab6a52f27b539e46bd603"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a475d66c7365ab6a52f27b539e46bd603">ilang::AbsKnob::RewriteInstr</a> (const InstrCnstPtr instr_src, const InstrPtr &amp;instr_dst, const ExprMap &amp;expr_map)</td></tr>
+<tr class="memdesc:a475d66c7365ab6a52f27b539e46bd603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewrite an instruction by replacing based on the rule. <br /></td></tr>
+<tr class="separator:a475d66c7365ab6a52f27b539e46bd603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b1820183d666d845d80f37e96f48db"><td class="memItemLeft" align="right" valign="top"><a id="a11b1820183d666d845d80f37e96f48db"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a11b1820183d666d845d80f37e96f48db">ilang::AbsKnob::FlattenIla</a> (const InstrLvlAbsPtr &amp;ila_ptr_)</td></tr>
+<tr class="memdesc:a11b1820183d666d845d80f37e96f48db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flatten the given ILA, the initial conditions will be added to the top the child instructions will also be added to the top, but their (hierarchical) valid conditions will be added to their decode condition Some usage hint: this function is intended to generate an ILA for Verilog generator or other verification model generator. You can first use ExtrDeptModl to extract the dependent model and use this to flatten the that model and send to the generator. <br /></td></tr>
+<tr class="separator:a11b1820183d666d845d80f37e96f48db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a756ac384ee01580c0693d29b69b7cf86"><td class="memItemLeft" align="right" valign="top"><a id="a756ac384ee01580c0693d29b69b7cf86"></a>
+InstrLvlAbsPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a756ac384ee01580c0693d29b69b7cf86">ilang::AbsKnob::ExtrDeptModl</a> (const InstrPtr &amp;instr, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a756ac384ee01580c0693d29b69b7cf86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new ILA that contains the dependant instructions and child-ILAs of an instruction (defined by sub-programs). <br /></td></tr>
+<tr class="separator:a756ac384ee01580c0693d29b69b7cf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a357afe22c636c0c7bb1a9e795859b276"><td class="memItemLeft" align="right" valign="top"><a id="a357afe22c636c0c7bb1a9e795859b276"></a>
+InstrLvlAbsPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a357afe22c636c0c7bb1a9e795859b276">ilang::AbsKnob::CopyIlaTree</a> (const InstrLvlAbsCnstPtr &amp;src, const std::string &amp;dst_name)</td></tr>
+<tr class="memdesc:a357afe22c636c0c7bb1a9e795859b276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy and ILA (including child). <br /></td></tr>
+<tr class="separator:a357afe22c636c0c7bb1a9e795859b276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ee969664adbcc09c1a015c984b756f"><td class="memItemLeft" align="right" valign="top"><a id="a98ee969664adbcc09c1a015c984b756f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a98ee969664adbcc09c1a015c984b756f">ilang::AbsKnob::DuplInp</a> (const InstrLvlAbsCnstPtr &amp;src, const InstrLvlAbsPtr &amp;dst, ExprMap &amp;expr_map)</td></tr>
+<tr class="memdesc:a98ee969664adbcc09c1a015c984b756f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate input vars from src to dst while updating the mapping. <br /></td></tr>
+<tr class="separator:a98ee969664adbcc09c1a015c984b756f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a57ea87348e104c253a4a88d0830aab"><td class="memItemLeft" align="right" valign="top"><a id="a3a57ea87348e104c253a4a88d0830aab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a3a57ea87348e104c253a4a88d0830aab">ilang::AbsKnob::DuplStt</a> (const InstrLvlAbsCnstPtr &amp;src, const InstrLvlAbsPtr &amp;dst, ExprMap &amp;expr_map)</td></tr>
+<tr class="memdesc:a3a57ea87348e104c253a4a88d0830aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate state vars from src to dst while updating the mapping. <br /></td></tr>
+<tr class="separator:a3a57ea87348e104c253a4a88d0830aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c525cd400e30ee86f6fb6a022ecf91"><td class="memItemLeft" align="right" valign="top"><a id="a40c525cd400e30ee86f6fb6a022ecf91"></a>
+ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a40c525cd400e30ee86f6fb6a022ecf91">ilang::AbsKnob::DuplFetch</a> (const InstrLvlAbsCnstPtr &amp;src, const InstrLvlAbsPtr &amp;dst, const ExprMap &amp;expr_map)</td></tr>
+<tr class="memdesc:a40c525cd400e30ee86f6fb6a022ecf91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate fetch from src to dst if defined (rewritten w.r.t. mapping). <br /></td></tr>
+<tr class="separator:a40c525cd400e30ee86f6fb6a022ecf91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace8a80d51183c3e92bfaea745784159"><td class="memItemLeft" align="right" valign="top"><a id="aace8a80d51183c3e92bfaea745784159"></a>
+ExprPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#aace8a80d51183c3e92bfaea745784159">ilang::AbsKnob::DuplValid</a> (const InstrLvlAbsCnstPtr &amp;src, const InstrLvlAbsPtr &amp;dst, const ExprMap &amp;expr_map)</td></tr>
+<tr class="memdesc:aace8a80d51183c3e92bfaea745784159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate valid from src to dst if defined (rewritten w.r.t. mapping). <br /></td></tr>
+<tr class="separator:aace8a80d51183c3e92bfaea745784159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8538bf8b7486a11089376871f0063230"><td class="memItemLeft" align="right" valign="top"><a id="a8538bf8b7486a11089376871f0063230"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a8538bf8b7486a11089376871f0063230">ilang::AbsKnob::DuplInit</a> (const InstrLvlAbsCnstPtr &amp;src, const InstrLvlAbsPtr &amp;dst, const ExprMap &amp;expr_map)</td></tr>
+<tr class="memdesc:a8538bf8b7486a11089376871f0063230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate initial conditions from src to dst (rewritten w.r.t. mapping). <br /></td></tr>
+<tr class="separator:a8538bf8b7486a11089376871f0063230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d977bf1ea13e58ed7018c188b8e07a1"><td class="memItemLeft" align="right" valign="top"><a id="a1d977bf1ea13e58ed7018c188b8e07a1"></a>
+InstrPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#a1d977bf1ea13e58ed7018c188b8e07a1">ilang::AbsKnob::DuplInstr</a> (const InstrCnstPtr instr_src, const InstrLvlAbsPtr &amp;dst, const ExprMap &amp;expr_map, const CnstIlaMap &amp;ila_map)</td></tr>
+<tr class="memdesc:a1d977bf1ea13e58ed7018c188b8e07a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate an instruction to dst (rewritten w.r.t. mapping). <br /></td></tr>
+<tr class="separator:a1d977bf1ea13e58ed7018c188b8e07a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac71d02fa46c36881bd577ee0904b264a"><td class="memItemLeft" align="right" valign="top"><a id="ac71d02fa46c36881bd577ee0904b264a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__abs__knob_8h.html#ac71d02fa46c36881bd577ee0904b264a">ilang::AbsKnob::DuplInstrSeq</a> (const InstrLvlAbsCnstPtr &amp;src, const InstrLvlAbsPtr &amp;dst)</td></tr>
+<tr class="memdesc:ac71d02fa46c36881bd577ee0904b264a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate instruction sequence to dst. NOT IMPLEMENTED YET. <br /></td></tr>
+<tr class="separator:ac71d02fa46c36881bd577ee0904b264a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A collection of ILA helpers. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="ace63a67f6d4120143c013d6ed78b49cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace63a67f6d4120143c013d6ed78b49cd">&#9670;&nbsp;</a></span>Rewrite()</h2>
+<a id="ac5d8eafcfb7fb716ab27c69d2cf6332c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5d8eafcfb7fb716ab27c69d2cf6332c">&#9670;&nbsp;</a></span>Rewrite()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,7 +225,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="u__a
         <tr>
           <td class="memname">ExprPtr ilang::AbsKnob::Rewrite </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> &amp;&#160;</td>
           <td class="paramname"><em>e</em>, </td>
         </tr>
         <tr>

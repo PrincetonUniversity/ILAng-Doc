@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">1.1.2</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -77,33 +77,34 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="instr__lvl__abs_8h.html">ilang/ila/instr_lvl_abs.h</a>&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceilang.html">ilang</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using</span> json = nlohmann::json;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classilang_1_1_ila_ser_des_mngr.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_ila_ser_des_mngr.html">IlaSerDesMngr</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="comment">// ------------------------- METHODS -------------------------------------- //</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span>  <span class="keyword">static</span> json <a class="code" href="classilang_1_1_ila_ser_des_mngr.html#a50047f5d8de5d9e9825a0fe67e5f7aa5">Serialize</a>(<span class="keyword">const</span> <a class="code" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a>&amp; m);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">static</span> <a class="code" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a> <a class="code" href="classilang_1_1_ila_ser_des_mngr.html#a0eb7076df1d65a96ca3c895f1cc8db36">Deserialize</a>(<span class="keyword">const</span> json&amp; j);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classilang_1_1_ila_ser_des_mngr.html#ae65f62193ecb6073c3553a7a29754f25">SerToFile</a>(<span class="keyword">const</span> <a class="code" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a>&amp; m, <span class="keyword">const</span> std::string&amp; file_name,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                        <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; indent = -1);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">static</span> <a class="code" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a> <a class="code" href="classilang_1_1_ila_ser_des_mngr.html#a6e8a57e8eacbce69dbaf5752388c7ce2">DesFromFile</a>(<span class="keyword">const</span> std::string&amp; file_name);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}; <span class="comment">// class IlaSerDesMngr</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}; <span class="comment">// namespace ilang</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif // ILANG_TARGET_JSON_INTERFACE_H__</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="instr__lvl__abs_8h.html">ilang/ila/instr_lvl_abs.h</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceilang.html">ilang</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> json = nlohmann::json;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classilang_1_1_ila_ser_des_mngr.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_ila_ser_des_mngr.html">IlaSerDesMngr</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">// ------------------------- METHODS -------------------------------------- //</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"></span>  <span class="keyword">static</span> json <a class="code" href="classilang_1_1_ila_ser_des_mngr.html#a50047f5d8de5d9e9825a0fe67e5f7aa5">Serialize</a>(<span class="keyword">const</span> <a class="code" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a>&amp; m);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">static</span> <a class="code" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a> <a class="code" href="classilang_1_1_ila_ser_des_mngr.html#a0eb7076df1d65a96ca3c895f1cc8db36">Deserialize</a>(<span class="keyword">const</span> json&amp; j);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classilang_1_1_ila_ser_des_mngr.html#ae65f62193ecb6073c3553a7a29754f25">SerToFile</a>(<span class="keyword">const</span> <a class="code" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a>&amp; m, <span class="keyword">const</span> std::string&amp; file_name,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                        <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; indent = -1);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">static</span> <a class="code" href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">InstrLvlAbsPtr</a> <a class="code" href="classilang_1_1_ila_ser_des_mngr.html#a6e8a57e8eacbce69dbaf5752388c7ce2">DesFromFile</a>(<span class="keyword">const</span> std::string&amp; file_name);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}; <span class="comment">// class IlaSerDesMngr</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;} <span class="comment">// namespace ilang</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif // ILANG_TARGET_JSON_INTERFACE_H__</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassilang_1_1_ila_ser_des_mngr_html_a6e8a57e8eacbce69dbaf5752388c7ce2"><div class="ttname"><a href="classilang_1_1_ila_ser_des_mngr.html#a6e8a57e8eacbce69dbaf5752388c7ce2">ilang::IlaSerDesMngr::DesFromFile</a></div><div class="ttdeci">static InstrLvlAbsPtr DesFromFile(const std::string &amp;file_name)</div><div class="ttdoc">Deserialize the ILA model from the given file.</div></div>
-<div class="ttc" id="aclassilang_1_1_ila_ser_des_mngr_html"><div class="ttname"><a href="classilang_1_1_ila_ser_des_mngr.html">ilang::IlaSerDesMngr</a></div><div class="ttdoc">Class wrapper for the ILA portable Ser/Des interface.</div><div class="ttdef"><b>Definition:</b> target-json/interface.h:18</div></div>
+<div class="ttc" id="aclassilang_1_1_ila_ser_des_mngr_html"><div class="ttname"><a href="classilang_1_1_ila_ser_des_mngr.html">ilang::IlaSerDesMngr</a></div><div class="ttdoc">Class wrapper for the ILA portable Ser/Des interface.</div><div class="ttdef"><b>Definition:</b> target-json/interface.h:19</div></div>
 <div class="ttc" id="aclassilang_1_1_ila_ser_des_mngr_html_a50047f5d8de5d9e9825a0fe67e5f7aa5"><div class="ttname"><a href="classilang_1_1_ila_ser_des_mngr.html#a50047f5d8de5d9e9825a0fe67e5f7aa5">ilang::IlaSerDesMngr::Serialize</a></div><div class="ttdeci">static json Serialize(const InstrLvlAbsPtr &amp;m)</div><div class="ttdoc">Serialize the ILA model to a JSON object.</div></div>
 <div class="ttc" id="aclassilang_1_1_ila_ser_des_mngr_html_a0eb7076df1d65a96ca3c895f1cc8db36"><div class="ttname"><a href="classilang_1_1_ila_ser_des_mngr.html#a0eb7076df1d65a96ca3c895f1cc8db36">ilang::IlaSerDesMngr::Deserialize</a></div><div class="ttdeci">static InstrLvlAbsPtr Deserialize(const json &amp;j)</div><div class="ttdoc">Deserialize the ILA model from a JSON object.</div></div>
 <div class="ttc" id="anamespaceilang_html"><div class="ttname"><a href="namespaceilang.html">ilang</a></div></div>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">1.1.2</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -102,14 +102,14 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">class </span>CxxFunc {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    CxxFunc(<span class="keyword">const</span> std::string&amp; in_name, <span class="keyword">const</span> <a class="code" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a>&amp; in_ret,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">const</span> <a class="code" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a>&amp; in_target = NULL)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">const</span> <a class="code" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a>&amp; in_target = <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        : name(in_name), ret(in_ret), target(in_target) {}</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    CxxFunc(<span class="keyword">const</span> std::string&amp; in_name, <span class="keyword">const</span> <a class="code" href="namespaceilang.html#ae01073336878d60a231f4fe96d45ab55">SortPtr</a>&amp; in_ret_type)</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        : name(in_name), ret_type(in_ret_type) {}</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">const</span> std::string name = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> ret = NULL;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> target = NULL;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceilang.html#ae01073336878d60a231f4fe96d45ab55">SortPtr</a> ret_type = NULL;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> ret = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> target = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceilang.html#ae01073336878d60a231f4fe96d45ab55">SortPtr</a> ret_type = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::vector&lt;SortPtr&gt; args;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  };</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
@@ -147,7 +147,7 @@ $(function() {
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">void</span> DfsOpRegular(<span class="keyword">const</span> <a class="code" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a>&amp; expr, StrBuff&amp; buff, ExprVarMap&amp; lut) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  CxxFunc* RegisterFunction(<span class="keyword">const</span> std::string&amp; func_name,</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                            <a class="code" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> return_expr = NULL);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                            <a class="code" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> return_expr = <span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  CxxFunc* RegisterExternalFunc(<span class="keyword">const</span> <a class="code" href="namespaceilang.html#a6140a3823254564a0e81db8b3afea25c">FuncPtr</a>&amp; func);</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  CxxFunc* RegisterMemoryUpdate(<span class="keyword">const</span> <a class="code" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a>&amp; expr);</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
@@ -181,18 +181,18 @@ $(function() {
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#endif // ILANG_TARGET_SC_ILATOR_H__</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespaceilang_html_a7c4196c72e53ea4df4b7861af7bc3bce"><div class="ttname"><a href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ilang::ExprPtr</a></div><div class="ttdeci">Expr::ExprPtr ExprPtr</div><div class="ttdoc">Pointer type for normal use of Expr.</div><div class="ttdef"><b>Definition:</b> expr.h:133</div></div>
+<div class="ttc" id="anamespaceilang_html_a7c4196c72e53ea4df4b7861af7bc3bce"><div class="ttname"><a href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ilang::ExprPtr</a></div><div class="ttdeci">Expr::ExprPtr ExprPtr</div><div class="ttdoc">Pointer type for normal use of Expr.</div><div class="ttdef"><b>Definition:</b> expr.h:138</div></div>
 <div class="ttc" id="aclassilang_1_1_ilator_html_a7703ef1b437287c81e3420887ab68334"><div class="ttname"><a href="classilang_1_1_ilator.html#a7703ef1b437287c81e3420887ab68334">ilang::Ilator::~Ilator</a></div><div class="ttdeci">~Ilator()</div><div class="ttdoc">Destructor.</div></div>
 <div class="ttc" id="aclassilang_1_1_ilator_html"><div class="ttname"><a href="classilang_1_1_ilator.html">ilang::Ilator</a></div><div class="ttdoc">The ILAtor class - for CMake-based SystemC simulator generation.</div><div class="ttdef"><b>Definition:</b> ilator.h:21</div></div>
 <div class="ttc" id="alog_8h_html_a905fd087721c081e4190e71c6817b88f"><div class="ttname"><a href="log_8h.html#a905fd087721c081e4190e71c6817b88f">ILA_ASSERT</a></div><div class="ttdeci">#define ILA_ASSERT(b)</div><div class="ttdoc">Assertion with message logged to FATAL (lvl 3). (Debug)</div><div class="ttdef"><b>Definition:</b> log.h:33</div></div>
-<div class="ttc" id="anamespaceilang_html_ae01073336878d60a231f4fe96d45ab55"><div class="ttname"><a href="namespaceilang.html#ae01073336878d60a231f4fe96d45ab55">ilang::SortPtr</a></div><div class="ttdeci">Sort::SortPtr SortPtr</div><div class="ttdoc">Pointer type for storing/passing Sort.</div><div class="ttdef"><b>Definition:</b> sort.h:76</div></div>
+<div class="ttc" id="anamespaceilang_html_ae01073336878d60a231f4fe96d45ab55"><div class="ttname"><a href="namespaceilang.html#ae01073336878d60a231f4fe96d45ab55">ilang::SortPtr</a></div><div class="ttdeci">Sort::SortPtr SortPtr</div><div class="ttdoc">Pointer type for storing/passing Sort.</div><div class="ttdef"><b>Definition:</b> sort.h:82</div></div>
 <div class="ttc" id="anamespaceilang_html"><div class="ttname"><a href="namespaceilang.html">ilang</a></div></div>
 <div class="ttc" id="anamespaceilang_html_ad1b30fdf347e493b3937143da05d1a72"><div class="ttname"><a href="namespaceilang.html#ad1b30fdf347e493b3937143da05d1a72">ilang::InstrLvlAbsPtr</a></div><div class="ttdeci">InstrLvlAbs::InstrLvlAbsPtr InstrLvlAbsPtr</div><div class="ttdoc">Pointer type for normal use of InstrLvlAbs.</div><div class="ttdef"><b>Definition:</b> instr_lvl_abs.h:326</div></div>
 <div class="ttc" id="alog_8h_html"><div class="ttname"><a href="log_8h.html">log.h</a></div></div>
 <div class="ttc" id="aclassilang_1_1_ilator_html_a582a6762f2b804f8cb8ef6ecad34656c"><div class="ttname"><a href="classilang_1_1_ilator.html#a582a6762f2b804f8cb8ef6ecad34656c">ilang::Ilator::Ilator</a></div><div class="ttdeci">Ilator(const InstrLvlAbsPtr &amp;m)</div><div class="ttdoc">Constructor with a fixed ILA model.</div></div>
-<div class="ttc" id="anamespaceilang_html_a6140a3823254564a0e81db8b3afea25c"><div class="ttname"><a href="namespaceilang.html#a6140a3823254564a0e81db8b3afea25c">ilang::FuncPtr</a></div><div class="ttdeci">Func::FuncPtr FuncPtr</div><div class="ttdoc">Pointer type for normal use of Func.</div><div class="ttdef"><b>Definition:</b> func.h:79</div></div>
+<div class="ttc" id="anamespaceilang_html_a6140a3823254564a0e81db8b3afea25c"><div class="ttname"><a href="namespaceilang.html#a6140a3823254564a0e81db8b3afea25c">ilang::FuncPtr</a></div><div class="ttdeci">Func::FuncPtr FuncPtr</div><div class="ttdoc">Pointer type for normal use of Func.</div><div class="ttdef"><b>Definition:</b> func.h:83</div></div>
 <div class="ttc" id="aclassilang_1_1_ilator_html_a9f89a48b9cec91732462b1350f95e26d"><div class="ttname"><a href="classilang_1_1_ilator.html#a9f89a48b9cec91732462b1350f95e26d">ilang::Ilator::Generate</a></div><div class="ttdeci">void Generate(const std::string &amp;dst, bool opt)</div><div class="ttdoc">Generate the SystemC simulator.</div></div>
-<div class="ttc" id="anamespaceilang_html_af88a19312ae653d687a0d1207bb284f6"><div class="ttname"><a href="namespaceilang.html#af88a19312ae653d687a0d1207bb284f6">ilang::InstrPtr</a></div><div class="ttdeci">Instr::InstrPtr InstrPtr</div><div class="ttdoc">Pointer type for normal use of Instr.</div><div class="ttdef"><b>Definition:</b> instr.h:138</div></div>
+<div class="ttc" id="anamespaceilang_html_af88a19312ae653d687a0d1207bb284f6"><div class="ttname"><a href="namespaceilang.html#af88a19312ae653d687a0d1207bb284f6">ilang::InstrPtr</a></div><div class="ttdeci">Instr::InstrPtr InstrPtr</div><div class="ttdoc">Pointer type for normal use of Instr.</div><div class="ttdef"><b>Definition:</b> instr.h:132</div></div>
 <div class="ttc" id="ainstr__lvl__abs_8h_html"><div class="ttname"><a href="instr__lvl__abs_8h.html">instr_lvl_abs.h</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">1.1.2</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -68,8 +68,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
 <a href="classilang_1_1_ast-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ilang::Ast Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -131,18 +131,6 @@ Inheritance diagram for ilang::Ast:</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a7433a1e6c865c5c7f64eb7bceca11ec2"><td class="memItemLeft" align="right" valign="top"><a id="a7433a1e6c865c5c7f64eb7bceca11ec2"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classilang_1_1_instr_lvl_abs.html">InstrLvlAbs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ast.html#a7433a1e6c865c5c7f64eb7bceca11ec2">InstrLvlAbsPtr</a></td></tr>
-<tr class="memdesc:a7433a1e6c865c5c7f64eb7bceca11ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for forward declaration of ILA. <br /></td></tr>
-<tr class="separator:a7433a1e6c865c5c7f64eb7bceca11ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classilang_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classilang_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classilang_1_1_object.html">ilang::Object</a></td></tr>
-<tr class="memitem:af23d3767cfbc8cb9312281cbfa4aae48 inherit pub_types_classilang_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="af23d3767cfbc8cb9312281cbfa4aae48"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classilang_1_1_object.html">Object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_object.html#af23d3767cfbc8cb9312281cbfa4aae48">ObjPtr</a></td></tr>
-<tr class="memdesc:af23d3767cfbc8cb9312281cbfa4aae48 inherit pub_types_classilang_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for normal use of <a class="el" href="classilang_1_1_object.html" title="The basest type in the ILA structure. It can be either Ast, Instr, or InstrLvlAbs.">Object</a>. <br /></td></tr>
-<tr class="separator:af23d3767cfbc8cb9312281cbfa4aae48 inherit pub_types_classilang_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac3ce0c23b9fbb09e5acf7548753cb1d1"><td class="memItemLeft" align="right" valign="top"><a id="ac3ce0c23b9fbb09e5acf7548753cb1d1"></a>
@@ -173,10 +161,10 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <a class="el" href="classilang_1_1_ast.html#a7433a1e6c865c5c7f64eb7bceca11ec2">InstrLvlAbsPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ast.html#a533dd9faf9db1cb76e479c1cacdde285">host</a> () const</td></tr>
 <tr class="memdesc:a533dd9faf9db1cb76e479c1cacdde285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the hosting ILA. <br /></td></tr>
 <tr class="separator:a533dd9faf9db1cb76e479c1cacdde285"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f6ec0aef013e95d4798500b9d6058dd"><td class="memItemLeft" align="right" valign="top"><a id="a5f6ec0aef013e95d4798500b9d6058dd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ast.html#a5f6ec0aef013e95d4798500b9d6058dd">set_host</a> (<a class="el" href="classilang_1_1_ast.html#a7433a1e6c865c5c7f64eb7bceca11ec2">InstrLvlAbsPtr</a> <a class="el" href="classilang_1_1_ast.html#a533dd9faf9db1cb76e479c1cacdde285">host</a>)</td></tr>
-<tr class="memdesc:a5f6ec0aef013e95d4798500b9d6058dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the hosting ILA. <br /></td></tr>
-<tr class="separator:a5f6ec0aef013e95d4798500b9d6058dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab86e69c8a4cd0bbb09ff6ce0ddf9face"><td class="memItemLeft" align="right" valign="top"><a id="ab86e69c8a4cd0bbb09ff6ce0ddf9face"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ast.html#ab86e69c8a4cd0bbb09ff6ce0ddf9face">set_host</a> (const <a class="el" href="classilang_1_1_ast.html#a7433a1e6c865c5c7f64eb7bceca11ec2">InstrLvlAbsPtr</a> &amp;<a class="el" href="classilang_1_1_ast.html#a533dd9faf9db1cb76e479c1cacdde285">host</a>)</td></tr>
+<tr class="memdesc:ab86e69c8a4cd0bbb09ff6ce0ddf9face"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the hosting ILA. <br /></td></tr>
+<tr class="separator:ab86e69c8a4cd0bbb09ff6ce0ddf9face"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac28b7b1df94499cbdecf82a9557c7689"><td class="memItemLeft" align="right" valign="top"><a id="ac28b7b1df94499cbdecf82a9557c7689"></a>
 virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ast.html#ac28b7b1df94499cbdecf82a9557c7689">Print</a> (std::ostream &amp;out) const =0</td></tr>
 <tr class="memdesc:ac28b7b1df94499cbdecf82a9557c7689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output function. <br /></td></tr>
@@ -206,6 +194,21 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_object.html#abafa1d9b1ba81835b191fc8a032f13ae">is_instr</a> () const</td></tr>
 <tr class="memdesc:abafa1d9b1ba81835b191fc8a032f13ae inherit pub_methods_classilang_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is type <a class="el" href="classilang_1_1_instr.html" title="The class for the Instruction. An Instr object contains:">Instr</a>. <br /></td></tr>
 <tr class="separator:abafa1d9b1ba81835b191fc8a032f13ae inherit pub_methods_classilang_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:a7433a1e6c865c5c7f64eb7bceca11ec2"><td class="memItemLeft" align="right" valign="top"><a id="a7433a1e6c865c5c7f64eb7bceca11ec2"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classilang_1_1_instr_lvl_abs.html">InstrLvlAbs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_ast.html#a7433a1e6c865c5c7f64eb7bceca11ec2">InstrLvlAbsPtr</a></td></tr>
+<tr class="memdesc:a7433a1e6c865c5c7f64eb7bceca11ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for forward declaration of ILA. <br /></td></tr>
+<tr class="separator:a7433a1e6c865c5c7f64eb7bceca11ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classilang_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classilang_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classilang_1_1_object.html">ilang::Object</a></td></tr>
+<tr class="memitem:af23d3767cfbc8cb9312281cbfa4aae48 inherit pub_types_classilang_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="af23d3767cfbc8cb9312281cbfa4aae48"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classilang_1_1_object.html">Object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_object.html#af23d3767cfbc8cb9312281cbfa4aae48">ObjPtr</a></td></tr>
+<tr class="memdesc:af23d3767cfbc8cb9312281cbfa4aae48 inherit pub_types_classilang_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for normal use of <a class="el" href="classilang_1_1_object.html" title="The basest type in the ILA structure. It can be either Ast, Instr, or InstrLvlAbs.">Object</a>. <br /></td></tr>
+<tr class="separator:af23d3767cfbc8cb9312281cbfa4aae48 inherit pub_types_classilang_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The class for the Abstract Syntax Tree. An <a class="el" href="classilang_1_1_ast.html" title="The class for the Abstract Syntax Tree. An Ast object can be an expression or function definition (in...">Ast</a> object can be an expression or function definition (interpreted or uninterpreted). </p>

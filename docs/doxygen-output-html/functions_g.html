@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">1.1.2</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -196,7 +196,7 @@ $(function() {
 : <a class="el" href="classilang_1_1_expr_ref.html#a89656d82ddc1b040935f2d0afeb7503d">ilang::ExprRef</a>
 </li>
 <li>GetExpr()
-: <a class="el" href="classilang_1_1_z3_expr_adapter.html#ae0cacd20a3ebd51b1e16480508d44162">ilang::Z3ExprAdapter</a>
+: <a class="el" href="classilang_1_1_z3_expr_adapter.html#ab0206b8584c2065bc52494928cfc6ab8">ilang::Z3ExprAdapter</a>
 </li>
 <li>GetExtraFreeVarDefs()
 : <a class="el" href="classilang_1_1_invariant_object.html#a1bc05f425d4532d3f5e69c550a08b53a">ilang::InvariantObject</a>
@@ -236,6 +236,14 @@ $(function() {
 <li>GetRunnableScriptName()
 : <a class="el" href="classilang_1_1_vlg_verif_tgt_gen.html#aae4feb306442a6a5f91dc5830ad74ab6">ilang::VlgVerifTgtGen</a>
 </li>
+<li>GetShimExpr()
+: <a class="el" href="classilang_1_1_smt_shim.html#a2b7803f1c46f4af0c493bd86eeddf40c">ilang::SmtShim&lt; Generator &gt;</a>
+, <a class="el" href="classilang_1_1_z3_expr_adapter.html#a4a2e3d69326f7f7aad885c50dd40e79b">ilang::Z3ExprAdapter</a>
+</li>
+<li>GetShimFunc()
+: <a class="el" href="classilang_1_1_smt_shim.html#a6a629d5b42c9948b8388903ac73d4dca">ilang::SmtShim&lt; Generator &gt;</a>
+, <a class="el" href="classilang_1_1_z3_expr_adapter.html#ab692e410dde10ffbcc84afdfb6665135">ilang::Z3ExprAdapter</a>
+</li>
 <li>GetSingleTraceStepProperty()
 : <a class="el" href="classilang_1_1_inter_ila_unroller.html#ae341d1d6ee4ce09419821a970cc79c39">ilang::InterIlaUnroller</a>
 , <a class="el" href="classilang_1_1_memory_model.html#a60611fca6e7e2968b5156339b8e8760c">ilang::MemoryModel</a>
@@ -244,10 +252,10 @@ $(function() {
 : <a class="el" href="classilang_1_1_invariant_object.html#a27fe8494ccf280a61cd8a9ebbe62f97b">ilang::InvariantObject</a>
 </li>
 <li>GetSortBinaryComparison()
-: <a class="el" href="classilang_1_1_expr_op.html#a15bfe08431fcbd48c149fd4a8454165c">ilang::ExprOp</a>
+: <a class="el" href="classilang_1_1_expr_op.html#a6fa51d258649f33237bf4d2bb74f6c92">ilang::ExprOp</a>
 </li>
 <li>GetSortBinaryOperation()
-: <a class="el" href="classilang_1_1_expr_op.html#ac954bc8ce74a6b05a89200cc550c46bc">ilang::ExprOp</a>
+: <a class="el" href="classilang_1_1_expr_op.html#afcc67bab8f89c5e9251ceb718fde75d6">ilang::ExprOp</a>
 </li>
 <li>GetStateVarMapExpr()
 : <a class="el" href="classilang_1_1_vlg_sgl_tgt_gen.html#ad15cf108be2089b870a6a24499f7a008">ilang::VlgSglTgtGen</a>
@@ -271,46 +279,46 @@ $(function() {
 <li>GetZ3Expr()
 : <a class="el" href="classilang_1_1_expr.html#a061fbe78d239f6361f3f6f166db6791d">ilang::Expr</a>
 , <a class="el" href="classilang_1_1_expr_const.html#aeed0933012a126d9d7a252af358703f4">ilang::ExprConst</a>
-, <a class="el" href="classilang_1_1_expr_op.html#a32cfcfef49677d6008f91c64dd74c56a">ilang::ExprOp</a>
-, <a class="el" href="classilang_1_1_expr_op_add.html#a10544b6520c6a844a1cffb53cc3d6e09">ilang::ExprOpAdd</a>
-, <a class="el" href="classilang_1_1_expr_op_and.html#ae8f7b9c936a8b04748fd5948c8e8a4ae">ilang::ExprOpAnd</a>
-, <a class="el" href="classilang_1_1_expr_op_app_func.html#a32137f39887907d70c7cafb282b1b4df">ilang::ExprOpAppFunc</a>
-, <a class="el" href="classilang_1_1_expr_op_ashr.html#a923adf66a885cc0b4045a5f861fc5ab4">ilang::ExprOpAshr</a>
-, <a class="el" href="classilang_1_1_expr_op_compl.html#afdf0473da8ff7c20adc956dd08ed9466">ilang::ExprOpCompl</a>
-, <a class="el" href="classilang_1_1_expr_op_concat.html#a0979d3d3bd24ef576404d7eb7fe8db0b">ilang::ExprOpConcat</a>
-, <a class="el" href="classilang_1_1_expr_op_div.html#ae3879094f8f5ff5c6244b260c175cbdf">ilang::ExprOpDiv</a>
-, <a class="el" href="classilang_1_1_expr_op_eq.html#a9437e025c7d3f78e507e85798785f49c">ilang::ExprOpEq</a>
-, <a class="el" href="classilang_1_1_expr_op_extract.html#a3bf28dc9f01c738a076f2f76dbaa72e8">ilang::ExprOpExtract</a>
-, <a class="el" href="classilang_1_1_expr_op_gt.html#ae81b129a316d01cfc09ab8e4bfca10e0">ilang::ExprOpGt</a>
-, <a class="el" href="classilang_1_1_expr_op_imply.html#abeb3591b65cc86ec4ee95fc99cc61bab">ilang::ExprOpImply</a>
-, <a class="el" href="classilang_1_1_expr_op_ite.html#a006b51a49846e82b677131d4d482b4e3">ilang::ExprOpIte</a>
-, <a class="el" href="classilang_1_1_expr_op_load.html#acfe4848a648ad1b1a5e7b014363e3e0e">ilang::ExprOpLoad</a>
-, <a class="el" href="classilang_1_1_expr_op_l_rotate.html#ada18cab917dd3f18286aeb021e4c3df3">ilang::ExprOpLRotate</a>
-, <a class="el" href="classilang_1_1_expr_op_lshr.html#abb09309905a8b5b37d734a5b980ad0ba">ilang::ExprOpLshr</a>
-, <a class="el" href="classilang_1_1_expr_op_lt.html#ae20f2afbb9426f6ae67eabc237909a25">ilang::ExprOpLt</a>
-, <a class="el" href="classilang_1_1_expr_op_mul.html#a7b6b27534abf2d029739742ade5c02e2">ilang::ExprOpMul</a>
-, <a class="el" href="classilang_1_1_expr_op_neg.html#a6cbe0829198771339149ffbb0a87a4e4">ilang::ExprOpNeg</a>
-, <a class="el" href="classilang_1_1_expr_op_not.html#a780bc51c28f39202444021bed997b841">ilang::ExprOpNot</a>
-, <a class="el" href="classilang_1_1_expr_op_or.html#a7a0cb080a390545a2b28c3a421030f2c">ilang::ExprOpOr</a>
-, <a class="el" href="classilang_1_1_expr_op_r_rotate.html#a4b8fc94c2dbf47fa2176ea77ec1f49ab">ilang::ExprOpRRotate</a>
-, <a class="el" href="classilang_1_1_expr_op_s_ext.html#a4681a1209941f2ef8bb6c54c089348ca">ilang::ExprOpSExt</a>
-, <a class="el" href="classilang_1_1_expr_op_shl.html#a297b2bc3b268ad05f31992154c806c72">ilang::ExprOpShl</a>
-, <a class="el" href="classilang_1_1_expr_op_s_mod.html#a9209446461371350bcc92e5bc57fa93e">ilang::ExprOpSMod</a>
-, <a class="el" href="classilang_1_1_expr_op_s_rem.html#a1e3c1147c0c7c1f49fd28ff14fafca71">ilang::ExprOpSRem</a>
-, <a class="el" href="classilang_1_1_expr_op_store.html#a127495a14cb8f11089831b029a18545c">ilang::ExprOpStore</a>
-, <a class="el" href="classilang_1_1_expr_op_sub.html#af28e786a96572faadd310322ebb89691">ilang::ExprOpSub</a>
-, <a class="el" href="classilang_1_1_expr_op_ugt.html#a77b2393c1f1e9d4f0adba8cf62bc57cd">ilang::ExprOpUgt</a>
-, <a class="el" href="classilang_1_1_expr_op_ult.html#a5e8dc7dde3200c60b837574a0241e560">ilang::ExprOpUlt</a>
-, <a class="el" href="classilang_1_1_expr_op_u_rem.html#a67ee1a7bad1d03b981c73959943579ab">ilang::ExprOpURem</a>
-, <a class="el" href="classilang_1_1_expr_op_xor.html#a0cecea709b3916b38e1c1fb3e5543902">ilang::ExprOpXor</a>
-, <a class="el" href="classilang_1_1_expr_op_z_ext.html#ace7b236f261271f81cf9bd49685f33b4">ilang::ExprOpZExt</a>
+, <a class="el" href="classilang_1_1_expr_op.html#a93894feb610d73fdc1d12ed8c132e09d">ilang::ExprOp</a>
+, <a class="el" href="classilang_1_1_expr_op_add.html#a2689cd88e2468543fad30b41ea9aff1a">ilang::ExprOpAdd</a>
+, <a class="el" href="classilang_1_1_expr_op_and.html#a19e5ec2c6ce6acf1232ed8d8642ca229">ilang::ExprOpAnd</a>
+, <a class="el" href="classilang_1_1_expr_op_app_func.html#aabc1dec2bcd170ba1e6a76b6457ca419">ilang::ExprOpAppFunc</a>
+, <a class="el" href="classilang_1_1_expr_op_ashr.html#a73e51fb6c6b1a85ab2e6cf8ad8aa6086">ilang::ExprOpAshr</a>
+, <a class="el" href="classilang_1_1_expr_op_compl.html#abe81f3e593fb0dc731c72da364041d27">ilang::ExprOpCompl</a>
+, <a class="el" href="classilang_1_1_expr_op_concat.html#ad706c69c172a679e13033ffc25e4acf8">ilang::ExprOpConcat</a>
+, <a class="el" href="classilang_1_1_expr_op_div.html#a0091b89717e14d6425c874904c261082">ilang::ExprOpDiv</a>
+, <a class="el" href="classilang_1_1_expr_op_eq.html#a46af6cb9621ceb25b8375a6de192dc12">ilang::ExprOpEq</a>
+, <a class="el" href="classilang_1_1_expr_op_extract.html#aaad5a9ebf421fd90869097d61e1e4758">ilang::ExprOpExtract</a>
+, <a class="el" href="classilang_1_1_expr_op_gt.html#a3bb5044f6a13d80e47cc7b073fc7bc78">ilang::ExprOpGt</a>
+, <a class="el" href="classilang_1_1_expr_op_imply.html#aa05dbcc5d9564a9ae2553e685167e5e8">ilang::ExprOpImply</a>
+, <a class="el" href="classilang_1_1_expr_op_ite.html#a737557a02e20e02159fd93d45abf53c0">ilang::ExprOpIte</a>
+, <a class="el" href="classilang_1_1_expr_op_load.html#aeefba7ca6b0e1e96b7918903fd69f34a">ilang::ExprOpLoad</a>
+, <a class="el" href="classilang_1_1_expr_op_l_rotate.html#abcc16503ed2ce4ae8f0d177b4aff40d4">ilang::ExprOpLRotate</a>
+, <a class="el" href="classilang_1_1_expr_op_lshr.html#af87cd3fccd63ec3f93a3cf074a1e7c5c">ilang::ExprOpLshr</a>
+, <a class="el" href="classilang_1_1_expr_op_lt.html#a57a47ffefa0c19e80990a213155028b9">ilang::ExprOpLt</a>
+, <a class="el" href="classilang_1_1_expr_op_mul.html#a0b6f84ea38e028636c7f81845e8a5757">ilang::ExprOpMul</a>
+, <a class="el" href="classilang_1_1_expr_op_neg.html#a1339f29ef4d7cf442434d7d919c20787">ilang::ExprOpNeg</a>
+, <a class="el" href="classilang_1_1_expr_op_not.html#a439891bd91e3e388d316ef0760783900">ilang::ExprOpNot</a>
+, <a class="el" href="classilang_1_1_expr_op_or.html#a548dde3a8aa3b72478f5f133305be87d">ilang::ExprOpOr</a>
+, <a class="el" href="classilang_1_1_expr_op_r_rotate.html#ac7bcdec497c6da10114934af7e4e2ae3">ilang::ExprOpRRotate</a>
+, <a class="el" href="classilang_1_1_expr_op_s_ext.html#a0e07eb0b4fef140d4c2cccb3d9201dd8">ilang::ExprOpSExt</a>
+, <a class="el" href="classilang_1_1_expr_op_shl.html#a3ff34826bcc04bd0171b0f16a7b9b8fb">ilang::ExprOpShl</a>
+, <a class="el" href="classilang_1_1_expr_op_s_mod.html#a8f9bd127459ed4f7d78b458e2fea3f60">ilang::ExprOpSMod</a>
+, <a class="el" href="classilang_1_1_expr_op_s_rem.html#a71f569b1df252abcc4208f44b974b483">ilang::ExprOpSRem</a>
+, <a class="el" href="classilang_1_1_expr_op_store.html#a80f61f73b9c74dab676a376f459ff234">ilang::ExprOpStore</a>
+, <a class="el" href="classilang_1_1_expr_op_sub.html#a4f57e60c14319bd8a1be93a52095e633">ilang::ExprOpSub</a>
+, <a class="el" href="classilang_1_1_expr_op_ugt.html#aef027be2bc9242a6ea158bc371231bf9">ilang::ExprOpUgt</a>
+, <a class="el" href="classilang_1_1_expr_op_ult.html#af9ff8741b3ca56c0eaded60e20754385">ilang::ExprOpUlt</a>
+, <a class="el" href="classilang_1_1_expr_op_u_rem.html#a434a6a0f9b416b92477586eecf65a38a">ilang::ExprOpURem</a>
+, <a class="el" href="classilang_1_1_expr_op_xor.html#a42c833fe341581672b2f7d3633fb60bb">ilang::ExprOpXor</a>
+, <a class="el" href="classilang_1_1_expr_op_z_ext.html#a5ff4044e4fc8b57fffda4e86cb63236c">ilang::ExprOpZExt</a>
 , <a class="el" href="classilang_1_1_expr_var.html#a4d8aefd58cf64ecda9b08c0108e90956">ilang::ExprVar</a>
 , <a class="el" href="classilang_1_1_ila_z3_unroller.html#a1c25e47c32bb83762be98466520a6e3c">ilang::IlaZ3Unroller</a>
 , <a class="el" href="classilang_1_1_sort.html#a75aa2fc1da69fceaaf6c2fc0edcd9659">ilang::Sort</a>
 , <a class="el" href="classilang_1_1_sort_bool.html#a8eeb8aafcf48c05e4666d54f3a5c8768">ilang::SortBool</a>
 , <a class="el" href="classilang_1_1_sort_bv.html#ae0d11a358273c746b86ddcfb80ca75fd">ilang::SortBv</a>
 , <a class="el" href="classilang_1_1_sort_mem.html#ad0aedbc62b13d9d1a2b5decee835896a">ilang::SortMem</a>
-, <a class="el" href="classilang_1_1_unroller.html#ae31da98aeaeb4a202566f92b6e55f05f">ilang::Unroller</a>
+, <a class="el" href="classilang_1_1_unroller.html#a141a85c633b666b3baa4757aec3f3fee">ilang::Unroller</a>
 </li>
 <li>GetZ3FuncDecl()
 : <a class="el" href="classilang_1_1_func.html#adba48cab7424157b4580434f695e4145">ilang::Func</a>

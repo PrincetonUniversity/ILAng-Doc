@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xor_2474',['Xor',['../expr__fuse_8h.html#a921b92fbe9d5f7a86085920f510a1e4f',1,'ilang::ExprFuse::Xor(const ExprPtr l, const ExprPtr r)'],['../expr__fuse_8h.html#aa6cfd61cd2054526f848ac3c3226138b',1,'ilang::ExprFuse::Xor(const ExprPtr l, const bool &amp;r)']]]
+  ['xor_2443',['Xor',['../ast__hub_8h.html#a65c1bf115f28972044ae7bb8c6aa92f1',1,'ilang::asthub::Xor(const ExprPtr &amp;l, const ExprPtr &amp;r)'],['../ast__hub_8h.html#a1fe400f0303fb8165cbf47a74f48feb6',1,'ilang::asthub::Xor(const ExprPtr &amp;l, const bool &amp;r)']]]
 ];

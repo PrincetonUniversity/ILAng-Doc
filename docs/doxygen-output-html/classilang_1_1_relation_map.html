@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">1.1.2</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -80,14 +80,10 @@ $(function() {
 <p>Relation mapping defines how arch states of two models are mapped, i.e., state mapping.  
  <a href="classilang_1_1_relation_map.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="comp__ref__rel_8h_source.html">comp_ref_rel.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="v__eq__check__refinement_8h_source.html">v_eq_check_refinement.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:adfdefb173e77fc29073c233aa3ccdbd2"><td class="memItemLeft" align="right" valign="top"><a id="adfdefb173e77fc29073c233aa3ccdbd2"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classilang_1_1_relation_map.html">RelationMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_relation_map.html#adfdefb173e77fc29073c233aa3ccdbd2">RelPtr</a></td></tr>
-<tr class="memdesc:adfdefb173e77fc29073c233aa3ccdbd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for passing around the relation mapping. <br /></td></tr>
-<tr class="separator:adfdefb173e77fc29073c233aa3ccdbd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfdefb173e77fc29073c233aa3ccdbd2"><td class="memItemLeft" align="right" valign="top"><a id="adfdefb173e77fc29073c233aa3ccdbd2"></a>
 typedef std::shared_ptr&lt; <a class="el" href="classilang_1_1_relation_map.html">RelationMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_relation_map.html#adfdefb173e77fc29073c233aa3ccdbd2">RelPtr</a></td></tr>
 <tr class="memdesc:adfdefb173e77fc29073c233aa3ccdbd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for passing around the relation mapping. <br /></td></tr>
@@ -103,26 +99,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_relation_map.html#ac3cb8bce777f37e705ffa0bcac62ddcf">~RelationMap</a> ()</td></tr>
 <tr class="memdesc:ac3cb8bce777f37e705ffa0bcac62ddcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
 <tr class="separator:ac3cb8bce777f37e705ffa0bcac62ddcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada615b06d8cbd4e8e525b89ac4fed7db"><td class="memItemLeft" align="right" valign="top"><a id="ada615b06d8cbd4e8e525b89ac4fed7db"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_relation_map.html#ada615b06d8cbd4e8e525b89ac4fed7db">add</a> (const <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> rel)</td></tr>
-<tr class="memdesc:ada615b06d8cbd4e8e525b89ac4fed7db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one relation. <br /></td></tr>
-<tr class="separator:ada615b06d8cbd4e8e525b89ac4fed7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a025d3d087fffa48fe20e23f8640e49b9"><td class="memItemLeft" align="right" valign="top"><a id="a025d3d087fffa48fe20e23f8640e49b9"></a>
-<a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_relation_map.html#a025d3d087fffa48fe20e23f8640e49b9">get</a> () const</td></tr>
-<tr class="memdesc:a025d3d087fffa48fe20e23f8640e49b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the conjuncted (ANDed) relation. <br /></td></tr>
-<tr class="separator:a025d3d087fffa48fe20e23f8640e49b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac11eda6555d38a1174843413ea7bf133"><td class="memItemLeft" align="right" valign="top"><a id="ac11eda6555d38a1174843413ea7bf133"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_relation_map.html#ac11eda6555d38a1174843413ea7bf133">RelationMap</a> ()</td></tr>
-<tr class="memdesc:ac11eda6555d38a1174843413ea7bf133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
-<tr class="separator:ac11eda6555d38a1174843413ea7bf133"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3cb8bce777f37e705ffa0bcac62ddcf"><td class="memItemLeft" align="right" valign="top"><a id="ac3cb8bce777f37e705ffa0bcac62ddcf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_relation_map.html#ac3cb8bce777f37e705ffa0bcac62ddcf">~RelationMap</a> ()</td></tr>
-<tr class="memdesc:ac3cb8bce777f37e705ffa0bcac62ddcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
-<tr class="separator:ac3cb8bce777f37e705ffa0bcac62ddcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada615b06d8cbd4e8e525b89ac4fed7db"><td class="memItemLeft" align="right" valign="top"><a id="ada615b06d8cbd4e8e525b89ac4fed7db"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_relation_map.html#ada615b06d8cbd4e8e525b89ac4fed7db">add</a> (const <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> rel)</td></tr>
-<tr class="memdesc:ada615b06d8cbd4e8e525b89ac4fed7db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one relation. <br /></td></tr>
-<tr class="separator:ada615b06d8cbd4e8e525b89ac4fed7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afafd76c95ae04da6cc0f1b2f137bb494"><td class="memItemLeft" align="right" valign="top"><a id="afafd76c95ae04da6cc0f1b2f137bb494"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_relation_map.html#afafd76c95ae04da6cc0f1b2f137bb494">add</a> (const <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a> &amp;rel)</td></tr>
+<tr class="memdesc:afafd76c95ae04da6cc0f1b2f137bb494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one relation. <br /></td></tr>
+<tr class="separator:afafd76c95ae04da6cc0f1b2f137bb494"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a025d3d087fffa48fe20e23f8640e49b9"><td class="memItemLeft" align="right" valign="top"><a id="a025d3d087fffa48fe20e23f8640e49b9"></a>
 <a class="el" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_relation_map.html#a025d3d087fffa48fe20e23f8640e49b9">get</a> () const</td></tr>
 <tr class="memdesc:a025d3d087fffa48fe20e23f8640e49b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the conjuncted (ANDed) relation. <br /></td></tr>
@@ -134,15 +114,10 @@ Static Public Member Functions</h2></td></tr>
 static <a class="el" href="classilang_1_1_relation_map.html#adfdefb173e77fc29073c233aa3ccdbd2">RelPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_relation_map.html#ab7a34fdd473ed3d0feede350dca4b95e">New</a> ()</td></tr>
 <tr class="memdesc:ab7a34fdd473ed3d0feede350dca4b95e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new relation mapping. Used for hiding implementation specific type details. <br /></td></tr>
 <tr class="separator:ab7a34fdd473ed3d0feede350dca4b95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7a34fdd473ed3d0feede350dca4b95e"><td class="memItemLeft" align="right" valign="top"><a id="ab7a34fdd473ed3d0feede350dca4b95e"></a>
-static <a class="el" href="classilang_1_1_relation_map.html#adfdefb173e77fc29073c233aa3ccdbd2">RelPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilang_1_1_relation_map.html#ab7a34fdd473ed3d0feede350dca4b95e">New</a> ()</td></tr>
-<tr class="memdesc:ab7a34fdd473ed3d0feede350dca4b95e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new relation mapping. Used for hiding implementation specific type details. <br /></td></tr>
-<tr class="separator:ab7a34fdd473ed3d0feede350dca4b95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Relation mapping defines how arch states of two models are mapped, i.e., state mapping. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="comp__ref__rel_8h_source.html">comp_ref_rel.h</a></li>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="v__eq__check__refinement_8h_source.html">v_eq_check_refinement.h</a></li>
 </ul>
 </div><!-- contents -->

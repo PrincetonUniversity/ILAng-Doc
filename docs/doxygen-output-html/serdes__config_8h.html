@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">1.1.2</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -69,12 +69,14 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">serdes_config.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;<a class="el" href="log_8h_source.html">ilang/util/log.h</a>&gt;</code><br />
+</div>
 <p><a href="serdes__config_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -186,6 +188,15 @@ Macros</h2></td></tr>
 <tr class="memitem:a76d6576830b1a8e8bc97cb7c6b40fb4e"><td class="memItemLeft" align="right" valign="top"><a id="a76d6576830b1a8e8bc97cb7c6b40fb4e"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SERDES_GLOBAL_TOP</b>&#160;&#160;&#160;&quot;t&quot;</td></tr>
 <tr class="separator:a76d6576830b1a8e8bc97cb7c6b40fb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a1c53367e17a7e227ace3137698017a9d"><td class="memItemLeft" align="right" valign="top"><a id="a1c53367e17a7e227ace3137698017a9d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilang.html#a1c53367e17a7e227ace3137698017a9d">ilang::ExprTypeId</a> { <b>kVar</b> = 1, 
+<b>kConst</b>, 
+<b>kOp</b>
+ }</td></tr>
+<tr class="memdesc:a1c53367e17a7e227ace3137698017a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ILA ser/des specific ID for Expr type. <br /></td></tr>
+<tr class="separator:a1c53367e17a7e227ace3137698017a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ILA to JSON Ser/Des config, macro, etc. </p>
