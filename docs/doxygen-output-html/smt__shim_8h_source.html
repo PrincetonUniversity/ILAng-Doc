@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.1.2</span>
+   &#160;<span id="projectnumber">1.1.3</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -86,28 +86,39 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  Generator&amp; gen_;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classilang_1_1_smt_shim.html#a2b7803f1c46f4af0c493bd86eeddf40c">   26</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="classilang_1_1_smt_shim.html#a2b7803f1c46f4af0c493bd86eeddf40c">GetShimExpr</a>(<span class="keyword">const</span> <a class="code" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a>&amp; expr, <span class="keyword">const</span> std::string&amp; suffix = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> gen_.GetShimExpr(expr, suffix);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  }</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classilang_1_1_smt_shim.html#a6a629d5b42c9948b8388903ac73d4dca">   30</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="classilang_1_1_smt_shim.html#a6a629d5b42c9948b8388903ac73d4dca">GetShimFunc</a>(<span class="keyword">const</span> <a class="code" href="namespaceilang.html#a6140a3823254564a0e81db8b3afea25c">FuncPtr</a>&amp; func) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> gen_.GetShimFunc(func);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}; <span class="comment">// class SmtShim</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;} <span class="comment">// namespace ilang</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif // ILANG_TARGET_SMT_SMT_SHIM_H__</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">typedef</span> decltype(gen_.GetShimExpr(<span class="keyword">nullptr</span>, <span class="stringliteral">&quot;&quot;</span>)) ShimExprType;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;public:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classilang_1_1_smt_shim.html#a2b7803f1c46f4af0c493bd86eeddf40c">   28</a></span>&#160;  inline auto <a class="code" href="classilang_1_1_smt_shim.html#a2b7803f1c46f4af0c493bd86eeddf40c">GetShimExpr</a>(const <a class="code" href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ExprPtr</a>&amp; expr, const std::<span class="keywordtype">string</span>&amp; suffix = &quot;&quot;) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> gen_.GetShimExpr(expr, suffix);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  }</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classilang_1_1_smt_shim.html#a6a629d5b42c9948b8388903ac73d4dca">   32</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="classilang_1_1_smt_shim.html#a6a629d5b42c9948b8388903ac73d4dca">GetShimFunc</a>(<span class="keyword">const</span> <a class="code" href="namespaceilang.html#a6140a3823254564a0e81db8b3afea25c">FuncPtr</a>&amp; func) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> gen_.GetShimFunc(func);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classilang_1_1_smt_shim.html#a1780e9e4ee7b6b6875b8b79591d25e1b">   36</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="classilang_1_1_smt_shim.html#a1780e9e4ee7b6b6875b8b79591d25e1b">BoolAnd</a>(<span class="keyword">const</span> ShimExprType&amp; a, <span class="keyword">const</span> ShimExprType&amp; b) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> gen_.BoolAnd(a, b);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classilang_1_1_smt_shim.html#a489c3cd02f41581fa4624c46e627b2f1">   40</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="classilang_1_1_smt_shim.html#a489c3cd02f41581fa4624c46e627b2f1">Equal</a>(<span class="keyword">const</span> ShimExprType&amp; a, <span class="keyword">const</span> ShimExprType&amp; b) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> gen_.Equal(a, b);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  }</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classilang_1_1_smt_shim.html#ae316a185bf22d88f5815b32a3ebd75a3">   44</a></span>&#160;  <span class="keyword">inline</span> Generator&amp; <a class="code" href="classilang_1_1_smt_shim.html#ae316a185bf22d88f5815b32a3ebd75a3">get</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> gen_; }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}; <span class="comment">// class SmtShim</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <span class="comment">// namespace ilang</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif // ILANG_TARGET_SMT_SMT_SHIM_H__</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceilang_html_a7c4196c72e53ea4df4b7861af7bc3bce"><div class="ttname"><a href="namespaceilang.html#a7c4196c72e53ea4df4b7861af7bc3bce">ilang::ExprPtr</a></div><div class="ttdeci">Expr::ExprPtr ExprPtr</div><div class="ttdoc">Pointer type for normal use of Expr.</div><div class="ttdef"><b>Definition:</b> expr.h:138</div></div>
-<div class="ttc" id="aclassilang_1_1_smt_shim_html_a6a629d5b42c9948b8388903ac73d4dca"><div class="ttname"><a href="classilang_1_1_smt_shim.html#a6a629d5b42c9948b8388903ac73d4dca">ilang::SmtShim::GetShimFunc</a></div><div class="ttdeci">auto GetShimFunc(const FuncPtr &amp;func)</div><div class="ttdoc">Unified interface to get function declaration.</div><div class="ttdef"><b>Definition:</b> smt_shim.h:30</div></div>
+<div class="ttc" id="aclassilang_1_1_smt_shim_html_a6a629d5b42c9948b8388903ac73d4dca"><div class="ttname"><a href="classilang_1_1_smt_shim.html#a6a629d5b42c9948b8388903ac73d4dca">ilang::SmtShim::GetShimFunc</a></div><div class="ttdeci">auto GetShimFunc(const FuncPtr &amp;func)</div><div class="ttdoc">Unified interface to get function declaration.</div><div class="ttdef"><b>Definition:</b> smt_shim.h:32</div></div>
 <div class="ttc" id="aclassilang_1_1_smt_shim_html"><div class="ttname"><a href="classilang_1_1_smt_shim.html">ilang::SmtShim</a></div><div class="ttdoc">A templated class for wrapping z3 and smt-switch to provide a unified interface for different applica...</div><div class="ttdef"><b>Definition:</b> smt_shim.h:15</div></div>
 <div class="ttc" id="afunc_8h_html"><div class="ttname"><a href="func_8h.html">func.h</a></div></div>
-<div class="ttc" id="aclassilang_1_1_smt_shim_html_a2b7803f1c46f4af0c493bd86eeddf40c"><div class="ttname"><a href="classilang_1_1_smt_shim.html#a2b7803f1c46f4af0c493bd86eeddf40c">ilang::SmtShim::GetShimExpr</a></div><div class="ttdeci">auto GetShimExpr(const ExprPtr &amp;expr, const std::string &amp;suffix=&quot;&quot;)</div><div class="ttdoc">Unified interface to get expression.</div><div class="ttdef"><b>Definition:</b> smt_shim.h:26</div></div>
+<div class="ttc" id="aclassilang_1_1_smt_shim_html_a2b7803f1c46f4af0c493bd86eeddf40c"><div class="ttname"><a href="classilang_1_1_smt_shim.html#a2b7803f1c46f4af0c493bd86eeddf40c">ilang::SmtShim::GetShimExpr</a></div><div class="ttdeci">auto GetShimExpr(const ExprPtr &amp;expr, const std::string &amp;suffix=&quot;&quot;)</div><div class="ttdoc">Unified interface to get expression.</div><div class="ttdef"><b>Definition:</b> smt_shim.h:28</div></div>
+<div class="ttc" id="aclassilang_1_1_smt_shim_html_a1780e9e4ee7b6b6875b8b79591d25e1b"><div class="ttname"><a href="classilang_1_1_smt_shim.html#a1780e9e4ee7b6b6875b8b79591d25e1b">ilang::SmtShim::BoolAnd</a></div><div class="ttdeci">auto BoolAnd(const ShimExprType &amp;a, const ShimExprType &amp;b)</div><div class="ttdoc">Unified interface to AND two boolean expressions.</div><div class="ttdef"><b>Definition:</b> smt_shim.h:36</div></div>
 <div class="ttc" id="anamespaceilang_html"><div class="ttname"><a href="namespaceilang.html">ilang</a></div></div>
 <div class="ttc" id="aclassilang_1_1_smt_shim_html_acce62ed531bab21ac1a1de8707b75f77"><div class="ttname"><a href="classilang_1_1_smt_shim.html#acce62ed531bab21ac1a1de8707b75f77">ilang::SmtShim::SmtShim</a></div><div class="ttdeci">SmtShim(Generator &amp;gen)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> smt_shim.h:18</div></div>
+<div class="ttc" id="aclassilang_1_1_smt_shim_html_ae316a185bf22d88f5815b32a3ebd75a3"><div class="ttname"><a href="classilang_1_1_smt_shim.html#ae316a185bf22d88f5815b32a3ebd75a3">ilang::SmtShim::get</a></div><div class="ttdeci">Generator &amp; get() const</div><div class="ttdoc">Return the underlying generator.</div><div class="ttdef"><b>Definition:</b> smt_shim.h:44</div></div>
+<div class="ttc" id="aclassilang_1_1_smt_shim_html_a489c3cd02f41581fa4624c46e627b2f1"><div class="ttname"><a href="classilang_1_1_smt_shim.html#a489c3cd02f41581fa4624c46e627b2f1">ilang::SmtShim::Equal</a></div><div class="ttdeci">auto Equal(const ShimExprType &amp;a, const ShimExprType &amp;b)</div><div class="ttdoc">Unified interface to Equal two expressions.</div><div class="ttdef"><b>Definition:</b> smt_shim.h:40</div></div>
 <div class="ttc" id="anamespaceilang_html_a6140a3823254564a0e81db8b3afea25c"><div class="ttname"><a href="namespaceilang.html#a6140a3823254564a0e81db8b3afea25c">ilang::FuncPtr</a></div><div class="ttdeci">Func::FuncPtr FuncPtr</div><div class="ttdoc">Pointer type for normal use of Func.</div><div class="ttdef"><b>Definition:</b> func.h:83</div></div>
 <div class="ttc" id="aast__hub_8h_html"><div class="ttname"><a href="ast__hub_8h.html">ast_hub.h</a></div></div>
 <!-- start footer part -->

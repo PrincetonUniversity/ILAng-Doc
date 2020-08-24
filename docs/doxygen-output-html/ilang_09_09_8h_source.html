@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ilang
-   &#160;<span id="projectnumber">1.1.2</span>
+   &#160;<span id="projectnumber">1.1.3</span>
    </div>
    <div id="projectbrief">ILAng: A Modeling and Verification Platform for SoCs</div>
   </td>
@@ -82,36 +82,36 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;z3++.h&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="config_8h.html">ilang/config.h</a>&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifdef SMTSWITCH_INTERFACE</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;smt-switch/smt.h&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif // SMTSWITCH_INTERFACE</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceilang.html">ilang</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespaceilang.html#acc1d2afe4c879a45329d57affe54a1db">   26</a></span>&#160;<span class="keyword">typedef</span> uint64_t <a class="code" href="namespaceilang.html#acc1d2afe4c879a45329d57affe54a1db">NumericType</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/******************************************************************************/</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// Logging system.</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">/******************************************************************************/</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceilang.html#a38808a9aed62a8c4a6917621c9318d6e">LogLevel</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; lvl);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceilang.html#a04b0d31076d694adcb6b1ee0a475c9dd">LogPath</a>(<span class="keyword">const</span> std::string&amp; path);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceilang.html#a7d33dbd65f2036041b06be22c830592b">LogToErr</a>(<span class="keywordtype">bool</span> to_err);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceilang.html#af596c444f0d40287ee7b91263d6ab91c">EnableDebug</a>(<span class="keyword">const</span> std::string&amp; tag);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceilang.html#a7b96e3e4622bcefd2d1159766a2df3d8">DisableDebug</a>(<span class="keyword">const</span> std::string&amp; tag);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/******************************************************************************/</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">// ILA Construction.</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/******************************************************************************/</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// implementation-specific structure</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_sort.html">Sort</a>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_func.html">Func</a>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_expr.html">Expr</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_instr.html">Instr</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_instr_lvl_abs.html">InstrLvlAbs</a>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_unroller.html">Unroller</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifdef SMTSWITCH_INTERFACE</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;smt-switch/smt.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif // SMTSWITCH_INTERFACE</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="config_8h.html">ilang/config.h</a>&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceilang.html">ilang</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespaceilang.html#acc1d2afe4c879a45329d57affe54a1db">   25</a></span>&#160;<span class="keyword">typedef</span> uint64_t <a class="code" href="namespaceilang.html#acc1d2afe4c879a45329d57affe54a1db">NumericType</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/******************************************************************************/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// Logging system.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">/******************************************************************************/</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceilang.html#a38808a9aed62a8c4a6917621c9318d6e">LogLevel</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; lvl);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceilang.html#a04b0d31076d694adcb6b1ee0a475c9dd">LogPath</a>(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceilang.html#a7d33dbd65f2036041b06be22c830592b">LogToErr</a>(<span class="keywordtype">bool</span> to_err);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceilang.html#af596c444f0d40287ee7b91263d6ab91c">EnableDebug</a>(<span class="keyword">const</span> std::string&amp; tag);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceilang.html#a7b96e3e4622bcefd2d1159766a2df3d8">DisableDebug</a>(<span class="keyword">const</span> std::string&amp; tag);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">/******************************************************************************/</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">// ILA Construction.</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">/******************************************************************************/</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">// implementation-specific structure</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_sort.html">Sort</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_func.html">Func</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_expr.html">Expr</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_instr.html">Instr</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_instr_lvl_abs.html">InstrLvlAbs</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_unroller.html">Unroller</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">// forward declaration</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">class </span><a class="code" href="classilang_1_1_ila.html">Ila</a>;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
@@ -602,7 +602,7 @@ $(function() {
 <div class="ttc" id="aclassilang_1_1_sort_html"><div class="ttname"><a href="classilang_1_1_sort.html">ilang::Sort</a></div><div class="ttdoc">The class for sort (type for expr, and the range/domain of functions).</div><div class="ttdef"><b>Definition:</b> sort.h:22</div></div>
 <div class="ttc" id="aclassilang_1_1_expr_ref_html"><div class="ttname"><a href="classilang_1_1_expr_ref.html">ilang::ExprRef</a></div><div class="ttdoc">The wrapper of Expr (e.g. state var, var relation, constant, etc).</div><div class="ttdef"><b>Definition:</b> ilang++.h:92</div></div>
 <div class="ttc" id="aclassilang_1_1_instr_ref_html_a0c28b811ca70252542fb7629fc71f643"><div class="ttname"><a href="classilang_1_1_instr_ref.html#a0c28b811ca70252542fb7629fc71f643">ilang::InstrRef::GetDecode</a></div><div class="ttdeci">ExprRef GetDecode() const</div><div class="ttdoc">Get the decode function of the instruction.</div></div>
-<div class="ttc" id="anamespaceilang_html_acc1d2afe4c879a45329d57affe54a1db"><div class="ttname"><a href="namespaceilang.html#acc1d2afe4c879a45329d57affe54a1db">ilang::NumericType</a></div><div class="ttdeci">uint64_t NumericType</div><div class="ttdoc">Data type for numerics. NOTE: SHOULD BE SYNCED WITH BvValType!!</div><div class="ttdef"><b>Definition:</b> ilang++.h:26</div></div>
+<div class="ttc" id="anamespaceilang_html_acc1d2afe4c879a45329d57affe54a1db"><div class="ttname"><a href="namespaceilang.html#acc1d2afe4c879a45329d57affe54a1db">ilang::NumericType</a></div><div class="ttdeci">uint64_t NumericType</div><div class="ttdoc">Data type for numerics. NOTE: SHOULD BE SYNCED WITH BvValType!!</div><div class="ttdef"><b>Definition:</b> ilang++.h:25</div></div>
 <div class="ttc" id="aclassilang_1_1_ila_html_a4b2e825a157ab9207dc6d6cd6d13fbdd"><div class="ttname"><a href="classilang_1_1_ila.html#a4b2e825a157ab9207dc6d6cd6d13fbdd">ilang::Ila::child</a></div><div class="ttdeci">Ila child(const size_t &amp;i) const</div><div class="ttdoc">Access the i-th child-ILA.</div></div>
 <div class="ttc" id="aclassilang_1_1_instr_ref_html_ac149bb5581c5176642bac9585814de89"><div class="ttname"><a href="classilang_1_1_instr_ref.html#ac149bb5581c5176642bac9585814de89">ilang::InstrRef::GetUpdate</a></div><div class="ttdeci">ExprRef GetUpdate(const ExprRef &amp;state) const</div><div class="ttdoc">Set the update function of the given state variable.</div></div>
 <div class="ttc" id="aclassilang_1_1_func_ref_html_a5ac4ac87418baae7180825870ebfb784"><div class="ttname"><a href="classilang_1_1_func_ref.html#a5ac4ac87418baae7180825870ebfb784">ilang::FuncRef::name</a></div><div class="ttdeci">std::string name() const</div><div class="ttdoc">Return the function name as std::string.</div></div>
