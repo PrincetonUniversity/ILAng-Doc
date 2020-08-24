@@ -1,5 +1,12 @@
 # Release Notes
 
+## 1.1.3 - 2020-08-24
+
+#### Updates
+
+* New `PathUnroller` that takes templated `SmtShim` for broader SMT support
+* Bug fixes in `smt-switch` interface
+
 ## 1.1.2 - 2020-07-20
 
 #### Updates
