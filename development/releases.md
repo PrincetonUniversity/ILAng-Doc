@@ -1,5 +1,12 @@
 # Release Notes
 
+## 1.1.4 - 2020-09-29
+
+#### Updates
+
+* Renaming namespace `AbsKnob` to `absknob` for consistency
+* Bug fixes in `Ilator`
+
 ## 1.1.3 - 2020-08-24
 
 #### Updates
