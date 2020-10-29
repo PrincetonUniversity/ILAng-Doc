@@ -3,7 +3,7 @@
 ## ILAng Python interface
 
 {% hint style="info" %}
- The complete Python API of ILAng is currently not yet available, and will be released soon.
+ The Python API will be deprecated and thus no future official support.
 {% endhint %}
 
 ## Synthesis engine
