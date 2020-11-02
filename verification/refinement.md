@@ -181,7 +181,7 @@ Memory state variable might be internal or external to the module. An internal m
   }
 ```
 
-The above annotation specifies memory named as `rf` and `mem` as internal and external respectively. Being internal or external affects how properties are generated. The mapping of internal memory is element-wise with expressions comparing two verilog arrays entry by entry, which is inefficient for a large memory. The mapping of external memory will use memory abstraction, which is more efficient. (In the future, we will support mapping internal memory using the Array data-type of the underlying property verifier.)
+The above annotation specifies memory named as `rf` and `mem` as internal and external respectively. Being internal or external affects how properties are generated. The mapping of internal memory is element-wise with expressions comparing two verilog arrays entry by entry, which is inefficient for a large memory. The mapping of external memory will use memory abstraction, which is more efficient. \(In the future, we will support mapping internal memory using the Array data-type of the underlying property verifier.\)
 
 ## Uninterpreted Function Mapping
 
@@ -289,4 +289,5 @@ An example is given as follows:
 This creates a 2-bit variable `stage_tracker` to track the number of cycles \(this is just for demoing the syntax of Verilog monitor, you can in fact use the embedded variable `__CYCLE_CNT__` to track the number of cycles\). Variables that should be accessible outside the monitor should be defined in the `defs` list with its name, bit-width and its type: `reg` or `wire`. Variables used only inside the monitor can be defined inside the `verilog` code list. Any variable inside the original Verilog, if referenced, should be put in the list of `refs`. This will help our tool to add auxiliary wires to connect them with the monitor.
 
 Value holders and monitors are normally only in effect when verifying instructions. If you want a monitor to appear also when verifying the invariants, you can add the `"keep-for-invariants":true` attribute in the monitor's description following the `defs` and `refs` attributes.
+
 
