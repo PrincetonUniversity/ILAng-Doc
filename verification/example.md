@@ -250,4 +250,3 @@ Recall that `defs` contains the auxiliary variables that we'd like to create and
 We are working on a syntactic sugar in the form of `signal ## cycle` and `(expression) ## cycle` that will create verilog-inline-monitor automatically to delay a signal for the given number of cycles.
 {% endhint %}
 
-

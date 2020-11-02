@@ -290,4 +290,3 @@ This creates a 2-bit variable `stage_tracker` to track the number of cycles \(th
 
 Value holders and monitors are normally only in effect when verifying instructions. If you want a monitor to appear also when verifying the invariants, you can add the `"keep-for-invariants":true` attribute in the monitor's description following the `defs` and `refs` attributes.
 
-
