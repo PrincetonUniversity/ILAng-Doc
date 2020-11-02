@@ -181,7 +181,7 @@ Memory state variable might be internal or external to the module. An internal m
   }
 ```
 
-The above annotation specifies memory named as `rf` and `mem` as internal and external respectively. Being internal or external affects how properties are generated. The mapping of internal memory is element-wise with expressions comparing two verilog arrays entry by entry, which is inefficient for a large memory. The mapping of external memory will use memory abstraction, which is more efficient. (In the future, we will support mapping internal memory using the Array data-type of the underlying property verifier.)
+The above annotation specifies memory named as `rf` and `mem` as internal and external respectively. Being internal or external affects how properties are generated. The mapping of internal memory is element-wise with expressions comparing two verilog arrays entry by entry, which is inefficient for a large memory. The mapping of external memory will use memory abstraction, which is more efficient. \(In the future, we will support mapping internal memory using the Array data-type of the underlying property verifier.\)
 
 ## Uninterpreted Function Mapping
 
