@@ -52,5 +52,3 @@ Below are the ILA-related publications \(bib-entries available below\)
 This document is meant to be a living document. You can raise an issue or create a pull request on [GitHub](https://github.com/Bo-Yuan-Huang/ILAng-Doc).
 {% endhint %}
 
-{% file src=".gitbook/assets/referencesila.tex" caption="Bibliography entries" %}
-
