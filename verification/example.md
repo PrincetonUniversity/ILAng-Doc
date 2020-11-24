@@ -311,7 +311,7 @@ The ILA model also model these as internal memory state variables and the ILA ha
   }
 ```
 
-The mapping of the memories in ILA and Verilog is very straightforward (below only shows the `state mapping` section).
+The mapping of the memories in ILA and Verilog is very straight-forward (below only shows the `state mapping` section).
 
 ```javascript
   "state mapping": {  
