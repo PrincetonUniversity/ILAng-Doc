@@ -156,7 +156,7 @@ The Verilog module comes with a set of I/O signals and the tool needs to know ho
 * `**SO**` directive, indicating that this is actually a direct output from a visible state variable \(a state variable that is modeled in the ILA\).
 * `**RESET**` or `**NRESET**` directive. Indicating that this signal is the reset signal, active-high or active-low \(we assume synchronous reset\).
 * `**CLOCK**` directive, indicating that this is the clock signal.
-* `**MEM**name.signal` directive, indicating this signal is the connection to an external/shared memory. The name part should be the ILA state variable name of the memory, and the signal part could be one of the following: `wdata`,`rdata`, `waddr`,`raddr`, `wen`, `ren`. If the signal does not directly correspond to the write/read data, write/read address, write/read enable signal, it should be specified as `**KEEP**`, you can specify the mapping using the additional assumptions.
+* `**MEM**name.signal` directive, indicating this signal is the connection to an external/shared memory. The name part should be the ILA state variable name of the memory, and the signal part could be one of the following: `wdata`,`rdata`, `waddr`,`raddr`, `wen`, `ren`. If the signal does not directly correspond to the write/read data, write/read address, write/read enable signal, it should be specified as `**KEEP**`, you can specify the mapping using "annotation" which will be dicussed below.
 
 For example, for a Verilog input signal `control`, the effects of applying different directives are:
 
@@ -182,6 +182,21 @@ Memory state variable might be internal or external to the module. An internal m
 ```
 
 The above annotation specifies memory named as `rf` and `mem` as internal and external respectively. Being internal or external affects how properties are generated. The mapping of internal memory is element-wise with expressions comparing two verilog arrays entry by entry, which is inefficient for a large memory. The mapping of external memory will use memory abstraction, which is more efficient. \(In the future, we will support mapping internal memory using the Array data-type of the underlying property verifier.\)
+
+For the external memory, it is likely that there isn't a one-to-one mapping between the module interface and the six signals required by the memory abstraction module: `wdata` (write-data) ,`rdata` (read-data), `waddr` (write-address),`raddr` (read-address), `wen` (write-enable), `ren` (read-enable). Therefore, we support specifying the mapping using the annotation here. An example of the syntax is given below.
+
+```javascript
+  "annotation" : {
+    "memory-ports" : {
+      "MemoryName.port1" : "Verilog-expression-here", 
+      "MemoryName.port2" : "Verilog-expression-here"
+    }
+  }
+```
+
+In the above example, `MemoryName` should be the name of the memory state variable in ILA and `port1`, `port2` should be one of  `wdata` (write-data) ,`rdata` (read-data), `waddr` (write-address),`raddr` (read-address), `wen` (write-enable), `ren` (read-enable). The Verilog expression after the colon represents how to use the Verilog signal to compute the interface signals.
+Note that this kind of mapping assumes the ports of an abstract memory state can be represented as a function of solely the Verilog signals. If this is not feasible for the design you are looking at, you can use the additional mapping capability provided by `mapping control` section described later in this chapter.
+
 
 ## Uninterpreted Function Mapping
 
