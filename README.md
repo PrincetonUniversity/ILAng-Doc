@@ -19,7 +19,7 @@ ILAng also provides for translating models and properties into various languages
 
 The ILAng platform has been used in several applications:
 
-* **Behavioral Equivalence Checking.** The modularity and hierarchy in the ILA models simplify behavioral equivalence checking through decomposition. \[[TODAES18](https://bo-yuan-huang.github.io/ILAng-Doc/todaes18.pdf)\] 
+* **Behavioral Equivalence Checking.** The modularity and hierarchy in the ILA models simplify behavioral equivalence checking through decomposition. \[[TODAES18](https://bo-yuan-huang.github.io/ILAng-Doc/todaes18.pdf)\] \([Best Paper Award](https://dl.acm.org/journal/todaes/honors-and-awards)\)
 * **Firmware/Hardware Co-Verification**. The ILA models program-visible hardware behavior while abstracting out lower-level implementation details. This enables scalable firmware/hardware co-verification. \[[DAC18](https://bo-yuan-huang.github.io/ILAng-Doc/dac18.pdf), [DATE16](https://bo-yuan-huang.github.io/ILAng-Doc/date16.pdf)\]
 * **Memory Consistency and Concurrency Reasoning**. The ILA model is an operational model that captures program-visible state updates. When integrated with axiomatic memory consistency models that specify orderings between memory operations, the transition relation can be used to reason about concurrent interactions between heterogeneous components. \[[FMCAD18](https://bo-yuan-huang.github.io/ILAng-Doc/fmcad18.pdf)\]
 * **Data Race Checking of GPU Programs**. Besides general-purpose processors and accelerators, an ILA model can be synthesized for the Nvidia GPU PTX instruction set using the synthesis engine. This can then been used for data race checking for GPU programs. \[[ICCAD18](https://bo-yuan-huang.github.io/ILAng-Doc/iccad18.pdf)\]
@@ -42,7 +42,7 @@ Below are the ILA-related publications \(bib-entries available below\)
 * A Formal Instruction-Level GPU Model for Scalable Verification. \[[ICCAD18](https://bo-yuan-huang.github.io/ILAng-Doc/iccad18.pdf)\]
 * Integrating Memory Consistency Models with Instruction-Level Abstractions for Heterogeneous System-on-Chip Verification. \[[FMCAD18](https://bo-yuan-huang.github.io/ILAng-Doc/fmcad18.pdf)\]
 * Formal Security Verification of Concurrent Firmware in SoCs using Instruction-Level Abstraction for Hardware. \[[DAC18](https://bo-yuan-huang.github.io/ILAng-Doc/dac18.pdf)\]
-* Instruction-Level Abstraction \(ILA\): A Uniform Specification for System-on-Chip \(SoC\) Verification. \[[TODAES18](https://bo-yuan-huang.github.io/ILAng-Doc/todaes18.pdf)\]
+* Instruction-Level Abstraction \(ILA\): A Uniform Specification for System-on-Chip \(SoC\) Verification. \[[TODAES18](https://bo-yuan-huang.github.io/ILAng-Doc/todaes18.pdf)\] \([Best Paper Award](https://dl.acm.org/journal/todaes/honors-and-awards)\)
 * Template-based Parameterized Synthesis of Uniform Instruction-Level Abstractions for SoC Verification. \[[TCAD18](https://bo-yuan-huang.github.io/ILAng-Doc/tcad18.pdf)\]
 * Invited: Specification and Modeling for Systems-on-Chip Security Verification. \[[DAC16](https://bo-yuan-huang.github.io/ILAng-Doc/dac16.pdf)\]
 * Verifying Information Flow Properties of Firmware using Symbolic Execution. \[[DATE16](https://bo-yuan-huang.github.io/ILAng-Doc/date16.pdf)\]
