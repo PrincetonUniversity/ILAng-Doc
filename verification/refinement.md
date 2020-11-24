@@ -73,6 +73,7 @@ The variable mapping in the JSON file is a map data structure. The keys of this 
 2. A predicate that has at least a `=` in it \(you can use `>=` , `<=` , `==` and etc.\) This is just for our parser to distinguish it from the first case.
 3. A string-string pair that is in the form of a list or map. If it is given as a list, the first element is regarded as the condition and the second element is regarded as the mapping. It conveys the meaning of "when the condition is true, the ILA and Verilog variables should have the mapping". If the condition is not true, there is no mapping guaranteed. If the string-string pair is given as a map, it must have two elements. One element should have the key `cond` and the other should have the  key `map`. The `map` part could be a string of Verilog variable name as in case \(1\) or a Verilog expression as case \(2\).
 4. A list of string-string pairs, each pair follows requirement in \(3\).
+5. If the ILA variable on the left is a memory, the right side depends on whether the Verilog memory is internal or external. If inside Verilog, there is an array that corresponds to this memory, you can directly use this name on the right side. Otherwise, you can make this ILA memory to map with an external memory using `"ILA-mem-name":"**MEM**ILA-mem-name"`. 
 
 Below are some of the examples:
 
@@ -84,6 +85,8 @@ Below are some of the examples:
     "ILA_state_3" : ["__START__", "Verilog_state_3"],                   // case 3.a
     "ILA_state_4" : { "cond":"__START__", "map":"Verilog_state_4"},     // case 3.b
     "ILA_state_5" : [["__START__", "Verilog_state_5"], ["__IEND__","Verilog_state_6"]],     // case 4
+    "ILA_mem_state" : "Verilog_array_name",       // case 5.a : internal memory in Verilog
+    "ILA_mem_state" : "**MEM**ILA_mem_state",     // case 5.b : external memory in Verilog
     // more ...
   }, 
   // other fields ...
@@ -107,6 +110,13 @@ wire variable_map_assume___p7__ILA_state_4 = (~ __START__) || (__m16__) ;
 
 wire __m18__ = ( (~ __START__ ) ||  ( Verilog_state_5 == ILA_state_5 ) ) && ( ~( ~__START__ && __IEND__ ) ||  Verilog_state_6 == ILA_state_5 ) ; // __START__ --> match1 && (~__START__ && __IEND__) --> match2
 wire variable_map_assume___p9__ILA_state_5 = (~ __START__) || (__m18__) ;
+
+// map to an internal Verilog array : element-wise equality
+assign __m20__ = ( __ILA_SO_mem_0 == VerilogArray_0_)&&( __ILA_SO_mem_1 == VerilogArray_1_)&&... ;
+assign variable_map_assume___p11__ = (~ __START__ )|| (__m20__) ;
+
+// map to an external Verilog array : using memory abstraction
+// no assumption is needed
 ```
 
 and the assertions:
@@ -126,6 +136,18 @@ wire variable_map_assert___p7__ILA_state_4 = (~ __IEND__) || (__m6__) ;
 
 wire __m8__ = ( (~ __START__ ) ||  ( Verilog_state_5 == ILA_state_5 ) ) && ( ~( ~__START__ && __IEND__ ) ||  Verilog_state_6 == ILA_state_5 ) ; // __START__ --> match1 && (~__START__ && __IEND__) --> match2
 wire variable_map_assert___p9__ILA_state_5 = (~ __IEND__) || (__m8__) ;
+
+// map to an internal Verilog array : element-wise equality
+assign __m10__ = ( __ILA_SO_mem_0 == VerilogArray_0_)&&( __ILA_SO_mem_1 == VerilogArray_1_)&&... ;
+assign variable_map_assert___p11__ = (~ __IEND__ )|| (__m10__) ;
+
+// map to an external Verilog array : using memory abstraction
+absmem #( 
+    .AW(32),
+    .DW(8),
+    .TTS(4294967296) )
+mi0(...,  .mem_EQ_(mem_EQ_) );
+assign variable_map_assert__p13__ = (~ __IEND__) || (mem_EQ_) ;
 ```
 
 One note in the above example: the condition can refer to special signals \(`__START__` and `__IEND__`\), which are the condition when the instruction-under-verification starts to execute and finishes.
@@ -156,7 +178,7 @@ The Verilog module comes with a set of I/O signals and the tool needs to know ho
 * `**SO**` directive, indicating that this is actually a direct output from a visible state variable \(a state variable that is modeled in the ILA\).
 * `**RESET**` or `**NRESET**` directive. Indicating that this signal is the reset signal, active-high or active-low \(we assume synchronous reset\).
 * `**CLOCK**` directive, indicating that this is the clock signal.
-* `**MEM**name.signal` directive, indicating this signal is the connection to an external/shared memory. The name part should be the ILA state variable name of the memory, and the signal part could be one of the following: `wdata`,`rdata`, `waddr`,`raddr`, `wen`, `ren`. If the signal does not directly correspond to the write/read data, write/read address, write/read enable signal, it should be specified as `**KEEP**`, you can specify the mapping using the additional assumptions.
+* `**MEM**name.signal` directive, indicating this signal is the connection to an external/shared memory. The name part should be the ILA state variable name of the memory, and the signal part could be one of the following: `wdata`,`rdata`, `waddr`,`raddr`, `wen`, `ren`. If the signal does not directly correspond to the write/read data, write/read address, write/read enable signal, it should be specified as `**KEEP**`, you can specify the mapping using "annotation" which will be dicussed below.
 
 For example, for a Verilog input signal `control`, the effects of applying different directives are:
 
@@ -182,6 +204,21 @@ Memory state variable might be internal or external to the module. An internal m
 ```
 
 The above annotation specifies memory named as `rf` and `mem` as internal and external respectively. Being internal or external affects how properties are generated. The mapping of internal memory is element-wise with expressions comparing two verilog arrays entry by entry, which is inefficient for a large memory. The mapping of external memory will use memory abstraction, which is more efficient. \(In the future, we will support mapping internal memory using the Array data-type of the underlying property verifier.\)
+
+For the external memory, it is likely that there isn't a one-to-one mapping between the module interface and the six signals required by the memory abstraction module: `wdata` (write-data) ,`rdata` (read-data), `waddr` (write-address),`raddr` (read-address), `wen` (write-enable), `ren` (read-enable). Therefore, we support specifying the mapping using the annotation here. An example of the syntax is given below.
+
+```javascript
+  "annotation" : {
+    "memory-ports" : {
+      "MemoryName.port1" : "Verilog-expression-here", 
+      "MemoryName.port2" : "Verilog-expression-here"
+    }
+  }
+```
+
+In the above example, `MemoryName` should be the name of the memory state variable in ILA and `port1`, `port2` should be one of  `wdata` (write-data) ,`rdata` (read-data), `waddr` (write-address),`raddr` (read-address), `wen` (write-enable), `ren` (read-enable). The Verilog expression after the colon represents how to use the Verilog signal to compute the interface signals.
+Note that this kind of mapping assumes the ports of an abstract memory state can be represented as a function of solely the Verilog signals. If this is not feasible for the design you are looking at, you can use the additional mapping capability provided by `mapping control` section described later in this chapter.
+
 
 ## Uninterpreted Function Mapping
 

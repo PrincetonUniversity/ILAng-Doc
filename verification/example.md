@@ -250,3 +250,199 @@ Recall that `defs` contains the auxiliary variables that we'd like to create and
 We are working on a syntactic sugar in the form of `signal ## cycle` and `(expression) ## cycle` that will create verilog-inline-monitor automatically to delay a signal for the given number of cycles.
 {% endhint %}
 
+## Mapping of Memory
+
+The specification of memory state variable mapping can be very different depends on the types of memory.
+The memory in Verilog be internal or external. While the memory in ILA may be modeled as an internal or memory state variable, as well.
+There isn't a strict dependency between the two choices. And there are four combinations as described below.
+
+### Internal Memory in both ILA and RTL
+
+Currently, there isn't a uniform and scalable way to handle this case for both Pono and JasperGold.
+The current implemented approach is to declare the memory as internal in the annotation section, however, this won't scale to large memory.
+Below gives an example.
+
+The implementation contains two internal memories `mema` and `memb`, when `start` signal is asserted, it will swap the contents between two addresses in these two memories, where the addresses are specified by the input indices.
+
+```text
+// swap with internal memory (im)
+module swap (
+  input clk,    // Clock
+  input rst,  // Synchronous reset active high
+  input [3:0] addra,
+  input [3:0] addrb,
+  input start);
+
+reg [7:0] mema[0:15];
+reg [7:0] memb[0:15];
+
+
+always @(posedge clk) begin
+  if (start) begin
+    mema[addra] <= memb[addrb];
+    memb[addrb] <= mema[addra];
+  end
+end
+endmodule
+```
+
+The ILA model also model these as internal memory state variables and the ILA has only one instruction `SWAP`.
+
+```cpp
+  auto memswap = Ila("MemorySwap");
+  memswap.SetValid(BoolConst(true));
+
+  auto addra = memswap.NewBvInput("addra", 4);
+  auto addrb = memswap.NewBvInput("addrb", 4);
+  auto start = memswap.NewBvInput("start", 1);
+
+  auto mema = memswap.NewMemState("mema", 4, 8);
+  auto memb = memswap.NewMemState("memb", 4, 8);
+
+  {
+    auto SWAP = memswap.NewInstr("SWAP");
+    SWAP.SetDecode(start == 1);
+
+    auto dataa = Load(mema, addra);
+    auto datab = Load(memb, addrb);
+
+    SWAP.SetUpdate(mema, Store(mema, addra, datab)); //mema[addra] = memb[addrb]
+    SWAP.SetUpdate(memb, Store(memb, addrb, dataa)); //memb[addrb] = mema[addra]
+  }
+```
+
+The mapping of the memories in ILA and Verilog is very straight-forward (below only shows the `state mapping` section).
+
+```javascript
+  "state mapping": {  
+    "mema":"mema",
+    "memb":"memb"},
+```
+
+This simple handling will work for all backends, but would not scale to large memories.
+If it is possible to convert the internal memory to an external one by commenting away the declaration of the Verilog array and the associated read/write logic, then we can use the memory abstraction approach that applies to external memory. (Note in the conversion, please keep the read/write signals intact as they will be treated as if they are interface signals to the external memory, and our tool can automatically pull these signals to the top level module.)
+
+
+{% hint style="info" %}
+Currently, there is a limitation on the memory abstraction model, which only supports making one read and one write concrete. So, if the internal array is read or written more than twice during the execution of the instruction and they must be concrete to avoid the spurious counterexample due to the abstraction, you might have to consider the commercial solution (the Proof Accelerator in JasperGold, which is essentially a memory abstraction but can be configured to support multiple concrete read and write).
+{% endhint %}
+
+{% hint style="info" %}
+Specifically, for the Pono backend, we are working on a solution to use SMT array theory to support mapping of arrays. However, although no Verilog modification is needed, it might be difficult for the model checkers to prove unbounded correctness.
+{% endhint %}
+
+{% hint style="info" %}
+We are also considering the possibility of intergrating CHC solvers to overcome the above difficulty when handling arrays. Comments and feedbacks on this are greatly appreciated.
+{% endhint %}
+
+### Internal Memory in ILA and External Memory in RTL
+
+Now suppose we want to convert the above Verilog to external memories, we need to comment away the declaration of Verilog arrays as well as the associated read/write logic.
+
+```text
+// swap with internal memory (im) (now converted to external memory)
+module swap (
+  input clk,    // Clock
+  input rst,  // Synchronous reset active high
+  input [3:0] addra,
+  input [3:0] addrb,
+  input start);
+
+// reg [7:0] mema[0:15];
+// reg [7:0] memb[0:15];
+
+
+// always @(posedge clk) begin
+//  if (start) begin
+//    mema[addra] <= memb[addrb];
+//    memb[addrb] <= mema[addra];
+//  end
+// end
+
+endmodule
+```
+
+Below shows the signal mapping below. Here it is a bit tricky as in Verilog there is no such signal that holds the output of the 
+read from these two arrays (they are directly used to overwrite the contect in another location). So we will need to create auxiliary variables to support this. In the table, we use `#mema_rdata#` and `#memb_rdata#` as the place-holders.
+
+| memory.port 	| signal       	|
+|-------------	|--------------	|
+| mema.ren    	| start        	|
+| mema.raddr  	| addra        	|
+| mema.rdata  	| #mema_rdata# 	|
+| mema.wen    	| start        	|
+| mema.waddr  	| addra        	|
+| mema.wdata  	| #memb_rdata# 	|
+| memb.ren    	| start        	|
+| memb.raddr  	| addrb        	|
+| memb.rdata  	| #memb_rdata# 	|
+| memb.wen    	| start        	|
+| memb.waddr  	| addrb        	|
+| memb.wdata  	| #mema_rdata# 	|
+
+
+The overall state variable mapping should looks like this:
+
+```json
+{
+  "models": { "ILA":"m0" , "VERILOG": "m1" },
+  "instruction mapping": [],
+  "state mapping": {  
+    "mema":"**MEM**mema",
+    "memb":"**MEM**memb"},
+
+  "interface mapping": {
+     "rst":"**RESET**", 
+     "clk":"**CLOCK**",
+     "addra":"addra",
+     "addrb":"addrb",
+     "start":"start"
+  },
+
+  "annotation" : {
+    "memory-ports" : {
+      "mema.ren"     : "start"         ,
+      "mema.raddr"   : "addra"         ,
+      "mema.rdata"   : "#mema_rdata#"  ,
+      "mema.wen"     : "start"         ,
+      "mema.waddr"   : "addra"         ,
+      "mema.wdata"   : "#memb_rdata#"  ,
+      "memb.ren"     : "start"         ,
+      "memb.raddr"   : "addrb"         ,
+      "memb.rdata"   : "#memb_rdata#"  ,
+      "memb.wen"     : "start"         ,
+      "memb.waddr"   : "addrb"         ,
+      "memb.wdata"   : "#mema_rdata#"  
+    }
+  },
+
+  "verilog-inline-monitors" : {
+    "read_value_holder" : {
+      "verilog": [],
+      "defs" :[ ["mema_rdata", 8, "wire"],["memb_rdata", 8, "wire"] ],
+      "refs" :[]
+    }
+  }
+}
+```
+
+And to aid efficient reasoning, you should also enable `MemAbsReadAbstraction` option in the configuration for `VerilogVerificationTargetGenerator`. An example is given below:
+
+```cpp
+  VerilogVerificationTargetGenerator::vtg_config_t  vtg_cfg; // default configuration
+  vtg_cfg.MemAbsReadAbstraction =  true; // enable read abstraction in the abstract memory model
+  VerilogVerificationTargetGenerator vg( ... /* the arguments are omitted here */ ,
+    vtg_cfg); // give vtg_cfg as the extra configuration
+```
+
+### External Memory in ILA and Internal Memory in RTL
+
+In this case, you may want to consider to convert the internal Verilog memory as external using the approach described above. This will help with mapping and also the automated reasoning in the underlying model checkers.
+
+### External Memory in both ILA and RTL
+
+In this case, you can try to map the directly interface signals between ILA and RTL, if 
+you are unable to write it as an one-to-one mapping in `interface mapping` section, `mapping control` section is available for you.
+
+
+
