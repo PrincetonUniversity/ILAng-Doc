@@ -1,228 +1,292 @@
 # Refinement Relation
 
-The refinement map or refinement relation mainly consists of two parts: _variable mappings_ and _instruction completion conditions_. These two parts are specified in two separate files, one referred as _var-map_ and the other _inst-cond_.
+## General Information
 
-Besides the above two parts, there are other auxiliary information needed. They are:
+Refinement relation is specified in JSON format and is provided as two files, one referred to as  _variable mappings_ and the other as _instruction completion conditions_.
+The JSON format allows specifying data structures like map and list and support datatypes like string, integer and `null` (for empty field).
 
-* **module naming**: The names of the ILA module and the Verilog module.
-* **global invariants**: Some properties that are globally true for the Verilog design that will be checked separately and can be safely assumed when verifying  individual instructions.
-* **interface signal information**: What does the interface of the Verilog top module look like and what do these signals mean to the tool.
-* **uninterpreted function mapping**: What an uninterpreted function inside the ILA model corresponds to.
+A map (similar to a dictionary in Python) has the following syntax:
+```javascript
+{
+  // a map is a set of key-value pairs
+  // the key must be string in ""
+  // the value can be anything
+  "a-string-for-key" : "a-string-for-value",
+  "a-string-for-another-key" : 123,
+  "a-string-for-a-third-key" : ...  
+}
+```
 
-## The Structure of Variable Mappings
+A list is an ordered set of elements, where each element can be any string, integer, or nested data structures. JSON format does not require the elements are of the same type.
+In the top-level of a JSON file is a map and we call the key-value pairs in this top-level map as sections.
+
+## The Structure of Variable Mapping
+
+Below shows the general structure the variable mapping file (or in short, var-map). Each section (like `state mapping"`) will be explained in detail later. Section `additional mapping`, `assumptions`, `monitor` and `functions` are optional. Section names are case-insensitive and you can always use hypen (`-`) to replace space in the section names.
 
 ```javascript
 {
-  "models": { 
-    "ILA" : "<module-name>" , 
-    "VERILOG": "<module-name>" 
-  },
   "state mapping": {
-    "<ILA-variable-name>" : "<Verilog-signal>",
+    "<ILA-state-variable-name>" : "<refinement-expression>",
     // more ...
   },
-  "interface mapping": {
-    "<Verilog-io-signal>" : "<ILA-variable-name/directives>",
+  "input mapping": {
+    "<ILA-input-variable-name>" : "<refinement-expression>",
     // more ...
-  },  
-  "mapping control": [
-    "<Verilog-expression>",
+  },
+  "RTL interface connection" :{
+    "CLOCK" : {
+      "<clk-name-1>" : "<rtl-input-signal-1>", // an input or a list of inputs
+      "<clk-name-2>" : ["<rtl-input-signal-2>", "<rtl-input-signal-3>"] },
+    "RESET" : "<rtl-input-signal-1>",  // an input or a list of inputs
+    "NRESET" : "<rtl-input-signal-2>",  // an input or a list of inputs
+    "CUSTOMRESET" : "<rtl-input-signal-2>",  // an input or a list of inputs
+  }
+  "additional mapping": [
+    "<condition>",
     // more ...
   ],
-  "functions":{
+  "assumptions": [
+    "<condition>",
+    // more ...
+  ],
+  "monitor" : {
+    "<name-1>" : {
+      "template" : "phase tracker",
+      ...
+      // instantiate a phase tracker template
+      // each template has its other fields
+      // to fill in
+    },
+    "<name-2>" : {
+      "template" : "value recorder",
+      ...
+      // instantiate a value recorder
+      // c,v,w
+
+    },
+    "<name-3>" : {
+      "verilog" : "<plain-verilog-here>",
+      ...
+      // directly writing verilog here
+    },
+    ...
+  }
+  "functions":{ // for uninterpreted functions 
     "<function-name>": [
       [
-        "<Verilog-expression>", "<Verilog-signal>",
-        "<Verilog-expression>", "<Verilog-signal>",
+        "<refinement-expression>", "<refinement-expression>",
+        "<refinement-expression>", "<refinement-expression>",
         // more ...
-      ]
+      ],
+      ...
     ]
   }
 }
 ```
 
-## The Structure of Instruction Completion Conditions
 
-```javascript
-{
-  "instructions":
-  [
-    {
-      "instruction"     :"<instr-name>",
-      "ready bound"     :12345, // <bound:integer>
-      "ready signal"    :"<Verilog-signal>",
-      "max bound"       :12345, // <bound:integer>
-      "start condition" :"<Verilog-expr>",
-      "flush constraint":"<Verilog-expr>",
-      "pre-flush end"   :"<Verilog-expr>",
-      "post-flush end"  :"<Verilog-expr>"
-    }
-  ]
-}
-```
+## Refinement Expression, Condition and Signal Names
+
+In the above general structure, you can find terms like "refinement expression", "condition" or "signal name". Refinement expressions are basically valid Verilog expressions with some minor differences. We introduce new syntax for value recorder, delay expression and phase identifiers, and these will be explained in the later sections of this document.
+The Verilog expressions can be interpreted as either (1) the expression of a function which specifies how ILA architectural state variable can be computed from the Verilog signals or (2) a relation between ILA architectural state variable and RTL signals. The difference in the interpretation is determined by whether the expression is a predicate in the last level. For example, a expression `RTL.v1 +  RTL.v2` is not a predicate, whereas `ILA.v1 == RTL.v1 + RTL.v2` is a predicate. Whether the refinement expression is regarded as a predicate, is independent from its bit-width. For example `RTL.one_bit_signal` is not a predicate, even it is one-bit wide, whereas `RTL.one_bit_signal == 1'b1` is a predicate.
+
+"Condition" is similar to a "refinement expression" as it follows the same syntactic requirements. However, the type or the outcome of a condition must be 1-bit. Even if it is not in the form of a predicate, it will be interpreted as a predicate (by implicitly adding `xxx == 1'b1` in the top-level).
+
+"Signal name" refers to a single signal (in RTL) and you cannot have any computation there.
+
+
+## Special Syntax in Refinement Expressions
+
+### Value Recorder
+
+Value holder is one special kind of auxiliary variables and can be introduced to capture the value of a Verilog variable at a certain time or under a certain condition. This is different from directly creating an auxiliary register in RTL. The value of a RTL register is not available for use before it is assigned under the conditionm,
+whereas, the content of a value holder is globally available even before the clock cycle where the specified condition is true. This is achieved with the help of assumptions.
+
+The following syntax is used to make a value recorder: `value @ condition`, where each of the value and condition part can be RTL signals or expressions. If either the `value` or `condition` is more than a signal name, paranthesis is needed, like `( RTL.v1 + RTL.v2 ) @ RTL.s1.commit`.
+Nested value recorder (value recorders in `value` or `condition`) is not allowed.
+
+### Simple Delay
+
+You can delay a signal by a fixed number of cycles using `signal ## cycle`. For example, if you need the value of signal `RTL.v1`  one cycle after `RTL.s1.commit`  becomes true for mapping, then you can write `RTL.v1 @ (RTL.s1.commit ## 1)`
+
+### Phase Identifier
+
+If the RTL executes the instructions in multiple phases (e.g., pipeline stages), you will need to declare these phases in order to track the progression of the instruction and to find out its time of finish. This create phases identifiers.
+By default, there are two built-in phases identifiers: `#start#` and `#end#`. 
+Generally speaking, the phase identifier are those wrapped in two `#`.
+The specification of stages will be explain [later](#template-for-phase-identifier).
 
 ## Module Naming
 
-The module naming section comes first in the _var-map_ JSON file. It is a dictionary \(map\) with two elements. One element should have the key `ILA` and the value of it is what will be used as the instance name of the ILA module. The other element should have the key `VERILOG` with the value to be the instance name of the Verilog module. These names are used in all the expressions later when you want to refer to a variable in Verilog or ILA.
+By default, when you refer to signal in RTL, you can use something like `RTL.module_instance_name1.module_instance_name2.signal`  to refer to it. And if you use a variable (either input or state variable) in ILA, you can use the format `ILA.var_name`. If you want to override this default, you can write a `model name` section in the variable mapping to rename.
 
-## Variable Mapping
+```javascript
 
-The variable mapping in the JSON file is a map data structure. The keys of this map are the state variable names in the ILA model while the values are the Verilog variables. There are cases that one Verilog state variable can be mapped to multiple Verilog state variables and the mapping may be some special function. So the allowed value field of this map can be:
+"model names" : {
+  "ILA" : "SomeNameHere",
+  "RTL" : "SomeNameHere"
+}
 
-1. A Verilog variable name as a string. If the Verilog variable is in the top module of Verilog, you can omit the module name \(it does not hurt to add it\). Otherwise, you must specify the complete hierarchy. For example, if you want to refer to a signal `S` in module `A` that is instantiated with name `IA` in the top module, while the top module's instance name is `VERILOG` \(specified in the previous section\), then you should use `VERILOG.IA.S` to refer to it.
-2. A predicate that has at least a `=` in it \(you can use `>=` , `<=` , `==` and etc.\) This is just for our parser to distinguish it from the first case.
-3. A string-string pair that is in the form of a list or map. If it is given as a list, the first element is regarded as the condition and the second element is regarded as the mapping. It conveys the meaning of "when the condition is true, the ILA and Verilog variables should have the mapping". If the condition is not true, there is no mapping guaranteed. If the string-string pair is given as a map, it must have two elements. One element should have the key `cond` and the other should have the  key `map`. The `map` part could be a string of Verilog variable name as in case \(1\) or a Verilog expression as case \(2\).
-4. A list of string-string pairs, each pair follows requirement in \(3\).
-5. If the ILA variable on the left is a memory, the right side depends on whether the Verilog memory is internal or external. If inside Verilog, there is an array that corresponds to this memory, you can directly use this name on the right side. Otherwise, you can make this ILA memory to map with an external memory using `"ILA-mem-name":"**MEM**ILA-mem-name"`. 
+```
 
-Below are some of the examples:
+## State Mapping and Input Mapping
+
+The state mapping in the JSON file is a map data structure. The keys of this map are the state variable names in the ILA model while the value of the map can be (1) a refinement expression, (2) a list of condition-refinement expression pairs for conditional mapping (a pair is written as a list of two elements)  (3) a memory expression for mapping internal array in RTL, or (4) a map following a pre-defined template for external memory. And below shows the syntactic structure of state mapping:
 
 ```javascript
 {
   "state mapping": {
-    "ILA_state_1" : "Verilog_state_1",                                  // case 1
-    "ILA_state_2" : "ILA_state_2 == Verilog_state_2 + Verilog_state_3", // case 2
-    "ILA_state_3" : ["__START__", "Verilog_state_3"],                   // case 3.a
-    "ILA_state_4" : { "cond":"__START__", "map":"Verilog_state_4"},     // case 3.b
-    "ILA_state_5" : [["__START__", "Verilog_state_5"], ["__IEND__","Verilog_state_6"]],     // case 4
-    "ILA_mem_state" : "Verilog_array_name",       // case 5.a : internal memory in Verilog
-    "ILA_mem_state" : "**MEM**ILA_mem_state",     // case 5.b : external memory in Verilog
+    "ILA_bitvec_state_var_1" : "<refinement-expression>", // case 1
+    "ILA_bitvec_state_var_2" : [
+      ["<condition-1>", "<refinement-expression-1>"], 
+      ["<condition-2>", "<refinement-expression-2>"]],   // case 2
+    "ILA_mem_state_var_1" : "<array-expression>",        // case 3 : internal RTL memory
+    "ILA_mem_state_var_2" : {                            // case 4 : external RTL memory
+      "wen"   : "<refinement-expression>",
+      "waddr" : "<refinement-expression>",
+      "wdata" : "<refinement-expression>",
+      "ren"   : "<refinement-expression>",
+      "raddr" : "<refinement-expression>",
+      "rdata" : "<refinement-expression>"
+    }, 
     // more ...
   }, 
   // other fields ...
 }
 ```
 
-The corresponding generated assumptions will be in the following form:
+For conditional mapping, there is a priority for the conditions. The first listed condition will be tested first, and if it is true, the first refinement expression will be used and then comes to the second and third.
 
-```text
-wire __m10__ = Verilog_state_1 == __ILA_SO_ILA_state_1 ;
-wire variable_map_assume___p1__ILA_state_1 = (~ __START__) || (__m10__) ;  // __START__ --> Verilog_state_1 == __ILA_SO_ILA_state_1
+A memory expression allows more than a Verilog array name, because sometimes, the mapping for array variables is one-to-one. We support conditional mapping in this case, which can specify in the similar syntax as case (2), or you can use ` conditon ? var1 : var2 `. In the future, we may support using universal quantifier with indices for more complex mapping of arrays.
 
-wire __m12__ = Verilog_state_2 + Verilog_state_3 == ILA_state_2 ;
-wire variable_map_assume___p3__ILA_state_2 = (~ __START__) || (__m12__) ;
+For an external memory, the mapping is actually between interface signals. The ILA array variables use 6 interface signals (see the table below) which should be mapped with the RTL signals. You can use refinement expression or condition-refinement pair for these signal mapping. Later, we shall see some examples of mapping internal or external arrays in ILA with either internal or external arrays in RTL.
 
-wire __m14__ = (~ __START__ ) ||  ( Verilog_state_3 == ILA_state_3 ) ;
-wire variable_map_assume___p5__ILA_state_3 = (~ __START__) || (__m14__) ;
+| interface signals   | meaning        |
+|-------------        |--------------  |
+| ren                 | read enable    |
+| raddr               | read address   |
+| rdata               | read data      |
+| wen                 | write enable   |
+| waddr               | write address  |
+| wdata               | write data     |
 
-wire __m16__ = (~ __START__ ) ||  ( Verilog_state_4 == ILA_state_4 ) ;
-wire variable_map_assume___p7__ILA_state_4 = (~ __START__) || (__m16__) ;
 
-wire __m18__ = ( (~ __START__ ) ||  ( Verilog_state_5 == ILA_state_5 ) ) && ( ~( ~__START__ && __IEND__ ) ||  Verilog_state_6 == ILA_state_5 ) ; // __START__ --> match1 && (~__START__ && __IEND__) --> match2
-wire variable_map_assume___p9__ILA_state_5 = (~ __START__) || (__m18__) ;
+And the `interface mapping` is similar but there the key names are the ILA input variables. Currently, input variables with array type are not supported.
 
-// map to an internal Verilog array : element-wise equality
-assign __m20__ = ( __ILA_SO_mem_0 == VerilogArray_0_)&&( __ILA_SO_mem_1 == VerilogArray_1_)&&... ;
-assign variable_map_assume___p11__ = (~ __START__ )|| (__m20__) ;
 
-// map to an external Verilog array : using memory abstraction
-// no assumption is needed
-```
 
-and the assertions:
+## Other Sections in Variable Mapping
 
-```text
-wire __m0__ = Verilog_state_1 == __ILA_SO_ILA_state_1 ;
-wire variable_map_assert___p1__ILA_state_1 = (~ __IEND__) || (__m0__) ;  // IEND --> Verilog_state_1 == __ILA_SO_ILA_state_1
+Within the same file of variable mapping, there are other sections: (1) clock and reset mapping, (2) clock and reset configuration, (3) uninterpreted function mapping, (4) additional mapping (5) assumptions and (6) RTL monitors.
 
-wire __m2__ = Verilog_state_2 + Verilog_state_3 == ILA_state_2 ;
-wire variable_map_assert___p3__ILA_state_2 = (~ __IEND__) || (__m2__) ;
 
-wire __m4__ = (~ __START__ ) ||  ( Verilog_state_3 == ILA_state_3 ) ;
-wire variable_map_assert___p5__ILA_state_3 = (~ __IEND__) || (__m4__) ;
+### Interface Mapping
 
-wire __m6__ = (~ __START__ ) ||  ( Verilog_state_4 == ILA_state_4 ) ;
-wire variable_map_assert___p7__ILA_state_4 = (~ __IEND__) || (__m6__) ;
+The interface mapping is used to specify which input port(s) is/are clock or reset signals. An example is shown below. The `CLOCK` field is a map from the name of the clock to the input pins. If there is only one clock, you can provide either a single input pin or multiple pin names in list which will be connected to the same clock. For reset, you can choose among the active-high/active-low or custom reset patterns using `RESET`, `NRESET` or `CUSTOMRESET`.
 
-wire __m8__ = ( (~ __START__ ) ||  ( Verilog_state_5 == ILA_state_5 ) ) && ( ~( ~__START__ && __IEND__ ) ||  Verilog_state_6 == ILA_state_5 ) ; // __START__ --> match1 && (~__START__ && __IEND__) --> match2
-wire variable_map_assert___p9__ILA_state_5 = (~ __IEND__) || (__m8__) ;
-
-// map to an internal Verilog array : element-wise equality
-assign __m10__ = ( __ILA_SO_mem_0 == VerilogArray_0_)&&( __ILA_SO_mem_1 == VerilogArray_1_)&&... ;
-assign variable_map_assert___p11__ = (~ __IEND__ )|| (__m10__) ;
-
-// map to an external Verilog array : using memory abstraction
-absmem #( 
-    .AW(32),
-    .DW(8),
-    .TTS(4294967296) )
-mi0(...,  .mem_EQ_(mem_EQ_) );
-assign variable_map_assert__p13__ = (~ __IEND__) || (mem_EQ_) ;
-```
-
-One note in the above example: the condition can refer to special signals \(`__START__` and `__IEND__`\), which are the condition when the instruction-under-verification starts to execute and finishes.
-
-## Instruction Completion Condition
-
-The instruction completion condition is specified per instruction. In the JSON file, it is a list of maps. The list does not need to be a full list of instructions. Those not in the list will not be verified. Each dictionary must have an element whose key is `instruction` and the value of this element is the name of the instruction in the ILA model. Besides this name element, it must contain one of the `ready bound` or the `ready signal` element. The `ready bound` specifies a bound that the instruction takes. It is used for instructions that take a fixed number of cycles. Alternatively, one can provide a signal \(or a predicate\) in the `ready signal` field.
-
-There are several optional fields. They are `start condition`, `max bound`, `flush constraint`, `pre-flush end` and `post-flush end`.
-
-The `start condition` field, if provided, should be a list of strings. Each string is a Verilog expression that acts as a predicate on the Verilog design. It can be used to constrain the Verilog implementation state, because usually there are more microarchitectural \(implementation states\) in the design. For the starting state of an instruction, these microarchitectural states should be `consistent` with the visible states in the ILA, and you can use this field to enforce the `consistency` at your discretion. You can use `$decode$` and `$valid$` to refer to the instruction's decode function or its ILA valid condition.
-
-The `max bound` can be used when `ready signal` field is provided. It provides an assumption that the condition that the `ready signal` field specified will occur in the given number of cycles, and this will limit the model checking to that bound. Usually this is used for the additional environment assumptions about the input \(for example, how many cycles at most there are for a request to be served with a response\).
-
-The `flush constraint`, `pre-flush end` and `post-flush end` signals are used when using the flushing verification setting. For this verification setting, you can refer to [TODAES19](https://bo-yuan-huang.github.io/ILAng-Doc/todaes18.pdf) on the ILA-based verification or the [Burch-Dill's approach](https://dl.acm.org/citation.cfm?id=735662) on processor verification.
-
-## Global Invariants
-
-In the verification of instructions, we do not assume the design starts from the initial states. This helps us to get a better guarantee of the instruction correctness when only bounded model checking is used. However, if there is no constraints on the starting state of an instruction, there might be spurious bugs just because the design starts from a state that it will never reach when started from the reset state. In order to avoid this false positive, we use global invariants to constrain on the starting state. These invariants help rule out some unreachable states and the tool will generate a separate target to check whether the provided invariants are globally true or not. These invariants should be provided as a list of strings, where each string is a Verilog predicate. In the future, we will exploit invariant synthesis techniques to help synthesize these invariants.
-
-## Interface Signal Information
-
-The Verilog module comes with a set of I/O signals and the tool needs to know how these signals should be connected. The `interface mapping` field is a map whose keys are the Verilog I/O signal names and whose values can be one of the following:
-
-* An ILA input name. This means that the Verilog input signal corresponds to one ILA input. They must have the same encoding and bit-width.
-* `**KEEP**` directive. Telling the tool to have a wire of the same name and to connect it as the verification wrapper I/O.
-* `**NC**` directive, indicating that this port does not need to be connected.
-* `**SO**` directive, indicating that this is actually a direct output from a visible state variable \(a state variable that is modeled in the ILA\).
-* `**RESET**` or `**NRESET**` directive. Indicating that this signal is the reset signal, active-high or active-low \(we assume synchronous reset\).
-* `**CLOCK**` directive, indicating that this is the clock signal.
-* `**MEM**name.signal` directive, indicating this signal is the connection to an external/shared memory. The name part should be the ILA state variable name of the memory, and the signal part could be one of the following: `wdata`,`rdata`, `waddr`,`raddr`, `wen`, `ren`. If the signal does not directly correspond to the write/read data, write/read address, write/read enable signal, it should be specified as `**KEEP**`, you can specify the mapping using "annotation" which will be dicussed below.
-
-For example, for a Verilog input signal `control`, the effects of applying different directives are:
-
-* An ILA input name, e.g., `c1`. The tool will check if ILA indeed has the input `c1` and the type is matched. The wire `__ILA_I_c1` will be created and will be connected to the input port `control`.
-* `**KEEP**` directive. The tool will check if the signal is input or output and create an input/output wire named `__VLG_I_control` with the proper width and connect to the port.
-* `**NC**` directive. The tool will have it unconnected like `.control()`.
-* `**SO**` directive. The tool will check if it is indeed an output and create an output wire `__VLG_SO_control` and connect to the port. In this example, because it is actually an input, the tool will give warning.
-* `**RESET**` or `**NRESET**`. It will be connected as `.control(rst)` or `.control(~rst)`, where `rst` is the reset signal of the wrapper.
-* `**CLOCK**` directive. It will be connected as `.control(clk)`, where `clk` is the clock signal of the wrapper.
-* `**MEM**name.signal`. The tool will check if `name` is an ILA memory name. It will be connected as `.control(__MEM_name_0_signal)`.
-
-## Notes on Memory State Variable
-
-Memory state variable might be internal or external to the module. An internal memory variable corresponds to a verilog array, and therefore no specific I/O interface is needed to access the memory. An external memory is a memory that connects with the current module via I/O interface. By default, all memory variables in the ILA are treated as external memory. The default setting can be override by _annotation_ in refinement map, and here is an example:
 
 ```javascript
-  "annotation" : {
-    "memory" : {
-      "rf":"internal",
-      "mem":"external"
-    }
+  "RTL interface connection": {
+    // below creates two clocks : clkA and clkB
+    // clkA is connected to wclk
+    // and clkB is connected to rclk and clk
+    "CLOCK" : { "clkA" : "wclk", "clkB" : ["rclk", "clk"] },
+    // or "CLOCK" : "clk"  , single clock -- single pin
+    // or "CLOCK" : ["wclk", "rclk"] , multiple input pins use 
+    //    the same single clock
+    "RESET" : "reset", // you can have a list of signals here
+    "NRESET" : ["nreset1", "nreset2"],  // like this
+    "CUSTOMRESET" : {"name"  : "input-pin", ...}
   }
 ```
 
-The above annotation specifies memory named as `rf` and `mem` as internal and external respectively. Being internal or external affects how properties are generated. The mapping of internal memory is element-wise with expressions comparing two verilog arrays entry by entry, which is inefficient for a large memory. The mapping of external memory will use memory abstraction, which is more efficient. \(In the future, we will support mapping internal memory using the Array data-type of the underlying property verifier.\)
 
-For the external memory, it is likely that there isn't a one-to-one mapping between the module interface and the six signals required by the memory abstraction module: `wdata` (write-data) ,`rdata` (read-data), `waddr` (write-address),`raddr` (read-address), `wen` (write-enable), `ren` (read-enable). Therefore, we support specifying the mapping using the annotation here. An example of the syntax is given below.
+
+
+### Clock and Reset Configuration
+
+In the interface mapping part, the clock and reset pins are specified. If there is one clock and the reset sequence is just one cycle, you don't need to explicitly state the clock and reset configurations.
+
+In the `reset` section, you can specify (1) the initial state (2) the length of the reset sequence, and (3) the custom reset sequence. A sequence is list of 0s or 1s. You can duplicate a sequence by adding a `"*N"` element in the end, where `N` is the number of copies to make. If you don't need reset sequence, you can set `cycles` to 0. And if both reset sequence and the initial state are provided, the RTL design will go through a reset sequence after the specified initial state.
+
+An example of the `reset` section is provided below. 
 
 ```javascript
-  "annotation" : {
-    "memory-ports" : {
-      "MemoryName.port1" : "Verilog-expression-here", 
-      "MemoryName.port2" : "Verilog-expression-here"
-    }
-  }
+ "reset" : {
+   "initial-state" : {
+     // this can be used with/without the reset sequence
+     "RTL.v1" : "1'b1",
+     "RTL.v2" : "2'b01",
+     ...
+   },
+   "cycles" : 5, 
+     // or 1 by default, this affects RESET, NRESET, CUSTOMRESET.n
+     // if you don't need reset, use 0 here
+   "custom-seq" : {"CUSTOMRESET.1": [0 , [1, "*3"], [0, "*1"] ] }
+}
 ```
 
-In the above example, `MemoryName` should be the name of the memory state variable in ILA and `port1`, `port2` should be one of  `wdata` (write-data) ,`rdata` (read-data), `waddr` (write-address),`raddr` (read-address), `wen` (write-enable), `ren` (read-enable). The Verilog expression after the colon represents how to use the Verilog signal to compute the interface signals.
-Note that this kind of mapping assumes the ports of an abstract memory state can be represented as a function of solely the Verilog signals. If this is not feasible for the design you are looking at, you can use the additional mapping capability provided by `mapping control` section described later in this chapter.
+The `clock` section is only needed if you have multiple clocks. Currently, the tool will only handle the case where the frequency of the clock signals have a least common multiple. Therefore, they can be simulated using a single clock signal. The `clock` tells the tool how  to simulate this clock signal.
+This can be specified using either `custom` or `factor` field.  The `custom` field are sequences 0s and 1s where you can use the similar duplicate operator as in the custom sequence of reset configuration. Alternatively, you can use the `factor` section to specify how many cycles of 0s and 1s and the starting offset of each clock.
 
 
-## Uninterpreted Function Mapping
+An example of the `clock` section is provided below, where using the `factor` field and the `custom` field actually creates the same set of clock signals.
 
-The ILA model may use uninterpreted functions, however, in the verification, the tool must know the correspondence of this uninterpreted function in order to reason about the correctness. In the `functions` field of the _var-map_ JSON, a map should be provided if uninterpreted function is used in the ILA model. The keys of the map are the function names, with the values in a list. Each element of this list is for one application of this function. Per each function application, the tool needs to know the correspondence of the arguments/result in the Verilog and when that happens, this is like a condition/mapping pair, and it is specified as a list. The correspondence of the function result goes first followed by the arguments \(in the same order as the arguments in ILA function definitions\).
+
+```javascript
+ "clock" : 
+ {
+   "factor" : {
+      "clkA" : {
+        "high" : 6
+        "low" : 6
+        // 12x gclk's period
+      },
+      "clkB" : {
+        "high" : 2
+        "low" : 1
+        // 3x gclk's period
+        // duty cycle 2/3
+      },
+      "clkC" : {
+        "high" : 2
+        "low" : 4,
+        "offset" : 3
+        // 6x gclk's period
+        // duty cycle 1/3
+        // 1 1 0 0 0 0
+        // start:^
+        // offset should be positive
+      }
+      // tool will calcuate the min length
+      // LCM(12,3,6) = 12
+   }
+ }
+
+ // Alternatively, you can use the custom field.
+ // Using both the factor and custom fields is
+ // not allowed.
+ "clock" : 
+ {
+   "custom" : {
+      "length" : 12,
+      "clocks": {
+        "CLOCK.1": [  [1, "*6"], [0,"*6"] ], 
+        "CLOCK.2": [  [1, 1, 0], "*4" ], 
+        "CLOCK.3": [  [0, "*3"], [1, "*2"] , [0, "*4"] , [1, "*2"], 0 ]
+      }
+   }
+ }
+
+```
+
+
+
+### Uninterpreted Function Mapping
+
+The ILA model may use uninterpreted functions, however, in the verification, the tool must know the correspondence of this uninterpreted function in order to reason about the correctness. In the `functions` field of the _var-map_ JSON, a list should be provided if uninterpreted function is used in the ILA model.
+Each element of this list is for one application of this function. Per each function application, the tool needs to know the correspondence of the arguments/result in the Verilog. And this is specified with a map. The keys of the map are the function names, with the values also in a map containing `result` and `arg` fields. `result` field accepts a single refinement expression while `arg` accepts a list.
 
 For example in the ILA there is such specification
 
@@ -231,59 +295,160 @@ For example in the ILA there is such specification
   instr.SetUpdate(state0, div(arg0, arg1) );
 ```
 
-Then in the refinement map
+Then in the refinement map, `div` is followed by a list of one element (because there is only one function application in ILA).
 
 ```javascript
 {
   "functions" : {
-    "div" : [ 
-      ["cond1", "verilog-signal-result", "cond2", "verilog-signal-arg0", "cond3", "verilog-signal-arg1", ] 
+    "div" : [ {
+      "result" : "<refinement-expression>",
+      "arg" : [
+        // there are only two arguments in div
+        "<refinement-expression-1>",
+        "<refinement-expression-2>"
+        ]
+      }
     ]
   }
 }
 ```
 
-## Additional Mapping
+### Additional Mapping
 
-Sometimes, the mapping between Verilog variables and ILA state variables does not fit easily into the state mapping section. For example, you may need a customized mapping from the Verilog design's memory interface to the provided 6-signal memory interface. The AES case study provides an example of this. The Verilog design uses two signals `stb` and `wr` to indicate memory read and write enable, which are different from the `ren` and `wen` signals. Therefore a mapping can be provided as follows:
+Sometimes, the mapping between Verilog variables and ILA state variables does not fit easily into the state mapping section.
+In this case you specified additional mapping using `additional mapping` section. It takes a list of strings and each string should be a valid Verilog expression. This will be translated as assumptions, which only appear when verifying individual instructions and will not be used when checking or synthesizing starting state invariants.
 
 ```javascript
-"mapping control" : [
-  "( wr & stb) == __MEM_XRAM_0_wen" , 
-  "(~wr & stb) == __MEM_XRAM_0_ren" 
+"additional mapping" : [
+  "( RTL.wr & RTL.stb) == (ILA.m1 & ILA.m2)" , 
+  "(~RTL.wr & RTL.stb) == (ILA.m2 & ILA.m3)" 
 ]
 ```
 
-Assumptions in the `mapping control` section does not appear in the invariant or invariant synthesis target.
-
-## Additional Assumptions
+### Additional Assumptions
 
 This section allows users to add additional assumptions in the verification. They can be, for example, an assumption about the module I/O.
 
 ```javascript
 "assumptions" : [
   // the two inputs can not be both 1
-  "! ( verilog_module.input1 & verilog_module.input2 )"
+  "! ( RTL.input1 & RTL.input2 )"
 ]
 ```
 
 Assumptions in this section are in effect when verifying the instructions, the invariants and when synthesizing the invariants.
 
-## Value Holder
+### RTL Monitors
 
-Value holder \(a.k.a prophecy variables, auxiliary variables and etc.\) can be introduced to capture the value of a Verilog variable at a certain time \(or under a certain condition\). Below is an example of a value holder:
+RTL monitors are additional logic and states that are added to aid the specification of refinement mapping.
+Our tool provides two templates (value recorder and phase tracker) and also allows arbitrary synthesizable Verilog to be used.
+
+#### Phase Tracker
+
+Phase tracker is a template for creating auxiliary variables to track the phase of an instruction. An example is shown below.
+It defines 4 phases, and the rules of entering and exiting each phase is specified in the `rules` field.
+For each phase, you can give it name, otherwise you can refer to it as `phaseX` where `X` is an index number starting from 1.
+There are two phases that are implicitly declared, which are `#decode#` and `#commit#`. 
+The entering condition should explicitly have its previous stage in the conjunction.
+
 
 ```javascript
-"value-holder": {
-  "r1_pvholder" : {
-        "cond": "m1.write_enable == 1",
-        "val":"m1.registers[1]",
-        "width":8
-      }
-}
+  "monitor" : {
+    "tracker" : { // this is just a name
+      "template" : "phase tracker",
+      "phases" : 4,
+      "event-alias" : { // will be translated as creating 1-bit wire
+        "issue" : "SomeVerilogExpressionsHere",
+        // for example
+        "i2e" : "RTL.s2_to_s3 & RTL.s2_to_s3",
+        "e2c"  : "RTL.s3_deq & RTL.s3_deq"
+      },
+      "rules" : [
+        { // 1
+          "enter" : {
+            "event"  : "issue & #decode#"
+          },
+          "exit" : {
+            "event"  : "i2e"
+          }
+        },
+        { // 2, if you give it a name, then 
+          "name" : "second_phase"
+          "enter" : {
+            "event"  : "i2e & #phase1#"
+          },
+          "exit" : {
+            "event"  : "e2c" 
+            // it is redundant to add & #phase2#
+          }
+        },
+        { // 3
+          "enter" : { // you can use the name elsewhere
+            "event"  : "e2c & #second_phase#",
+          },
+          "exit" : {
+            "event"  : "e2c ## 1",
+          }
+        }
+      ]
+      // instantiate a phase tracker template
+      // each template has its other fields
+      // to fill in
+    }
 ```
 
-The above value holder will be translated to the following Verilog code fragments in the Verilog.
+Additionally, you can declare alias for events which can be referred to in the rules. You can also define auxiliary variables and update them using actions. Below shows an example of tracking a command/instruction through a FIFO. When the command/instruction enters the FIFO, we need to take down the write pointer of the FIFO (stored in auxiliary variable `fifo_ptr`) so that we can know when the command/instruction gets out of the FIFO.
+
+
+```javascript
+  "monitor" : {
+    "TrackingThroughFifo" : { // this is just a name
+      "template" : "phase tracker",
+      "phases" : 2,
+      "aux-var" : [ ["fifo_ptr", "reg", 8] ],
+      "rules" : [
+          { // 1
+            "enter" : {
+              "event"  : "RTL.fifo_wen & #decode# ",
+              "action" : "fifo_ptr <= RTL.fifo_wptr;"
+            },
+            "exit" : {
+              "event"  : "RTL.fifo_ren & RTL.fifo_rptr == fifo_ptr"
+            }
+          },
+          { // 2
+            "enter" : {
+              "event"  : "RTL.fifo_ren & RTL.fifo_rptr == fifo_ptr & #phase1#"
+            },
+            "exit" : {
+              "event"  : "..."
+            }
+          }
+        ]
+    }
+  }
+```
+
+The phase tracker also allows specifying branching and convergence. This is useful, for example, in the verification of superscaler out-of-order processor implementation, where there are multiple pipelines and instructions can be dynamically dispatched to some processing pipelines. A phase can be referred to in other parts of the refinement specification using `#phase_name#`.
+
+
+#### Value Recoder
+
+Value recorder can be created using `value @ condition` syntax in the refinement expressions. Alternatively, you can also  create explicit value recorders. An example showing the syntax for specifying explicit value recorder is provided below. For the `width` field, you can also use `"auto"` to ask the tool to automatically infer the width needed to hold the value.
+
+
+```javascript
+  "monitor" : {
+    "r1_pvholder" : { // this is just a name
+      "template" : "value recorder",
+        "cond": "RTL.write_enable == 1",
+        "val":"RTL.registers[1]",
+        "width":8
+    }
+  }
+```
+
+The above value recorder will be translated into the corresponding Verilog below.
 
 ```text
 input      [7:0] __r1_pvholder_init__;
@@ -293,37 +458,83 @@ always @(posedge clk) begin
    if(rst) begin
        r1_pvholder <= __r1_pvholder_init__;
    end
-   else if(1) begin
+   else begin
        r1_pvholder <= r1_pvholder;
    end
 end
 
-assume property ((m1.write_enable == 1) |-> ((r1_pvholder) == (m1.registers[1])));
+assume property ((RTL.write_enable == 1) |-> ((r1_pvholder) == (RTL.registers[1])));
 ```
 
-It creates an auxiliary Verilog variable `r1_pvholder` which carries a undetermined value. Its value keeps the same all the time, and an assumption says this undetermined value is same as the specified value `m1.registers[1]`, under the condition that `m1.write_enable == 1`. This variables can be referenced in other sections by `#r1_pvholder#` \(this tells the tool not to find this signal name in the original Verilog design. The `width` part can also be a string `"auto"`, which tells the tool to automatically determine the width \(in case of failure, error will be prompted.\) This value holder does not check if there is only one cycle that `m1.write_enable == 1` holds. If there are multiple cycles that its condition holds, the assumption may overconstrain if `m1.registers[1]` should carry different values at these points. This situation should be avoided.
+It creates an auxiliary Verilog variable `r1_pvholder` which carries a undetermined value. Its value keeps the same all the time, and an assumption says this undetermined value is same as the specified value `RTL.registers[1]`, under the condition that `RTL.write_enable == 1`. This variables can be referenced in other sections by `r1_pvholder`. This value holder does not check if there is only one cycle that `RTL.write_enable == 1` holds. If there are multiple cycles that its condition holds, the assumption may overconstrain if `RTL.registers[1]` should carry different values at these points. This situation should be avoided.
 
-## Verilog Monitor
 
-In the case that user may want to add customized auxiliary variables, we support inline monitors for this purpose.
+#### Abitrary Verilog
 
-An example is given as follows:
+You can also add arbitrary synthesizable Verilog as the monitor. An example is given below:
 
 ```javascript
-  "verilog-inline-monitors" : {
-    "stage_tracker" : {
+  "monitor" : {
+    "counter" : {
       "verilog": 
         ["always @(posedge clk) begin",
-         "  if (__START__) stage_tracker <= 0;",
-         "  else if (__STARTED__ && !__ENDED__) stage_tracker <= stage_tracker + 1;",
+         "  if (RTL.signal_1) counter <= 0;",
+         "  else if (RTL.signal_2 && ! RTL.signal_3) counter <= counter + 1;",
          "end"],
-      "defs" :[ ["stage_tracker", 2, "reg"] ],
-      "refs" :[]
+      "defs" :[ ["counter", 2, "reg"] ],
+      "refs" :[ "RTL.signal_1" , "RTL.signal_2", "RTL.signal_3" ]
     },
   }
 ```
 
-This creates a 2-bit variable `stage_tracker` to track the number of cycles \(this is just for demoing the syntax of Verilog monitor, you can in fact use the embedded variable `__CYCLE_CNT__` to track the number of cycles\). Variables that should be accessible outside the monitor should be defined in the `defs` list with its name, bit-width and its type: `reg` or `wire`. Variables used only inside the monitor can be defined inside the `verilog` code list. Any variable inside the original Verilog, if referenced, should be put in the list of `refs`. This will help our tool to add auxiliary wires to connect them with the monitor.
+This creates a 2-bit variable `counter` to count the number of cycles under a certain condition. Variables that should be accessible outside the monitor should be defined in the `defs` list with its name, bit-width and its type: `reg` or `wire`. Variables used only inside the monitor can be defined inside the `verilog` code list. Any variable inside the original Verilog, if referenced, should be put in the list of `refs`. This will help our tool to add auxiliary wires to connect them with the monitor.
 
-Value holders and monitors are normally only in effect when verifying instructions. If you want a monitor to appear also when verifying the invariants, you can add the `"keep-for-invariants":true` attribute in the monitor's description following the `defs` and `refs` attributes.
+Monitors are normally only in effect when verifying instructions. If you want a monitor to appear also when verifying the invariants, you can add the `"keep-for-invariants":true` attribute in the monitor's description following the `defs` and `refs` attributes.
+
+
+
+
+## Instruction Completion Condition
+
+
+
+The instruction completion condition is specified per instruction. In the JSON file, it is a list of maps. The list does not need to be a full list of instructions. Those not in the list will not be verified. Each dictionary must have an element whose key is `instruction` and the value of this element is the name of the instruction in the ILA model. Besides this name element, it must contain one of the `ready bound` or the `ready signal` element. The `ready bound` specifies a bound that the instruction takes. It is used for instructions that take a fixed number of cycles. Alternatively, one can provide a signal \(or a predicate\) in the `ready signal` field.
+
+There are two optional fields. They are `start condition`, `max bound`.
+
+The `start condition` field, if provided, should be a list of strings. Each string is a Verilog expression that acts as a predicate on the Verilog design. It can be used to constrain the Verilog implementation state, because usually there are more microarchitectural \(implementation states\) in the design. For the starting state of an instruction, these microarchitectural states should be `consistent` with the visible states in the ILA, and you can use this field to enforce the `consistency` at your discretion. You can use `$decode$` and `$valid$` to refer to the instruction's decode function or its ILA valid condition.
+
+The `max bound` can be used when `ready signal` field is provided. It provides an assumption that the condition that the `ready signal` field specified will occur in the given number of cycles, and this will limit the model checking to that bound. Usually this is used for the additional environment assumptions about the input \(for example, how many cycles at most there are for a request to be served with a response\).
+
+
+### The Structure of Instruction Completion Condition
+
+The structure of the instruction completion condition is relatively simple as shown below. `max bound` and `start condition` are optional, and you can only choose one between `ready bound` and `ready signal`.
+
+
+```javascript
+{
+  "instructions":
+  [
+    {
+      "instruction"     :"<instr-name>",
+      "ready bound"     :12345, // <some integer here>
+      "ready signal"    :"<condition>",
+      "max bound"       :12345, // <some integer here>
+      "start condition" :"<condition>"
+    }
+  ],
+
+  "global invariants" : 
+  [
+    "Verilog-expressions-here",
+    ...
+  ]
+}
+```
+
+### Global Invariants
+
+In the verification of instructions, we do not assume the design starts from the initial states. This helps us to get a better guarantee of the instruction correctness when only bounded model checking is used. However, if there is no constraints on the starting state of an instruction, there might be spurious bugs just because the design starts from a state that it will never reach when started from the reset state. In order to avoid this false positive, we use global invariants to constrain on the starting state. These invariants help rule out some unreachable states and the tool will generate a separate target to check whether the provided invariants are globally true or not. These invariants should be provided as a list of strings, where each string is a Verilog predicate. 
+
 
