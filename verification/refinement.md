@@ -3,7 +3,7 @@
 ## General Information
 
 Refinement relation is specified in JSON format and is provided as two files, one referred to as  _variable mappings_ and the other as _instruction completion conditions_.
-The JSON format allows specifying data structures like map and list and support datatypes like string, integer and `null` (for empty field).
+The JSON format allows specifying data structures like map and list and support data-types like string, integer and `null` (for empty field).
 
 A map (similar to a dictionary in Python) has the following syntax:
 ```javascript
@@ -17,12 +17,12 @@ A map (similar to a dictionary in Python) has the following syntax:
 }
 ```
 
-A list is an ordered set of elements, where each element can be any string, integer, or nested data structures. JSON format does not require the elements are of the same type.
-In the top-level of a JSON file is a map and we call the key-value pairs in this top-level map as sections.
+A list is an ordered set of elements, where each element can be any string, integer, or nested data structures. JSON format does not require the elements of a list to have the same type.
+The top-level of a JSON file is a map and we call the key-value pairs in this top-level map as sections.
 
 ## The Structure of Variable Mapping
 
-Below shows the general structure the variable mapping file (or in short, var-map). Each section (like `state mapping"`) will be explained in detail later. Section `additional mapping`, `assumptions`, `monitor` and `functions` are optional. Section names are case-insensitive and you can always use hypen (`-`) to replace space in the section names.
+Below shows the general structure of the variable mapping file (or in short, var-map). Each section (like `state mapping"`) will be explained in details later. Section `additional mapping`, `assumptions`, `monitor` and `functions` are optional. Section names are case-insensitive and you can always use hypen (`-`) to replace space in the section names.
 
 ```javascript
 {
@@ -70,15 +70,16 @@ Below shows the general structure the variable mapping file (or in short, var-ma
       ...
       // directly writing verilog here
     },
+    "<name-4>" : "<refinement-expression>"
     ...
   }
   "functions":{ // for uninterpreted functions 
-    "<function-name>": [
-      [
-        "<refinement-expression>", "<refinement-expression>",
-        "<refinement-expression>", "<refinement-expression>",
+    "<function-name>": [ // list of invocation
+      { // an invocation is a map with `result` and `arg`
+        "result" : "<refinement-expression>",
+        "args" : { "<refinement-expression>", ...} // args
         // more ...
-      ],
+      },
       ...
     ]
   }
@@ -88,8 +89,8 @@ Below shows the general structure the variable mapping file (or in short, var-ma
 
 ## Refinement Expression, Condition and Signal Names
 
-In the above general structure, you can find terms like "refinement expression", "condition" or "signal name". Refinement expressions are basically valid Verilog expressions with some minor differences. We introduce new syntax for value recorder, delay expression and phase identifiers, and these will be explained in the later sections of this document.
-The Verilog expressions can be interpreted as either (1) the expression of a function which specifies how ILA architectural state variable can be computed from the Verilog signals or (2) a relation between ILA architectural state variable and RTL signals. The difference in the interpretation is determined by whether the expression is a predicate in the last level. For example, a expression `RTL.v1 +  RTL.v2` is not a predicate, whereas `ILA.v1 == RTL.v1 + RTL.v2` is a predicate. Whether the refinement expression is regarded as a predicate, is independent from its bit-width. For example `RTL.one_bit_signal` is not a predicate, even it is one-bit wide, whereas `RTL.one_bit_signal == 1'b1` is a predicate.
+In the above general structure, you can find terms like "refinement expression", "condition" or "signal name". Refinement expressions are basically valid Verilog expressions with some minor differences. We introduce new syntax for *value recorder*, *delay expression* and *phase identifiers*, and these will be explained in the later sections of this document.
+The Verilog expressions can be interpreted as either (1) the expression of a function which specifies how ILA architectural state variables can be computed from the Verilog signals or (2) a relation between ILA architectural state variable and RTL signals. The difference in the interpretation is determined by whether the expression is a predicate in the last level. For example, a expression `RTL.v1 +  RTL.v2` is not a predicate, whereas `ILA.v1 == RTL.v1 + RTL.v2` is a predicate. Whether the refinement expression is regarded as a predicate is independent from the bit-width. For example, `RTL.one_bit_signal` is not a predicate, even it is one-bit wide, whereas `RTL.one_bit_signal == 1'b1` is a predicate.
 
 "Condition" is similar to a "refinement expression" as it follows the same syntactic requirements. However, the type or the outcome of a condition must be 1-bit. Even if it is not in the form of a predicate, it will be interpreted as a predicate (by implicitly adding `xxx == 1'b1` in the top-level).
 
@@ -100,35 +101,26 @@ The Verilog expressions can be interpreted as either (1) the expression of a fun
 
 ### Value Recorder
 
-Value holder is one special kind of auxiliary variables and can be introduced to capture the value of a Verilog variable at a certain time or under a certain condition. This is different from directly creating an auxiliary register in RTL. The value of a RTL register is not available for use before it is assigned under the conditionm,
+Value holder is one special kind of auxiliary variables and can be introduced to capture the value of a Verilog variable at a certain time or under a certain condition. This is different from directly creating an auxiliary register in RTL. The value of a RTL register is not available for use before it is assigned under the condition,
 whereas, the content of a value holder is globally available even before the clock cycle where the specified condition is true. This is achieved with the help of assumptions.
 
-The following syntax is used to make a value recorder: `value @ condition`, where each of the value and condition part can be RTL signals or expressions. If either the `value` or `condition` is more than a signal name, paranthesis is needed, like `( RTL.v1 + RTL.v2 ) @ RTL.s1.commit`.
-Nested value recorder (value recorders in `value` or `condition`) is not allowed.
+The following syntax is used to make a value recorder: `value @ condition`, where each of the value and condition part can be RTL signals or expressions. If either the `value` or `condition` is more than a signal name, a pair of parantheses is needed, like `( RTL.v1 + RTL.v2 ) @ RTL.s1.commit`.
+Nested value recorders (value recorders in `value` or `condition`) are not allowed.
 
 ### Simple Delay
 
 You can delay a signal by a fixed number of cycles using `signal ## cycle`. For example, if you need the value of signal `RTL.v1`  one cycle after `RTL.s1.commit`  becomes true for mapping, then you can write `RTL.v1 @ (RTL.s1.commit ## 1)`
 
-### Phase Identifier
+### Phase Trackers
 
-If the RTL executes the instructions in multiple phases (e.g., pipeline stages), you will need to declare these phases in order to track the progression of the instruction and to find out its time of finish. This create phases identifiers.
-By default, there are two built-in phases identifiers: `#start#` and `#end#`. 
-Generally speaking, the phase identifier are those wrapped in two `#`.
+If the RTL executes the instructions in multiple phases (e.g., pipeline stages), you will need to declare these phases in order to track the progression of the instruction and to find out its time of finish. This requires using phases trackers.
+By default, there are two built-in phase trackers: `#decode#` and `#commit#`. 
+It is recommended to wrapped the phase trackers in a pair of `#`.
 The specification of stages will be explain [later](#template-for-phase-identifier).
 
 ## Module Naming
 
-By default, when you refer to signal in RTL, you can use something like `RTL.module_instance_name1.module_instance_name2.signal`  to refer to it. And if you use a variable (either input or state variable) in ILA, you can use the format `ILA.var_name`. If you want to override this default, you can write a `model name` section in the variable mapping to rename.
-
-```javascript
-
-"model names" : {
-  "ILA" : "SomeNameHere",
-  "RTL" : "SomeNameHere"
-}
-
-```
+When you refer to signal in RTL, you can use something like `RTL.module_instance_name1.module_instance_name2.signal`  to refer to it. And if you use a variable (either input or state variable) in ILA, you can use the format `ILA.var_name`.
 
 ## State Mapping and Input Mapping
 
@@ -156,9 +148,9 @@ The state mapping in the JSON file is a map data structure. The keys of this map
 }
 ```
 
-For conditional mapping, there is a priority for the conditions. The first listed condition will be tested first, and if it is true, the first refinement expression will be used and then comes to the second and third.
+For conditional mapping, the list of conditions has a priority. The first listed condition will be tested first, and if it is true, the first refinement expression will be used and then comes to the second and third.
 
-A memory expression allows more than a Verilog array name, because sometimes, the mapping for array variables is one-to-one. We support conditional mapping in this case, which can specify in the similar syntax as case (2), or you can use ` conditon ? var1 : var2 `. In the future, we may support using universal quantifier with indices for more complex mapping of arrays.
+A memory expression allows more than a Verilog array name, because sometimes, the mapping for array variables is not one-to-one. We support conditional mapping in this case, you can specify it in the similar syntax as case (2), or you can use ` conditon ? var1 : var2 `. 
 
 For an external memory, the mapping is actually between interface signals. The ILA array variables use 6 interface signals (see the table below) which should be mapped with the RTL signals. You can use refinement expression or condition-refinement pair for these signal mapping. Later, we shall see some examples of mapping internal or external arrays in ILA with either internal or external arrays in RTL.
 
@@ -172,8 +164,7 @@ For an external memory, the mapping is actually between interface signals. The I
 | wdata               | write data     |
 
 
-And the `interface mapping` is similar but there the key names are the ILA input variables. Currently, input variables with array type are not supported.
-
+The `input mapping` is similar to `state mapping` but there the keys are the ILA input variables. Currently, input variables with array type are not supported.
 
 
 ## Other Sections in Variable Mapping
@@ -184,6 +175,8 @@ Within the same file of variable mapping, there are other sections: (1) clock an
 ### Interface Mapping
 
 The interface mapping is used to specify which input port(s) is/are clock or reset signals. An example is shown below. The `CLOCK` field is a map from the name of the clock to the input pins. If there is only one clock, you can provide either a single input pin or multiple pin names in list which will be connected to the same clock. For reset, you can choose among the active-high/active-low or custom reset patterns using `RESET`, `NRESET` or `CUSTOMRESET`.
+
+By default, all input ports are connected as the wrapper's input and all output ports are connected with the wrappper's output.  In case you want to specify how the input ports should be connected, you can use the  `INPUT PORTS` field.
 
 
 ```javascript
@@ -197,7 +190,10 @@ The interface mapping is used to specify which input port(s) is/are clock or res
     //    the same single clock
     "RESET" : "reset", // you can have a list of signals here
     "NRESET" : ["nreset1", "nreset2"],  // like this
-    "CUSTOMRESET" : {"name"  : "input-pin", ...}
+    "CUSTOMRESET" : {"name"  : "input-pin", ...},
+    "INPUT PORTS" : {
+      "<rtl input pin>" : "<refinement-expression>"
+    }
   }
 ```
 
@@ -228,7 +224,7 @@ An example of the `reset` section is provided below.
 ```
 
 The `clock` section is only needed if you have multiple clocks. Currently, the tool will only handle the case where the frequency of the clock signals have a least common multiple. Therefore, they can be simulated using a single clock signal. The `clock` tells the tool how  to simulate this clock signal.
-This can be specified using either `custom` or `factor` field.  The `custom` field are sequences 0s and 1s where you can use the similar duplicate operator as in the custom sequence of reset configuration. Alternatively, you can use the `factor` section to specify how many cycles of 0s and 1s and the starting offset of each clock.
+This can be specified using either `custom` or `factor` field.  The `custom` field should be sequences of 0s and 1s where you can use the similar duplicate operator as in the custom sequence of reset configuration. Alternatively, you can use the `factor` section to specify how many cycles of 0s and 1s and the starting offset of each clock.
 
 
 An example of the `clock` section is provided below, where using the `factor` field and the `custom` field actually creates the same set of clock signals.
@@ -356,7 +352,6 @@ The entering condition should explicitly have its previous stage in the conjunct
   "monitor" : {
     "tracker" : { // this is just a name
       "template" : "phase tracker",
-      "phases" : 4,
       "event-alias" : { // will be translated as creating 1-bit wire
         "issue" : "SomeVerilogExpressionsHere",
         // for example
@@ -404,7 +399,6 @@ Additionally, you can declare alias for events which can be referred to in the r
   "monitor" : {
     "TrackingThroughFifo" : { // this is just a name
       "template" : "phase tracker",
-      "phases" : 2,
       "aux-var" : [ ["fifo_ptr", "reg", 8] ],
       "rules" : [
           { // 1
@@ -429,7 +423,7 @@ Additionally, you can declare alias for events which can be referred to in the r
   }
 ```
 
-The phase tracker also allows specifying branching and convergence. This is useful, for example, in the verification of superscaler out-of-order processor implementation, where there are multiple pipelines and instructions can be dynamically dispatched to some processing pipelines. A phase can be referred to in other parts of the refinement specification using `#phase_name#`.
+The phase tracker also allows specifying branching and convergence. This is useful, for example, in the verification of superscaler out-of-order processor implementation, where there are multiple pipelines and instructions can be dynamically dispatched to some processing pipelines. A phase can be referred to in other parts of the refinement specification using `#MonitorName_PhaseName#` (unnamed stages are named as `stageX` where X is the index in the list of rules, and the index starts from 0).
 
 
 #### Value Recoder
@@ -469,9 +463,9 @@ assume property ((RTL.write_enable == 1) |-> ((r1_pvholder) == (RTL.registers[1]
 It creates an auxiliary Verilog variable `r1_pvholder` which carries a undetermined value. Its value keeps the same all the time, and an assumption says this undetermined value is same as the specified value `RTL.registers[1]`, under the condition that `RTL.write_enable == 1`. This variables can be referenced in other sections by `r1_pvholder`. This value holder does not check if there is only one cycle that `RTL.write_enable == 1` holds. If there are multiple cycles that its condition holds, the assumption may overconstrain if `RTL.registers[1]` should carry different values at these points. This situation should be avoided.
 
 
-#### Abitrary Verilog
+#### Arbitrary Verilog
 
-You can also add arbitrary synthesizable Verilog as the monitor. An example is given below:
+You can also add arbitrary synthesizable Verilog as the monitor. An example is shown below:
 
 ```javascript
   "monitor" : {
@@ -491,7 +485,8 @@ This creates a 2-bit variable `counter` to count the number of cycles under a ce
 
 Monitors are normally only in effect when verifying instructions. If you want a monitor to appear also when verifying the invariants, you can add the `"keep-for-invariants":true` attribute in the monitor's description following the `defs` and `refs` attributes.
 
-
+Additionally, you can load Verilog from file using `"verilog-from-file":"<file-name>"` instead of the `
+verilog` field above. You can also have additional Verilog appended to the generated wrapper using field `append-verilog` and `append-verilog-from-file`.
 
 
 ## Instruction Completion Condition
