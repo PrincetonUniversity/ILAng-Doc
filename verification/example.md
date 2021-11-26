@@ -16,9 +16,9 @@ When verifying the child-instructions, we need to map the state variables holdin
 
 ```javascript
   "state mapping": {
-    "ciphertext" : [["ILA.round == 0", "s_in" ],
-                    ["ILA.round == 1", "s0"   ],
-                    ["ILA.round == 2", "s1"   ],
+    "ciphertext" : [["ILA.round == 0", "RTL.s_in" ],
+                    ["ILA.round == 1", "RTL.s0"   ],
+                    ["ILA.round == 2", "RTL.s1"   ],
                     ...
                    ]
   }
@@ -49,9 +49,9 @@ When tackling pipelined designs, for a software-visible state variable \(e.g., a
 ```javascript
   "state mapping": {
       ...,
-    "r1" : [ [ "m1.reg_1_w_stage[1]", "ex_alu_result"],
-             [ "m1.reg_1_w_stage[0]", "ex_wb_val"    ],
-             [ "1'b1",                "register[1]"  ]],
+    "r1" : [ [ "m1.reg_1_w_stage[1]", "RTL.ex_alu_result"],
+             [ "m1.reg_1_w_stage[0]", "RTL.ex_wb_val"    ],
+             [ "1'b1",                "RTL.register[1]"  ]],
     "r2" : [...],
     ...
   }
@@ -66,8 +66,8 @@ Again for the previous pipeline example, we can have the variable mapping as fol
 ```javascript
   "state mapping": {
       ...,
-    "r1" : [ ["#decode#", "( m1.register[1] )@( stage_tracker == 1 )"],
-             ["#commit#", "register[1]"]],
+    "r1" : [ ["#decode#", "( RTL.register[1] )@( stage_tracker == 1 )"],
+             ["#commit#", "RTL.register[1]"]],
     "r2" : [...],
     ...
   }

@@ -22,7 +22,7 @@ The top-level of a JSON file is a map and we call the key-value pairs in this to
 
 ## The Structure of Variable Mapping
 
-Below shows the general structure of the variable mapping file (or in short, var-map). Each section (like `state mapping"`) will be explained in details later. Section `additional mapping`, `assumptions`, `monitor` and `functions` are optional. Section names are case-insensitive and you can always use hypen (`-`) to replace space in the section names.
+Below shows the general structure of the variable mapping file (or in short, var-map). Each section (like `state mapping"`) will be explained in details later. Section `additional mapping`, `assumptions`, `monitor` and `functions` are optional. Section names are case-insensitive and you can always use hypen (`-`) or underscore (`_`) to replace space in the section names.
 
 ```javascript
 {
