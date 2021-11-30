@@ -116,7 +116,7 @@ You can delay a signal by a fixed number of cycles using `signal ## cycle`. For 
 If the RTL executes the instructions in multiple phases (e.g., pipeline stages), you will need to declare these phases in order to track the progression of the instruction and to find out its time of finish. This requires using phases trackers.
 By default, there are two built-in phase trackers: `#decode#` and `#commit#`. 
 It is recommended to wrapped the phase trackers in a pair of `#`.
-The specification of stages will be explain [later](#template-for-phase-identifier).
+The specification of stages will be explain later.
 
 ## Module Naming
 
